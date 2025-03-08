@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How do I Integrate with Internet Explorer</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="How Do I register / move DLL"
+HREF="chap2howdoiregisterdll.html"><LINK
+REL="NEXT"
+TITLE="Support Notes"
+HREF="supportnotes.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiregisterdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="supportnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIIntegrateIE"
+>How do I Integrate with Internet Explorer</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Integrating with Internet Explorer</B
+></SPAN
+></P
+><P
+>My-T-Soft used as an example / Integrated with Internet Explorer</P
+><P
+>Option 1</P
+><P
+>&#13;You can trigger events within My-T-Soft by using WebSync and VBScript (or other scripting method that can create a file on the client system).
+</P
+><P
+> HREF="./webdev.exe"&#62;Download WEBDEV.EXE (39K)
+</P
+><P
+>&#13;( 1) WEBDEV contains 2 HTM files and WebSync (EDITPAGE.HTM, OVERVIEW.HTM, WEBSYNC.EXE)
+</P
+><P
+>&#13;( 2) Download this file and using Windows Explorer copy to the default folder (\WINDOWS\MYTSOFT or \WINNT\MYTSOFT)
+</P
+><P
+>&#13;( 3) Double-click on WEBDEV.EXE to extract the 3 files (Note: You may need to close the DOS window after it runs and extracts files) (or use WinZip)
+</P
+><P
+>&#13;( 4) Double-click on WEBSYNC.EXE to run WebSync
+</P
+><P
+>&#13;( 5) Make sure you have My-T-Soft running, it is not minimized, and you have a keyboard open at about size 8
+</P
+><P
+>&#13;( 6) Double-click on EDITPAGE.HTM - this should open Internet Explorer - if you are on Windows 98, My-T-Soft, you should see the keyboard position itself on EDITPAGE, and hide on OVERVIEW - the 2 pages are linked to illustrate this approach of using the Devevloper's Kit &#38; VBScript with WebSync
+</P
+><P
+>&#13;( 7) All the details about the VBScript approach and WebSync are in the OVERVIEW.HTM - refer to this for notes &#38; implementation details
+</P
+><P
+>&#13;( 8) If you are running Windows NT/2000 or My-T-Pen/My-T-Touch, you will have to modify EDITPAGE.HTM and OVERVIEW.HTM to view example
+</P
+><P
+>&#13;( 9) Review OVERVIEW.HTM and the Web page "source" to see details.
+</P
+><P
+>&#13;(10) Quick Note: This example uses VBScript to communicate externally to WebSync, which uses the pre-compiled Developer's Kit executables to manipulate My-T-Soft.</P
+><P
+>Option 2</P
+><P
+>&#13;You can trigger events within My-T-Soft by using the My-T-Soft Setup | Configuration | Special Options' Run command.  This works best if you only have a small number of pages where you need a keyboard configuration, and/or you aren't using an advanced browser.  The following example assumes you have 1 page with a form on it (where the keyboard is required), and a second page indicating proper submission.
+</P
+><P
+>&#13;( 1) You need the window names (the "TITLE" tag for the HTML page) - assuming you are in control of these, you should create a small, but unique title to each page you want to trigger on.
+</P
+><P
+>&#13;( 2) Run My-T-Soft Setup | Configuration | Special Options.
+</P
+><P
+>&#13;( 3) Enter the text for the "form" window in the drop-down combo edit box (Application Window Name), e.g. "Please fill out form"
+</P
+><P
+>&#13;( 4) Click on Run EXE radio button, Browse to select Developer's Kit EXE (e.g. C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE)
+</P
+><P
+>&#13;( 5) Add command line parameters (C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE x:20 y:344)
+</P
+><P
+>&#13;( 6) Click OK
+</P
+><P
+>&#13;( 7) Repeat for second window, click on Special Options
+</P
+><P
+>&#13;( 8) Enter the text for the "submitted" window in the drop-down combo edit box (Application Window Name), e.g. "Thank you!"
+</P
+><P
+>&#13;( 9) Click on Run EXE radio button, Browse to select Developer's Kit EXE (e.g. C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE)
+</P
+><P
+>&#13;(10) Add command line parameters (C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE x:2000 y:344)
+</P
+><P
+>&#13;(11) Click OK
+</P
+><P
+>&#13;(12) Test with web pages
+</P
+><P
+>&#13;(13) Notes: You need at least 2 windows to make operation work as you'd expect.  To prevent an infinite loop, the Run EXE runs, and then is locked out until a different Run EXE event is triggered.
+</P
+><P
+>&#13;(14) The "React to Dialogs..." in My-T-Soft Setup | Configuration | Operation Options must be checked on to allow monitoring active windows.
+</P
+><P
+>&#13;(15) Only 64 characters from the Window Text (Window Name) are checked, and there is a max of 32 characters allowed in Special Options
+</P
+><P
+>&#13;(16) The name entered is matched against the whole name, so "Word" will match WordPad, Microsoft Word, WordPerfect, etc.
+</P
+><P
+>&#13;(17) This will drag on system resources, and may cause problems if you get a large number of entries in Special Options - this will depend on the speed of the system, memory, other applications running, etc., etc. so the exact number your particular system can handle before you notice speed issues will vary.  This is really meant for just a handful of specific windows, not a 100 different configurations.
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoiregisterdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="supportnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How Do I register / move DLL</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Support Notes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

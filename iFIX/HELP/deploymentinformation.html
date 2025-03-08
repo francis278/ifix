@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Deployment Information</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Files &#38; File Notes &#38; Installation Information"
+HREF="filesandinstallationinformation.html"><LINK
+REL="PREVIOUS"
+TITLE="Installation Information"
+HREF="installationinformation.html"><LINK
+REL="NEXT"
+TITLE="Operation Notes"
+HREF="operationnotes.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="installationinformation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="operationnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="DeploymentInformation"
+>Deployment Information</A
+></H2
+><P
+>&#13;	This section outlines relevant information if <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is going to be imaged via hard disk replication, incorporated into a different installation package, or handled externally from the publically provided installation approaches.  Please refer to the other sections in this chapter to have a basic level of understanding regarding the files and issues involved in the installation of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>This is a quick summary of the 3 steps typically used to prepare a master image - for more details and reference information, see below</B
+></SPAN
+></P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Install the software.  It is recommended you do not run the software until after the duplication.</P
+></LI
+><LI
+><P
+>Copy in custom configuration (if necessary).  If configured on a separate system, refer to <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup | File menu | Show Config File Location for location of configuration files.</P
+></LI
+><LI
+><P
+>Copy in company/site/deployment license (if applicable) - replace LICENSE.LIC in Installation folder.</P
+></LI
+></OL
+><P
+>&#13;	There are 3 main areas that need to be managed:  Deployment, Default Configuration, and Licensing
+	</P
+><P
+>&#13;	<SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Deployment</B
+></SPAN
+>
+	</P
+><P
+>&#13;	The goal of this step is to ensure that all the required files are on the target system.  For practical purposes, these are simply all the files and folders in the Installation folder, e.g. \Program Files\MYTSOFT.  Often, the default installation method can be used, with post installation management of configuration and license details handled after the installation.</P
+><P
+>&#13;	When Imaging, the basic approach is to install the software onto the master system, then perform any updates to configuration and license files, and then DO NOT RUN the software (as settings and files can be modified by running the software).</P
+><P
+>&#13;	For actual installation (i.e. including the software with an existing application), it is best to wrap the files into the existing application installation approach.  Refer to the Zip files in the extended download area, as these are the installation files without any installation add-ons - these are just the program files that need to be installed on a system in a compressed, single file zip format.  Often it is easiest to have a test system where normal installation / testing can take place, and refer to the information here, the post installation files on the test system, and also the MANIFEST.TXT text file (a post-build snapshot of the product files) in the installation folder for file details.
+	</P
+><P
+>&#13;	Doing folder comparisons, or simply testing on the target system (after imaging/installation), is the preferred approach to ensure the software has been deployed correctly.
+	</P
+><P
+>&#13;	<SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Default Configuration</B
+></SPAN
+>
+	</P
+><P
+>&#13;	The configuration is contained in the KEYBOARD.KBF / MYTSOFT.INI files (and the MAC*.KMF files if the macro panels are used).  Typically making sure the desired (correctly configured) files are the files in the installation folder is all that is necessary to bring a new/different default configuration when the software is run.
+	</P
+><P
+>&#13;	The simplest steps to create the desired configuration files are to configure the software as desired, then use the menu to Save Current Settings, and also Save Position.  To test, re-start the software and verify the configuration is correct.  Then obtain the KEYBOARD.KBF / MYTSOFT.INI file (refer to the ConfigPath setting / or use Setup | File menu | Show Config File Location), and use these on your master image or as part of the installation files.
+	</P
+><P
+>&#13;	After duplication, when a new user runs the software, they will receive a copy of these default configuration files from the Installation Folder.  They will then have their own personal copy which can be configured as they desire.  This is the default setting of the software (ConfigPath=1).  Note there are different approaches that could be taken with these configuration files based on the ConfigPath setting and permissions - for example, a fixed configuration for all users that cannot be modified.
+	</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Note: </B
+>If secure logon is required, the Logon Utilities require a registry entry in the WinLogon group, which is not managed by installation or via the configuration files.  This option requires proper configuration via the <A
+HREF="logonutilities.html"
+>Logon Utilities</A
+>.
+	</P
+></BLOCKQUOTE
+></DIV
+><P
+>&#13;	<SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Licensing</B
+></SPAN
+>
+	</P
+><P
+>&#13;	If using the default (retail) license scheme, you just need to ensure that the file LICENSE.LIC in the installation folder is the same as LICENSE.ORG (the as shipped license file).  If using any other type of license, refer to notes and instructions that were provided to you.  In most cases, this means that you will have been provided a custom LICENSE.LIC file, and this must be the file installed as LICENSE.LIC.
+	</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="installationinformation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="operationnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Installation Information</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="filesandinstallationinformation.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Operation Notes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

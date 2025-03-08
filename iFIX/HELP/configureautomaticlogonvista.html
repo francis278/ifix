@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Configure Automatic Logon for Windows</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Logon Utilities for Windows 8"
+HREF="logonutilitiesvista.html"><LINK
+REL="PREVIOUS"
+TITLE="Setup / Configure Logon Utility"
+HREF="mytsoft2keyboardvista.html"><LINK
+REL="NEXT"
+TITLE="My-T-Soft Technical Documentation"
+HREF="partthree.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="mytsoft2keyboardvista.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="partthree.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="ConfigureAutomaticLogonVista"
+>Configure Automatic Logon for Windows</A
+></H2
+><P
+></P
+><UL
+><LI
+><P
+>Open <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Logon Utilities from Start Menu | (All) Programs | <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> </P
+></LI
+><LI
+><P
+>Select Setup Automatic Logon </P
+></LI
+></UL
+><P
+>&#13;<DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="images/logonautologonsetup.png"
+ALIGN="center"></P
+></DIV
+>
+</P
+><P
+>There are 3 options available </P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Enable Auto Logon</P
+></LI
+><LI
+><P
+>Default Logon Name</P
+></LI
+><LI
+><P
+>Default Password</P
+></LI
+></OL
+><P
+>The Name and Password fields are disabled unless the Enable Auto Logon is checked On.</P
+><P
+>Check Enable Auto Logon On to enable the automatic logon of the Default User / Default Password combination.  You must enter a valid User Name along with the proper Password to ensure proper operation of the Automatic Logon. </P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Notes:</I
+></SPAN
+></P
+><P
+></P
+><UL
+><LI
+><P
+>If the Default User Name has a blank Password, this option will only work once - the next time you turn on the system, the Name / Password Logon screen will appear.  A Password must be entered to ensure proper operation of the Automatic Logon.</P
+></LI
+><LI
+><P
+>You must have Administrator Rights to update the system with any changes. </P
+></LI
+></UL
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Technical Notes: </B
+>
+This section and settings are just a convenient user interface to registry settings specified by Microsoft (dating back to Window NT) to allow an automatic user logon.  There are security issues - check with a System Administrator if there are any questions about using this convenience feature.  There are 3 entries affected by this section: DefaultUserName, DefaultPassword, and AutoAdminLogon in the HKEY_LOCAL_MACHINE/Software/Microsoft/Windows NT/CurrentVersion/WinLogon registry key.  When enabled, AutoAdminLogon=1, and when disabled, AutoAdminLogon=0.  The DefaultPassword entry is stored as plain text.  For an automatic logon, AutoAdminLogon=1, and a valid DefaultUserName with correct DefaultPassword must be set.
+</P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="mytsoft2keyboardvista.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="partthree.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Setup / Configure Logon Utility</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="logonutilitiesvista.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Technical Documentation</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

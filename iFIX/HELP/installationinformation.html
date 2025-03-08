@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Installation Information</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Files &#38; File Notes &#38; Installation Information"
+HREF="filesandinstallationinformation.html"><LINK
+REL="PREVIOUS"
+TITLE="My-T-Soft Files &#38; File Notes &#38; Installation Information"
+HREF="filesandinstallationinformation.html"><LINK
+REL="NEXT"
+TITLE="Deployment Information"
+HREF="deploymentinformation.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="filesandinstallationinformation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="deploymentinformation.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="InstallationInformation"
+>Installation Information</A
+></H2
+><P
+>CD/DVD may contain:</P
+><P
+>SETUP.EXE - Installation Assistant to determine platform / install files</P
+><P
+>AUTORUN.INF - AutoRun for AutoPlay CD/DVD</P
+><P
+>RELEASE.TXT - Release information</P
+><P
+>Located on the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Distribution media:</P
+><P
+>Compressed Files of the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Installation Files and:</P
+><P
+>README.TXT  - For the Experienced User</P
+><P
+>LICENSE.TXT - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> License Agreement</P
+><P
+>SETUP.EXE   - Setup Utility to Install <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> onto your Hard Drive</P
+><P
+>The IMG installer can support these options:</P
+><P
+>	/? Displays  a message box with info about options</P
+><P
+>	/Q (Quiet install) runs a quiet install (no dialogs/user interaction)</P
+><P
+>	/I (Install) runs a quiet install (no dialogs/user interaction)</P
+><P
+>	/U runs a quiet un-install (no dialogs/user interaction)</P
+><P
+>	/Q and /I are handled the same (customer requested /Q)</P
+><P
+>OnScreen Add-ons</P
+><P
+>WordLists Folder - contains available Word Lists</P
+><P
+>Speech Folder - Microsoft Speech Components, Text-To-Speech</P
+><P
+>The following information is for those users who are curious and
+	want to know, or wish to Uninstall <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> &#38; do not have the original
+	distribution media.</P
+><P
+>There are 2 approaches to Setup, an IMG installer and the Windows 
+	Installer (MSI).  The reason 2 installers are available is for flexibility
+	and support purposes.  Installing any product is a relatively easy process,
+	but can become complicated as more &#38; more features and capabilities are
+	included.  In any complicated sequential process, it is inevitable that some 
+	sequence or step is not handled properly.  By using a second approach, 
+	a verifiable comparison based mechanism is created
+	where a definitive end-result of files &#38; settings can be attained,
+	ensuring the integrity of the installation steps.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Post Installation information: </B
+>IMGUTIL.EXE performs
+	various post installation tasks.  For reference, if the installation media has 
+	LICENSE.LIC in the same folder as SETUP.EXE, or in the \LICENSE folder, IMGUTIL
+	will copy this into the installation folder (this is useful for evaluation and other
+	types of licensing).  If the installation media has a DK??????.ZIP file in the same
+	folder as SETUP.EXE, or in the \DEVKIT folder, it will be copied to the installation
+	folder.</P
+><P
+>For reference information, you can refer to the INSTALL.XML used by the IMG 
+	SETUP.EXE for all post installation operations.  In Windows Installer (MSI) installs, 
+	these same actions occur.</P
+></BLOCKQUOTE
+></DIV
+><P
+>SETUP.EXE will sense if <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is Installed or not. If
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is not installed, then Install must be checked to
+	Install the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> software.  If <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is already 
+	installed, you may Un-Install by selecting the Un-Install 
+	option and selecting OK throughout the following screens.  </P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>The following outlines relevant information about the MSI (Microsoft Installer) packages, and command line options to msiexec to manage installation with these files</B
+></SPAN
+></P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>IMPORTANT NOTE: </B
+>The MSI support is being phased out due to issues with User Account Control, Permissions, Security, Code-signing, and user support.  For best results, if using the MSI, do so as an Administrator with User Account Control disabled.  Another effective option is to run the CMD prompt and Run as Administrator, then use the appropriate msiexec command below.
+	</P
+></BLOCKQUOTE
+></DIV
+><P
+>&#13;	The MSI files are essentially databases of information used by the Windows Installer to install the files and setup a system. The executable to use is "msiexec.exe" and any appropriate command line switches. In general, if you double click on an MSI file, Windows launches msiexec with the /i install option (e.g. "msiexec /i prodver_target.msi"). </P
+><P
+>&#13;	For some basic, frequently asked for options, here are a few that can be used with the standard IMG MSI install files (these switches are not case sensitive):</P
+><P
+>&#13;	In these examples, the msi file should be replaced with the msi file you want to operate on</P
+><P
+>&#13;	msiexec /i mts178_2000xp.msi (This installs My-T-Soft 1.78 (using the user interface))</P
+><P
+>&#13;	msiexec /qn /i mts178_2000xp.msi (This silently installs My-T-Soft 1.78 (with NO user interface))</P
+><P
+>&#13;	msiexec /qn /x mts178_2000xp.msi (This silently un-installs My-T-Soft 1.78 (with NO user interface))</P
+><P
+>&#13;	msiexec /a mts178_2000xp.msi /qn TARGETDIR="C:\Documents and Settings\Full User\Desktop\Test" (This silently installs My-T-Soft 1.78 (with NO user interface) to a different target directory (for testing, etc.))</P
+><P
+>&#13;	Further notes on command line switches:</P
+><P
+>&#13;	/a = Administrative install - allows use of TARGETDIR override</P
+><P
+>&#13;	/i = standard install</P
+><P
+>&#13;	/x = standard un-install</P
+><P
+>&#13;	/q? = user interface options</P
+><P
+>/qn = Displays no user interface.</P
+><P
+>/qb = Displays a basic user interface.</P
+><P
+>/qr = Displays a reduced user interface with a modal dialog box displayed at the end of the installation.</P
+><P
+>/qf = Displays the full user interface with a modal dialog box displayed at the end.</P
+><P
+>/qn+ = Displays no user interface, except for a modal dialog box displayed at the end.</P
+><P
+>/qb+ = Displays a basic user interface with a modal dialog box displayed at the end.</P
+><P
+>/qb- = Displays a basic user interface with no modal dialog boxes.</P
+><P
+>For further info on msiexec.exe, refer to Microsoft's documentation. </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="filesandinstallationinformation.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="deploymentinformation.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Files &#38; File Notes &#38; Installation Information</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="filesandinstallationinformation.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Deployment Information</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

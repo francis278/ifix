@@ -1,0 +1,617 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Command Line Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Operation Notes"
+HREF="operationnotes.html"><LINK
+REL="PREVIOUS"
+TITLE="Memory"
+HREF="memorynotes.html"><LINK
+REL="NEXT"
+TITLE="Build-A-Board Support"
+HREF="buildaboardsupport.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="memorynotes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 9. Operation Notes</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="buildaboardsupport.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="CommandLineOptions"
+>Command Line Options</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Quick Reference (Command line options)</B
+></SPAN
+></P
+><P
+></P
+><UL
+><LI
+><P
+>-NoSplash [Open without splash screen]</P
+></LI
+><LI
+><P
+>!Minimize [Open in the as configured minimized state]</P
+></LI
+><LI
+><P
+>DEFERSKIPMSG [If this is found in the command line, it only affects the second instance - the default actions will occur, but no message (no dialog/MessageBox) will be shown (see below for notes/details)]</P
+></LI
+><LI
+><P
+>DEFERNOACTION [If this is found in the command line, it only affects the second instance - nothing will occur when the EXE is launched - the second EXE will just close itself (see below for notes/details)]</P
+></LI
+><LI
+><P
+>/k=mynew.kbf [Override KeyBoard File (must be in Config Path location)]</P
+></LI
+><LI
+><P
+>/i=mynew.ini [Override Initialization File (must be in Config Path location)]</P
+></LI
+><LI
+><P
+>x=123[%] [Override opening x screen position, add % to use screen percentages (calculated)]</P
+></LI
+><LI
+><P
+>y=321[%] [Override opening y screen position, add % to use screen percentages (calculated)]</P
+></LI
+></UL
+><P
+>Prior to Version 1.76, the only command line option was the ability to specify
+	the NoSplash setting - see NoSplash in the Iniitialization file description.
+	[Path]\MYTSOFT.EXE -NoSplash
+	In the implementation, the - (dash) is actually the trigger, and the notes
+	specify NoSplash only as a description so maintainers can understand
+	what the command line means - it is not required, and in fact, can be
+	anything as long as there is a - (dash).</P
+><P
+>In the 1.79 release, a command line based "Open in the minimized state" has been added.  Prior to this, the shortcut link properties needed to be modified to indicate the "Run:" state as Minimized (instead of Normal Window (or Maximized)).  This is implemented similar to the -NoSplash and can be used as !Minimize or Minimized! - the exclamation point character is the trigger, and if it is present, the internal operation will match the Show Window properties from the shortcut link.  It is recommended you include the text of Minimize or Minimized for future maintainers.</P
+><DIV
+CLASS="important"
+><BLOCKQUOTE
+CLASS="important"
+><P
+><B
+>Important: </B
+>In the 1.78 release, the ConfigPath setting determines the default location
+	for the user's configuration file.  These notes apply to this location.  For example,
+	if you are specifying a different layout, it must reside in the user's specific path, if
+	ConfigPath=1 (default) is set in the Initialization file.  See ConfigPath setting in the 
+	<A
+HREF="initializationfile.html"
+>Initialization file</A
+> for further details on location	
+	You may also reference the configuration files location from the File menu in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup</P
+></BLOCKQUOTE
+></DIV
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>DEFER overrides - DEFERSKIPMSG &#38; DEFERNOACTION: </B
+>
+	In 1.79, 2 new DEFER overrides have been added to change the operation of the second instance of the EXE when launched.  With no option, the default action is to find the existing Window, restore from minimized state (if in a minimized state), position the keyboard window at the center bottom of the screen, and display a message indicating only one process (window) can be running.  For situations where this message, or these actions are undesirable, one of these 2 options can be included in the shortcut's command line, and change these actions.  If DEFERSKIPMSG is included in the command line, all actions will occur, but the final dialog (MessageBox) will NOT be shown.  The second instance will open/position the running software, and then close.  If DEFERNOACTION is included in the command line, the second instance will perform no actions, and simply close.  Running a second instance of the EXE with the DEFERNOACTION option will result in no feedback to the user.
+	</P
+></BLOCKQUOTE
+></DIV
+><P
+>In the 1.76 release, in addition to the -NoSplash code, there is support
+	for a /k=[file] and/or a /i=[file].  These provide an override to the default
+	KEYBOARD.KBF (/k) and MYTSOFT.INI (/i).</P
+><P
+>There should be no spaces in the command line entry, except to separate
+	multiple entries.</P
+><P
+>(e.g. C:\Program Files\MYTSOFT\MYTSOFT.EXE /k=mykbf.kbf /i=mykbf.ini -NoSplash)</P
+><P
+>The [file] specified must reside in the current configuration folder, as specified by the ConfigPath setting in the Initialization File (except in Terminal Server version).</P
+><P
+>The code checks for both upper &#38; lowercase k (K) and i (I).  The trigger
+	is the = (equal) sign, and the code looks to the previous character
+	for the k or i, and the following characters up until a space or end of
+	line for the [file].</P
+><P
+>The /k option updates the KEYBOARD.KBF file with the specified
+	[file].  There is no error checking to guarantee the file exists, or that
+	it is a valid KBF file, so care should be used when implementing
+	these options.  The [file] specified with the /k option MUST be a copy
+	of a previously saved configuration (i.e. copy KEYBOARD.KBF to 
+	MYKBF.KBF).  A Build-A-Board 2.10 generated KBF file may also
+	be used.</P
+><P
+>The /i option references the given [file] for configuration information,
+	instead of the default MYTSOFT.INI, allowing different settings to
+	be used.</P
+><P
+>The implementation of the 2 options is internally different (because of
+	internal design).  The /k option for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> actually copies the
+	specified [file] to KEYBOARD.KBF, then continues on as normal.  The
+	/i option internally references the specified [file], leaving the default
+	MYTSOFT.INI file intact.</P
+><P
+>In order to ensure proper operation, certain settings (panels, colors,
+	etc.) are written to the INI file when the /k option is used.  This is done
+	to ensure a match between the layout information, and the details in the
+	INI file.  When the /k override in the command line is used, the following
+	occurs:</P
+><P
+></P
+><UL
+><LI
+><P
+>The specified [file] is copied to KEYBOARD.KBF</P
+></LI
+><LI
+><P
+>If only the /k option is used, overlapping features from the specified
+	configuration [file] are written to the MYTSOFT.INI.</P
+></LI
+><LI
+><P
+>if both /k and /i options are used, the INI settings will be used.
+	Therefore, a "matched" pair should be used whenever both options
+	are specified.</P
+></LI
+><LI
+><P
+>If the /k is used, any other "launch" should probably also require the 
+	/k option to ensure the desired layout appears.</P
+></LI
+></UL
+><P
+>A "matched" pair means saving both Settings and Position, then closing
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  Copy the KEYBOARD.KBF to MYNEW.CFG, and MYTSOFT.INI
+	To MYNEW.INI.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Additional Implementation Notes: </B
+>
+	The command line overrides will use the current configuration location - see <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup | File menu | Show Config File Location to identify the current user configuration file location.  Custom files need to be in this location.  The /i=mynew.ini INI override has a quirk - because of internal backup code, the custom named INI should be in the program files location, i.e. \Program Files\MYTSOFT.  For ease of use, you can duplicate files in both locations.  Often if there are no specific INI settings that affect operation, and the primary motivation is to use a different layout, it is easiest to only specify the KBF, e.g. /k=mynew.kbf (the KBF must be in the Config File Location).
+	</P
+></BLOCKQUOTE
+></DIV
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Terminal Server Note: </B
+>In the Terminal Server version, the file must reside in the current user's folder.</P
+></BLOCKQUOTE
+></DIV
+><P
+>In the 1.77 release, an X/Y coordinate can also be used, e.g X:200 Y:300
+	(e.g. C:\Program Files\MYTSOFT\MYTSOFT.EXE -NoSplash x:200 y:300)</P
+><P
+>The implementation looks for either the : (colon) character, or the = (equal sign), and
+	looks at both upper or lower case x (X), y (Y).  So X=200 and Y=300 will also be
+	recognized.  Negative numbers can be used.  There should be no spaces in the 
+	command line except to separate options.</P
+><P
+>In the 1.78 Release 2, a percent sign character can be used to position the X/Y coordinates based on the relative position specified (percent of total screen resolution), rather than a fixed location, e.g. x:34% y:70%.</P
+><P
+>The implementation requires the % character to immediately follow the numeric value.  Valid values for X/Y must be in the range 0-100 - negative numbers or numbers over a 100 will revert to acceptable values.  The calculation includes the size of the keyboard window, and will keep the entire window visible, so it is a dynamic calculation based on the specified percent, the screen resolution, and the current size of the window.  Some examples: [C:\Program Files\MYTSOFT\MYTSOFT.EXE x:20% y:75%], or [C:\Program Files\MYTSOFT\MYTSOFT.EXE -NoSplash x=75% y=50%].</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Note: </B
+>When opening in the minimized state with the minimize option as a Window (Floating Window), these X/Y command line overrides will be applied to the floating window.  Refer to ButtonOverrideW/H and ButtonOverrideX/Y for additional control options specific to the floating window minimize option at startup.</P
+></BLOCKQUOTE
+></DIV
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Troubleshooting / Diagnosing Startup</B
+></SPAN
+></P
+><P
+>In the 1.78 Release 2, "STARTDEBUG" can be used as the command line to display to the screen key code points during the initialization of the software.  During the program startup, there is a direct to display "Reached Code Marker ID" code indication. As the code progress and reaches key points in the startup sequence, a code marker (e.g. 1003) is reached, and using a direct to display debugging feature, the code marker is directly displayed on the left side of the system display. If there is an error or other problem starting, the last code marker display will help indicate where the code stopped, and what it was doing.
+</P
+><P
+>The following is the list of the codes and what has happened up to that point:</P
+><P
+></P
+><UL
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1001</B
+></SPAN
+> In WinMain code, no system calls made yet</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1002</B
+></SPAN
+> After check for Window already existing (Previous Instance)</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1003</B
+></SPAN
+> After Class Registered with system (Register Class) Pre Window Creation</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1004</B
+></SPAN
+> After Window created</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1005</B
+></SPAN
+> Free System Timer verified, internal variables initialized</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1006</B
+></SPAN
+> DLL's attached</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1007</B
+></SPAN
+> Macro file verified / loaded, Read from INI</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1008</B
+></SPAN
+> If Win Logon, IMGSERV.EXE launched (95/98/Me) - post launch (Code after OpenFirst=1 drop-out)</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1009</B
+></SPAN
+> Several system calls completed</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1010</B
+></SPAN
+> After Keyboard Layout read in / prepare for paint</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1011</B
+></SPAN
+> System Timer set - last spot before paint</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1012</B
+></SPAN
+> After paint, pre System hooks (95/98/M3/NT)</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1013</B
+></SPAN
+> After System hooks set (95/98/M3/NT)</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1014</B
+></SPAN
+> Final call to DLL's, last spot before message loop</P
+></LI
+><LI
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>1015</B
+></SPAN
+> After message loop, before all internal cleanup</P
+></LI
+></UL
+><P
+>There are also several "critical error" spots that can be tested easily (refer to ConfigPath setting to ensure you are working with correct file location!)</P
+><P
+>1) Rename MAC00000.KMF to something else (KM, BAK, etc.)</P
+><P
+>Run <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> - it will stop after 1006 and return false in WinMain</P
+><P
+>2) Rename MYTSOFT.INI to something else (IN, HLD, etc.)</P
+><P
+>Run <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> - it will stop after 1006 and return false in WinMain</P
+><P
+>3) Rename KEYBOARD.KBF to something else (KB, HLD, etc.)</P
+><P
+>Run <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> - it will stop after 1009 and return false in WinMain</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Note: </B
+>A normal startup will show through 1014 (and not show 1015 unless you close the software).  Setting ClassWatch &#38; WindowWatch in the INI file will identify if message loop is reached, and that the process is acting normally (outside of actual window display).  When this setting is enabled, the results will be shown on the top lines of the screen.</P
+></BLOCKQUOTE
+></DIV
+><P
+>As a separate reference, these details were asked by a customer doing custom integration work, and the following is a generalized flow of the startup &#38; important events when the executable is started.</P
+><P
+></P
+><UL
+><LI
+><P
+>Opening Check - should MTSOPEN.EXE be run (reference OpenFirst settings in INI file)</P
+></LI
+><LI
+><P
+>Verify MYTLIB.DLL (Existence, LoadLibrary)</P
+></LI
+><LI
+><P
+>Register Window Class (RegisterClassEx)</P
+></LI
+><LI
+><P
+>Create Windows (CreateWindowEx)</P
+></LI
+><LI
+><P
+>Verify System Timer Available</P
+></LI
+><LI
+><P
+>Initialize variables, global memory, files, etc.</P
+></LI
+><LI
+><P
+>Interface Libraries (LoadLibrary)</P
+></LI
+><LI
+><P
+>INI File</P
+></LI
+><LI
+><P
+>Keyboard Configuration file</P
+></LI
+><LI
+><P
+>Show/Update window (splash window - see Note below)</P
+></LI
+><LI
+><P
+>Message Loop</P
+></LI
+></UL
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Splash Window Note (Window painting/WM_PAINT): </B
+>The NoSplash setting in the INI file or command line -NoSplash can be used for removing splash.  The splash processing is an added sequence prior to normal painting.</P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="memorynotes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="buildaboardsupport.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Memory</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="operationnotes.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Build-A-Board Support</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

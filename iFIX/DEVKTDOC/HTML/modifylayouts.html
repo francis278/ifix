@@ -1,0 +1,635 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Modifying Keyboard Layouts</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="Keyboard based utilities"
+HREF="keyboard.html"><LINK
+REL="NEXT"
+TITLE="Add-On DLL Template"
+HREF="addondll.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="keyboard.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="addondll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="ModifyLayouts"
+>Modifying Keyboard Layouts</A
+></H1
+><P
+>FOLDER: LAYOUTS</P
+><P
+>TYPE: Keyboard Layout source for My-T-Soft</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: ASM (Assembler files)</P
+><P
+>IDE: Text editor / NASM</P
+><P
+>The Keyboard Macro File (KMF) - (e.g KYBD0001.KMF) controls the display &#38; operation of the particular layout for My-T-Soft (My-T-Touch/My-T-Pen), etc.</P
+><P
+>The layout itself is a binary file, which is generated from an ASM  (e.g. ASeMbler).  The reason for this is the file layout structure - it is a set of offsets &#38; links, so that all of the data can be variable length.  Over time, certain areas have become fixed, while other areas are changed to create the different layouts.</P
+><P
+>The following documents and provides an overview to the sections within the ASM file.  Before getting into all the detail, here is a quick example of modifying one of the files:</P
+><P
+>Quick Example</P
+><P
+>You want to change the # symbol to a + symbol in the normal US 101 layout.  Edit KEYBRD01.ASM with your favorite text editor, find the LBL000: section, find the # symbol (e.g. LBL003: DB '#',0)</P
+><P
+>And change it to LBL003: DB '+',0 </P
+><P
+>Save the file</P
+><P
+>Now rebuild the KMF file:</P
+><P
+>nasmw -f bin KEYBRD01.ASM -o KYBD0001.KMF</P
+><P
+>Overwrite the existing KYBD0001.KMF in \Program Files\[ProductDir], and when this layout is used (e.g. Keyboard=1 in the INI file), the shift-3 key will show a + symbol instead of the # symbol.</P
+><P
+>A few notes on the example:</P
+><P
+>In general, it is recommended that you preserve the existing files (unless there is a fundamental problem that you are trying to resolve), and use numbers in the 3000 range (e.g. KYBD3001.KMF).  You should also modify the layout name in the ENDDATA at the end of the file (or with LAYOUT_NAME in those that have the LAYOUT_NAME define), so there is a unique entry in the Keyboard layout selection in Setup.</P
+><P
+>Modifying KMF Source files (ASM files)</P
+><P
+>A quick lesson in assembler syntax:</P
+><P
+>The EQUs are equates, or macro replacements (similar to #define in C)  These should not be touched.</P
+><P
+>DB means Define Byte (or create a single Byte of data based on the following human readable entry)</P
+><P
+>DW means Define Word (or double byte, 16-bits)</P
+><P
+>DD means Define Double word (or 32-bit value)</P
+><P
+>A label is a non-reserved word followed by a colon, e.g. KEY000:</P
+><P
+>Text can be represented with single-quotes, e.g. This is some text,0 (always end text with a null terminating byte, in case it us used as a string internally!)
+Decimal values are OK, but hex is used often.  To represent hexadecimal, use a leading 0 and a trailing H, e.g. 020H is 2x16+0, or 32 decimal - these are all the same when compiled to binary:</P
+><P
+>DB 32  ;this is a decimal 32, or a byte with a decimal value of 32 will be placed into the file</P
+><P
+>DB 020H ; hexadecimal representation of 32 decimal, e.g. a 2 in the 16s place and a 0 in the ones place</P
+><P
+>DB   ;this is a text - the character for the space is decimal 32</P
+><P
+>ASM File Overview</P
+><P
+>For all practical purposes, these are the 12 areas to be familiar with:</P
+><P
+>1) The header (after the equates (EQU is like #define in assembler)).  This is followed by a long listing of offsets, handled as fixed length data objects, with various offsets into this table kept in the header.</P
+><P
+>2) The KEY scan codes, e.g. KEY000:</P
+><P
+>3) The Label pool,e.g. LBL000:</P
+><P
+>4) The IDKeys section KMF001: (normal display)</P
+><P
+>5) The IDShiftKeys section KMF002: (Shifted display)</P
+><P
+>6) The IDShiftAltGrKeys section KMF003: (Shift AltGr display)</P
+><P
+>7) The IDAltGrKeys section KMF004: (AltGr display)</P
+><P
+>8) (* NOT RELEVANT IN ALL LAYOUTS!) The IDKeysCAPS section KMF005: (normal display - CAPS overrides)</P
+><P
+>9) (* NOT RELEVANT IN ALL LAYOUTS!) The IDShiftKeysCAPS section KMF006: (Shifted display - CAPS overrides)</P
+><P
+>10) (* NOT RELEVANT IN ALL LAYOUTS!) The IDShiftAltGrKeysCAPS section KMF007: (Shift AltGr display - CAPS overrides)</P
+><P
+>11) (* NOT RELEVANT IN ALL LAYOUTS!) The IDAltGrKeysCAPS section KMF008: (AltGr display - CAPS overrides)</P
+><P
+>12) The Layout Name (ENDDATA)</P
+><P
+>In most layouts, only the labels need to change (and in some international layouts, occasionally the KEY scan codes may require some changes).</P
+><P
+>This is how the file is laid out:</P
+><P
+>Header</P
+><P
+>Fixed Table of offsets into actual data</P
+><P
+>Actual data</P
+><P
+>This file structure allows variable actual data, while the reference (or offset/pointer) to it is always in the same location.  By keeping the raw data in Assembler form, it can be edited fairly easily by humans (once you become familiar with the areas &#38; the implementation).  Because the format is compact in its binary form, does not need to be changed that often, the format has stuck.</P
+><P
+>ASM File Details</P
+><P
+>Here are the details on the sections:</P
+><P
+>######################################################################</P
+><P
+>### (1) HEADER EXCERPT ###################################################</P
+><P
+>The first 32 bytes are a header</P
+><P
+>Note the KeyLabelOffset coded here, and used in the Key Label "lookup" below</P
+><P
+>DB      'MK77'  ;signature, subject to change BYTE 0,1,2,3</P
+><P
+>DB      32      ;Length of header (32) BYTE 4</P
+><P
+>DD      OFFSET ENDDATA  ;File Pointer to next entry (5 bytes) BYTE 5,6,7,8,9</P
+><P
+>DB      0</P
+><P
+>DD      65536   ;File ID           BYTE 10,11,12,13</P
+><P
+>DW      0       ;Reserved BYTE 14,15</P
+><P
+>DW      0       ;ScancodeOffset   BYTE 16,17</P
+><P
+>DW      256     ;QuickHelpOffset  BYTE 18,19</P
+><P
+>DW      476     ;BaseMacroOffset  BYTE 20,21</P
+><P
+>DW      542     ;KeyLabelOffset   BYTE 22,23</P
+><P
+>DW      772     ;MacroPanelOffset BYTE 24,25  ;Base KMF look up tables</P
+><P
+>DW      0       ;PanelKeyOffset   BYTE 26,27</P
+><P
+>DW      0       ;Char Set         BYTE 28,29</P
+><P
+>DW      0       ;Attributes       BYTE 30,31</P
+><P
+>The Char Set (28/29), and Attributes (30,31) are the only items that should
+be changed.  The Char Set matches the ANSI code page, as defined by Microsoft
+The relevant ones are documented in the My-T-Soft help under Fonts.</P
+><P
+>The Attributes are bits that signify certain internal operation.</P
+><P
+>Low Byte is bits for specific handling</P
+><P
+>Internal Header #defines:</P
+><P
+>#define KMFHDR_TRACKALTGR         0x0001</P
+><P
+>#define KMFHDR_NOLOWERCASEDISPLAY 0x0002  (NOT USED ANYMORE)</P
+><P
+>/* Asian Keyboards */</P
+><P
+>#define KMFHDR_CODEPAGEINENDDATA  0x0004</P
+><P
+>/* Localized KMF files / keys over 104 (ScaleAFont) 1.78*/</P
+><P
+>#define KMFHDR_LOCALIZEDKMFFILE   0x0008</P
+><P
+>/* Weird handling (in code) - Use 16 values in low nybble of high byte */</P
+><P
+>#define KMFHDR_HEBREWHANDLING     0x0100</P
+><P
+>#define KMFHDR_FRENCHHANDLING     0x0200 (Old, could use CAPSTABLES)</P
+><P
+>#define KMFHDR_MULTIBYTEHANDLING  0x0400</P
+><P
+>#define KMFHDR_CAPSTABLES         0x0800</P
+><P
+>######################################################################</P
+><P
+>### KEY EXCERPT ######################################################</P
+><P
+>The KEY entries are the actual scan codes</P
+><P
+>This is the scan code pool (lookup table) for the KMF000 entries below</P
+><P
+>KEY000: DW      0001BH</P
+><P
+>KEY001: DW      00070H</P
+><P
+>KEY002: DW      00071H</P
+><P
+>KEY003: DW      00072H</P
+><P
+>######################################################################</P
+><P
+>### Label Pool -LBL EXCERPT ##########################################</P
+><P
+>These are the labels used on the displayed keys</P
+><P
+>This is the Label pool (lookup table) for the different keyboard
+states KMF001, KMF002, KMF003, KMF004</P
+><P
+>e.g. Regular, Shifted, Shift Alt-Gr, and Alt-Gr</P
+><P
+>LBL000: DB '~',0</P
+><P
+>LBL001: DB '!',0</P
+><P
+>LBL002: DB '@',0</P
+><P
+>LBL003: DB '#',0</P
+><P
+>LBL004: DB '$',0</P
+><P
+>SPECIAL LABEL NOTES:</P
+><P
+>Use Unicode character - 255,'U',D1,D2,D3,D4 where D1-D4 is hex "text" 
+representation, e.g. DB 255,'U','0','6','D','E' - or use Unicode value 06DEH, 
+(or 0x06de) (or unicode value 1758 (in decimal))</P
+><P
+>Also DB 0xFF,'U','0','6','D','E'</P
+><P
+>Note the ending 0 is not assumed or required, but ALL 4 Unicode hex digits
+are required!</P
+><P
+>The unicode character makes the most sense with KMFHDR_CODEPAGEINENDDATA,
+as these characters most likely will require a special code page for
+the WideCharToMultiByte to pull them up &#38; display correctly.  In general,
+this really isn't the unicode character, as the code page limits what
+will really be displayed.</P
+><P
+>Use Multiple Unicode characters - 255,'M',D1,D2,D3,D4,D1,D2,D3,D4,0 or
+255,'M',D1,D2,D3,D4,D1,D2,D3,D4,D1,D2,D3,D4,0</P
+><P
+>This works very similar to above (with same issues with code pages) The internal logic always assumes at least 2 characters (e.g. if there was only 1, use the 'U' above, not the 'M'!).</P
+><P
+>The third character is optional, and the check for the ending 0 (null value) is used to see if only 2 (or if there is a third).  Internally, the M is changed to a U and the code falls through into the handling for U automatically.  The characters 2 and 3 may have spacing issues, depending on the actual character.  Although this was implemented &#38; tested, it does not fully handle the spacing for the 2nd (or 3rd) characters.  In general, this shouldn't be used, but was left in the code in case it needed to
+be improved at a later time.</P
+><P
+>Override character length as 1 - 255,'1',C1,[C2,][C3,][C...,]0, this allows multiple characters to be used, but the font size will be used internally as if only 1 character is used.</P
+><P
+>If the KMFHDR_CAPSTABLES attribute is used (0800H), there is also an "override" label available.  By specifying a 3 character entry, e.g. 0FFH,0FFH,0BDH, (or 255,255,[some other char value]), this type of entry will use the third character without any modification (since some of the internal caps logic says if it is a 1 character label, use AnsiUpper/AnsiLower if LowerCaseDisplay=1 in the INI)  This forced upper/lower case change for single character displays can cause some issues on international layouts, and if it affects a normal or shifted state (e.g. KMF001/KMF002), using a label with the 3 character override (leading 255,255/0FFH,0FFH) will allow selection of the unmodified character value for display.</P
+><P
+>######################################################################</P
+><P
+>### IDKeys - KMF EXCERPT #############################################</P
+><P
+>IDKeys</P
+><P
+>This is the regular layout</P
+><P
+>Note the 542 offset to refer to the LBL pool</P
+><P
+>KMF001: DW 542+21    ;Esc</P
+><P
+>DW 542+22  ;F1</P
+><P
+>DW 542+23  ;F2</P
+><P
+>######################################################################</P
+><P
+>### IDShiftKeys - KMF EXCERPT ########################################</P
+><P
+>IDShiftKeys</P
+><P
+>This is the shifted layout</P
+><P
+>0 means no change from the regular, rather than no display</P
+><P
+>The 542 offset is used to refer to the LBL pool</P
+><P
+>KMF002: DW 0  ;Esc</P
+><P
+>DW 0  ;F1</P
+><P
+>DW 0  ;F2</P
+><P
+>######################################################################</P
+><P
+>### IDShiftAltGrKeys - KMF EXCERPT ###################################</P
+><P
+>IDShiftAltGrKeys</P
+><P
+>This is the shifted Alt-Gr layout</P
+><P
+>0 means no display</P
+><P
+>The 542 offset is used to refer to the LBL pool</P
+><P
+>KMF003: DW 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0   ;20</P
+><P
+>DW 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0   ;20</P
+><P
+>######################################################################</P
+><P
+>### IDAltGrKeys - KMF EXCERPT ########################################</P
+><P
+>IDAltGrKeys</P
+><P
+>This is the Alt-Gr layout</P
+><P
+>0 means no display</P
+><P
+>The 542 offset is used to refer to the LBL pool</P
+><P
+>KMF004: DW 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0   ;20</P
+><P
+>DW 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0   ;20</P
+><P
+>######################################################################</P
+><P
+>### CAPS SECTION - SIMILAR TO ABOVE###################################</P
+><P
+>0 means no change from the current display, rather than no display</P
+><P
+>KMF005 is CAPS override to KMF001</P
+><P
+>KMF006 is CAPS override to KMF002</P
+><P
+>KMF007 is CAPS override to KMF003</P
+><P
+>KMF008 is CAPS override to KMF004</P
+><P
+>As overrides, they should be 0, unless the CAPS state for that key
+label is wrong.  If it is wrong, then you need to specify the correct
+label, e.g. 542+123 - the internal logic, says if this is not 0, then
+lookup the specified label &#38; use that rather than what would have
+been displayed.</P
+><P
+>######################################################################</P
+><P
+>### Layout Name (ENDDATA) ############################################</P
+><P
+>ENDDATA:</P
+><P
+>DB '104 United States Standard',0</P
+><P
+>_TEXT   ENDS</P
+><P
+>Building KMF Files from ASM files</P
+><P
+>This section defines how to build the asm files</P
+><P
+>These examples are for the Borland Turbo Assembler (i.e. TASM), used by IMG.  These notes are for IMGs developers only - see below for using NASM.</P
+><P
+>This is for 101 layouts (%1 = 23 for example):</P
+><P
+>TASM KEYBRD%1</P
+><P
+>TLINK /3/x/t KEYBRD%1,KYBD00%1.KMF</P
+><P
+>DEL KEYBRD%1.OBJ</P
+><P
+>This is for 104 layouts (%1 = 123 for example):</P
+><P
+>TASM KYBD0%1</P
+><P
+>TLINK /3/x/t KYBD0%1,KYBD0%1.KMF</P
+><P
+>DEL KYBD0%1.OBJ</P
+><P
+>The layouts included in the Developers Kit have been modified slightly to work with nasm (GPL assembler).  The included zip nasm-0.98.39-win32.zip was downloaded on April 27, 2007 from http://nasm.sourceforge.net - (you may wish to go there and obtain the latest stable version).  The COPYING file describes the license for this software.  The modified KMF layout ASM files contain a %include nasm.inc to bypass &#38; ignore certain entries from the original TASM source files.</P
+><P
+>File: nasm.inc</P
+><P
+>%idefine offset</P
+><P
+>%idefine _TEXT </P
+><P
+>%idefine SEGMENT</P
+><P
+>%idefine PUBLIC</P
+><P
+>%idefine BYTE NOTHING EQU</P
+><P
+>%idefine ENDS</P
+><P
+>To build a KMF file for use with My-T-Soft, you can do the following with the nasm binaries in the nasm-0.98.39-win32.zip file.</P
+><P
+>nasmw -f bin KEYBRD01.ASM -o KYBD0001.KMF</P
+><P
+>The binary file can be copied to the \Program Files\[ProductDir] folder, and can be used directly.</P
+><P
+>There is a BUILD.BAT file that will make the typing a bit easier, e.g. you just specify the number (Build 01 for Keyboard 1, Build 105 for Keyboard 105, etc.).  Here is the BUILD.BAT text:</P
+><P
+>@echo off</P
+><P
+>if %1XX == XX goto NOGOOD</P
+><P
+>if exist KEYBRD%1.ASM goto BUILD101</P
+><P
+>if exist KYBD0%1.ASM goto BUILD104</P
+><P
+>goto NOMATCH</P
+><P
+>:BUILD101</P
+><P
+>nasmw -f bin KEYBRD%1.ASM -o KYBD00%1.KMF</P
+><P
+>ECHO Built KYBD00%1.KMF</P
+><P
+>GOTO END</P
+><P
+>:BUILD104</P
+><P
+>nasmw -f bin KYBD0%1.ASM -o KYBD0%1.KMF</P
+><P
+>ECHO Built KYBD0%1.KMF</P
+><P
+>GOTO END</P
+><P
+>:NOMATCH</P
+><P
+>Echo Problem finding an ASM file!!</P
+><P
+>ECHO "%1"</P
+><P
+>ECHO See following build specs:</P
+><P
+>goto NOGOOD</P
+><P
+>:NOGOOD</P
+><P
+>ECHO No ASM FILE SPECIFIED!  You must specify a specific </P
+><P
+>ECHO keyboard layout ASM file, e.g.</P
+><P
+>ECHO build 01[Enter]</P
+><P
+>ECHO -or-</P
+><P
+>ECHO build 102[Enter]</P
+><P
+>goto END</P
+><P
+>:END</P
+><P
+>Example &#38; instructions making changes between KMF &#38; testing</P
+><P
+>Test procedures in XP Pro</P
+><P
+>Some things to know about keyboards - AltGr, Dead Keys</P
+><P
+>AltGr - some international layouts provide a whole new mode to access even more characters.</P
+><P
+> The right-hand Alt key becomes AltGr (which I believe was originally for Alt Graphics), and it creates 2 possible new states - AltGr, and Shift-AltGr.</P
+><P
+>Dead Key - is an accenting key, used mostly for accent characters.  The way this works in practice, is you type the key, and NOTHING shows up !!! (hence, dead key), but when you type the next character that can be accented, e.g. e, you will see ï¿½instead of e.  Dead Keys (when typed on 2 times, will generate 2 accent characters - this is important when testing, since you can type a key &#38; get nothing, and this could mean 1 of 2 things - it is a blank/not used key, or it is a dead key!)</P
+><P
+>To test any layout, you must be in the appropriate "Locale" with the correct keyboard layout selected.  </P
+><P
+>For example, in Turkey, there is a Type F/Type Q layout.  If you have Type F in My-T-Soft, but Windows
+thinks it is Type Q, you'll have lots of problems.</P
+><P
+>This is the best way to test in Windows XP</P
+><P
+>Load Wordpad</P
+><P
+>Load the Locale</P
+><P
+>Set the font fairly large, e.g. 24 or 26</P
+><P
+>Type with the physical keyboard &#38; My-T-Soft keyboard to verify everything matches.</P
+><P
+>On All keys, you must press the key 2 or 3 times, to verify it is not a dead key (dead keys will not generate any visible output if only pressed once!)</P
+><P
+>For reference to layouts, you can try: http://www.microsoft.com/globaldev, then when loaded, on the left-hand column under the GlobalDev Home, find References | Keyboard Layouts.  Once at the layout page, you can select from the available layouts - this will load a popup that shows the layout/dead-keys, etc.</P
+><P
+>Some helpful hints:</P
+><P
+>Show the locale / internationalization / layout selection bar in a window - if floats towards the top-right</P
+><P
+>Compare physical keyboard to My-T-Soft results first, e.g. type with the physical keyboard, then type with My-T-Soft - they should match, then verify the display in My-T-Soft matches the results</P
+><P
+>These are 8 possible states to be aware of:</P
+><P
+>Normal, Shifted, Caps &#38; Caps-Shifted</P
+><P
+>If the keyboard supports AltGr, then you have:</P
+><P
+>Normal, Shifted, Caps, Caps-Shifted, AltGr, Shift-AltGr, Caps-AltGr, Caps-Shift-AltGr</P
+><P
+>Some advanced notes:</P
+><P
+>Setting KeyWatch=1 in the INI file, shows you the number of the key internal to My-T-Soft
+KeyWatch.exe (from Developer's Kit/KEYBOARD folder) shows virtual key/actual results for comparing physical keyboard/My-T-Soft generated keystrokes</P
+><P
+>Version 1.78 Release 2 - 5/4/2007</P
+><P
+>Copyright © 1993-2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are
+registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="keyboard.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="addondll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Keyboard based utilities</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Add-On DLL Template</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

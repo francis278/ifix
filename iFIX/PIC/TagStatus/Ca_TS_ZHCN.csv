@@ -1,0 +1,66 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Ca_TS.TEXT13,Arial,9,1, Values                , 数值                ,,
+Caption,Ca_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Ca_TS.TEXT3,Arial,9,0,Description:,描述:,,
+Caption,Ca_TS.DATALINK1,Arial,9,1,,,,
+Caption,Ca_TS.DATALINK2,Arial,9,0,,,,
+Caption,Ca_TS.DATALINK_PREV,Arial,9,1,,,,
+Caption,Ca_TS.TEXT10,Arial,9,0,Prev Block:,前一块:,,
+Caption,Ca_TS.TEXT11,Arial,9,0,Tagname:,标签名:,,
+Caption,Ca_TS.DATALINK_NEXT,Arial,9,1,,,,
+Caption,Ca_TS.TEXT12,Arial,9,0,Next Block:,下一块:,,
+Caption,Ca_TS.DataLink30,Arial,9,1,,,,
+Chart,Ca_TS.Chart3,Arial,9,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Ca_TS.DATALINK25,Arial,9,1,,,,
+Caption,Ca_TS.DATALINK27,Arial,9,1,,,,
+Caption,Ca_TS.Text69,Arial,9,1,Block Status:,数据块状态:
+Caption,Ca_TS.Text70,Arial,9,1,Value:,数值:
+Caption,Ca_TS.TEXT14,Arial,9,1,Current State,当前状态
+Caption,Ca_TS.DATALINK8,Arial,9,0,,
+Caption,Ca_TS.DATALINK9,Arial,9,0,,
+Caption,Ca_TS.DATALINK10,Arial,9,0,,
+Caption,Ca_TS.TEXT6,Arial,9,1,Engineering Units,工程单位
+Caption,Ca_TS.Text62,Arial,9,0,Low Limit:,低限:
+Caption,Ca_TS.Text63,Arial,9,0,High Limit:,高限:
+Caption,Ca_TS.Text64,Arial,9,0,Units:,单位:
+Caption,Ca_TS.TEXT8,Arial,9,1,Security Areas,安全区域
+Caption,Ca_TS.DATALINK11,Arial,9,0,,
+Caption,Ca_TS.DATALINK12,Arial,9,0,,
+Caption,Ca_TS.DATALINK13,Arial,9,0,,
+Caption,Ca_TS.Text65,Arial,9,0,1,1
+Caption,Ca_TS.Text66,Arial,9,0,2,2
+Caption,Ca_TS.Text67,Arial,9,0,3,3
+Caption,Ca_TS.TEXT4,Arial,9,0,A:,A:
+Caption,Ca_TS.DATALINK7,Arial,9,0,,
+Caption,Ca_TS.DATALINK14,Arial,9,0,,
+Caption,Ca_TS.DATALINK15,Arial,9,0,,
+Caption,Ca_TS.DATALINK16,Arial,9,0,,
+Caption,Ca_TS.DATALINK17,Arial,9,0,,
+Caption,Ca_TS.DATALINK18,Arial,9,0,,
+Caption,Ca_TS.DATALINK19,Arial,9,0,,
+Caption,Ca_TS.DATALINK21,Arial,9,0,,
+Caption,Ca_TS.DATALINK22,Arial,9,0,,
+Caption,Ca_TS.DATALINK23,Arial,9,0,,
+Caption,Ca_TS.DATALINK24,Arial,9,0,,
+Caption,Ca_TS.DATALINK26,Arial,9,0,,
+Caption,Ca_TS.DATALINK28,Arial,9,0,,
+Caption,Ca_TS.TEXT5,Arial,9,1,Output Calculation:,输出计算:
+Caption,Ca_TS.TEXT9,Arial,9,1, Inputs                                                                                     , 输入                                                                                     
+Caption,Ca_TS.DataLink31,Arial,9,0,,
+Caption,Ca_TS.DataLink32,Arial,9,0,,
+Caption,Ca_TS.DATALINK29,Arial,9,1,,
+Caption,Ca_TS.TEXT1,Arial,9,1,Alarms,报警
+Caption,Ca_TS.DATALINK33,Arial,9,0,,
+Caption,Ca_TS.DATALINK35,Arial,9,0,,
+Caption,Ca_TS.Text76,Arial,9,0,Areas:,区域:
+Caption,Ca_TS.Text78,Arial,9,0,Enabled:,启用:
+Caption,Ca_TS.TEXT7,Arial,9,0,B:,B:
+Caption,Ca_TS.TEXT15,Arial,9,0,C:,C:
+Caption,Ca_TS.TEXT16,Arial,9,0,D:,D:
+Caption,Ca_TS.TEXT17,Arial,9,0,E:,E:
+Caption,Ca_TS.TEXT18,Arial,9,0,F:,F:
+Caption,Ca_TS.TEXT19,Arial,9,0,G:,G:
+Caption,Ca_TS.TEXT20,Arial,9,0,H:,H:
+Caption,Ca_TS.DATALINK36,Arial,9,0,,
+Caption,Ca_TS.Text77,Arial,9,0,Counter:,计数:

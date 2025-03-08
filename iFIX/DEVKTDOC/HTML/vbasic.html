@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Visual Basic Examples / DLL of DevKit</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Language and Platform Examples"
+HREF="languageplatform.html"><LINK
+REL="PREVIOUS"
+TITLE="Language and Platform Examples"
+HREF="languageplatform.html"><LINK
+REL="NEXT"
+TITLE="Visual C++ Examples (Microsoft Visual C++ Version 6 Project)"
+HREF="visualc.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 7. Language and Platform Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="visualc.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="VBasic"
+>Visual Basic Examples / DLL of DevKit</A
+></H1
+><P
+>FOLDER: VBASIC</P
+><P
+>TYPE: Visual Basic project integrated with C based DLL</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: Visual Basic/Forms, and C / Windows API for DLL</P
+><P
+>IDE: Microsoft Visual Basic 6 / Microsoft Visual C++ 6</P
+><P
+>Welcome to the Visual Basic Example set for Developers!</P
+><P
+>1.77 Notes</P
+><P
+>Due to various changes in the DevKit utilities, and updates to the MTSDLL.DLL, this example is dated - refer to MTSDLL.DLL for code &#38; functionality and the MS-Access examples for up-to-date VB examples.</P
+><P
+>Refer to VBASIC6 for a folder with the project converted to Visual Basic 6 and updated to work with MTSDLL.DLL.  The original VBASIC folder has been preserved for compatibility with older versions of Visual Basic.</P
+><P
+>If there are any specific questions, please refer to the source code provided, and the original notes below.</P
+><P
+>This is an add-on to the Developer's Kit for IMG's My-T-Soft, My-T-Touch, and My-T-Pen to allow Visual Basic Developer's to access &#38; Use the Developer's Kit directly from Visual Basic.</P
+><P
+>MicroSoft Visual Basic Version Notes</P
+><P
+>This was built in VB 4.0 for maximum compatibility  if you open the project in later versions of Visual Basic, just say OK, OK, OK, OK, etc. to convert to the current version you are running.</P
+><P
+>Installation</P
+><P
+>The files are delivered in the Zip format (VBASIC.ZIP).</P
+><P
+>Default Install Locations:</P
+><P
+>My-T-Soft = C:\WINNT\MYTSOFT</P
+><P
+>Extract VB Examples to: C:\WINNT\MYTSOFT\VBASIC</P
+><P
+>My-T-Touch = C:\WINDOWS\MYTTOUCH</P
+><P
+>Extract VB Examples to: C:\WINDOWS\MYTTOUCH\VBASIC</P
+><P
+>My-T-Pen = C:\WINNT\MYTPEN</P
+><P
+>Extract VB Examples to: C:\WINDOWS\MYTPEN\VBASIC</P
+><P
+>To Install, do the following:</P
+><P
+>1) Windows Explorer to default install location</P
+><P
+>2) Create New Folder called "VBASIC (Right-click, New, Folder, then change "New Folder" to "VBASIC")</P
+><P
+>3) Copy VBASIC.ZIP (download file) to the new VBASIC folder</P
+><P
+>4) PKUNZIP or WinZip to extract files from VBASIC.ZIP</P
+><P
+>Some of the features assume that the Developer's Kit has already been "installed".  If the "Send Text Thru" or the "External Control" examples are not operating properly, then install the
+DevKit:</P
+><P
+>Start Menu | Programs | My-T-???? | Install Developer's Kit</P
+><P
+>Note: Only My-T-Soft Version 1.50 &#38; above, or NT/2000 Versions supports advanced Send Text Feature</P
+><P
+>Operation</P
+><P
+>The appropriate Project name (MYTSOFT.VBP, MYTTOUCH.VBP, or MYTPEN.VBP) should be run from a "VBasic" folder under the install directory of matching product.</P
+><P
+>**********************************************************</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DISCLAIMER</B
+></SPAN
+></P
+><P
+>The source code &#38; derived executable are provided at no 
+cost as useful &#38; instructional materials to developers &#38; 
+system integrators incorporating IMG software.  Because 
+no licensing fee has been tendered, there is no technical 
+support offered for this software, source code, or its 
+capabilities to solve a particular problem.</P
+><P
+>**********************************************************</P
+><P
+>There is a fair amount of error checking, but every possibility has not been addressed.  If the default installation of all components has been done, then the operation should be straightforward &#38; error free. If there are operational problems, then it is assumed that as a Visual Basic developer, fixing the error will not be a problem.  You may contact IMG at "devkit@imgpresents.com" or check our website "http://www.imgpresents.com" for any news or updates, but technical support is not offered for the Developer's Kit utilities - source code is provided, and should be referenced.</P
+><P
+>Once in the Visual Basic Environment, simply "Run" to engage the form &#38; start Operation. Click on buttons to see operational features, "Stop" operation and review Visual Basic Form / Properties / Controls &#38; Properties / Module code, etc.  See MTSVBDLL.C for source code of C based DLL.</P
+><P
+>1.71 Note - this DLL has been generalized - see the MTSDLL for the "future" of this DLL.</P
+><P
+>Operation Notes</P
+><P
+>Load Event</P
+><P
+>If the MTSVBDLL.DLL is not found in the current directory, and InputBox will appear to "ask" for its location.</P
+><P
+>Buttons / Text Fields</P
+><P
+>Launch - This will launch the appropriate product based on the project loaded.  By default (See DLL Source code) My-T-Soft is attempted, if it fails, then My-T-Touch is attempted, if it fails, then My-T-Pen is attempted.  If these fail, then it is assumed the default install locations have not been used, and the LaunchFromCurrentMTS function is called with the current directory, and the parent folder (i.e. the folder that contains the VBASIC folder) is used as the location of the product.  If the My-T-Soft keyboard is NOT launched, either:</P
+><P
+>a) Modify the source code to fit your requirements</P
+><P
+>-or-</P
+><P
+>b) Run the My-T-Soft product directly...</P
+><P
+>Close - this will Close the running keyboard software</P
+><P
+>Minimize to Button - will send the message to minimize to button</P
+><P
+>Open from Button - will send the message to open from the button state</P
+><P
+>MoveWindow / text fields X &#38; Y - enter appropriate values in the text fields, and click on button to move keyboard window to that (Top/Left) X, Y location</P
+><P
+>Set Cursor Position / text fields X &#38; Y - this will move the cursor (mouse cursor) to X, Y location</P
+><P
+>Save Settings - Saves the current configuration / panels open on the keyboard software</P
+><P
+>Save Position - Saves the Top/Left X, Y position of the keyboard software</P
+><P
+>Restore Settings - restores the saved panels &#38; position</P
+><P
+>Restore Position - restores X, Y location (Top/Left) of keyboard software with current configuration preserved</P
+><P
+>Send Text Through My-T-Soft - This is an advanced feature of the My-T-Soft version - the VB example does not back support My-T-Touch or My-T-Pen, although this could work with some modification - this is left as an exercise for the developer.  The compatibility issue revolves around the way the keystrokes are sent - the example here uses the embedded codes ([Tab], [Enter], [F1]), and this is only supported in the SDSTRM32.EXE, which only operates with My-T-Soft Version 1.50 and above (or NT/2000 versions).</P
+><P
+>This is grayed out in the My-T-Touch and My-T-Pen versions (Enabled = False) earlier than 1.70.  In order to operate properly, the Developer's Kit must have been installed (to ensure the SDSTRM32.EXE file is in the Install directory).  By clicking on the Send button, the text in the left-hand text field will be sent through to My-T-Soft - the default [Tab] moves the keyboard focus to the right text field, and the rest of the text is typed.  In order for My-T-Soft to type via this mechanism, the cursor must have previously been over the keyboard window, or must be moved over the keyboard window to "engage" the appropriate window &#38; keyboard focus code in My-T-Soft.  See Developer notes / source code for SDSTRMTS for other details.  Note that using the Set Cursor Position option, this can be forced with a FindWindow / GetWindowRect with the Windows API or MoveWindowMTS and SetCursorPosMTS.</P
+><P
+>Configuration On-the-fly - Select the appropriate panels and/or size, click on Configure and the keyboard software will reconfigure itself based on the checked panels / size.  Note that the position is dependent on current position, and how the new configuration will fit on screen.</P
+><P
+>See External Control &#38; notes on CPYCNMTS.C for a much stronger level of control which includes positioning.</P
+><P
+>External Control - For proper operation, the Developer's Kit MUST be extracted (installed).</P
+><P
+> The files KYBD.CFG, EDIT.CFG, NUM.CFG, and MACRO.CFG must be in the installation directory.  If you want to modify the default "configurations", refer to the notes of CPYCNMTS (Copy &#38; Configure My-T-Soft) in the Developer's Kit.  Essentially, the configuration &#38; position must be saved - Save Position / Save Settings.  Then the KEYBOARD.KBF can be copied to the "saved" configuration (e.g. COPY KEYBOARD.KBF NEW.CFG). Call 'CopyConfigureMTS("NEW.CFG")' to establish this configuration instantly...</P
+><P
+>Keyboard Config - Uses KYBD.CFG</P
+><P
+>Edit Config - Uses EDIT.CFG</P
+><P
+>Num Config - Uses NUM.CFG</P
+><P
+>Macro Config - Uses MACRO.CFG</P
+><P
+>Toggle off-screen or reconfigure - this uses the FWCTLMTS approach.  Logic is: if "on-screen", move "off-screen"  if "off-screen" used CopyConfigure approach to establish new configuration.</P
+><P
+>Files &#38; Notes</P
+><P
+>MTSVBDLL.DLL - compiled DLL that contains C based functions as called by Visual Basic </P
+><P
+>MTSVBDLL.C - MTSVBDLL.DLL Source code</P
+><P
+>MTSVBDLL.RC - MTSVBDLL.DLL Resource Script</P
+><P
+>MTSVBDLL.DEF - MTSVBDLL.DLL Exports / Module Definition file</P
+><P
+>MTSUTIL.ICO - MTSVBDLL.DLL Icon</P
+><P
+>MYTSOFT.H - Header file MTSVBDLL.DLL source</P
+><P
+>RESOURCE.H - Visual C Resource Header</P
+><P
+>MYTSOFT.VBP - Visual Basic Project (v4) for My-T-Soft</P
+><P
+>MYTSOFT.FRM - Form for My-T-Soft</P
+><P
+>MYTSOFT.BAS - Module for My-T-Soft</P
+><P
+>MYTPEN.VBP - Visual Basic Project (v4) for My-T-Pen</P
+><P
+>MYTPEN.FRM - Form for My-T-Pen</P
+><P
+>MYTPEN.BAS - Module for My-T-Pen</P
+><P
+>MYTTOUCH.VBP - Visual Basic Project (v4) for My-T-Touch</P
+><P
+>MYTTOUCH.FRM - Form for My-T-Touch</P
+><P
+>MYTTOUCH.BAS - Module for My-T-Touch</P
+><P
+>My-T-Soft Visual Basic Examples </P
+><P
+>Version 1.70 - 5/11/2000</P
+><P
+>Copyright  2000 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="visualc.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Language and Platform Examples</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Visual C++ Examples (Microsoft Visual C++ Version 6 Project)</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

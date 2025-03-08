@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Java Example</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Language and Platform Examples"
+HREF="languageplatform.html"><LINK
+REL="PREVIOUS"
+TITLE="C# (.NET) DLL Example"
+HREF="csharpdll.html"><LINK
+REL="NEXT"
+TITLE="J# (J Sharp) Example"
+HREF="jsharp.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="csharpdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 7. Language and Platform Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="jsharp.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Java"
+>Java Example</A
+></H1
+><P
+>FOLDER: JAVA</P
+><P
+>TYPE: Example integration in Java</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: Java</P
+><P
+>IDE: Eclipse 3.00</P
+><P
+>Welcome to the Java Example set for Developers!</P
+><P
+>Java Examples / DLL of DevKit. This is an add-on to the Developer's Kit for IMG's My-T-Soft to allow Java Developer's to access &#38; Use the Developer's Kit directly from Java.</P
+><P
+>Java Version Notes</P
+><P
+>This was built in Eclipse 3.0, java version 1.4.2_08. </P
+><P
+>NOTE: jre version 1.4 or later is needed to run code from Eclipse 3.0.</P
+><P
+>Files &#38; Notes</P
+><P
+>JNIMTSDLL.dll - Dll that interfaces with My-T-Soft</P
+><P
+>MTSDIR.dll - finds the My-T-Soft installation path</P
+><P
+>MYTSOFT.java - the main java application. </P
+><P
+>swt-win32-3064.dll - dll used for swt gui applications.</P
+><P
+>Running the application under Windows XP, Windows 2000 Professional</P
+><P
+>Prerequisites: 	J2RE version 1.4.2_08 or later.</P
+><P
+>	J2SDK version 1.4.2_08 or later (needed to create C++ header 
+			files for jni).</P
+><P
+>Update the environment variable Path to include the
+			bin folder of both the J2RE and J2SDK.</P
+><P
+>Eclipse 3.0</P
+><P
+>a. You should find the folder JAVA in default install location of 
+	   the My-T-Soft product (My-T-Soft, My-T-Touch, My-T-Pen). If folder
+	   is not found then follow the installations instructions under Sec. 3. 
+   	   Navigate to .\JAVA\MYTSOFT\exec</P
+><P
+>b. Click on MYTSOFT.jar to run the application</P
+><P
+>Running the code under Windows XP, Windows 2000 Professional</P
+><P
+>Prerequisites: 	J2RE version 1.4.2_08 or later.</P
+><P
+>J2SDK version 1.4.2_08 or later (needed to create C++ header 
+			files for jni).</P
+><P
+>Eclipse 3.0</P
+><P
+>Note:		Update the environment variable Path to include the
+			bin folder of both the J2RE and J2SDK.</P
+><P
+>a. You should find the folder JAVA in default install location of 
+	   the My-T-Soft product (My-T-Soft, My-T-Touch, My-T-Pen). If folder
+	   is not found then follow the installations instructions under Sec. 3. 
+   	   Navigate to .\JAVA</P
+><P
+>b. Open Eclipse.</P
+><P
+>c. Copy the MYTSOFT folder from .\JAVA to the Eclipse workspace </P
+><P
+>i.e. C:\eclipse\workspace</P
+><P
+>d. In Eclipse, click on Window-&#62;Open Perspective-&#62;Java</P
+><P
+>e. In the Package Panel on the left side, right click in the white space and click
+	   on Import... from the menu. In the Import Dialog box click on Existing Project 
+	   into Workspace and click Next</P
+><P
+>f. Click Browse and choose the MYTSOFT folder that was copied to the eclipse workspace
+	   directory </P
+><P
+>g. Click OK</P
+><P
+>h. Click Finish</P
+><P
+>i. In the Package Panel expand (default package) to open the Java file.</P
+><P
+>j. To Run the application, click Run-&#62;Run As-&#62;Java Application.</P
+><P
+>Compiling the MTSDll Dll code under Windows XP, Windows 2000 Professional</P
+><P
+>Prerequisites: 	J2RE version 1.4.2_08 or later.</P
+><P
+>J2SDK version 1.4.2_08 or later (needed to create C++ header 
+			files for jni).</P
+><P
+>Microsoft Visual C++ 6.0</P
+><P
+>a. You should find the folder JAVA in default install location of 
+	   the My-T-Soft product (My-T-Soft, My-T-Touch, My-T-Pen). If folder
+	   is not found then follow the installations instructions under Sec. 3.</P
+><P
+>b. Open Microsoft Visual C++ 6.0</P
+><P
+>c. Click File-&#62;Open Workspace and navigate to the location of the My-T-Soft 
+	   product (My-T-Soft, My-T-Touch, My-T-Pen) then to folder Java\MTSDLL
+	   and click on the file MTSDLL.dsw</P
+><P
+>d. To compile the code click Build-&#62;Build JNIMTSDLL.dll.</P
+><P
+>The dll can be found in the .\JAVA\MTSDLL\Release folder.</P
+><P
+>Note: jni_md.h, jni.h must be copied from the j2sdk 1.4 (or later) folder and 
+		 pasted	in the	Visual Studio Include folder i.e "%installed path%\Microsoft 				 Visual Studio\VC98\Include".</P
+><P
+>Compiling the MTSDIR Dll code under Windows XP, Windows 2000 Professional</P
+><P
+>Prerequisites: 	J2RE version 1.4.2_08 or later.</P
+><P
+>J2SDK version 1.4.2_08 or later (needed to create C++ header 
+			files for jni).</P
+><P
+>Microsoft Visual C++ 6.0</P
+><P
+>a. You should find the folder JAVA in default install location of 
+	   the My-T-Soft product (My-T-Soft, My-T-Touch, My-T-Pen). If folder
+	   is not found then follow the installations instructions under Sec. 3.</P
+><P
+>b. Open Microsoft Visual C++ 6.0</P
+><P
+>c. Click File-&#62;Open Workspace and navigate to the location of the My-T-Soft 
+	   product (My-T-Soft, My-T-Touch, My-T-Pen) then to folder Java\MTSDIR
+	   and click on the file MTSDIR.dsw</P
+><P
+>d. To compile the code click Build-&#62;Build MTSDIR.dll.</P
+><P
+>The dll can be found in the .\JAVA\MTSDIR\Debug folder.	   </P
+><P
+>Some of the features assume that the Developer's Kit has already been "installed".  If the "Send Text Thru" or the "External Control" examples are not operating properly, then install the DevKit:</P
+><P
+>Start Menu | Programs | My-T-???? | Install Developer's Kit</P
+><P
+>Notes on the two dll's used in this project</P
+><P
+>NOTE: </P
+><P
+>MTSDIR Folder contains the dll that is used obtains the directory where the My-T-Soft product was installed.</P
+><P
+>MTSDLL Folder contains the dll utilities themselves</P
+><P
+>NOTE:	jni_md.h, jni.h must be copied from the j2sdk 1.4 (or later) folder and pasted in the Visual Studio Include folder i.e "%installed path%\Microsoft Visual Studio\VC98\Include".</P
+><P
+>**********************************************************</P
+><P
+>DISCLAIMER</P
+><P
+>The source code &#38; derived executable are provided at no 
+cost as useful &#38; instructional materials to developers &#38; 
+system integrators incorporating IMG software.  Because 
+no licensing fee has been tendered, there is no technical 
+support offered for this software, source code, or its 
+capabilities to solve a particular problem.</P
+><P
+>**********************************************************</P
+><P
+>There is a fair amount of error checking, but every possibility has not been addressed.  If the default installation of all components has been done, then the operation should be straightforward &#38; error free. If there are operational problems, then it is assumed that as a JAVA developer, fixing the error will not be a problem.  You may contact IMG at "devkit@imgpresents.com" or check our website "http://www.imgpresents.com" for any news or updates, but technical support is not offered for the Developer's Kit utilities - source code is provided, and should be referenced.</P
+><P
+>Once workspace is setup in Elcipse, simply click Run, Run As then click Java Application from the menu to engage the form &#38; start Operation. Click on buttons to see operational features, "Stop" operation and review SWT Properties / Controls &#38; Class code, etc.  See MTDLL.dsw for the source code of C based DLL.</P
+><P
+>Note - the MTSDLLJNI DLL has been modified to implement the Java Native Interface (JNI) to allow interoperablity between Java and C.</P
+><P
+>Operation Notes</P
+><P
+>Load Event</P
+><P
+>If the MTSDLL.DLL is not found in the current directory or in the application path where MT??, is installed, a InputBox will appear to "ask" for its location, enter the full path including the filname into the textbox and hit Enter.</P
+><P
+>Buttons / Text Fields</P
+><P
+>Launch - This will launch the appropriate product based on the project loaded.  By default (See DLL Source code) My-T-Soft is attempted, if it fails, then My-T-Touch is attempted, if it fails, then My-T-Pen is attempted.  If these fail, then it is assumed the default install locations have not been used, and the LaunchFromCurrentMTS function is called with the current directory, and the parent folder (i.e. the folder that contains the CSHARP folder) is used as the location of the product.  If the My-T-Soft keyboard is NOT launched, either:</P
+><P
+>a) Modify the source code to fit your requirements</P
+><P
+>-or-</P
+><P
+>b) Run the My-T-Soft product directly...</P
+><P
+>Close - this will Close the running keyboard software</P
+><P
+>Minimize to Button - will send the message to minimize to button</P
+><P
+>Open from Button - will send the message to open from the button state</P
+><P
+>MoveWindow / text fields X &#38; Y - enter appropriate values in the text fields, and click on button to move keyboard window to that (Top/Left) X, Y location</P
+><P
+>Set Cursor Position / text fields X &#38; Y - this will move the cursor (mouse cursor) to X, Y location</P
+><P
+>Save Settings - Saves the current configuration / panels open on the keyboard software</P
+><P
+>Save Position - Saves the Top/Left X, Y position of the keyboard software</P
+><P
+>Restore Settings - restores the saved panels &#38; position</P
+><P
+>Restore Position - restores X, Y location (Top/Left) of keyboard software with current configuration preserved</P
+><P
+>Send Text Through My-T-Soft - This is an advanced feature of the My-T-Soft version - the Java example does not back support My-T-Touch or My-T-Pen, although this could work with some modification - this is left as an exercise for the developer.  The compatibility issue revolves around the way the keystrokes are sent - the example here uses the embedded codes ([Tab], [Enter], [F1]), and this is only supported in the SDSTRM32.EXE, which only operates with My-T-Soft Version 1.50 and above (or NT/2000 versions).</P
+><P
+>This is grayed out in the My-T-Touch and My-T-Pen versions (Enabled = False) earlier than 1.70.  In order to operate properly, the Developer's Kit must have been installed (to ensure the SDSTRM32.EXE file is in the Install directory).  By clicking on the Send button, the text in the left-hand text field will be sent through to My-T-Soft - the default [Tab] moves the keyboard focus to the right text field, and the rest of the text is typed.  In order for My-T-Soft to type via this mechanism, the cursor must have previously been over the keyboard window, or must be moved over the keyboard window to "engage" the appropriate window &#38; keyboard focus code in My-T-Soft.  See Developer notes / source code for SDSTRMTS for other details.  Note that using the Set Cursor Position option, this can be forced with a FindWindow / GetWindowRect with the Windows API or MoveWindowMTS and SetCursorPosMTS.</P
+><P
+>Configuration On-the-fly - Select the appropriate panels and/or size, click on Configure and the keyboard software will reconfigure itself based on the checked panels / size.  Note that the position is dependent on current position, and how the new configuration will fit on screen.</P
+><P
+>See External Control &#38; notes on CPYCNMTS.C for a much stronger level of control which includes positioning.</P
+><P
+>External Control - For proper operation, the Developer's Kit MUST be extracted (installed).  The files KYBD.CFG, EDIT.CFG, NUM.CFG, and MACRO.CFG must be in the installation directory.  If you want to modify the default "configurations", refer to the notes of CPYCNMTS (Copy &#38; Configure My-T-Soft) in the Developer's Kit.  Essentially, the configuration &#38; position must be saved - Save Position / Save Settings.  Then the KEYBOARD.KBF can be copied to the "saved" configuration (e.g. COPY KEYBOARD.KBF NEW.CFG). Call 'CopyConfigureMTS("NEW.CFG")' to establish this configuration instantly...</P
+><P
+>Keyboard Config - Uses KYBD.CFG</P
+><P
+>Edit Config - Uses EDIT.CFG</P
+><P
+>Num Config - Uses NUM.CFG</P
+><P
+>Macro Config - Uses MACRO.CFG</P
+><P
+>Toggle off-screen or reconfigure - this uses the FWCTLMTS approach.  Logic is: if "on-screen", move "off-screen"  if "off-screen" used CopyConfigure approach to establish new configuration.</P
+><P
+>My-T-Soft Java Examples</P
+><P
+>Version 1.78 - August 9, 2005</P
+><P
+>Copyright  2004-2005 by Innovation Management Group, Inc.  All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc. </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="csharpdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="jsharp.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>C# (.NET) DLL Example</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>J# (J Sharp) Example</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Macro Zoom Dialog Box</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Information on Advanced Macro Editing"
+HREF="advancedmacroediting.html"><LINK
+REL="PREVIOUS"
+TITLE="Macro Panel Dialog Box"
+HREF="macropaneldialogbox.html"><LINK
+REL="NEXT"
+TITLE="Macro Select Dialog Box"
+HREF="macroselectdialogbox.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="macropaneldialogbox.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="macroselectdialogbox.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="MacroZoomDialogBox"
+>Macro Zoom Dialog Box</A
+></H2
+><P
+>&#13;<DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="images/macrozoomdialogbox.png"
+ALIGN="center"></P
+></DIV
+>
+</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Key Label</I
+></SPAN
+></P
+><P
+>Key label will show which button is currently edited.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Key Description</I
+></SPAN
+></P
+><P
+>Enter a detailed description (will appear on Quick Help).</P
+><P
+>In order to create a keystroke Macro follow these steps:</P
+><P
+>There are six vertical selection lists in the bottom left corner of the dialog box.  Select &#38; double-click to add to the Keystroke Macro.</P
+><P
+></P
+><UL
+><LI
+><P
+>Use the up-and-down arrows to select the appropriate keystrokes, then double-click to enter into the Keystroke Macro.</P
+></LI
+><LI
+><P
+>For example, double-click on Alt-Down to simulate pressing the Alt button down.</P
+></LI
+><LI
+><P
+>Now, double-click on the letter F.</P
+></LI
+><LI
+><P
+>Now, release the Alt button by double-clicking on Alt-Up.</P
+></LI
+><LI
+><P
+>Finally, double-click on the letter v.</P
+></LI
+><LI
+><P
+>This Macro [Alt-Down]f[Alt-Up]v will bring up the Print Preview while running MS Word!</P
+></LI
+></UL
+><P
+>You may edit the Keystroke Macro directly in the Edit window.  You may wish to refer to the Advanced User Notes for options &#38; details regarding the keystroke macros.</P
+><P
+>Reserved words in brackets [ ] will only function properly when typed exactly!  They may be used to indicate combination keystrokes.  For example, to execute Ctrl-S it must appear as [Ctrl-Down]s[Ctrl-Up].  This allows you to execute more than one character with the combination key depressed.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>NOTE:</I
+></SPAN
+> For proper operation, you must have EVERY keystroke required! (Don't forget [Enter])
+If the macro does not operate as desired, review &#38; verify that each keystroke and the sequence of keystrokes is accurate.  Also make sure that the correct Application is Active when the Macro is initiated.</P
+><P
+>There are seven buttons with standard editing options:</P
+><P
+>CUT - Cuts the highlighted portion of a Macro.</P
+><P
+>COPY - Copies the highlighted portion of a Macro.</P
+><P
+>PASTE - Pastes the highlighted portion of a Macro (must be preceded by a CUT or COPY).</P
+><P
+>DELETE - Deletes the highlighted portion of a Macro. (UNDO will not recover!)</P
+><P
+>UNDO - Undoes the previous operation (like a CUT OR DELETE).</P
+><P
+>SELECT ALL - Selects the whole Macro.</P
+><P
+>OPTIONS - Changes to a different set of seven editing buttons.</P
+><P
+>There are seven buttons with advanced editing options (Useful if you are pasting in text from other applications):</P
+><P
+>CLEAR ALL - Clears the editing Window, even if nothing is highlighted. (Erases the entire macro).</P
+><P
+>CR - Changes carriage returns to [Enter]. (ANSI character 13)</P
+><P
+>CRLF - Changes carriage return-line feed to [Enter}. (ANSI characters 13 10)</P
+><P
+>TAB - Changes tab to [Tab]. (ANSI character 9)</P
+><P
+>STRIP - Strips all ANSI characters. (Removes all non-ANSI characters from text)</P
+><P
+>ALL - Does all of the above (CRLF, TAB, STRIP)</P
+><P
+>EDITING - Returns to the previous seven buttons.</P
+><P
+>The Open and Save buttons are available as conveniences for developers using the MACROBAT and other IMG utilities.  These will use the Zoom Edit screen as an the Editing area - Open will open, read, and place the contents of a previously Saved Macro into the Zoom Edit area.  The KMF (Keyboard Macro File) format is used.</P
+><P
+>The special selections [Time], [Date], and [Pause] can be used as follows:
+[Time] and [Date] insert the current system time as formatted via the System Information panel (formatted as set in the Windows Regional Settings).</P
+><P
+>[Pause] inserts an "empty" keystroke in the sequence of keystrokes.  This is a special option along with other specialty macros otherwise undocumented.</P
+><P
+>Click on the OK Button to save the current options.</P
+><P
+>Click on the CANCEL button to Close the Dialog &#38; cancel any changes.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="macropaneldialogbox.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="macroselectdialogbox.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Macro Panel Dialog Box</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="advancedmacroediting.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Macro Select Dialog Box</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

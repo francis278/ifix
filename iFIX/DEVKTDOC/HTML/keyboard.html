@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Keyboard based utilities</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="NEXT"
+TITLE="Modifying Keyboard Layouts"
+HREF="modifylayouts.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="devtools.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="modifylayouts.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Keyboard"
+>Keyboard based utilities</A
+></H1
+><P
+>FOLDER: KEYBOARD, KEYBOARD/KYBDSYNC</P
+><P
+>TYPE: Utilities / Stand-alone Executable with Source</P
+><P
+>SOURCE: INCLUDED with KYBDSYNC</P
+><P
+>LANGUAGE: C / Windows API</P
+><P
+>IDE: Microsoft Visual C++ 6</P
+><P
+>2 utilities are included: KeyboardSync, and KeyWatch:</P
+><P
+>Name: KeyboardSync</P
+><P
+>Program name: KYBDSYNC.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: 1.70 version</P
+><P
+>Description: Automatically synchronizes My-T-Soft to current Windows layout</P
+><P
+>Notes: When running, it will place a small icon in the system tray (Task bar tray - Shell icon) </P
+><P
+>If My-T-Soft/My-T-Pen/My-T-Touch is running, it will monitor the current Keyboard layout, and select the appropriate layout for My-T-Soft and update the layout automatically, matching the My-T-Soft visual layout with the current Windows layout.  This is most helpful when the user has 2 or more layouts that get used often.</P
+><P
+>1.77 Notes</P
+><P
+>The KeyboardSync utility has been updated to be more flexible.  If the file KYBDSYNC.TXT is in the same folder as the KYBDSYNC.EXE, it will be read and used to manage the synchronization between the current input locale and the displayed My-T-Soft keyboard.  The input locale information comes from Microsoft, based on the settings for Windows  for more details, refer to their knowledge base, Q224804.</P
+><P
+>The logic used is as follows:</P
+><P
+>Using the GetKeyboardLayout API call, KeyboardSync based on the delay, queries the foreground window (keyboard focus/input window), and establishes the locale ID for the window.  Then it attempts to match the local ID against the list read in from KYBDSYNC.TXT, and if there is a match, the My-T-Soft keyboard layout is updated, and My-T-Soft is refreshed to match.</P
+><P
+>The structure of the KYBDSYNC.TXT is important.</P
+><P
+>Lines beginning with a ; (semi-colon) are treated as comments.</P
+><P
+>Lines with local information must be structured as follows:
+0x????,??,Description</P
+><P
+>The locale MUST start with 0x and follow with the 4 digit hex code (exactly 4 characters!).
+E.g. 0x0409,1,English</P
+><P
+>The commas are used to separate the values, and spaces should not be included for the first 2 entries.  The description currently is not used by KeyboardSync, so it may contain any characters  it is used for reference.</P
+><P
+>The second entry is the My-T-Soft keyboard layout value  refer to the list in the My-T-Soft Help for more details.</P
+><P
+>Name: KeyWatch</P
+><P
+>Program name: KEYWATCH.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: No special requirements, will also work with physical keyboard</P
+><P
+>Description: Displays keystroke information, scan code, virtual codes, extended, etc.</P
+><P
+>Notes: Useful for debugging and comparing input approaches to the keyboard.  Runs as a stand-alone application, displays last keystroke, and streams keystroke display, automatically clearing when screen if full.  Really a programmer debugging tool, it has helped to resolve some issues regarding how My-T-Soft generates shift sequences, etc.</P
+><P
+>Name: KeyEnter</P
+><P
+>Program Name: KEYENTER.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: Nothing</P
+><P
+>Description: Generates an Enter Keystroke</P
+><P
+>Notes: Asked for by a customer to handle a particular application.</P
+><P
+>Name: KeyBack</P
+><P
+>Program Name: KEYBACK.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: Nothing</P
+><P
+>Description: Generates an Backspace key Keystroke</P
+><P
+>Notes: Built along with KEYENTER</P
+><P
+>Name: KeyTab</P
+><P
+>Program Name: KEYTAB.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: Nothing</P
+><P
+>Description: Generates an Tab key Keystroke</P
+><P
+>Notes: Built along with KEYENTER</P
+><P
+>Name: KeyEscape</P
+><P
+>Program Name: KEYESC.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: Nothing</P
+><P
+>Description: Generates an Escape key Keystroke</P
+><P
+>Notes: Built along with KEYENTER</P
+><P
+>Version 1.74 - 4/3/2002</P
+><P
+>Copyright © 2000-2002 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are
+registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="modifylayouts.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Developer Tools and Examples</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Modifying Keyboard Layouts</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

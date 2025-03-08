@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>What I really want... (My-T-Soft 1.x)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Developer's Kit for Windows"
+HREF="mytsoftdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="My-T-Soft Startup as Icon"
+HREF="startupasicon.html"><LINK
+REL="NEXT"
+TITLE="My-T-Soft Developer's Kit for Windows CE"
+HREF="mytsoftdevkitce.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="startupasicon.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. My-T-Soft Developer's Kit for Windows</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="mytsoftdevkitce.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="WhatIReallyWant"
+>What I really want... (My-T-Soft 1.x)</A
+></H1
+><P
+>1.72 note - This is dated - it is only included because we have customers running older versions - we recommend you use the MTSDLL or the CPYCNMTS/FWCTLMTS utilities.</P
+><P
+>For developers who need several different configurations, and desire a seamless changeover, the following steps will enable a clean change-over from one configuration to another.  It is implemented as a batch file, and the steps required to setup for this must be followed in exact detail.</P
+><P
+>Also see new Copy and Configure utility above. (CPYCNMTS &#38; FWCTLMTS)</P
+><P
+>This batch method, the CPYCNMTS and FWCTLMTS utilities expect saved configurations.  Use Steps 1 through 3 below to obtain these configuration files.</P
+><P
+>1) Configure My-T-Soft with the desired panels.</P
+><P
+>2) Save Settings &#38; Position (either via the menu, or with SVSETMTS &#38; SVPOSMTS with a windowed command prompt).</P
+><P
+>3) Copy the KEYBOARD.KBF (My-T-Soft Installation directory) to a distinctive name (e.g. NUMERIC.CFG, KEYBOARD.CFG, or MACRO.CFG).</P
+><P
+>4) Repeat steps 1 through 3 as required for as many different configurations as needed.</P
+><P
+>5) Create BATCH files (or script, or code) for each configuration.</P
+><P
+>EXAMPLE:</P
+><P
+>FILE: NUMERIC.BAT</P
+><P
+>copy \windows\mytsoft\numeric.cfg \windows\mytsoft\keyboard.kbf</P
+><P
+>resetmts.exe</P
+><P
+>FILE: MACRO.BAT</P
+><P
+>copy \windows\mytsoft\macro.cfg \windows\mytsoft\keyboard.kbf</P
+><P
+>resetmts.exe</P
+><P
+>FILE: KEYBOARD.BAT</P
+><P
+>copy \windows\mytsoft\keyboard.cfg \windows\mytsoft\keyboard.kbf</P
+><P
+>resetmts.exe</P
+><P
+>6) Run Batch files at appropriate times to change layouts.</P
+><P
+>Version 1.77, July 7, 2003</P
+><P
+>Copyright © 1997-2003 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="startupasicon.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="mytsoftdevkitce.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>My-T-Soft Startup as Icon</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>My-T-Soft Developer's Kit for Windows CE</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

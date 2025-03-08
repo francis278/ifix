@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How Do I register / move DLL</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE='How do I implement "on-demand" use with Visual Basic/MS Access?'
+HREF="chap2howdoiondemand.html"><LINK
+REL="NEXT"
+TITLE="How do I Integrate with Internet Explorer"
+HREF="chap2howdoiintegrateie.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiondemand.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiintegrateie.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIRegisterDLL"
+>How Do I register / move DLL</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>How Do I register / move the DLL?</B
+></SPAN
+></P
+><P
+>Visual Basic Developers: Review the samples in the VBASIC folder (Installed Developer's Kit) for Form Event Examples, and Module Load information - This is the starting point for integrating into VB! (Note: MTSDLL is the future of this DLL (1.71 Release))</P
+><P
+>Question: How do I Register the DLL?</P
+><P
+>Answer: You don't - the DLL is a Dynamic Link Library of Compiled (Native C) code - by declaring the Module "Lib" statements, you are indicating to your VB Project where to find the DLL.  This question arises because VB developer's are familiar with COM Components located in a DLL which need to register the Server that handles the interface to these COM objects. The MTSDLL is not like a COM Component in a DLL.  The C-based DLL is a lot more direct, quicker, with no overhead, and what optimized computer software is all about - do the job intended with minimal impact on system performance.</P
+><P
+>Several quick notes:</P
+><P
+>&#13;( 1) You have the source code
+</P
+><P
+>&#13;( 2) Think from your programs point of view: Calling the function (with the "Lib" statement required in the module) is more straightforward than reviewing all of the registered system components to find if a particular capability is available - if you've ever waited for Windows to load, you may appreciate the speed, power, and directness of using only what you need.
+</P
+><P
+>&#13;( 3) If you move the DLL, you will need to update the "Lib" statements to indicate its location - also, see below.
+</P
+><P
+>&#13;( 4) There are advantages and disadvantages of using COM components and advantages and disadvantages of using C-based DLL's.  This is a C-based DLL.
+</P
+><P
+>&#13;( 5) If you want to build this functionality as a COM interface that adds layers of complexity, takes time, taps system performance, and provides no further functionality, you have the source code.
+</P
+><P
+>Question: How do I move the DLL?</P
+><P
+>Answer:You may move the DLL anywhere on the system, but please note the following items:</P
+><P
+>&#13;( 1) If you move the DLL, you will need to update the "Lib" statements to indicate its location.
+</P
+><P
+>&#13;( 2) If "hard coding" the location is not desirable, you may simply enter the name of the DLL, e.g. "MTSDLL.DLL" and move the DLL into a location indicated in your environment's path.  Although not recommended, you can drop the DLL into the "\WINDOWS\SYSTEM" ("\WINNT\SYSTEM32") folder.  If unfamiliar with these issues, please refer to Microsoft documentation on Windows and the Visual Basic reference.
+</P
+><P
+>&#13;( 3) If you don't know your project's location, you can use the "\Program Files\Common Files" area and create your own spot for your program's required files.
+</P
+><P
+>&#13;( 4) Refer to the "Load" event of the example projects - use the Dir command to verify the DLL is located where you expected it, or exit gracefully.
+</P
+><P
+>&#13;( 5) Refer to Microsoft Help for VBA on DLL's and locating them.
+</P
+><P
+>&#13;( 6) Refer to Microsoft Knowledge Base Q106553 for notes on integrating C based DLL's and Visual Basic.
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoiondemand.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2howdoiintegrateie.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How do I implement "on-demand" use with Visual Basic/MS Access?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How do I Integrate with Internet Explorer</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

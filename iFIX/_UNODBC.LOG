@@ -1,0 +1,6 @@
+[ODBC Remove]
+Manager=1
+Driver1=iFIX Real Time Driver
+Driver2=iFIX Historical Driver
+DSN1=FIX Dynamics Real Time Data
+DSN2=FIX Dynamics Historical Data

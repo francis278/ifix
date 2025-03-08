@@ -1,0 +1,32 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Ev_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Ev_TS.DATALINK,Arial,9,1,,,,
+Caption,Ev_TS.TEXT1,Arial,9,0,Tagname:,标签名:,,
+Caption,Ev_TS.DATALINK1,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK2,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK3,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK4,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK5,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK6,Arial,9,0,,,,
+Caption,Ev_TS.DATALINK7,Arial,9,0,,,,
+Caption,Ev_TS.TEXT2,Arial,9,1,THEN:,THEN:,,
+Caption,Ev_TS.TEXT5,Arial,9,0,Next Block:,下一块:,,
+Caption,Ev_TS.DATALINK12,Arial,9,1,,,,
+Caption,Ev_TS.TEXT6,Arial,9,1,Current Block Status:,当前块状态:,,
+Caption,Ev_TS.TEXT7,Arial,9,0,Prev Block:,前一块:
+Caption,Ev_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Ev_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Ev_TS.Text9,Arial,9,1,Security Areas,安全区域
+Caption,Ev_TS.DataLink15,Arial,9,0,,
+Caption,Ev_TS.DataLink16,Arial,9,0,,
+Caption,Ev_TS.DataLink17,Arial,9,0,,
+Caption,Ev_TS.Text10,Arial,9,0,1,1
+Caption,Ev_TS.Text11,Arial,9,0,2,2
+Caption,Ev_TS.Text12,Arial,9,0,3,3
+Caption,Ev_TS.Text13,Arial,9,1,Conditions,条件
+Caption,Ev_TS.Text14,Arial,9,1,ELSE:,ELSE:
+Caption,Ev_TS.Text15,Arial,9,1,1. IF:,1. IF:
+Caption,Ev_TS.Text16,Arial,9,1,2. IF:,2. IF:
+Caption,Ev_TS.Text17,Arial,9,1,THEN:,THEN:
+Caption,Ev_TS.Text18,Arial,9,1,ELSE:,ELSE:

@@ -1,0 +1,73 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Pg_TS.TEXT6,Arial,9,0,Program Steps,程序步骤,,
+Caption,Pg_TS.DATALINK30,Arial,9,0,,,,
+Caption,Pg_TS.TEXT8,Arial,9,0,Block Status:,数据块状态:,,
+Caption,Pg_TS.DATALINK31,Arial,9,0,,,,
+Caption,Pg_TS.Text11,Arial,9,1,19,19,,
+Caption,Pg_TS.DataLink34,Arial,9,1,,,,
+Caption,Pg_TS.DataLink35,Arial,9,1,,,,
+Caption,Pg_TS.DataLink36,Arial,9,1,,,,
+Caption,Pg_TS.DataLink37,Arial,9,1,,,,
+Caption,Pg_TS.DataLink38,Arial,9,1,,,,
+Caption,Pg_TS.DataLink39,Arial,9,1,,,,
+Caption,Pg_TS.DataLink40,Arial,9,1,,,,
+Caption,Pg_TS.DataLink41,Arial,9,1,,,,
+Caption,Pg_TS.DataLink42,Arial,9,1,,,,
+Caption,Pg_TS.DataLink43,Arial,9,1,,
+Caption,Pg_TS.DataLink44,Arial,9,1,,
+Caption,Pg_TS.DataLink45,Arial,9,1,,
+Caption,Pg_TS.DataLink46,Arial,9,1,,
+Caption,Pg_TS.DataLink47,Arial,9,1,,
+Caption,Pg_TS.DataLink48,Arial,9,1,,
+Caption,Pg_TS.DataLink49,Arial,9,1,,
+Caption,Pg_TS.DataLink50,Arial,9,1,,
+Caption,Pg_TS.DataLink51,Arial,9,1,,
+Caption,Pg_TS.DataLink52,Arial,9,1,,
+Caption,Pg_TS.Text12,Arial,9,1,Block Type:,数据块类型:
+Caption,Pg_TS.DataLink53,Arial,9,1,,
+Caption,Pg_TS.DataLink54,Arial,9,1,,
+Caption,Pg_TS.DataLink55,Arial,9,0,,
+Caption,Pg_TS.DataLink56,Arial,9,0,,
+Caption,Pg_TS.Text13,Arial,9,0,Tagname:,标签名:
+Caption,Pg_TS.Text14,Arial,9,0,Scan Time:,扫描时间:
+Caption,Pg_TS.Text15,Arial,9,0,Description:,描述:
+Caption,Pg_TS.DataLink33,Arial,9,1,,
+Caption,Pg_TS.Text16,Arial,9,1,Current State,当前状态
+Caption,Pg_TS.Text17,Arial,9,1,Security Areas,安全区域
+Caption,Pg_TS.DataLink57,Arial,9,0,,
+Caption,Pg_TS.DataLink58,Arial,9,0,,
+Caption,Pg_TS.DataLink59,Arial,9,0,,
+Caption,Pg_TS.Text18,Arial,9,0,1,1
+Caption,Pg_TS.Text19,Arial,9,0,2,2
+Caption,Pg_TS.Text20,Arial,9,0,3,3
+Caption,Pg_TS.Text25,Arial,9,1,Alarms,报警
+Caption,Pg_TS.DataLink63,Arial,9,0,,
+Caption,Pg_TS.DataLink64,Arial,9,0,,
+Caption,Pg_TS.DataLink65,Arial,9,0,,
+Caption,Pg_TS.Text26,Arial,9,0,Areas:,区域:
+Caption,Pg_TS.Text27,Arial,9,0,Priority:,优先级:
+Caption,Pg_TS.Text28,Arial,9,0,Enabled:,启用:
+Caption,Pg_TS.Text29,Arial,9,1,18,18
+Caption,Pg_TS.Text30,Arial,9,1,18,18
+Caption,Pg_TS.Text31,Arial,9,1,17,17
+Caption,Pg_TS.Text32,Arial,9,1,16,16
+Caption,Pg_TS.Text33,Arial,9,1,15,15
+Caption,Pg_TS.Text34,Arial,9,1,0,0
+Caption,Pg_TS.Text35,Arial,9,1,1,1
+Caption,Pg_TS.Text36,Arial,9,1,2,2
+Caption,Pg_TS.Text38,Arial,9,1,4,4
+Caption,Pg_TS.Text39,Arial,9,1,5,5
+Caption,Pg_TS.Text40,Arial,9,1,6,6
+Caption,Pg_TS.Text41,Arial,9,1,7,7
+Caption,Pg_TS.Text42,Arial,9,1,8,8
+Caption,Pg_TS.Text43,Arial,9,1,9,9
+Caption,Pg_TS.Text44,Arial,9,1,10,10
+Caption,Pg_TS.Text45,Arial,9,1,11,11
+Caption,Pg_TS.Text46,Arial,9,1,12,12
+Caption,Pg_TS.Text47,Arial,9,1,3,3
+Caption,Pg_TS.Text48,Arial,9,1,13,13
+Caption,Pg_TS.Text49,Arial,9,1,14,14
+Caption,Pg_TS.Text50,Arial,9,0,Program Step:,程序步骤:
+Caption,Pg_TS.DataLink66,Arial,9,0,,
+Caption,Pg_TS.Text51,Arial,9,0,Counter:,计数:

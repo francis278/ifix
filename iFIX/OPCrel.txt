@@ -1,0 +1,171 @@
+Proficy iFIX OPC Client Version 7.46 Release Notes
+GE Intelligent Platforms, Inc. (GEIP)
+
+Contents
+
+A.  System Requirements
+	A1. Important Information about Windows XP and Windows Vista Firewall
+B.  General Information
+	B.1  New Features in this Release
+C.  Known Issues
+D.  Troubleshooting
+	D.1  Automatically Starting the OPC Client
+	D.2  Using Licensing Software
+
+	
+A.  SYSTEM REQUIREMENTS
+
+The OPC driver requires the following software:
+
+Operating System
+*  Microsoft® Windows® Server 2012   64-bit (WoW64)
+*  Microsoft® Windows® 8   32 and 64-bit (WoW64)
+*  Microsoft® Windows® Server 2008 R2   64-bit (WoW64)
+*  Microsoft® Windows® 7   32 and 64-bit (WoW64)
+*  Microsoft® Windows® Server 2008 SP2
+*  Microsoft® Windows® Vista™ Business or Ultimate Edition
+*  Microsoft® Windows® Server 2003, SP2 or greater
+*  Microsoft® Windows® XP Professional, Service Pack 2 or greater
+
+A.1 IMPORTANT INFORMATION ABOUT WINDOWS XP and Windows Vista Firewall
+
+There are Firewall settings that must be configured before you 
+can access remote OPC servers. For more information, refer to the OPC 
+Client online help topic Set Up Windows XP or Vista Firewall for Remote OPC Servers.
+
+
+B.  GENERAL INFORMATION
+*  In version 7.41a of the OPC Client, code changes were made to check for
+   invalid formats of floating point values being returned from the 
+   OPC Server, and to generate errors when invalid formats are found.
+   These changes were made to support OPC Foundation Certification 
+   of the OPC Client. 
+
+   These changes may cause errors to occur in your current configuration,
+   after upgrading to version 7.41a. To address this concern, the OPC
+   Client driver (version 7.41a and above) now includes a check box 
+   in the PowerTool on the Options menu > Setup > Advanced tab to "Disable 
+   Floating Point Checks." When this check box is selected, the driver 
+   does not check the format of floating point values returned from 
+   the OPC Server. This is a global setting, and remains set until 
+   you clear the check box, or the driver is re-installed. 
+
+   By default, this check box is cleared, meaning the driver  
+   will check the format of the floating point values returned from 
+   the OPC Server and generate errors for invalid floating point values. 
+
+*  If you are running on a Vista operating system and you are using 
+   the OPC Client driver with iFIX, GEIP strongly recommends that 
+   both applications run in the same service context. Mixing modes of   
+   operation is not supported in Windows Vista. For example, if iFIX is 
+   running in Service mode, the OPC Client must also run in Service mode 
+   or if iFIX is not running in service mode, the client must run in 
+   non-service mode. 
+
+*  The OPC Client should be stopped before importing, reloading, or
+   generating a process database.
+
+*  7.x drivers no longer use the Period field in Mission Control. 
+
+*  The OPC Client has an Overruns field in the Power Tool at the 
+   driver, server, group, and item statistics level.  You 
+   can use this field as a troubleshooting tool to assist in 
+   optimization.  The presence of overruns do not necessarily 
+   indicate a problem.  Any of the following conditions can cause 
+   overruns:
+
+   *  Bandwidth saturation on your network.
+   *  Turnaround delays in the PLC.
+   *  Overflowing message queues in the process hardware.
+
+   Please refer to the OPC Client Help for more information on 
+   overruns. You can find information on overruns by displaying 
+   the driver statistics in the Power Tool, selecting the Overruns 
+   field, and pressing the F1 key.
+
+*  Do not install or uninstall a new version of the OPC Client 
+   while an old version is running.  Always stop and exit the driver 
+   before installing or uninstalling new version of the OPC Client.
+
+B.1  NEW FEATURES IN THIS RELEASE
+
+v7.46 (includes v7.45c)
+*	Validated running under Windows 8 and Windows Server 2012.
+*	Enhanced to allow logging of all OnDataChange events.
+
+v7.45a (includes v7.45)
+*  FixIOUser was removed as part of v7.42a.  In this version we've added a new 
+   utility app which will be installed in the iFIX directory and will be executed 
+   automatically at the end of install.  If the FixIOUser account is found on the 
+   system, the user will be prompted to remove it.  If the user selects OK,
+   the utility will automatically remove the account fromt he system.  If the 
+   selects EXIT or if the FixIOUser account is not found, no aciton is taken.
+
+v7.42a
+*  To address security concerns, the FixIOUser account has been removed.  When
+   configuring the server in service mode, you will need to use either a named
+   account or the System Acount.
+
+
+C.  KNOWN ISSUES
+*  Analog Register and Digital Register blocks in iFIX databases do not
+   support exception-based processing. In addition, the OPC Client does
+   not support using the Text block with exception-based processing.
+
+*  The OPC Client does not support exception-based processing for
+   database blocks that reference items configured as data arrays.
+
+*  Do not overlap data arrays when using RS-Linx v2.3 or greater.  If you do 
+   overlap arrays, modification of arrays element may change elements
+   that you do not intend to overwrite.  Consequently, we recommend if
+   you require data arrays to overlap, use RS-Linx v2.2. 
+
+*  If you shut down iFIX before shutting down the OPC Client Power Tool,
+   you will not be able to restart iFIX. Shut down  the OPC Client 
+   Power Tool before restarting iFIX. 
+
+*  If you are using this OPC Client driver (v7.41) in iFIX 4.5, 15-digit 
+   precision is supported for data values only, and not for signal 
+   conditioning. Therefore, in iFIX 4.5, signal conditioning calculations
+   are limited to 7 digits of precision. In other words, if the range of 
+   your EGU limits exceeds 7 digits, a small amount of imprecision will 
+   be introduced into the calculated result for signal conditioning.
+
+*  If you are using iFIX 5.0 with this OPC Client driver (v7.41),  
+   15-digit precision is supported for both data values and signaling 
+   conditioning. 
+
+*  Prior to iFIX 4.5, 15-digit precision was not supported. Instead, 
+   you are limited to the 7 digit limits imposed by the use of single
+   precision values.
+
+   
+D.  TROUBLESHOOTING
+Only use the OPC Client server window for troubleshooting.  
+When you are not debugging a problem, disable all debug messages and 
+close the server window.  Leaving debug messages enabled or leaving 
+the OPC Client server window open degrades driver performance.
+
+If you experience difficulty installing the OPC Client, refer to 
+the following sections for information on how to resolve the 
+problem.
+
+D.1  AUTOMATICALLY STARTING THE OPC CLIENT
+When you install the OPC Client, the installation program creates 
+a driver configuration file called nodename.OPC.  FIX uses this 
+file when you automatically start the server.  If you subsequently 
+change the name of your SCADA server after installing the OPC 
+server, FIX cannot automatically start the server because the name 
+of the node does not match the name of the configuration file.  To 
+correct this, rename the configuration file to match the name of 
+your SCADA server.  For example, if you change the name of the 
+SCADA server from SCADA1 to SCADA9, rename the configuration file 
+from SCADA1.OPC to SCADA9.OPC.
+
+D.2  USING LICENSING SOFTWARE
+You must use the latest GEIP Licensing software to avoid problems
+with key checking when the OPC Client launches an GEIP OPC Server. 
+The GEIP Licensing software is available from the GEIP support 
+web site at www.ge-ip.com/support.
+
+

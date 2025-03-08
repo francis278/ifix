@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>My-T-Soft Developer's Kit for Windows Overview</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Developer's Kit for Windows"
+HREF="mytsoftdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="My-T-Soft Developer's Kit for Windows"
+HREF="mytsoftdevkit.html"><LINK
+REL="NEXT"
+TITLE="Close My-T-Soft Window"
+HREF="closemytsoft.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. My-T-Soft Developer's Kit for Windows</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="closemytsoft.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="DevKitForWindows"
+>My-T-Soft Developer's Kit for Windows Overview</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: DEVKIT</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: Utilities / Stand-alone Executable with Source</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6</B
+></SPAN
+></P
+><P
+>Utilities for implementing My-T-Soft within application development environments (Microsoft Access, Borland Delphi, Visual Basic, and other visual application design environments)</P
+><P
+>My-T-Soft is used as a generic term for My-T-Touch, My-T-Pen, My-T-Soft, or private label versions of IMG's My-T-Soft family.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Overview</B
+></SPAN
+></P
+><P
+>Each utility comes with a C source module, a Resource Script (RC), and a Module Definition file (DEF).</P
+><P
+>The pre-compiled executables can be integrated into any environment that can launch (i.e. shell, spawn, WinExec, CreateProcess, etc.) an EXE executable program.  Use a windowed command prompt (MS-DOS prompt/CMD/Command) to manually work with these executables.</P
+><P
+>These utilities were developed in response to customer suggestions, wants, needs, and by reviewing the capabilities of various high-end application development tools.  The executable approach allows use of Shell, WinExec, CreateProcess, or other API (Application Programming Interface) calls common to any robust environment.  The inclusion of the source code allows easy integration into applications developed closer to the Windows API.  The instructional information is also useful in allowing developers to create functional applications quickly.</P
+><P
+>The order of the utilities is in the order they were created.</P
+><P
+>Be sure to read the <A
+HREF="chap2hintsandcomments.html"
+>Hints &#38; Comments for Developers</A
+>, or in the <A
+HREF="faq.html"
+>Frequently Asked Questions</A
+> (FAQ) section.</P
+><P
+>There are various utilities.  Some pair up as opposites, some are more powerful than others.  Be sure to read through the following details to gain a good understanding of the ability of these tools to assist you in your development efforts.  Please feel free to contact us with other ideas or needs.</P
+><P
+>Version Release Notes</P
+><P
+>The 1.77 release updates CONFGMTS to handle All panels, including the tool bar panel.  MOVEWMTS now opens a minimized My-T-Soft before executing move.  A new utility called TRIGGER waits on a window to disappear before triggering a command.</P
+><P
+>The 1.72 updates FWCTLMTS and CPYCNMTS to only use Microsoft Win32 APIs for file manipulation.  The 1.71 version was quality tested under Win98, but these same (Visual C++ Version 6, SP3) compiled EXE files did not operate properly under NT/2000/XP.  1.72 adds WaitRun, WCRemap, and updates MTSStart &#38; Open_MTS.</P
+><P
+>The 1.71 release is compiled for Win32 - the #define MYTWIN32 is added in the MYTSOFT.H, and each C source file uses this to build the appropriate target.  The 1.71 also includes the MTSDLL Dynamic Link Library with examples for close integration with VBA (Visual Basic for Applications) - see the VBASIC projects, or the MDB in MTSDLL for coding samples.</P
+><P
+>The 1.70 release adds the StartUp as minimized utility.  This resolves taskbar icon artifacts in Win 95/98 when opened for logon, along with minimizing to an icon.  (NOTE: In the 1.70 release of My-T-Soft, the StartupInfo properties are referenced, and the shortcut can be set to Open as a minimized window - the button will be used) Also note that Size 12 is a virtual barrier for re-sizing on the fly from the larger sizes (i.e. greather than size 12) to the smaller sizes (i.e. 12 or less).  Do not cross this barrier one way or the other without first establishing a painted keyboard at size 12.  The larger sizes are all keyed off of the dimensions of size 12, so corruption of the valid KBF file is possible (probable!) if crossing size 12!</P
+><P
+>The 1.50 release adds the FindWindow &#38; Control My-T-Soft that allows the toggling of the window off-screen, and on-the-fly configuration when called up by the user.  Goes well with the Control My-T-Soft button utility (also included).  The MoveWindow (MOVEWMTS) utility changes a parameter for cleaner operation with the My-T-Soft 1.50 release.</P
+><P
+>The 1.40 Release adds the Send String through My-T-Soft, but this is only fully functional in Version 1.52 of My-T-Touch / My-T-Pen.</P
+><P
+>The 1.30 release combines the previous My-T-Soft, My-T-Touch, and My-T-Pen utility kits.  This was done to allow addition of customized versions, and to allow developers to extend the capabilities of the executables to other windows in the system.  My-T-Soft is used throughout, but please note that the appropriate product name (window name) must be in the FindMyTSoft function provided internally in the source code.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DISCLAIMER</B
+></SPAN
+></P
+><P
+>The source code &#38; derived executable are provided at no cost as useful &#38; instructional materials to developers &#38; system integrators incorporating IMG software.  Because no licensing fee has been tendered, there is no technical support offered for this software, source code, or its capabilities to solve a particular problem.</P
+><P
+>Support info:</P
+><P
+>These codes indicate which utility is available for which platforms</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>My-T-Soft 1.x = My-T-Soft / My-T-Touch / My-T-Pen versions prior to 2.00</B
+></SPAN
+></P
+><P
+>- In DEVKIT folder</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>My-T-Soft 2.x = My-T-Soft versions for Build-A-Board
+- In DEVKIT2 folder</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>My-T-Soft CE = My-T-Soft versions for Windows CE
+- In DEVKITCE folder, in processor sub-folder</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developers Kit Utilities &#38; Quick Description&#62;</B
+></SPAN
+></P
+><P
+><A
+HREF="closemytsoft.html"
+>Close My-T-Soft Window</A
+></P
+><P
+>This sends the WM_CLOSE Window Message to shut down the software</P
+><P
+><A
+HREF="showwindowsoptions.html"
+>Show window options for My-T-Soft</A
+></P
+><P
+>Example of using ShowWindow API call</P
+><P
+><A
+HREF="minimize.html"
+>Minimize My-T-Soft to Icon, Button, or Tray icon</A
+></P
+><P
+>Based on minimize settings (Setup | Configuration), minimizes window</P
+><P
+><A
+HREF="openfromminimized.html"
+>Open My-T-Soft from minimized state</A
+></P
+><P
+>Restores to open window from minimized state</P
+><P
+><A
+HREF="movewindow.html"
+>Move My-T-Soft Window</A
+></P
+><P
+>Position window at X/Y location</P
+><P
+><A
+HREF="setcursorposition.html"
+>Set Cursor Position for My-T-Soft</A
+></P
+><P
+>Uses SetCursorPos API to move mouse cursor</P
+><P
+><A
+HREF="configuremtspanels.html"
+>Configure My-T-Soft Panels &#38; Size</A
+></P
+><P
+>Open/close panels, and resizes from command line</P
+><P
+><A
+HREF="configuremtsonthefly.html"
+>Configure My-T-Soft on the fly (from pre-existing configurations)</A
+></P
+><P
+>Restores saved files for immediate configuration changes</P
+><P
+><A
+HREF="togglescreen.html"
+>Toggle My-T-Soft off-screen or on-screen in specified configuration</A
+></P
+><P
+>One command to move off-screen, or restore from file based on position</P
+><P
+><A
+HREF="sendstring.html"
+>Send String (type) through My-T-Soft</A
+></P
+><P
+>Externally (programmatically) send keystrokes through My-T-Soft</P
+><P
+><A
+HREF="saveposition.html"
+>Save Position of My-T-Soft</A
+></P
+><P
+>Saves current position to KEYBOARD.KBF</P
+><P
+><A
+HREF="savesettings.html"
+>Save Settings of My-T-Soft</A
+></P
+><P
+>Saves panels/size configuration to KEYBOARD.KBF</P
+><P
+><A
+HREF="restoreposition.html"
+>Restore Position of My-T-Soft</A
+></P
+><P
+>Restores saved X/Y location from KEYBOARD.KBF</P
+><P
+><A
+HREF="restoresettings.html"
+>Restore Settings of My-T-Soft</A
+></P
+><P
+>Restores panels/size from KEYBOARD.KBF</P
+><P
+><A
+HREF="startupoptions.html"
+>My-T-Soft Startup Options</A
+></P
+><P
+>	Manipulating My-T-Soft at Startup example</P
+><P
+><A
+HREF="waitthenrun.html"
+>Wait and then Run Program/Utility</A
+></P
+><P
+>Utility to delay execution of another program</P
+><P
+><A
+HREF="waitthenclose.html"
+>Wait and then Close Window Utility</A
+></P
+><P
+>Utility to close an arbitrary window</P
+><P
+><A
+HREF="trigger.html"
+>Trigger - Wait while Window, then Run utility</A
+></P
+><P
+>Utility to monitor a window, then run a command if window closes</P
+><P
+><A
+HREF="wordcompleteremapping.html"
+>WordComplete Remapping Utility (OnScreen only)</A
+></P
+><P
+>Trigger WordComplete selections in an alternate way</P
+><P
+><A
+HREF="startupasicon.html"
+>My-T-Soft Startup as Icon</A
+></P
+><P
+>Another Startup Utility example</P
+><P
+><A
+HREF="whatireallywant.html"
+>What I really want (My-T-Soft 1.x)</A
+></P
+><P
+>Overview of how to work on-the-fly changes</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="closemytsoft.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>My-T-Soft Developer's Kit for Windows</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Close My-T-Soft Window</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

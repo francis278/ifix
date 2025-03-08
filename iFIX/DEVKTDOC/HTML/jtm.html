@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Joystick-To-Mouse</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Joystick To Mouse Utilities"
+HREF="jtmutil.html"><LINK
+REL="PREVIOUS"
+TITLE="Joystick To Mouse Utilities"
+HREF="jtmutil.html"><LINK
+REL="NEXT"
+TITLE="The Magnifier"
+HREF="themagnifier.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="jtmutil.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 11. Joystick To Mouse Utilities</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="themagnifier.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="JTM"
+>Joystick-To-Mouse</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: JTMUTIL</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: Utility / Stand-alone Executable with Source</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C++ / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6</B
+></SPAN
+></P
+><P
+>Joystick-To-Mouse External speed control + Other Utilities</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Overview</B
+></SPAN
+></P
+><P
+>Joystick-To-Mouse now has predefined messages for controlling the internal speed variables and global acceleration setting, along with basic operation and buttons.  This allows high-level development environments some basic control over the functionality of Joystick-To-Mouse.</P
+><P
+>Various other utilities have been added.  These are primarily meant for true developer's, although there are a set of pre-built EXEs that can be used by a computer user that is familiar with the basic concepts of programs, messaging, and scripting.</P
+><P
+>The following "external" interfaces are available via these utilities:</P
+><P
+>Set Speed (1-10, 0, and Reset from current configuration)</P
+><P
+>On, Off, Close (Start, Stop, or Close Joystick-To-Mouse)</P
+><P
+>Buttons (1-32, 01-10 built as EXEs)</P
+><P
+>This is bare-bones code that implements the control of Joystick-To-Mouse.</P
+><P
+>There are pre-built EXEs that can be implemented via a WinExec, CreateProcess,
+Shell, Spawn, etc. function</P
+><P
+>Details about the source code are in the source code.  This is developer material, and the source code is the explanation / details you need (if you are a developer).</P
+><P
+>These are the available EXEs with descriptions:</P
+><P
+>JTMSPD00.EXE - Set speed of 0, center mouse cursor</P
+><P
+>JTMSPD01.EXE - Set speed of 1, disable acceleration</P
+><P
+>JTMSPD02.EXE - Set speed of 2, disable acceleration</P
+><P
+>JTMSPD03.EXE - Set speed of 3, disable acceleration</P
+><P
+>JTMSPD04.EXE - Set speed of 4, disable acceleration</P
+><P
+>JTMSPD05.EXE - Set speed of 5, disable acceleration</P
+><P
+>JTMSPD06.EXE - Set speed of 6, disable acceleration</P
+><P
+>JTMSPD07.EXE - Set speed of 7, disable acceleration</P
+><P
+>JTMSPD08.EXE - Set speed of 8, disable acceleration</P
+><P
+>JTMSPD09.EXE - Set speed of 9, disable acceleration</P
+><P
+>JTMSPD10.EXE - Set speed of 10, disable acceleration</P
+><P
+>JTMRESET.EXE - reset from the last set of saved settings for speed and acceleration</P
+><P
+>JTMON.EXE - turn ON Joystick-To-Mouse if OFF</P
+><P
+>JTMOFF.EXE - turn OFF Joystick-To-Mouse if ON</P
+><P
+>JTMCLOSE.EXE - Close Joystick-To-Mouse</P
+><P
+>JTMBTN01.EXE - trigger button 1 if pressed (Macros not supported)</P
+><P
+>JTMBTN02.EXE - trigger button 2 if pressed (Macros not supported)</P
+><P
+>JTMBTN03.EXE - trigger button 3 if pressed (Macros not supported)</P
+><P
+>JTMBTN04.EXE - trigger button 4 if pressed (Macros not supported)</P
+><P
+>JTMBTN05.EXE - trigger button 5 if pressed (Macros not supported)</P
+><P
+>JTMBTN06.EXE - trigger button 6 if pressed (Macros not supported)</P
+><P
+>JTMBTN07.EXE - trigger button 7 if pressed (Macros not supported)</P
+><P
+>JTMBTN08.EXE - trigger button 8 if pressed (Macros not supported)</P
+><P
+>JTMBTN09.EXE - trigger button 9 if pressed (Macros not supported)</P
+><P
+>JTMBTN10.EXE - trigger button 10 if pressed (Macros not supported)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Implementation</B
+></SPAN
+></P
+><P
+>STEP 1</P
+><P
+>Interfacing with Joystick-To-Mouse from an application.</P
+><P
+>Decide which method:</P
+><P
+>INTERNAL (using Windows API Messaging), or</P
+><P
+>EXTERNAL (run pre-built stand-alone executables via Shell or WinExec type
+commands).</P
+><P
+>To use the INTERNAL method, your development environment must support calls such as FindWindow and SendMessage.</P
+><P
+>To use the EXTERNAL method, you must have the ability to compile C based Windows Source code with a Windows Application as the target.</P
+><P
+>If the requirements are not clear, then this type of low-level program interfacing is not recommended.</P
+><P
+>Otherwise reference the JTMSPEED.C and JTMSPEED.RC files for reference &#38; proceed on to STEP 2.</P
+><P
+>STEP 2 - INTERNAL (Overview)</P
+><P
+>Obtain the Window handle for the Joystick-To-Mouse window.  As seen in the source code, only the Class of "Joystick-To-Mouse" is required for the FindWindow API call.  Note that the Window Text (Window Name / Caption Bar Text) can change from "Joystick-To-Mouse" to "Joystick-To-Mouse ON" to "Joystick-To-Mouse OFF" - this can be dangerous to use because of these changes, however, it can also allow your application to sense the current state of Joystick-To-Mouse.</P
+><P
+>Once you have the window handle, you must then Send or Post a message to JTM.  The SendMessage API is preferred because the action will be engaged immediately.  All of the options return a TRUE (non-0) value.</P
+><P
+>Reference JTMSPEED.C for an example and also see the header info below.</P
+><P
+>If required to use decimal values, note the appropriate values under the HEADER DEFINES. </P
+><P
+>Also note that working between 16 &#38; 32-bit apps may cause parameter issues.</P
+><P
+>For reference, the parameters expected within the JTM window function are:</P
+><P
+>HWND - Handle to JTM - Must be obtained within your app by some mechanism.</P
+><P
+>MESSAGE - Must be WM_COMMAND, or 273 decimal</P
+><P
+>WPARAM - Must be the appropriate value (see HEADER DEFINES) (256-267 decimal)</P
+><P
+>LPARAM - Not used - should be 0 to resolve 16/32 bit issues.</P
+><P
+>STEP 2 - EXTERNAL (Overview)</P
+><P
+>Most of the basic EXEs have been compiled for you, only the Buttons 10-32 have not.  See Overview for details about each executable.  Once these files are built, use the Shell or WinExec to launch the executable when triggered by the appropriate event.</P
+><P
+>STEP 3 - EXTERNAL APP CONSIDERATIONS</P
+><P
+>If using the MouseMove event to trigger the communication between your app and JTM, it is recommended to use a global boolean variable to indicate the status of the communication.  If this is not implemented, you will end up sending numerous messages to JTM, and this can be especially undesirable if using the external method of communication.</P
+><P
+>In testing, the following method was used to make a clean interface:</P
+><P
+>2 Controls were created, a button, with a larger enclosing rectangle (static box) surrounding the button.</P
+><P
+>Both Controls were configured to have the MouseMove property event trigger communication with JTM, with a Global variable used to indicated which state JTM was in (Fast or Slow).  If "Fast", the button would send the "Slow" speed to JTM &#38; set the variable to "Slow". If "Slow", the rectangle would send the RESETSPEED ("Fast" in this example), and change the variable to "Fast".</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Other Notes</B
+></SPAN
+></P
+><P
+>The RESETSPEED command results in JTM re-reading the INI file for the values set there.  If you have the capability of modifying the INI, you can use the SpeedX, SpeedY, and Multiply settings, and then issue the RESETSPEED message.</P
+><P
+>Multiply is the internal variable for Global acceleration effects.  Using any of the SETSPEED? commands results in the Multiply variable to be set to 0, disabling acceleration.  If you do not have acceleration enabled, then this means nothing, but if you do, you MUST call RESETSPEED to return JTM to its proper settings.</P
+><P
+>All SETSPEED? messages set X &#38; Y speeds to the same values, and clears the global acceleration variable.</P
+><P
+>RESETSPEED message re-reads the values from the INI.</P
+><P
+>Final note: If you are working within JTM to configure settings, and working with an external app that can affect the internal variable settings, you may get strange results when the INI file is saved/re-read.  It is strongly recommended that you stay out of the JTM setting dialogs while using these external messages.</P
+><P
+>Developers Kit Version 1.78 Release 3 - 9/26/2007</P
+><P
+>Copyright  1995-2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="jtmutil.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="themagnifier.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Joystick To Mouse Utilities</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="jtmutil.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>The Magnifier</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

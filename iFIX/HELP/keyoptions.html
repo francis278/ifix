@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Key Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Change My-T-Soft Configuration"
+HREF="changeconfiguration.html"><LINK
+REL="PREVIOUS"
+TITLE="Interface Settings"
+HREF="interfacesettings.html"><LINK
+REL="NEXT"
+TITLE="My-T-Soft Special Handling Dialog Box"
+HREF="specialhandlingdialogbox.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="interfacesettings.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="specialhandlingdialogbox.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="KeyOptions"
+>Key Options</A
+></H2
+><P
+>&#13;<DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="images/keyoptions.png"
+ALIGN="center"></P
+></DIV
+>
+</P
+><P
+>Key Options offers customization capabilities for keys on the main Alpha Keyboard Panel and the Edit panel.  Keys may be disabled, assigned to other functions, and can be re-mapped using the Launch Key EXE in conjunction with the Developer's Kit (e.g. the Esc key could be re-mapped to send Alt-F4).</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Select Key</I
+></SPAN
+></P
+><P
+>This Drop-Down list allows you to select the specific key you wish to work with.  The number in parentheses is the internal ID used by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> for the key's position.  Refer to the Build-A-Macro Notes for more details on these internal IDs.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Select Key Modifier (Key with...)</I
+></SPAN
+></P
+><P
+>This Drop-Down list allows you to select a specific key combination (i.e. Ctrl-Alt-Delete) for the currently selected Key.  All combination options are available.  Note that with the proper setting, you can disable Ctrl-F1, but not F1, or just disable Alt-F4, or Shift-Esc.  Due to the complexity of available applications, each possible option for each key is given.  See the Key Display (below) which is a quick visual aid to see if a particular key has any enhanced settings.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Key Display</I
+></SPAN
+></P
+><P
+>This is a visual aid only.  When it is 0 (zero), there are no enhanced key settings in use.  All keys are Enabled, and there is no Launch setting on.  Any non-zero display means that at least one enhanced key setting is selected for the currently selected Key.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Clear</I
+></SPAN
+></P
+><P
+>This button will remove all enhanced settings for the currently selected key.  All keystrokes will be Enabled, and any Launch settings will be removed (No Additional Action will be selected to every possible keystroke).  This will not remove the Key EXE entry, but this is disabled since all Launch settings will be cleared.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Enable Keystroke(s) / Disable Keystroke(s)</I
+></SPAN
+></P
+><P
+>This defines the state of the particular key and its current modifier (Ctrl, Shift, Alt).  If Enabled, then <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will generate &#38; send the keystroke.  If Disabled, then the keystroke(s) will be removed and no action by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will occur when the particular keystroke(s) is/are initiated by the user.  Note that this action is independent of the Launch Key EXE capability.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>No Additional Action / Launch Key EXE</I
+></SPAN
+></P
+><P
+>In general, the No Additional Action for any keystroke is the typical setting.  Due to customer requests, we have added the capability of also initiating other actions tied to specific Keystrokes.  By using the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Developers Kit, these (or any other developer selected action) can be tied to a particular keystroke or combination.  Some of these requested capabilities are:</P
+><P
+>- Minimize to button upon Enter (type Enter, then minimize = Enter Key Enabled, Launch MINMZMTS.EXE)</P
+><P
+>- Ctrl-Alt-Delete restarts system (Ctrl-Alt-Delete Launches NTRSTART.EXE)</P
+><P
+>- Alt-F4 cannot close window (Alt-F4 Disabled)</P
+><P
+>- Make F1 run special Application Help program tied to a different key (F1 Key Disabled, Launch SDSTRMTS.EXE with appropriate alternate keystroke used)</P
+><P
+>This adds a great deal of flexibility to the general keyboard (similar to the capabilities of the Macro panels), but it also creates a greater chance of confusion.  These should only be used when implementing a system for only 1 type of use.  In general, these settings are potentially more dangerous then helpful.  Wondering why the keyboard disappears everytime you press Enter is certainly not the end goal of productivity - so please be extremely careful when using these options, and document any changes for developers to come and for your users!</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Key EXE</I
+></SPAN
+></P
+><P
+>This is an Executable file that will be run if the "Launch key EXE" option is selected for the particular Key Combination.  Note you may add command line options, but be sure to click on OK when you are through editing the selection.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Browse</I
+></SPAN
+></P
+><P
+>This button will open a File Open Browse Dialog that will let you explore your system to select an executable.  Because of backward compatibility, only short path &#38; file names are used.</P
+><P
+>It is strongly recommended that only Developer Kit EXEs be used.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="interfacesettings.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="specialhandlingdialogbox.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Interface Settings</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="changeconfiguration.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Special Handling Dialog Box</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Themes with Key Images and PaintDLL Source</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="Build-A-Board KBF Dump (Extract)"
+HREF="kbfdump.html"><LINK
+REL="NEXT"
+TITLE="MultiTouchDLL DLL Source Code"
+HREF="multitouchdll.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="kbfdump.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="multitouchdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Themes"
+>Themes with Key Images and PaintDLL Source</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: THEMES</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: DLL with Source / images</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6</B
+></SPAN
+></P
+><P
+>To allow different views of the keyboard, the PaintDLL can be used.  In order to show off this capability, Themes were introduced in 1.79, using pre-defined looks (key images and coding in a specific PaintDLL).  This is the folder that contains the source images and code for the predefined Themes released with the software.  For further information on PaintDLL capabilities, refer to the <A
+HREF="paintdll.html"
+>PaintDLL section</A
+>.</P
+><P
+>Each folder is named and listed back in the Initialization file for the software - see Theme, ThemeList, ThemesFolder.  The base folder has a THEME.INI and a Release folder with a built PaintDLL.DLL interface.  When a Theme is changed or selected, the THEME.INI file is referenced, and settings in this file are then used to update the Initialization file of the running software, which then becomes the current PaintDLL in use.  The special RESET folder clears the Theme and defaults to the current default configured display.</P
+><P
+>Note the THEMES folder in the IMG Developer's Kit has the source for the PaintDLLs for each Theme.  The Themes included in the release software only contain the THEME.INI and PaintDLL.DLL.  Because the 101 keyboard have a large return key, these themes may be better on the 104 key layouts - the 101 keys layouts splits the return key, and uses the carriage return symbol on the upper "key".</P
+><P
+>To recap the THEMES folders, the THEMES folder installed / included with the software only contains the DLL and details necessary to allow operation within the software, and the THEMES folder here in the IMG Developer's Kit contains the source to build the DLL, and has the specific code to create the matching theme.  The method used to create the installed THEMES.zip (for the as installed THEMES folder) was to test and finalize with the Developer's Kit THEMES folder, then run the cleanup.bat (which strips out everything but the necessary DLL/THEME.INI).</P
+><P
+>Themes can easily be added or removed, but do require some manual handling as based on the settings in the INI and the appropriate THEMES sub-folder(s).  Refer to the existing samples and settings, along with notes on the INI settings Theme, ThemeList, and ThemesFolder.</P
+><P
+>Version 1.79 - September 5, 2012</P
+><P
+>Copyright © 2007-2012 by Innovation Management Group, Inc.  All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="kbfdump.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="multitouchdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Build-A-Board KBF Dump (Extract)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>MultiTouchDLL DLL Source Code</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

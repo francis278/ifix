@@ -1,0 +1,44 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Ll_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Ll_TS.TEXT7,Arial,9,0,Lead/Lag Factors,超前/滞后因数,,
+Caption,Ll_TS.DATALINK9,Arial,9,0,,,,
+Caption,Ll_TS.DATALINK10,Arial,9,0,,,,
+Caption,Ll_TS.DATALINK11,Arial,9,0,,,,
+Caption,Ll_TS.TEXT8,Arial,9,0,Constant:,常数:,,
+Caption,Ll_TS.Text35,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Ll_TS.DataLink18,Arial,9,1,,,,
+Caption,Ll_TS.Text36,Arial,9,0,Tagname:,标签名:,,
+Caption,Ll_TS.DataLink19,Arial,9,1,,,,
+Caption,Ll_TS.Text37,Arial,9,0,Prev Block:,前一块:,,
+Caption,Ll_TS.Text38,Arial,9,0,Next Block:,下一块:,,
+Caption,Ll_TS.DATALINK_PREV,Arial,9,1,,,,
+Caption,Ll_TS.DATALINK_NEXT,Arial,9,1,,,,
+Caption,Ll_TS.DataLink20,Arial,9,1,,
+Caption,Ll_TS.DataLink21,Arial,9,1,,
+Caption,Ll_TS.Text39,Arial,9,1,Current State,当前状态
+Caption,Ll_TS.Text40,Arial,9,1,Block Status:,数据块状态:
+Caption,Ll_TS.Text41,Arial,9,1,Value:,数值:
+Caption,Ll_TS.Text42,Arial,9,1,Alarms,报警
+Caption,Ll_TS.DataLink22,Arial,9,0,,
+Caption,Ll_TS.DataLink23,Arial,9,0,,
+Caption,Ll_TS.Text43,Arial,9,0,Areas:,区域:
+Caption,Ll_TS.Text44,Arial,9,0,Enabled:,启用:
+Caption,Ll_TS.DataLink27,Arial,9,0,,
+Caption,Ll_TS.DataLink28,Arial,9,0,,
+Caption,Ll_TS.DataLink29,Arial,9,0,,
+Caption,Ll_TS.Text49,Arial,9,0,1,1
+Caption,Ll_TS.Text50,Arial,9,0,2,2
+Caption,Ll_TS.Text51,Arial,9,0,3,3
+Caption,Ll_TS.Text52,Arial,9,1,Security Areas,安全区域
+Caption,Ll_TS.DataLink30,Arial,9,0,,
+Caption,Ll_TS.DataLink31,Arial,9,0,,
+Caption,Ll_TS.DataLink32,Arial,9,0,,
+Caption,Ll_TS.Text53,Arial,9,1,Engineering Units,工程单位
+Caption,Ll_TS.Text54,Arial,9,0,Low Limit:,低限:
+Caption,Ll_TS.Text55,Arial,9,0,High Limit:,高限:
+Caption,Ll_TS.Text56,Arial,9,0,Units:,单位:
+Caption,Ll_TS.Text57,Arial,9,0,Lead:,超前:
+Caption,Ll_TS.Text58,Arial,9,0,Lag:,滞后:
+Caption,Ll_TS.DataLink33,Arial,9,0,,
+Caption,Ll_TS.Text59,Arial,9,0,Counter:,计数:

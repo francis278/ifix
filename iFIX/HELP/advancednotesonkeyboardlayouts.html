@@ -1,0 +1,667 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Advanced Notes on Keyboard Layouts</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Select Keyboard Layouts"
+HREF="selectkeyboardlayouts.html"><LINK
+REL="PREVIOUS"
+TITLE="Keyboard Layouts &#38; Windows"
+HREF="keyboardlayoutsandwindows.html"><LINK
+REL="NEXT"
+TITLE="Build-A-Macro"
+HREF="buildamacro.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="keyboardlayoutsandwindows.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="buildamacro.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AdvancedNotesOnKeyboardLayouts"
+>Advanced Notes on Keyboard Layouts</A
+></H2
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Keyboard Layouts &#38; Specific Notes</I
+></SPAN
+></P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Notes:</I
+></SPAN
+></P
+><P
+>&#13;The keyboard language/layout must be changed for the keyboard to type correctly based on the Windows Keyboard Layout, Windows Regional settings, and the displayed Layout.</P
+><P
+>&#13;Most users operate on one version of Windows, and are used to one keyboard layout.  After selecting the layout when they first configure <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, they may never return to the Keyboard Layout selection again.  This is what the objective was for the design &#38; approach to handling keyboard layouts in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  Changing the keyboard layout in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> only affect <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>'s display &#38; operation.  To synchronize the display and operation with Windows, both <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> and Windows must be set to the same layout.
+</P
+><P
+>During the various updates in Windows versions, keyboard layouts have changed.  Keys have been moved/added, internal scan codes changed, etc.  It is important to note there is no standards body that determines what a particular keyboard layout should be.  Technically, it is left up to the manufacturer to determine the physical keyboard layout (e.g. look at different keyboard layouts on laptops/notebooks/desktops).  Microsoft must support these different hardware implementations, and also is involved in layout modifications (e.g. adding keys, such as the Windows Key).  The end result is that the keyboard layout files must be viewed as dynamic and may be different between one version of Windows and the next.  If you experience a problem with a layout, please contact technical support, or refer to our <A
+HREF="http://www.imgpresents.com/imgdev.htm"
+TARGET="_top"
+>Developer's Corner</A
+> for options available.
+</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Regional Settings (Refer to notes below)</I
+></SPAN
+></P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Optional</I
+></SPAN
+> = the Regional Settings doesn't have to change for showing the correct labels.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Suggested</I
+></SPAN
+> = the Regional Settings has to change for showing the correct labels</P
+><P
+>Char Set numbers has to be changed in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to matching keyboard language/layout.</P
+><P
+>&#13;There are several settings that take affect when the keyboard is selected through <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup.  The appropriate character set is automatically selected, the status of whether or not the software should handle the AltGr keystroke is set, and the setting for whether or not the Lowercase display is allowed on the keyboard panel is set for some layouts.  Because of display issues, these settings have been pre-set for various layouts.  Refer to Advanced User notes and the setting for KeyboardUpdate (in initialization file description), and see manual setting below for additional details on the actual implementation.
+</P
+><P
+>&#13;In some cases, the logic behind the upper/lowercase display causes minor display issues with certain layouts - these issues are documented under the layout.
+</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Arabic</I
+></SPAN
+></P
+><P
+>Char Set = 178</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Belarusian</I
+></SPAN
+></P
+><P
+>Regional Settings = Belarusian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Belarusian/Belarusian</P
+><P
+>Char Set = 204</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Bulgarian</I
+></SPAN
+></P
+><P
+>Regional Settings = Bulgarian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Bulgarian/Bulgarian</P
+><P
+>Char Set = 204</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Bulgarian (Latin)</I
+></SPAN
+></P
+><P
+>Regional Settings = Bulgarian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Bulgarian/Bulgarian (Latin)</P
+><P
+>Char Set = 204</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Croatian</I
+></SPAN
+></P
+><P
+>Regional Settings = Croatian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Croatian/Croatian</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Czech (Qwerty)</I
+></SPAN
+></P
+><P
+>Regional Settings = Czech	(Suggested)</P
+><P
+>Keyboard Language/Layout = Czech/Czech (Qwerty)</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Czech</I
+></SPAN
+></P
+><P
+>Regional Settings = Czech	(Suggested)</P
+><P
+>Keyboard Language/Layout = Czech/Czech</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Estonian   (Code Page might not be fully supported by some version of Windows)</I
+></SPAN
+></P
+><P
+>Regional Settings = Estonian	(Optional)</P
+><P
+>Keyboard Language/Layout = Estonian/Estonian</P
+><P
+>Char Set = 186</P
+><P
+>Suggested Font:  MS Sans Serif</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Greek</I
+></SPAN
+></P
+><P
+>Regional Settings = Greek	(Suggested)</P
+><P
+>Keyboard Language/Layout = Greek/Greek</P
+><P
+>Char Set = 161</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Hebrew</I
+></SPAN
+></P
+><P
+>Char Set = 177</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Hungarian</I
+></SPAN
+></P
+><P
+>Regional Settings = Hungarian	(Optional)</P
+><P
+>Keyboard Language/Layout = Hungarian/Hungarian</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Irish</I
+></SPAN
+></P
+><P
+>Regional Settings = English (Ireland)	(Optional)</P
+><P
+>Keyboard Language/Layout = English (Ireland)/Irish</P
+><P
+>Char Set = 0</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Korean</I
+></SPAN
+></P
+><P
+>Regional Settings = Korean</P
+><P
+>Keyboard Language/Layout = Korean (IME)</P
+><P
+>Char Set = 129</P
+><P
+>On the 104 layout, the key above the enter and next to the right-shift appear the same.  The correct letter is displayed in Windows Vista/7, but not in Windows XP.  The 2 keys generate different virtual keys (220 &#38; 226), but both generate the same character.</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Latvian (Latin)  (Code Page might not be fully supported by some version of Windows)</I
+></SPAN
+></P
+><P
+>Regional Settings = Latvian	(Optional)</P
+><P
+>Keyboard Language/Layout = Latvian/Latvian (Latin)</P
+><P
+>Char Set = 186</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Latvian	(Code Page might not be fully supported by some version of Windows)</I
+></SPAN
+></P
+><P
+>Regional Settings = Latvian	(Optional)</P
+><P
+>Keyboard Language/Layout = Latvian/Latvian</P
+><P
+>Char Set = 186</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Polish</I
+></SPAN
+></P
+><P
+>Regional Settings = Polish	(Optional)</P
+><P
+>Keyboard Language/Layout = Polish/Polish</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Polish Programmer</I
+></SPAN
+></P
+><P
+>Regional Settings = Polish	(Optional)</P
+><P
+>Keyboard Language/Layout = Polish/Polish</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Romanian</I
+></SPAN
+></P
+><P
+>Regional Settings = Romanian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Romanian/Romanian</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Russian</I
+></SPAN
+></P
+><P
+>Regional Settings = Russian	(Suggested)</P
+><P
+>Keyboard Language/Layout = Russian/Russian</P
+><P
+>Char Set = 204</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Slovak</I
+></SPAN
+></P
+><P
+>Regional Settings = Slovak	(Suggested)</P
+><P
+>Keyboard Language/Layout = Slovak/Slovak</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Slovak (Qwerty)</I
+></SPAN
+></P
+><P
+>Regional Settings = Slovak	(Suggested)</P
+><P
+>Keyboard Language/Layout = Slovak/Slovak (Qwerty)</P
+><P
+>Char Set = 238</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Turkish (F Type)</I
+></SPAN
+></P
+><P
+>Regional Settings = Turkish	(Optional)</P
+><P
+>Keyboard Language/Layout = Turkish/Turkish (F type)</P
+><P
+>Char Set = 162</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Turkish (Q Type)</I
+></SPAN
+></P
+><P
+>Regional Settings = Turkish	(Optional)</P
+><P
+>Keyboard Language/Layout = Turkish/Turkish (Q type)</P
+><P
+>Char Set = 162</P
+><P
+><SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>HOW TO SETUP ADDITIONAL KEYBOARD LAYOUTS MANUALLY</I
+></SPAN
+></P
+><P
+>Make sure the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> keyboard is closed during these steps!</P
+><P
+>Step 1) Copy All (or the appropriate) KYBD????.KMF file to the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Installation folder</P
+><P
+>\Program Files\MYTSOFT</P
+><P
+>Step 2) Modify the MYTSOFT.INI file</P
+><DIV
+CLASS="important"
+><BLOCKQUOTE
+CLASS="important"
+><P
+><B
+>Important: </B
+>Refer to the ConfigPath entry in the <A
+HREF="initializationfile.html"
+>Initialization file</A
+> to determine which MYTSOFT.INI file is the correct file to modify!</P
+></BLOCKQUOTE
+></DIV
+><P
+>- <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup | Configuration | Special Options | Edit Initialization File</P
+><P
+>- Find the Keyboard=? setting in the [Configuration] section (top of file)</P
+><P
+>- Change to the appropriate numbered keyboard layout </P
+><P
+>Layout Numbers</P
+><P
+>The values 1-96, and 101-196, and any 200+ entries listed are valid, and are 
+	related as follows:</P
+><P
+>01 = U.S. Standard, 02 = U.S. Dvorak Standard,
+	03 = U.S. Dvorak Left-Handed, 04 = U.S. Dvorak Right-Handed,
+	05 = U.S. My-T-Easy (ABC) Alphabetic Keyboard,
+	06 = Belgian (comma), 07 = British, 08 = Canadian Multi-lingual,
+	09 = Danish, 10 = Dutch, 11 = Finnish, 12 = French,
+	13 = French Canadian, 14 = German, 15 = Icelandic,
+	16 = Italian, 17 = Latin American, 18 = Norwegian,
+	19 = Portuguese, 20 = Spanish, 21 = Swedish,
+	22 = Swiss French, 23 = Swiss German, 24 = U.S. International,
+	25 = Hungarian (Old), 26 = Belgian (period), 27 = Arabic,
+	28 = Belarusian, 29 = Bulgarian, 30 = Bulgarian (Latin),
+	31 = Croatian, 32 = Czech (Old), 33 = Czech (Qwerty),
+	34 = Estonian, 35 = Greek, 36 = Hebrew,
+	37 = Hungarian, 38 = Irish, 39 = Latvian,
+	40 = Latvian (Latin), 41 = Polish (Old), 42 = Romanian,
+	43 = Russian (old), 44 = Slovak, 45 = Slovak (Qwerty),
+	46 = Turkish (F type), 47 = Turkish (Q type),
+	48 = Spanish (Mexico), 49 = U.S. Fazekas,
+	50 = U.S. Chubon, 51 = Slovenian, 52=Japanese,
+	53 = Chinese, 54 = Korean, 55 = French (Belgian),
+	56 = French (Luxembourg), 57 = German (Austrian),
+	58 = German (Leichtenstein),
+	59 = German (Luxembourg), 60 = Spanish (Argentina),
+	61 = Spanish (Bolivia), 62 = Spanish (Chile),
+	63 = Spanish (Columbia), 64 = Spanish (Costa Rica),
+	65 = Spanish (Dominican Republic),
+	66 = Spanish (Ecuador), 67 = Dutch (Belgian),
+	68 = Dutch (Netherlands), 69 = Italian (Switzerland),
+	70 = Norwegian (Bokmal), 71 = Portuguese (Brazilian),
+	72 = Spanish (Guatemala), 73 = Spanish (El Salvador),
+	74 = Spanish (Honduras), 75 = Spanish (Modern Sort),
+	76 = Spanish (Nicaragua), 77 = Spanish (Panama),
+	78 = Spanish (Paraguay), 79 = Spanish (Peru),
+	80 = Spanish (Puerto Rico), 81 = Spanish (Uruguay),
+	82 = Spanish (Venezuela), 83 = English (Australian),
+	84 = English (New Zealand), 85 = English (Jamaica),
+	86 = English (United Kingdom), 87 = Chinese (Cangjie),
+	88 = Canadian Multilingual, 89 = Polish,
+	90 = Polish Programmer, 91 = Thai,
+	92 = U.S. Plum, 93 = Russian (Cyrillic),
+	94 = Danish (ABC), 95 = U.S. (Numpad Enter),
+	96 = Czech, 97 = Belgian (period),
+	101-197 are the 104 key layouts matching the above,
+	200 = 104 British (1st alternate),
+	201 = 104 British (2nd alternate),
+	202 = 104 Hebrew (Alt.),
+	203 = 104 Chinese (Zhuyin) (Alt.),
+	204 = 104 Arabic (Alt.)</P
+><P
+>- Save the file</P
+><P
+>Step 3) Change the Font / Character Set </P
+><P
+>- <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup | Configuration | Fonts</P
+><P
+>- See above for character set numbers</P
+><P
+>Step 4) Verify Windows Keyboard Layout &#38; Regional Settings</P
+><P
+>Step 5) Close <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup, run <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+></P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="keyboardlayoutsandwindows.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="buildamacro.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Keyboard Layouts &#38; Windows</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="selectkeyboardlayouts.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Build-A-Macro</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

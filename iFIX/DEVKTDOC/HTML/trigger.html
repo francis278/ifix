@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Trigger - Wait While Window, then Run - Also Launch / Activate App</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Developer's Kit for Windows"
+HREF="mytsoftdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="Wait and then Close Program/Utility"
+HREF="waitthenclose.html"><LINK
+REL="NEXT"
+TITLE="WordComplete Remapping utility (OnScreen only)"
+HREF="wordcompleteremapping.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="waitthenclose.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. My-T-Soft Developer's Kit for Windows</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="wordcompleteremapping.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Trigger"
+>Trigger - Wait While Window, then Run - Also Launch / Activate App</A
+></H1
+><P
+>This utility has various options - originally it was meant to wait while a window was active, then trigger a DevKit utility once the window was dismissed.  This is part of the common situations that arise when trying to integrate My-T-Soft with existing applications.  Because of the structure of the utility, it also is used to launch an Application, but if the Application is already running, it will bring the running Application to the foreground (Active window).</P
+><P
+>Name: Trigger - Wait while Window, then Run Utility</P
+><P
+>Executable name: TRIGGER.EXE</P
+><P
+>Command Line Arguments: [option character]{[Class],[Text]}![command to run]!</P
+><P
+>Command Line notes: Requires Command Line of form {Class,Window Text}!command.exe! Start with ~ to display debug info, e.g. ~{Class,Window Text}!command.exe!</P
+><P
+>Start with @ to run command (launch application) if no Window found, or activate if Window found, e.g. @{Class,Window Text}!command.exe!</P
+><P
+>Start with * to close any running TRIGGER Windows, e.g. *Close existing processes</P
+><P
+>Start with + to close any running TRIGGER Windows, then start new TRIGGER</P
+><P
+>Examples:</P
+><P
+>TRIGGER {#32770,Enter Name}!MOVEWMTS x:10000 y:10000!</P
+><P
+>(When Enter Name dialog is closed, move My-T-Soft off-screen)</P
+><P
+>TRIGGER ~{#32770,Error}!MOVEWMTS x:100 y:400!</P
+><P
+>(Show debug info, When Error dialog is closed, move My-T-Soft on-screen)</P
+><P
+>(Can use Debug with other special characters, but must be second position, e.g. @~ or +~)</P
+><P
+>TRIGGER *Close Existing TRIGGERS</P
+><P
+>(Any TRIGGERs waiting on a window will be sent a close message)</P
+><P
+>TRIGGER +{#32770,Error}!MOVEWMTS x:100 y:400!</P
+><P
+>(Close any existing TRIGGER processes, then When Error dialog is closed, move My-T-Soft on-screen)</P
+><P
+>When waiting on a window, there is buffer time!</P
+><P
+>TRIGGER waits 20 seconds for specified Window to appear</P
+><P
+>If this FAILSAFEDELAY entry runs out, TRIGGER will close.</P
+><P
+>This allows a holding period for the desired window to appear.</P
+><P
+>Notes:</P
+><P
+>Must include comma between {} to record class/text!</P
+><P
+>To use NULL value for Class/Text, use character '0', e.g. {SciCalc,0}, or {0,Document}</P
+><P
+>Description: If specified Window is found, will wait until window no longer exists, or if not an exact match, will match text in Caption, and wait until Window is no longer the foreground window, then it will execute the specified command.  There is a 20 second delay to wait for a window match, otherwise 
+TRIGGER will close if no match occurs.</P
+><P
+>Description (@ option): If specified Window is found, the Windows API SetForegroundWindow will be called to bring the specific app/window to the foreground (Active window).  If the specified Window is not found, the command is executed (i.e. launch the application).  This mode could also be used to trigger some other utility for the case when the specified window is not running, but was designed to launch the application associated with the window class/text.</P
+><P
+>Notes: This utility was requested by a DeltaV developer, and has been modified to handle more options.  If run with no command line, a message box will be displayed indicating command line options.</P
+><P
+>Support: My-T-Soft 1.x (Note: not tied to version)</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="waitthenclose.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="wordcompleteremapping.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Wait and then Close Program/Utility</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>WordComplete Remapping utility (OnScreen only)</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

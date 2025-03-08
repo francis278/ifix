@@ -1,0 +1,566 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>C# (.NET) DLL Example</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="C# (.NET) Example"
+HREF="csharpnet.html"><LINK
+REL="PREVIOUS"
+TITLE="C# (.NET) Example"
+HREF="csharp.html"><LINK
+REL="NEXT"
+TITLE="Java Example"
+HREF="java.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="csharp.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="java.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="CSharpDLL"
+>C# (.NET) DLL Example</A
+></H2
+><P
+>FOLDER: CSHARP\MYTSDLL</P
+><P
+>TYPE: Example integration in C# / .NET</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: C# / .NET Framework</P
+><P
+>IDE: Visual Studio .NET 2003</P
+><P
+>MTS DLL with Source in C#</P
+><P
+>My-T-Soft Developer's Kit DLL - This is a reworked version of the MTSDLL written in C#, for inclusion with C# projects.  For more details on the MTSDLL, see the original <A
+HREF="mtsdll.html"
+>MTS DLL with Source</A
+>.</P
+><P
+>Microsoft C# Version Notes</P
+><P
+>This was built in Microsoft Visual Studio.NET 2003, .Net Framework version 1.1 for maximum compatibility  if you open the project in later versions of Visual Studio.NET, just say OK, etc. to convert to the current version you are running.</P
+><P
+>NOTE: The C# project cannot be run in older versions of Visual Studio.NET.</P
+><P
+>C# Developers:</P
+><P
+>Compiling the Dll code under Windows XP, Windows 2000 Professional</P
+><P
+>Prerequisites: .NET Framework version 1.1 or later.</P
+><P
+>a. You should find the folder CSHARP in default install location of 
+	   the My-T-Soft product (My-T-Soft, My-T-Touch, My-T-Pen). If folder
+	   is not found then follow the installations instructions under Sec. 1. 
+   	   Navigate to .\CSHARP\MYTSDLL</P
+><P
+>b. Click on MYTSDLL.csproj to open the project</P
+><P
+>c. Click on Build-&#62;Build Solution from the menu to create the dll.
+	   The dll can be found in the .\CSHARP\MYTSDLL\bin\Release folder.</P
+><P
+>The DLL utilities comes with the following C# classes:</P
+><P
+>MYTSDriver.cs - main functionality for MTSDLL.DLL</P
+><P
+>Util.cs - utility class used for conversions.</P
+><P
+>Win32API.cs - contains the dllimport declarations needed to perform p/invoke statements between win32 api and the common language runtime</P
+><P
+>AssemblyInfo.cs - class used to control general information about the assembly
+Along with Project and solution files for Microsoft Visual Studio.NET:</P
+><P
+>MYTSDLL.csproj - Microsoft Visual Studio.NET C# project file</P
+><P
+>MYTSDLL.sln - Microsoft Visual Studio.NET solution object file</P
+><P
+>MYTSDLL.suo - Microsoft Visual Studio.NET Studio Solution User Options</P
+><P
+>MYTSDLL.csproj.user - Microsoft Visual Studio.NET Project User Options</P
+><P
+>MYTSDLLCS.DLL - compiled DLL that contains C# based functions called by the C# Application</P
+><P
+>Overview</P
+><P
+>These utilities were developed in response to customer suggestions, wants, needs, and by reviewing the capabilities of various high-end application development tools.  The DLL approach allows use of these function calls directly by any environment capable of integrating a DLL.  The inclusion of the source code allows easy integration into applications developed closer to the Windows API.  The instructional information is also useful in allowing developers to create functional applications quickly.</P
+><P
+>There are various utilities.  Some pair up as opposites, some are more powerful than others.  Be sure to read through the following details to gain a good understanding of the ability of these tools to assist you in your development efforts.  Please feel free to contact us with other ideas or needs.</P
+><P
+>See My-T-Soft Developer's Kit for additional info &#38; examples, including how to enable seamless change-overs between configurations.</P
+><P
+>For usage examples of the C Dll version, please refer to the following:
+See the MS Access samples integrating the MTSDLL.DLL</P
+><P
+>Developer's Corner on website "http://www.imgpresents.com/imgdev.htm"</P
+><P
+>How To's in Developer's Corner</P
+><P
+>The Visual Basic Example (VBASIC folder in DevKit)</P
+><P
+>Note that Size 12 is a virtual barrier for re-sizing on the fly from the larger sizes (i.e. greater than size 12) to the smaller sizes (i.e. 12 or less).  Do not cross this barrier one way or the other without first establishing a painted keyboard at size 12.  The larger sizes are all keyed off of the dimensions of size 12, so corruption of the valid KBF file is possible (probable!) if crossing size 12!</P
+><P
+>DISCLAIMER</P
+><P
+>The source code &#38; derived executable are provided at no cost as useful &#38; instructional materials to developers &#38; system integrators incorporating IMG software.  Because no licensing fee has been tendered, there is no technical support offered for this software, source code, or its capabilities to solve a particular problem.</P
+><P
+>Utility Description / Function Call Interface</P
+><P
+>This is a list of each function in the DLL. See below for descriptions &#38; interface:</P
+><P
+>GetXYMTS</P
+><P
+>GetXYWnd</P
+><P
+>MoveWindowMTS</P
+><P
+>SetCursorPosMTS</P
+><P
+>LaunchMTS</P
+><P
+>LaunchFromCurrentMTS</P
+><P
+>CloseMTS</P
+><P
+>MinimizeMTS</P
+><P
+>OpenMTS</P
+><P
+>SaveSettingsMTS</P
+><P
+>SavePositionMTS</P
+><P
+>RestoreSettingsMTS</P
+><P
+>RestorePositionMTS</P
+><P
+>ConfigureMTS</P
+><P
+>SendStringMTS</P
+><P
+>CopyConfigureMTS</P
+><P
+>ToggleConfigureMTS</P
+><P
+>SetInputWindowMTS</P
+><P
+>Utility Name: Get My-T-Soft Position (Top/Left, Width/Height, Bottom/Right)</P
+><P
+>Function name: GetXYMTS</P
+><P
+>vFunction Arguments: WhichType as long</P
+><P
+>//In MYTSDriver.cs</P
+><P
+>public const long TOPLEFT = 0x01;</P
+><P
+>public const long LEFTTOP = 0x01;</P
+><P
+>public const long BOTTOMRIGHT = 0x02;</P
+><P
+>public const long RIGHTBOTTOM = 0x02;</P
+><P
+>public const long WIDTHHEIGHT = 0x04;</P
+><P
+>Returns: long with low word as X, high word as Y</P
+><P
+>Example: GetXYMTS(TOPLEFT)</P
+><P
+>Description: This utility uses the GetWindowRect and returns an XY pair composed in a long</P
+><P
+>return value using the MAKELONG(x,y) macro.</P
+><P
+>Utility Name: Get Window Position (Top/Left, Width/Height, Bottom/Right)</P
+><P
+>Function name: GetXYWnd</P
+><P
+>Function Arguments: hWnd as IntPtr, WhichType as long</P
+><P
+>//In MYTSDriver.cs</P
+><P
+>public const long TOPLEFT = 0x01;</P
+><P
+>public const long LEFTTOP = 0x01;</P
+><P
+>public const long BOTTOMRIGHT = 0x02;</P
+><P
+>public const long RIGHTBOTTOM = 0x02;</P
+><P
+>public const long WIDTHHEIGHT = 0x04;</P
+><P
+>Returns: LONG with low word as X, high word as Y</P
+><P
+>Example: GetXYWnd(hWnd,TOPLEFT)</P
+><P
+>Description: This utility uses the GetWindowRect and returns an XY pair composed in a long return value using the MAKELONG(x,y) macro.</P
+><P
+>Utility Name: Launch My-T-Soft</P
+><P
+>Function name: LaunchMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will execute the My-T-Soft Executable.</P
+><P
+>Notes: This assumes a standard install - for non-standard installs, see LaunchFromCurrentMTS.</P
+><P
+>Utility Name: Launch My-T-Soft from Current Path</P
+><P
+>Function name: LaunchFromCurrentMTS</P
+><P
+>Function Arguments: FileName path</P
+><P
+>Example: LaunchFromCurrentMTS("C:\TEMP\DEVELOP\")</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will execute the My-T-Soft Executable.</P
+><P
+>Notes: This assumes the My-T-Soft files have been copied into the C:\TEMP\DEVELOP folder, and MYTSOFT.EXE &#38; MYTSOFT.INI are included along with supporting DLL's, KBF's, KMF's, etc., etc.  Locks in default INI location for other calls to DLL functions.</P
+><P
+>Utility Name: Close My-T-Soft</P
+><P
+>Function name: CloseMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will close the My-T-Soft Executable.</P
+><P
+>Notes: Requested by an MS-Access Developer.  Sends a WM_CLOSE message to the My-T-Soft Window.</P
+><P
+>Utility Name: Minimize My-T-Soft</P
+><P
+>Function name: MinimizeMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Minimizes My-T-Soft using configured method.</P
+><P
+>Notes: Use OpenMTS to return My-T-Soft to original state.</P
+><P
+>Name: Open My-T-Soft</P
+><P
+>Function name: OpenMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: bool</P
+><P
+>Description: Opens My-T-Soft from minimized state using My-T-Soft API.</P
+><P
+>Notes: Opposite of MINMZMTS.EXE</P
+><P
+>Name: Move My-T-Soft Window</P
+><P
+>Function name: MoveWindowMTS</P
+><P
+>Function Arguments: X as int, Y as int</P
+><P
+>Returns: Nothing</P
+><P
+>Example: MoveWindow(200,20)</P
+><P
+>Description: Moves My-T-Soft window to indicated x &#38; y position.</P
+><P
+>Notes: Extremely useful for complex applications.  You may wish to always position My-T-Soft so the Tool bar panel (logo / menu / minimize) are mostly or all the way off the screen.</P
+><P
+>Name: SetCursor for My-T-Soft</P
+><P
+>Function name: SetCursorPosMTS</P
+><P
+>Function Arguments: X as int, Y as int</P
+><P
+>Example: SetCursorPos(200,20)</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Moves cursor to indicated x &#38; y position.</P
+><P
+>Notes: Focus issues and shell or exec implementation of My-T-Soft Utilities can sometimes result in the wrong window having the focus.  By moving the cursor over My-T-Soft, code in My-T-Soft can resolve some focus issues. </P
+><P
+>Name: Configure My-T-Soft</P
+><P
+>Function name: ConfigureMTS</P
+><P
+>Function Arguments: /K[-] /E[-] /N[-] /C[-] /M[-] /W[-] /T[-] /B[-] /I[-] /Q[-] /G[-] /S:??</P
+><P
+>Returns: Nothing</P
+><P
+>Example: ConfigureMTS("/k-/e-/w/m/s:9")</P
+><P
+>Closes Keyboard &#38; Edit panel, opens Windows Control &#38; Macro Panel, sizes to 9.</P
+><P
+>K = Keyboard (alphanumeric) panel</P
+><P
+>E = Edit panel</P
+><P
+>N = Numeric panel</P
+><P
+>C = Calculator panel</P
+><P
+>M = Macro panel</P
+><P
+>W = Windows control panel</P
+><P
+>T = Tool / Control panel</P
+><P
+>B = Toolbar (3 icon panel)</P
+><P
+>G = Magnifier panel</P
+><P
+>I = System Info panel</P
+><P
+>Q = QuickHelp panel</P
+><P
+>- = after any of the above indicates the panel will be closed</P
+><P
+>S:?? = Size from 1 - 12</P
+><P
+>Description: Gives complete control over appearance.  Used in conjunction with</P
+><P
+>MoveWindowMTS allows different looks / interfaces for complex applications.</P
+><P
+>Notes: This modifies the INI file, and then sends the update command to My-T-Soft. The UpdateDefINI routine is used to find installation folder and location of INI file.</P
+><P
+>Name: Copy and Configure My-T-Soft</P
+><P
+>Function name: CopyConfigureMTS</P
+><P
+>Function Arguments: [drive:][path]FileName</P
+><P
+>Example: CopyConfigureMTS("NUM.CFG"), CopyConfigureMTS("D:\PANELS\KEYPAD.CFG")</P
+><P
+>Returns: bool</P
+><P
+>Description: Gives complete control over appearance - cleaner switch over than ConfigureMTS.</P
+><P
+>Notes: </P
+><P
+>If no path is given within the FileName specification, the default My-T-Soft directory is used - however, for guaranteed operation, a well formed path (with short file names) is required.</P
+><P
+> The KEYBOARD.KBF file that is overwritten defaults to the default My-T-Soft directory.</P
+><P
+>Name: FindWindow &#38; Control My-T-Soft</P
+><P
+>Function name: ToggleConfigureMTS</P
+><P
+>Function Arguments: [drive:][path]FileName</P
+><P
+>Example: ToggleConfigure("NUM.CFG,") ToggleConfigure("D:\PANELS\KEYPAD.CFG")</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Gives complete control over appearance with the added ability to move the displayed panels off-screen if already on-screen. This is a modified version of CopyConfigureMTS that has the following logic:  If My-T-Soft is visible, move it off-screen and do not process file.  If My-T-Soft is not visible (off-screen), then process file.</P
+><P
+>Notes: This allows a toggle selection for the user using the same action (button on application, CTRLMTS buttons, etc.).  Bring up the keyboard, then put it away.  Note if My-T-Soft is off-screen, then this acts exactly as the CopyConfigureMTS utility.  If My-T-Soft is visible, then its added feature of moving the software off-screen occurs.  1 monitor assumed (for multiple monitor configurations, modification of the source is probably required).</P
+><P
+>Name: Send String Through My-T-Soft</P
+><P
+>Function name: SendStringMTS</P
+><P
+>Function Arguments: Text String (with Build-A-Macro cooked format)</P
+><P
+>Returns: Nothing</P
+><P
+>Description: This communicates with My-T-Soft and hands off a text string to be processed and typed.</P
+><P
+>Notes: Version does not read the raw formats.  Use the Save option in Build-A-Macro, Keystroke Macro, Zoom as the string format for this command.  There is a file created (SDSTRMTS.KMF), and then the message is sent to My-T-Soft.  The location is keyed off of the INI file, and must reside in the same folder as the executable.</P
+><P
+>Name: Save Position of My-T-Soft</P
+><P
+>Function name: SavePositionMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Saves current position, for use with RestorePositionMTS, or upon re-opening of My-T-Soft.</P
+><P
+>Notes: Opposite of RestorePositionMTS.  Same as Menu Option, Save Current Position.</P
+><P
+>Name: Save Settings of My-T-Soft</P
+><P
+>Function name: SaveSettingsMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Saves current settings, for use with RestoreSettingsMTS, or upon re-opening of My-T-Soft.</P
+><P
+>Notes: Opposite of RestoreSettingsMTS.  Same as Menu Option, Save Current settings.</P
+><P
+>Name: Restore Position of My-T-Soft</P
+><P
+>Function name: RestorePositionMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Restore saved position.</P
+><P
+>Notes: Opposite of SavePositionMTS.  Same as Menu Option, Restore Current Position.</P
+><P
+>Name: Restore Settings of My-T-Soft</P
+><P
+>Function name: RestoreSettingsMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Restores saved settings.</P
+><P
+>Notes: Opposite of SaveSettingsMTS.  Same as Menu Option, Restore Current settings.</P
+><P
+>Name: Interface to SetForegroundWindow API via MTSDLL</P
+><P
+>Function name: SetInputWindowMTS</P
+><P
+>Function Arguments: IntPtr to Window</P
+><P
+>Returns: bool result of SetForegroundWindow call</P
+><P
+>Description: Used to set the input focus (keyboard focus) to the specified window</P
+><P
+>Notes: There are various limitations in the various versions of Windows with this API and the ability for programs to control the input focus.  This is just a basic interface in the DLL so an environment that doesnt have access to the Windows API can access SetForegroundWindow. </P
+><P
+>Refer to MSDN (Microsoft Developer Network) resources for limitations on this API call.</P
+><P
+>Version 1.78 - August 9, 2005</P
+><P
+>Copyright  2004-2005 by Innovation Management Group, Inc.  All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc. </P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="csharp.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="java.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>C# (.NET) Example</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="csharpnet.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Java Example</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

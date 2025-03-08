@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How Do I redefine Key Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="How do I Setup the Custom Logo?"
+HREF="chap2howdoicustomlogo.html"><LINK
+REL="NEXT"
+TITLE="How do I implement minimize on Enter?"
+HREF="chap2howdoiminonenter.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoicustomlogo.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiminonenter.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIRedefineKey"
+>How Do I redefine Key Options</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Steps for remapping the F1 &#38; F10 keys (as a specific example)</B
+></SPAN
+></P
+><P
+>My-T-Soft used as an example</P
+><P
+>Map F1 key on My-T-Soft to open an HTML Web Page instead of default keystroke of F1</P
+><P
+>&#13;( 1) Configure My-T-Soft with the Keyboard Panel and any other Panels open &#38; set the appropriate size.  Save Settings, Save Position, then Close My-T-Soft.
+</P
+><P
+>&#13;( 2) Run My-T-Soft Setup.
+</P
+><P
+>&#13;( 3) Select Configuration | Key Options.
+</P
+><P
+>&#13;( 4) Select the F1 key in the "Key" list on the left.  Do not select any modifiers "Key with..." (Ctrl/Shift/Alt).
+</P
+><P
+>&#13;( 5) Select Disable Keystroke(s) (so the F1 key is not sent as a keystroke), and Select Launch Key EXE.
+</P
+><P
+>&#13;( 6) Now enter the path / file name for Explorer (or Internet Explorer) or use Browse to find the appropriate file.  (In Windows 2000, it would be C:\WINNT\EXPLORER.EXE).
+</P
+><P
+>&#13;( 7) Now enter the path / file name for page to be displayed after the exe (e.g. "C:\Program Files\Common Files\Microsoft Shared\Citrus punch.htm") with whole name as [C:\WINNT\EXPLORER.EXE C:\Program Files\Common Files\Microsoft Shared\Citrus punch.htm]
+</P
+><P
+>&#13;( 8) Close Setup, Run My-T-Soft.  When the F1 key is clicked, the web page will appear in Explorer.
+</P
+><P
+>Map F10 key on My-T-Soft to type web site instead of default keystroke of F10</P
+><P
+>&#13;( 1) Configure My-T-Soft with the Keyboard Panel and any other Panels open &#38; set the appropriate size.  Save Settings, Save Position, then Close My-T-Soft.
+</P
+><P
+>&#13;( 2) Run My-T-Soft Setup.
+</P
+><P
+>&#13;( 3) Prepare for Send String - The Send String MUST be in the same directory as the Keyboard Executable (i.e. MYTSOFT.EXE).  Therefore, we need to copy the SDSTRMTS.EXE file from the DEVKIT folder down a level into the default install (C:\Program Files\MYTSOFT) folder.  Use Explorer to open WINNT, MYTSOFT, DEVKIT, Highlight SDSTRMTS.EXE, Right-click, select Copy, click on MYTSOFT, Right-click on blank area, Select Paste.
+</P
+><P
+>&#13;( 4) Select Configuration | Key Options.
+</P
+><P
+>&#13;( 5) Select the F10 key in the "Key" list on the left.  Do not select any modifiers "Key with..." (Ctrl/Shift/Alt).
+</P
+><P
+>&#13;( 6) Select Disable Keystroke(s) (so the F10 key is not sent as a keystroke), and Select Launch Key EXE.
+</P
+><P
+>&#13;( 7) Now enter the path / file name for SDSTRMTS.EXE (Send String through My-T-Soft) or use Browse to find.  (In Windows 2000, after copy in step 3, it would be C:\WINNT\MYTSOFT\SDSTRMTS.EXE).
+</P
+><P
+>&#13;( 8) Now enter the keystrokes to send through My-T-Soft (e.g. "www.My-T-Soft.com[Enter]") with Executable name as the Key EXE as in [C:\WINNT\MYTSOFT\SDSTRMTS.EXE www.My-T-Soft.com[Enter]]
+</P
+><P
+>&#13;( 9) Close Setup, Run My-T-Soft.  When the F10 key is clicked on My-T-Soft, the text will be typed, effectively remapping the F10 key to a custom sequence of keystrokes.
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoicustomlogo.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2howdoiminonenter.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How do I Setup the Custom Logo?</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How do I implement minimize on Enter?</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

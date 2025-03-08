@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="GaugeControlsV2.LinearGauge"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="400" Background="White">
+    <!--Outside border-->
+    <Border Name="OutBorder" CornerRadius="8" BorderThickness="4">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop x:Name="OutColor1" Color="#FFCDB7B7" Offset="0"/>
+                <GradientStop x:Name="OutColor2" Color="#FFE8DCDC" Offset="0.3"/>
+                <GradientStop x:Name="OutColor3" Color="#FF695858" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <!--Inside border-->
+        <Border Name="RimBorder" CornerRadius="1" BorderThickness="8">
+            <Border.BorderBrush>
+                <LinearGradientBrush>
+                    <GradientStop x:Name="RimColor1" Color="#FFB09494" Offset="0"/>
+                    <GradientStop x:Name="RimColor2" Color="#FFDBC9C9" Offset="0.4"/>
+                    <GradientStop x:Name="RimColor3" Color="#FF907272" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <!--Guage area-->
+            <Grid>
+                <!--Gauge background rectangle-->
+                <Rectangle Name="ScaleFrame">
+                    <Rectangle.Fill>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop x:Name="FrameColor1" Color="#FF9C7F7F" Offset="0"/>
+                            <GradientStop x:Name="FrameColor2" Color="#FFE8DCDC" Offset="0.5"/>
+                            <GradientStop x:Name="FrameColor3" Color="#FFB69C9C" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <!--Left shadow line-->
+                <Rectangle Width="1" HorizontalAlignment="Left" Fill="Black" />
+                <!--Top shadow line-->
+                <Rectangle Height="1" VerticalAlignment="Top" Fill="Black" />
+                <!--Right bright line-->
+                <Rectangle Width="1" HorizontalAlignment="Right" Fill="#FFFEEEEE"/>
+                <!--Bottom bright line-->
+                <Rectangle Height="1" VerticalAlignment="Bottom" Fill="#FFFEEEEE"/>
+                <!--Viewbox to make the gaude drawing resizable-->
+                <Viewbox Name="GaugeView" Stretch="Fill" StretchDirection="Both">
+                    <Grid>
+                        <!--Reading range bands-->
+                        <DockPanel Name="RangeBand" Height="24" Width="{Binding ElementName=ScaleGrid, Path=Width}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <!--Fill brushes are fixed to be SolidColorBrush-->
+                            <Rectangle Name="Range1" DockPanel.Dock="Left" Fill="Yellow" Width="85" />
+                            <Rectangle Name="Range3" DockPanel.Dock="Right" Fill="Red"  Width="85" />
+                            <Rectangle Name="Range2" Fill="Green" />
+                        </DockPanel>
+                        <!--Scale and label area (it draws in code)-->
+                        <Grid Name="ScaleGrid" Height="100" Width="340" Margin="30,0" />
+                        <!--Gauge title (bright effect)-->
+                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"
+                                   Text="{Binding ElementName=TitleBlock, Path=Text}" Foreground="{Binding ElementName=TitleBlock, Path=Foreground}"
+                                   FontWeight="{Binding ElementName=TitleBlock, Path=FontWeight}" FontStyle="{Binding ElementName=TitleBlock, Path=FontStyle}"
+                                   FontSize="{Binding ElementName=TitleBlock, Path=FontSize}" FontFamily="{Binding ElementName=TitleBlock, Path=FontFamily}">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="{Binding ElementName=TitleEffect, Path=ShadowDepth}" Direction="135" Color="White" BlurRadius="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <!--Gauge title (shadow effect)-->
+                        <TextBlock Name="TitleBlock" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,4"
+                                   Text="Linear Gauge" Foreground="#FFCFACAC" FontWeight="Bold" FontStyle="Normal" FontSize="16" FontFamily="Tahoma">
+                            <TextBlock.Effect>
+                                <DropShadowEffect x:Name="TitleEffect" ShadowDepth="1" Direction="315" Color="Black" BlurRadius="1"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                        <!--Gauge needle-->
+                        <Path Name="NeedlePath" Stretch="Fill" Width="20" Stroke="#FF9F5C5C" Fill="#FFDF9C9C" StrokeThickness="1"
+                            Data="M1,3 C1,1.8954304 1.8954304,1 3,1 L11,1 C12.104569,1 13,1.8954304 13,3 C13,3 8.5457163,13 7.4411469,13 L7.4514785,89.679596 L6.5580759,89.667915 L6.5588531,13 C5.4542832,13 1,3 1,3 z" />
+                    </Grid>
+                </Viewbox>
+            </Grid>
+        </Border>
+    </Border>
+</UserControl>

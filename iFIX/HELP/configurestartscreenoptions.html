@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Configure Start Screen Options</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Logon Utilities for Windows 8"
+HREF="logonutilitiesvista.html"><LINK
+REL="PREVIOUS"
+TITLE="Windows Logon Setup Options"
+HREF="windowslogonsetupoptions.html"><LINK
+REL="NEXT"
+TITLE="Setup / Configure Logon Utility"
+HREF="mytsoft2keyboardvista.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="windowslogonsetupoptions.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="mytsoft2keyboardvista.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="ConfigureStartScreenOptions"
+>Configure Start Screen Options</A
+></H2
+><P
+></P
+><UL
+><LI
+><P
+>Open <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Logon Utilities from Start Menu | (All) Programs | <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> </P
+></LI
+><LI
+><P
+>Select Setup Start Screen Options</P
+></LI
+></UL
+><P
+>&#13;<DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="images/logonstartscreenoptions.png"
+ALIGN="center"></P
+></DIV
+>
+</P
+><P
+>When running the Keyboard at the Start Screen is enabled, there are 3 options available </P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Automatically go to Desktop</P
+></LI
+><LI
+><P
+>Start Minimized</P
+></LI
+><LI
+><P
+>Start without Opening Splash Screen</P
+></LI
+></OL
+><P
+>The additional actions/options are disabled unless the Enable Keyboard at Start Screen is checked On.</P
+><P
+>Check Enable Keyboard at Start Screen On to enable the automatic startup of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> after the user logon and during the display of the Start Screen.  With no other options selected, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will appear as it is currently configured.</P
+><P
+>Each option is independently selectable and can be selected in any combination.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Automatically go to Desktop</B
+></SPAN
+> inserts a Win-D keystroke combination into the system, and will take the logged on user directly to the Windows Desktop screen.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Start Minimized</B
+></SPAN
+> -  when selected, this will start <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> and then display in the currently configured minimized state.  Note some minimize options may not be available / visible at the Start Screen (e.g. if you do not select Automatically go to Desktop).  It is recommended that the Button or Window option be used if this option is selected.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Start without Opening Splash Screen</B
+></SPAN
+> bypasses the splash screen opening when being launched via this feature.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Technical Notes: </B
+>The older Windows StartUp Group option will not launch an application until the user goes to the Desktop.  These Start Screen options provide additional features and capabilities by integrating with newer Windows capabilities via the Ease of Access tools.  The actual file MYTSOFT_RUN.EXE is used to launch <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> in different ways based on options set via the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Logon Utilities | Setup Start Screen options.  The program uses mutexes and command line options to launch <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  This is configured at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Accessibility\ATs\img_my-t-soft_v180 and configured to run in the HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Accessibility via the Configuration Key.  If used, this should be disabled prior to un-installing the software - no accommodation to remove this registry entry is performed, so if this option is in use and the software is uninstalled, this entry will remain.  However, with the software removed, its existence will have no affect on the system, although it will appear in Ease of Access under keyboard options.
+</P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="windowslogonsetupoptions.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="mytsoft2keyboardvista.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Windows Logon Setup Options</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="logonutilitiesvista.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Setup / Configure Logon Utility</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

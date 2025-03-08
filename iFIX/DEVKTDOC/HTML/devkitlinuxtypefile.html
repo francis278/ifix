@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>typefile - sends command line or file through My-T-Soft</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Developer's Kit for Linux"
+HREF="mytsoftdevkitlinux.html"><LINK
+REL="PREVIOUS"
+TITLE="open_mts - Open (Restore) My-T-Soft Window from minimized state"
+HREF="devkitlinuxopen.html"><LINK
+REL="NEXT"
+TITLE="OnScreen Developer's Kit for Windows"
+HREF="mytsoftdevkitonscreen.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="devkitlinuxopen.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 5. My-T-Soft Developer's Kit for Linux</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="mytsoftdevkitonscreen.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="DevKitLinuxtypefile"
+>typefile - sends command line or file through My-T-Soft</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>typefile</B
+></SPAN
+></P
+><P
+>Sends the command line, or the text from within a specified file.  The 
+logic takes the command line and sees if a file exists.  If a file exists,
+it will be opened, read, and then sent to MacroBat to type.  If there is
+not an existing file, the command line will be sent to MacroBat to type.
+The file should contain the macro to type in a single line.  The current 
+limit is 255 characters.</P
+><P
+>Example - type Hello world with typefile: ./typefile [Shift-Down]h[Shift-Up]ello world[Enter]</P
+><P
+>Example - change layout via text in file: ./typefile keyboard1.txt[Enter]</P
+><P
+>Example - change layout via text in file: ./typefile keyboard2.txt[Enter]</P
+><P
+>Where keyboard1.txt contains:</P
+><P
+>[CMD:NKBF=FULL_LAYOUT.KBF]</P
+><P
+>keyboard2.txt contains:</P
+><P
+>[CMD:NKBF=NUM_LAYOUT.KBF]</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="devkitlinuxopen.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="mytsoftdevkitonscreen.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>open_mts - Open (Restore) My-T-Soft Window from minimized state</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="mytsoftdevkitlinux.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>OnScreen Developer's Kit for Windows</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

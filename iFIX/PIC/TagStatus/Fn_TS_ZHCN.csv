@@ -1,0 +1,30 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Fn_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Fn_TS.DATALINK,Arial,9,1,,,,
+Caption,Fn_TS.DATALINK1,Arial,9,0,,,,
+Caption,Fn_TS.TEXT1,Arial,9,0,Tagname:,标签名:,,
+Caption,Fn_TS.DATALINK2,Arial,9,0,,,,
+Caption,Fn_TS.DATALINK3,Arial,9,0,,,,
+Caption,Fn_TS.DATALINK4,Arial,9,0,,,,
+Caption,Fn_TS.DATALINK5,Arial,9,0,,,,
+Caption,Fn_TS.TEXT4,Arial,9,0,Next Block:,下一块:,,
+Caption,Fn_TS.TEXT7,Arial,9,0,Alarm Areas:,报警区域:,,
+Caption,Fn_TS.DATALINK10,Arial,9,0,,,,
+Caption,Fn_TS.TEXT8,Arial,9,0,Prev Block:,前一块:,,
+Caption,Fn_TS.DATALINK12,Arial,9,1,,,,
+Caption,Fn_TS.TEXT9,Arial,9,1,Current Block Status:,当前块状态:,,
+Caption,Fn_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Fn_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Fn_TS.Text11,Arial,9,1,Security Areas,安全区域
+Caption,Fn_TS.DataLink14,Arial,9,0,,
+Caption,Fn_TS.DataLink15,Arial,9,0,,
+Caption,Fn_TS.DataLink16,Arial,9,0,,
+Caption,Fn_TS.Text12,Arial,9,0,1,1
+Caption,Fn_TS.Text13,Arial,9,0,2,2
+Caption,Fn_TS.Text14,Arial,9,0,3,3
+Caption,Fn_TS.Text15,Arial,9,1,Destinations,描述
+Caption,Fn_TS.Text16,Arial,9,1,D:,D:
+Caption,Fn_TS.Text17,Arial,9,1,C:,C:
+Caption,Fn_TS.Text18,Arial,9,1,B:,B:
+Caption,Fn_TS.Text19,Arial,9,1,A:,A:

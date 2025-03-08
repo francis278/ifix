@@ -1,0 +1,40 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Tr_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Tr_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Tr_TS.DATALINK,Arial,9,1,,,,
+Caption,Tr_TS.DATALINK1,Arial,9,1,,,,
+Caption,Tr_TS.TEXT1,Arial,9,0,Prev Block:,前一块:,,
+Caption,Tr_TS.DATALINK3,Arial,9,0,,,,
+Caption,Tr_TS.DATALINK4,Arial,9,0,,,,
+Caption,Tr_TS.TEXT2,Arial,9,0,Tag:,标签:,,
+Caption,Tr_TS.DATALINK5,Arial,9,0,,,,
+Caption,Tr_TS.DATALINK6,Arial,9,0,,,,
+Caption,Tr_TS.TEXT4,Arial,9,0,AverageCompress:,平均压缩:,,
+Caption,Tr_TS.TEXT9,Arial,9,0,Tagname:,标签名:,,
+Caption,Tr_TS.TEXT10,Arial,9,0,Next Block:,下一块:,,
+Caption,Tr_TS.DATALINK_PREV,Arial,9,1,,,,
+Caption,Tr_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Tr_TS.DataLink17,Arial,9,1,,
+Caption,Tr_TS.DataLink18,Arial,9,1,,
+Caption,Tr_TS.Text33,Arial,9,1,Block Status:,数据块状态:
+Caption,Tr_TS.Text34,Arial,9,1,Value:,数值:
+Caption,Tr_TS.Text35,Arial,9,1,Current State,当前状态
+Caption,Tr_TS.Text36,Arial,9,1,Security Areas,安全区域
+Caption,Tr_TS.DataLink19,Arial,9,0,,
+Caption,Tr_TS.DataLink20,Arial,9,0,,
+Caption,Tr_TS.DataLink21,Arial,9,0,,
+Caption,Tr_TS.Text37,Arial,9,0,1,1
+Caption,Tr_TS.Text38,Arial,9,0,2,2
+Caption,Tr_TS.Text39,Arial,9,0,3,3
+Caption,Tr_TS.DataLink22,Arial,9,0,,
+Caption,Tr_TS.DataLink23,Arial,9,0,,
+Caption,Tr_TS.DataLink24,Arial,9,0,,
+Caption,Tr_TS.Text40,Arial,9,1,Engineering Units,工程单位
+Caption,Tr_TS.Text41,Arial,9,0,Low Limit:,低限:
+Caption,Tr_TS.Text42,Arial,9,0,High Limit:,高限:
+Caption,Tr_TS.Text43,Arial,9,0,Units:,单位:
+Caption,Tr_TS.Text44,Arial,9,1,Input,输入
+Caption,Tr_TS.Text45,Arial,9,1,Trend Parameters,趋势参数
+Caption,Tr_TS.Text46,Arial,9,0,Value:,数值:
+Caption,Tr_TS.Text47,Arial,9,0,Clear Buffers on Startup:,启动时清除缓冲区:

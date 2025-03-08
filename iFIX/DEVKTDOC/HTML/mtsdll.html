@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>MTS DLL with Source</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Language and Platform Examples"
+HREF="languageplatform.html"><LINK
+REL="PREVIOUS"
+TITLE="Internet Explorer utilities"
+HREF="iexplorer.html"><LINK
+REL="NEXT"
+TITLE="COM Edit Control Example"
+HREF="comeditcontrol.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="iexplorer.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 7. Language and Platform Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="comeditcontrol.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="MTSDLL"
+>MTS DLL with Source</A
+></H1
+><P
+>FOLDER: MTSDLL</P
+><P
+>TYPE: DLL with Source</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: C</P
+><P
+>IDE: Microsoft Visual C++ 6</P
+><P
+>My-T-Soft Developer's Kit DLL</P
+><P
+>Utilities for implementing My-T-Soft within application development environments (Microsoft Access, Borland Delphi, Visual Basic, and other visual application design environments), implemented as a stand-alone Dynamic Link Library with source code.</P
+><P
+>My-T-Soft is used as a generic term for My-T-Touch, My-T-Pen, My-T-Soft, or private label versions of IMG's My-T-Soft family.</P
+><P
+>Overview</P
+><P
+>The DLL utilities comes with a C source module, a Resource Script (RC), and a Module Definition file (DEF), along with Project &#38; Workspace information for Microsoft Visual C++ Version 6.</P
+><P
+>These utilities were developed in response to customer suggestions, wants, needs, and by reviewing the capabilities of various high-end application development tools.  The DLL approach allows use of these function calls directly by any environment capable of integrating a DLL.  The inclusion of the source code allows easy integration into applications developed closer to the Windows API.  The instructional information is also useful in allowing developers to create functional applications quickly.</P
+><P
+>There are various utilities.  Some pair up as opposites, some are more powerful than others.  Be sure to read through the following details to gain a good understanding of the ability of these tools to assist you in your development efforts.  Please feel free to contact us with other ideas or needs.</P
+><P
+>The 1.71 release modified the DLL included with the VBASIC examples.  All future add-ons to the DLL portion of the Developer's Kit will be done in this project.  Most of these are alternate implementations of the base Developer's Kit - see I. My-T-Soft Developer's Kit for additional info &#38; examples, including how to enable seamless change-overs between configurations.</P
+><P
+>For usage examples, please refer to the following:</P
+><P
+>See the <A
+HREF="msaccess.html"
+>MS Access samples integrating the MTSDLL.DLL</A
+></P
+><P
+>Developer's Corner on website "http://www.imgpresents.com/imgdev.htm"</P
+><P
+>How To's in Developer's Corner</P
+><P
+>The Visual Basic Example (VBASIC folder in DevKit)</P
+><P
+>Note that Size 12 is a virtual barrier for re-sizing on the fly from the larger sizes (i.e. greather than size 12) to the smaller sizes (i.e. 12 or less).  Do not cross this barrier one way or the other without first establishing a painted keyboard at size 12.  The larger sizes are all keyed off of the dimensions of size 12, so corruption of the valid KBF file is possible (probable!) if crossing size 12!</P
+><P
+>DISCLAIMER</P
+><P
+>The source code &#38; derived executable are provided at no cost as useful &#38; instructional materials to developers &#38; system integrators incorporating IMG software.  Because no licensing fee has been tendered, there is no technical support offered for this software, source code, or its capabilities to solve a particular problem.</P
+><P
+>Utility Description / Function Call Interface</P
+><P
+>This is a list of each function in the DLL. See below for descriptions &#38; interface:</P
+><P
+>GetXYMTS</P
+><P
+>GetXYWnd</P
+><P
+>MoveWindowMTS</P
+><P
+>SetCursorPosMTS</P
+><P
+>LaunchMTS</P
+><P
+>LaunchFromCurrentMTS</P
+><P
+>CloseMTS</P
+><P
+>MinimizeMTS</P
+><P
+>OpenMTS</P
+><P
+>SaveSettingsMTS</P
+><P
+>SavePositionMTS</P
+><P
+>RestoreSettingsMTS</P
+><P
+>RestorePositionMTS</P
+><P
+>ConfigureMTS</P
+><P
+>SendStringMTS</P
+><P
+>CopyConfigureMTS</P
+><P
+>ToggleConfigureMTS</P
+><P
+>QueryPanelsMTS</P
+><P
+>QuerySizeMTS </P
+><P
+>SetInputWindowMTS</P
+><P
+>Utility Name: Get My-T-Soft Position (Top/Left, Width/Height, Bottom/Right)</P
+><P
+>Function name: GetXYMTS</P
+><P
+>Function Arguments: WhichType as long</P
+><P
+>//In MYTSOFT.H</P
+><P
+>#define TOPLEFT 0x01</P
+><P
+>#define LEFTTOP 0x01</P
+><P
+>#define BOTTOMRIGHT 0x02</P
+><P
+>#define RIGHTBOTTOM 0x02</P
+><P
+>#define WIDTHHEIGHT 0x04</P
+><P
+>Returns: LONG with low word as X, high word as Y</P
+><P
+>Example: GetXYMTS(TOPLEFT)</P
+><P
+>Description: This utility uses the GetWindowRect and returns an XY pair composed in a long return value using the MAKELONG(x,y) macro.</P
+><P
+>Utility Name: Get Window Position (Top/Left, Width/Height, Bottom/Right)</P
+><P
+>Function name: GetXYWnd</P
+><P
+>Function Arguments: hWnd as Long, WhichType as long</P
+><P
+>//In MYTSOFT.H</P
+><P
+>#define TOPLEFT 0x01</P
+><P
+>#define LEFTTOP 0x01</P
+><P
+>#define BOTTOMRIGHT 0x02</P
+><P
+>#define RIGHTBOTTOM 0x02</P
+><P
+>#define WIDTHHEIGHT 0x04</P
+><P
+>Returns: LONG with low word as X, high word as Y</P
+><P
+>Example: GetXYWnd(hWnd,TOPLEFT)</P
+><P
+>Description: This utility uses the GetWindowRect and returns an XY pair composed in a long return value using the MAKELONG(x,y) macro.</P
+><P
+>Utility Name: Launch My-T-Soft</P
+><P
+>Function name: LaunchMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will execute the My-T-Soft Executable.</P
+><P
+>Notes: This assumes a standard install - for non-standard installs, see LaunchFromCurrentMTS.</P
+><P
+>Utility Name: Launch My-T-Soft from Current Path</P
+><P
+>Function name: LaunchFromCurrentMTS</P
+><P
+>Function Arguments: FileName path</P
+><P
+>Example: LaunchFromCurrentMTS("C:\TEMP\DEVELOP\")</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will execute the My-T-Soft Executable.</P
+><P
+>Notes: This assumes the My-T-Soft files have been copied into the C:\TEMP\DEVELOP folder, and MYTSOFT.EXE &#38; MYTSOFT.INI are included along with supporting DLL's, KBF's, KMF's, etc., etc. </P
+><P
+>Locks in default INI location for other calls to DLL functions.</P
+><P
+>Utility Name: Close My-T-Soft</P
+><P
+>Function name: CloseMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Executing this will close the My-T-Soft Executable.</P
+><P
+>Notes: Requested by an MS-Access Developer.  Sends a WM_CLOSE message to the My-T-Soft Window.</P
+><P
+>Utility Name: Minimize My-T-Soft</P
+><P
+>Function name: MinimizeMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Minimizes My-T-Soft using configured method.</P
+><P
+>Notes: Use OpenMTS to return My-T-Soft to original state.</P
+><P
+>Name: Open My-T-Soft</P
+><P
+>Function name: OpenMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Opens My-T-Soft from minimized state using My-T-Soft API.</P
+><P
+>Notes: Opposite of MINMZMTS.EXE</P
+><P
+>Name: Move My-T-Soft Window</P
+><P
+>Function name: MoveWindowMTS</P
+><P
+>Function Arguments: X as long, Y as long</P
+><P
+>Returns: Nothing</P
+><P
+>Example: MoveWindow(200,20)</P
+><P
+>Description: Moves My-T-Soft window to indicated x &#38; y position.</P
+><P
+>Notes: Extremely useful for complex applications.  You may wish to always position My-T-Soft so the Tool bar panel (logo / menu / minimize) are mostly or all the way off the screen.</P
+><P
+>Name: SetCursor for My-T-Soft</P
+><P
+>Function name: SetCursorPosMTS</P
+><P
+>Function Arguments: X as long, Y as long</P
+><P
+>Example: SetCursorPos(200,20)</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Moves cursor to indicated x &#38; y position.</P
+><P
+>Notes: Focus issues and shell or exec implementation of My-T-Soft Utilities can sometimes result in the wrong window having the focus.  By moving the cursor over My-T-Soft, code in My-T-Soft can resolve some focus issues. </P
+><P
+>Name: Configure My-T-Soft</P
+><P
+>Function name: ConfigureMTS</P
+><P
+>Function Arguments: /K[-] /E[-] /N[-] /C[-] /M[-] /W[-] /T[-] /B[-] /I[-] /Q[-] /G[-] /S:??</P
+><P
+>Returns: Nothing</P
+><P
+>Example: ConfigureMTS("/k-/e-/w/m/s:10")</P
+><P
+>Closes Keyboard &#38; Edit panel, opens Windows Control &#38; Macro Panel, sizes to 10.</P
+><P
+>K = Keyboard (alphanumeric) panel</P
+><P
+>E = Edit panel</P
+><P
+>N = Numeric panel</P
+><P
+>C = Calculator panel</P
+><P
+>M = Macro panel</P
+><P
+>W = Windows control panel</P
+><P
+>T = Tool / Control panel</P
+><P
+>B = Toolbar (3 icon panel)</P
+><P
+>G = Magnifier panel</P
+><P
+>I = System Info panel</P
+><P
+>Q = QuickHelp panel</P
+><P
+>- = after any of the above indicates the panel will be closed</P
+><P
+>S:?? = Size from 1 - 12</P
+><P
+>Description: Gives complete control over appearance.  Used in conjunction with</P
+><P
+>MoveWindowMTS allows different looks / interfaces for complex applications.</P
+><P
+>Notes: This modifies the INI file, and then sends the update command to My-T-Soft.  The UpdateDefINI routine is used to find installation folder and location of INI file.</P
+><P
+>Name: Copy and Configure My-T-Soft</P
+><P
+>Function name: CopyConfigureMTS</P
+><P
+>Function Arguments: [drive:][path]FileName</P
+><P
+>Example: CopyConfigureMTS("NUM.CFG"), CopyConfigureMTS("D:\PANELS\KEYPAD.CFG")</P
+><P
+>Description: Gives complete control over appearance - cleaner switch over than ConfigureMTS.</P
+><P
+>Notes: </P
+><P
+>If no path is given within the FileName specification, the default My-T-Soft directory is used - however, for guaranteed operation, a well formed path (with short file names) is required.  The KEYBOARD.KBF file that is overwritten defaults to the default My-T-Soft directory.</P
+><P
+>Name: FindWindow &#38; Control My-T-Soft</P
+><P
+>Function name: ToggleConfigureMTS</P
+><P
+>Function Arguments: [drive:][path]FileName</P
+><P
+>Example: ToggleConfigure("NUM.CFG,") ToggleConfigure("D:\PANELS\KEYPAD.CFG")</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Gives complete control over appearance with the added ability to move the displayed panels off-screen if already on-screen. This is a modified version of CopyConfigureMTS that has the following logic:  If My-T-Soft is visible, move it off-screen and do not process file.  If My-T-Soft is not visible (off-screen), then process file.</P
+><P
+>Notes: This allows a toggle selection for the user using the same action (button on application, CTRLMTS buttons, etc.).  Bring up the keyboard, then put it away.  Note if My-T-Soft is off-screen, then this acts exactly as the CopyConfigureMTS utility.  If My-T-Soft is visible, then its added feature of moving the software off-screen occurs.  1 monitor assumed (for multiple monitor configurations, modification of the source is probably required).</P
+><P
+>Name: Send String Through My-T-Soft</P
+><P
+>Function name: SendStringMTS</P
+><P
+>Function Arguments: Text String (with Build-A-Macro cooked format)</P
+><P
+>Returns: Nothing</P
+><P
+>Description: This communicates with My-T-Soft and hands off a text string to be processed and typed.</P
+><P
+>Notes: Version does not read the raw formats.  Use the Save option in Build-A-Macro, Keystroke Macro, Zoom as the string format for this command.  There is a file created (SDSTRMTS.KMF), and then the message is sent to My-T-Soft.  The location is keyed off of the INI file, and must reside in the same folder as the executable.</P
+><P
+>Name: Save Position of My-T-Soft</P
+><P
+>Function name: SavePositionMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Saves current position, for use with RestorePositionMTS, or upon re-opening of My-T-Soft.</P
+><P
+>Notes: Opposite of RestorePositionMTS.  Same as Menu Option, Save Current Position.</P
+><P
+>Name: Save Settings of My-T-Soft</P
+><P
+>Function name: SaveSettingsMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Saves current settings, for use with RestoreSettingsMTS, or upon re-opening of My-T-Soft.</P
+><P
+>Notes: Opposite of RestoreSettingsMTS.  Same as Menu Option, Save Current settings.</P
+><P
+>Name: Restore Position of My-T-Soft</P
+><P
+>Function name: RestorePositionMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Restore saved position.</P
+><P
+>Notes: Opposite of SavePositionMTS.  Same as Menu Option, Restore Current Position.</P
+><P
+>Name: Restore Settings of My-T-Soft</P
+><P
+>Function name: RestoreSettingsMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Nothing</P
+><P
+>Description: Restores saved settings.</P
+><P
+>Notes: Opposite of SaveSettingsMTS.  Same as Menu Option, Restore Current settings.</P
+><P
+>Name: Query Currently Displayed Panels on My-T-Soft</P
+><P
+>Function name: QueryPanelsMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Long value containing bits set to indicate panel displayed</P
+><P
+>Description: Queries running My-T-Soft program for current panels displayed</P
+><P
+>Notes: The bit values can be checked to examine which panels are visible (opened).  The following lists the panels &#38; their corresponding bit value - refer to the source code for particular syntax.</P
+><P
+>Keyboard (Alpha) panel, bit 1  0x00000001</P
+><P
+>Edit panel, bit 2  0x00000002</P
+><P
+>Numeric (Numpad) panel, bit 4  0x00000004</P
+><P
+>Calculator (Calc) Panel, bit 8  0x00000008</P
+><P
+>Magnifier panel, bit 16  0x00000010</P
+><P
+>System Information (Info) panel, bit 32  0x00000020</P
+><P
+>Windows Controls panel, bit 64  0x00000040</P
+><P
+>Macro panel, bit 128  0x00000080</P
+><P
+>QuickHelp panel, bit 256  0x00000100</P
+><P
+>Control panel, bit 512  0x00000200</P
+><P
+>ToolBar panel, bit 1024  0x00000400</P
+><P
+>Name: Query Current Size of My-T-Soft</P
+><P
+>Function name: QuerySizeMTS</P
+><P
+>Function Arguments: NONE</P
+><P
+>Returns: Long value current size (number)</P
+><P
+>Description: Queries running My-T-Soft program for current size</P
+><P
+>Notes: The return value is the current (internal) size of My-T-Soft</P
+><P
+>Name: Interface to SetForegroundWindow API via MTSDLL</P
+><P
+>Function name: SetInputWindowMTS</P
+><P
+>Function Arguments: Handle to Window</P
+><P
+>Returns: Result of SetForegroundWindow call</P
+><P
+>Description: Used to set the input focus (keyboard focus) to the specified window</P
+><P
+>Notes: There are various limitations in the various versions of Windows with this API and the ability for programs to control the input focus.  This is just a basic interface in the DLL so an environment that doesnt have access to the Windows API can access SetForegroundWindow. </P
+><P
+>Refer to MSDN (Microsoft Developer Network) resources for limitations on this API call.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="iexplorer.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="comeditcontrol.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Internet Explorer utilities</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>COM Edit Control Example</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

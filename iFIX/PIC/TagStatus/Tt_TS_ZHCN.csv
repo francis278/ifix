@@ -1,0 +1,36 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Tt_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Tt_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Tt_TS.DATALINK,Arial,9,1,,,,
+Caption,Tt_TS.DATALINK1,Arial,9,0,,,,
+Caption,Tt_TS.DATALINK2,Arial,9,0,,,,
+Caption,Tt_TS.TEXT1,Arial,9,0,Description:,描述:,,
+Caption,Tt_TS.TEXT2,Arial,9,0,Prev Block:,前一块:,,
+Caption,Tt_TS.DATALINK7,Arial,9,0,,,,
+Caption,Tt_TS.DATALINK8,Arial,9,0,,,,
+Caption,Tt_TS.DATALINK9,Arial,9,0,,,,
+Caption,Tt_TS.DATALINK10,Arial,9,0,,,,
+Caption,Tt_TS.TEXT6,Arial,9,0,Units:,单位:,,
+Caption,Tt_TS.TEXT7,Arial,9,0,Alarm Areas:,报警区域:,,
+Caption,Tt_TS.TEXT8,Arial,9,0,Next Block:,下一块:,,
+Caption,Tt_TS.TEXT9,Arial,9,0,Tagname:,标签名:
+Caption,Tt_TS.Text31,Arial,9,1,Security Areas,安全区域
+Caption,Tt_TS.DataLink16,Arial,9,0,,
+Caption,Tt_TS.DataLink17,Arial,9,0,,
+Caption,Tt_TS.DataLink18,Arial,9,0,,
+Caption,Tt_TS.Text32,Arial,9,0,1,1
+Caption,Tt_TS.Text33,Arial,9,0,2,2
+Caption,Tt_TS.Text34,Arial,9,0,3,3
+Caption,Tt_TS.DataLink19,Arial,9,1,,
+Caption,Tt_TS.DataLink21,Arial,9,1,,
+Caption,Tt_TS.DataLink22,Arial,9,1,,
+Caption,Tt_TS.Text36,Arial,9,1,Current State,当前状态
+Caption,Tt_TS.Text37,Arial,9,1,Alarm Status:,报警状态:
+Caption,Tt_TS.Text38,Arial,9,1,Block Status:,数据块状态:
+Caption,Tt_TS.Text39,Arial,9,1,Value:,数值:
+Caption,Tt_TS.Text40,Arial,9,1,Totalizer,总计
+Caption,Tt_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Tt_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Tt_TS.Text41,Arial,9,0,Per (HH:MM:SS):,每 (HH:MM:SS):
+Caption,Tt_TS.Text42,Arial,9,0,Display Format:,显示格式:

@@ -1,0 +1,45 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Do_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Do_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Do_TS.DATALINK,Arial,9,1,,,,
+Caption,Do_TS.DATALINK1,Arial,9,1,,,,
+Caption,Do_TS.DATALINK2,Arial,9,0,,,,
+Caption,Do_TS.TEXT1,Arial,9,0,Description:,描述:,,
+Caption,Do_TS.TEXT6,Arial,9,0,Prev Block:,前一块:,,
+Caption,Do_TS.DATALINK10,Arial,9,0,,,,
+Caption,Do_TS.DATALINK11,Arial,9,0,,,,
+Caption,Do_TS.TEXT7,Arial,9,0,Invert Output:,反向输出:,,
+Caption,Do_TS.DATALINK12,Arial,9,0,,,,
+Caption,Do_TS.TEXT10,Arial,9,0,Initial Value:,初始值:,,
+Caption,Do_TS.TEXT11,Arial,9,0,Tagname:,标签名:,,
+Caption,Do_TS.TEXT12,Arial,9,0,Next Block:,下一块:,,
+Caption,Do_TS.DATALINK14,Arial,9,0,,
+Caption,Do_TS.DATALINK15,Arial,9,1,,
+Caption,Do_TS.DATALINK16,Arial,9,1,,
+Caption,Do_TS.DATALINK17,Arial,9,0,,
+Caption,Do_TS.Text34,Arial,9,0,Event Msg:,事件消息:
+Caption,Do_TS.Text35,Arial,9,0,Enabled:,启用:
+Caption,Do_TS.Text36,Arial,9,0,Areas:,区域:
+Caption,Do_TS.Text37,Arial,9,1,Alarms,报警
+Caption,Do_TS.Text38,Arial,9,1,Security Areas,安全区域
+Caption,Do_TS.DataLink19,Arial,9,0,,
+Caption,Do_TS.DataLink20,Arial,9,0,,
+Caption,Do_TS.DataLink21,Arial,9,0,,
+Caption,Do_TS.Text39,Arial,9,0,1,1
+Caption,Do_TS.Text40,Arial,9,0,2,2
+Caption,Do_TS.Text41,Arial,9,0,3,3
+Caption,Do_TS.Text42,Arial,9,1,Alarm Status:,报警状态:
+Caption,Do_TS.Text43,Arial,9,1,Value:,数值:
+Caption,Do_TS.Text44,Arial,9,1,Current State,当前状态
+Caption,Do_TS.Text45,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Do_TS.Text46,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Do_TS.Text47,Arial,9,0,Device:,设备 :
+Caption,Do_TS.DataLink22,Arial,9,0,,
+Caption,Do_TS.DataLink23,Arial,9,0,,
+Caption,Do_TS.DataLink24,Arial,9,0,,
+Caption,Do_TS.Text48,Arial,9,1,Hardware Specifications,硬件特性
+Caption,Do_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Do_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Do_TS.DataLink25,Arial,9,0,,
+Caption,Do_TS.Text49,Arial,9,0,Counter:,计数:

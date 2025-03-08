@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How do I implement minimize on Enter?</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="How Do I redefine Key Options"
+HREF="chap2howdoiredefinekey.html"><LINK
+REL="NEXT"
+TITLE="How do I open minimized?"
+HREF="chap2howdoiopenmin.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiredefinekey.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiopenmin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIMinOnEnter"
+>How do I implement minimize on Enter?</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Steps for setting up the Minimize on Enter Key / Key Options</B
+></SPAN
+></P
+><P
+>My-T-Soft used as an example</P
+><P
+>It is recommended that developer's use a move off-screen when not needed, move on-screen when needed approach for "putting" My-T-Soft away when not desired.  This gives more control of the user-interface, quicker display times, and is the preferred method for manipulating My-T-Soft.</P
+><P
+>&#13;( 1) Configure My-T-Soft with the proper Panels open &#38; set the appropriate size.  Save Settings, Save Position, then Close My-T-Soft.
+</P
+><P
+>&#13;( 2) The MINMZMTS.EXE should be available in the Installation directory, or in the default directory (Install Developer's Kit).
+</P
+><P
+>&#13;( 3) Run My-T-Soft Setup.
+</P
+><P
+>&#13;( 4) Select Configuration | Key Options.
+</P
+><P
+>&#13;( 5) Select the Enter key in the "Key" list on the left.  Do not select any modifiers "Key with..." (Ctrl/Shift/Alt).
+</P
+><P
+>&#13;( 6) Leave Enable Key selected (so the Enter key is sent as a keystroke), and Select Launch Key EXE.
+</P
+><P
+>&#13;( 7) Now enter the path / file name for MINMZMTS.EXE or use Browse to find the file.  Verify Key EXE indicates MINMZMTS.EXE, then click OK.
+</P
+><P
+>&#13;( 8) Close Setup, Run My-T-Soft.  When the Enter key is clicked, the "Enter" keystroke will be sent, and the MINMZMTS.EXE will be launched, resulting in "Minimize on Enter key."
+</P
+><P
+>&#13;( 9) NOTE: Using MOVEWMTS and other Dev Kit utilities can create other options.  It is preferable to have these interactions controlled in the "Typed into" application, but there are times when this is NOT a possibility, and these key actions allow some customization.
+</P
+><P
+>&#13;(10) NOTE: Do not be surprised when the keyboard "disappears" after pressing Enter!!  
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoiredefinekey.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2howdoiopenmin.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How Do I redefine Key Options</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How do I open minimized?</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

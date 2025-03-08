@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How do I toggle between keyboard layouts</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="How Do I use the Copy &#38; Configure utility"
+HREF="chap2howdoicopyconfigure.html"><LINK
+REL="NEXT"
+TITLE='How do I implement "on-demand" use with Visual Basic/MS Access?'
+HREF="chap2howdoiondemand.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoicopyconfigure.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiondemand.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIToggleLayouts"
+>How do I toggle between keyboard layouts</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Steps for setting up a keystroke macro behind F12 to toggle keyboard layouts, and using KYBDSYNC to automatically update My-T-Soft</B
+></SPAN
+></P
+><P
+>My-T-Soft used as an example</P
+><P
+>&#13;( 1) You will need to extract Developer's Kit (Install Developer's Kit Icon in Program Group) to get to the KEYBOARD\KYBDSYNC.EXE and DEVKIT\SDSTRMTS.EXE
+</P
+><P
+>&#13;( 2) Use the KYBDSYNC (just run EXE directly from Windows Explorer) - this will tie My-T-Soft display to current keyboard layout selected in Windows.  You can run this in the Windows StartUp group to make it always available if required.
+</P
+><P
+>&#13;( 3) Run Windows Control Panel and select the Keyboard icon.  Click on Language Tab and verify the 2 language layouts desired are available.  Your Windows CD may be required if you need to add a new layout.
+</P
+><P
+>&#13;( 4) Copy the DEVKIT\SDSTRMTS.EXE to the MYTSOFT folder (e.g. to C:\WINDOWS\MYTSOFT from C:\WINDOWS\MYTSOFT\DEVKIT)
+</P
+><P
+>&#13;( 5) Use F12 or one of the other function keys as the "trigger" to toggle keyboard layouts
+</P
+><P
+>&#13;( 6) Go to My-T-Soft Setup | Configuration | Key Options
+</P
+><P
+>&#13;( 7) Select F12, Disable Keystroke, Enable Key EXE
+</P
+><P
+>&#13;( 8) Browse and select SDSTRMTS.EXE
+</P
+><P
+>&#13;( 9) Add command line, e.g. "...\SDSTRMTS.EXE [Alt-Down][Shift-Down][Shift-Up][Alt-Up]"
+</P
+><P
+>&#13;(10) Now when F12 is clicked, the keyboard will toggle - with KeyboardSync running (KYBDSYNC.EXE), the display will toggle
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoicopyconfigure.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2howdoiondemand.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How Do I use the Copy &#38; Configure utility</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How do I implement "on-demand" use with Visual Basic/MS Access?</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

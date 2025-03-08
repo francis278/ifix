@@ -1,0 +1,103 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Mdi_TS.TEXT3,Arial,9,1,Device 0,设备 0,,
+Caption,Mdi_TS.DATALINK5,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK6,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK7,Arial,9,0,,,,
+Caption,Mdi_TS.TEXT4,Arial,9,0,Enabled:,启用:,,
+Caption,Mdi_TS.DATALINK8,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK9,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK10,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK11,Arial,9,0,,,,
+Caption,Mdi_TS.TEXT5,Arial,9,0,0,0,,
+Caption,Mdi_TS.DATALINK12,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK13,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK14,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK15,Arial,9,0,,,,
+Caption,Mdi_TS.DATALINK16,Arial,9,0,,
+Caption,Mdi_TS.DATALINK17,Arial,9,0,,
+Caption,Mdi_TS.DATALINK18,Arial,9,0,,
+Caption,Mdi_TS.DATALINK19,Arial,9,0,,
+Caption,Mdi_TS.TEXT6,Arial,9,0,Alarms,报警
+Caption,Mdi_TS.TEXT7,Arial,9,0,Enabled:,启用:
+Caption,Mdi_TS.DATALINK20,Arial,9,1,,
+Caption,Mdi_TS.TEXT8,Arial,9,0,Current Value:,当前值:
+Caption,Mdi_TS.TEXT9,Arial,9,0,Device States,设备状态
+Caption,Mdi_TS.DATALINK21,Arial,9,0,,
+Caption,Mdi_TS.DATALINK22,Arial,9,0,,
+Caption,Mdi_TS.DATALINK23,Arial,9,0,,
+Caption,Mdi_TS.DATALINK24,Arial,9,0,,
+Caption,Mdi_TS.DATALINK25,Arial,9,0,,
+Caption,Mdi_TS.DATALINK26,Arial,9,0,,
+Caption,Mdi_TS.DATALINK27,Arial,9,0,,
+Caption,Mdi_TS.DATALINK28,Arial,9,0,,
+Caption,Mdi_TS.TEXT10,Arial,9,1,Alarm,报警
+Caption,Mdi_TS.TEXT11,Arial,9,1,Name           ,名           
+Caption,Mdi_TS.DATALINK29,Arial,9,0,,
+Caption,Mdi_TS.DATALINK30,Arial,9,0,,
+Caption,Mdi_TS.DATALINK31,Arial,9,0,,
+Caption,Mdi_TS.DATALINK32,Arial,9,0,,
+Caption,Mdi_TS.DATALINK33,Arial,9,1,,
+Caption,Mdi_TS.DATALINK34,Arial,9,0,,
+Caption,Mdi_TS.DATALINK35,Arial,9,0,,
+Caption,Mdi_TS.DATALINK36,Arial,9,0,,
+Caption,Mdi_TS.DATALINK37,Arial,9,0,,
+Caption,Mdi_TS.DATALINK38,Arial,9,1,,
+Caption,Mdi_TS.DATALINK40,Arial,9,0,,
+Caption,Mdi_TS.DATALINK41,Arial,9,0,,
+Caption,Mdi_TS.TEXT22,Arial,9,1,Security Areas,安全区域
+Caption,Mdi_TS.DATALINK46,Arial,9,0,,
+Caption,Mdi_TS.DATALINK47,Arial,9,0,,
+Caption,Mdi_TS.DATALINK48,Arial,9,0,,
+Caption,Mdi_TS.TEXT23,Arial,9,0,1,1
+Caption,Mdi_TS.TEXT24,Arial,9,0,2,2
+Caption,Mdi_TS.TEXT25,Arial,9,0,3,3
+Caption,Mdi_TS.Text27,Arial,9,0,Description:,描述:
+Caption,Mdi_TS.DataLink50,Arial,9,1,,
+Caption,Mdi_TS.DataLink51,Arial,9,0,,
+Caption,Mdi_TS.DataLink52,Arial,9,0,,
+Caption,Mdi_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Mdi_TS.Text28,Arial,9,0,Prev Block:,前一块:
+Caption,Mdi_TS.Text29,Arial,9,0,Tagname:,标签名:
+Caption,Mdi_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Mdi_TS.Text30,Arial,9,0,Next Block:,下一块:
+Caption,Mdi_TS.Text31,Arial,9,0,Scan Time:,扫描时间:
+Caption,Mdi_TS.DataLink53,Arial,9,1,,
+Caption,Mdi_TS.Text32,Arial,9,1,Block Type:,数据块类型:
+Caption,Mdi_TS.DataLink56,Arial,9,1,,
+Caption,Mdi_TS.Text33,Arial,9,1,Scan Status:,扫描状态:
+Caption,Mdi_TS.Text34,Arial,9,1,Alarm Status:,报警状态:
+Caption,Mdi_TS.Text35,Arial,9,1,Block Status:,数据块状态:
+Caption,Mdi_TS.Text36,Arial,9,1,Value:,数值:
+Caption,Mdi_TS.Text37,Arial,9,1,Current State,当前状态
+Caption,Mdi_TS.Text38,Arial,9,1,Raw Value:,原始值:
+Caption,Mdi_TS.Text39,Arial,9,1,Device 1,设备 1
+Caption,Mdi_TS.Text41,Arial,9,0,Current Value:,当前值:
+Caption,Mdi_TS.Text42,Arial,9,1,Device 2,设备 2
+Caption,Mdi_TS.Text44,Arial,9,0,Current Value:,当前值:
+Caption,Mdi_TS.Text45,Arial,9,0,1,1
+Caption,Mdi_TS.Text46,Arial,9,0,7,7
+Caption,Mdi_TS.Text47,Arial,9,0,6,6
+Caption,Mdi_TS.Text48,Arial,9,0,5,5
+Caption,Mdi_TS.Text49,Arial,9,0,4,4
+Caption,Mdi_TS.Text50,Arial,9,0,3,3
+Caption,Mdi_TS.Text51,Arial,9,0,2,2
+Caption,Mdi_TS.Text52,Arial,9,0,Re-Alarm:,重报警:
+Caption,Mdi_TS.Text53,Arial,9,0,Priority:,优先级:
+Caption,Mdi_TS.Text54,Arial,9,0,Areas:,区域:
+Caption,Mdi_TS.DataLink58,Arial,9,1,,
+Caption,Mdi_TS.DataLink59,Arial,9,1,,
+Caption,Mdi_TS.DataLink60,Arial,9,1,,
+Caption,Mdi_TS.Text55,Arial,9,0,Device:,设备:
+Caption,Mdi_TS.Text56,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Mdi_TS.Text58,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Mdi_TS.Text60,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Mdi_TS.Text61,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Mdi_TS.Text62,Arial,9,0,Device:,设备:
+Caption,Mdi_TS.Text63,Arial,9,0,Enabled:,启用:
+Caption,Mdi_TS.Text64,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Mdi_TS.Text65,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Mdi_TS.Text66,Arial,9,0,Device:,设备:
+Caption,Mdi_TS.Text67,Arial,9,0,Enabled:,启用:
+Caption,Mdi_TS.DataLink61,Arial,9,0,,
+Caption,Mdi_TS.Text68,Arial,9,0,Counter:,计数:

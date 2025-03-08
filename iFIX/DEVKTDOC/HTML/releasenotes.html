@@ -1,0 +1,431 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Release Notes</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="IMG Developer's Kit"
+HREF="imgdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="Welcome to the IMG Developer's Kit"
+HREF="welcome.html"><LINK
+REL="NEXT"
+TITLE="Files And Installation Notes"
+HREF="filesandinstallationnotes.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="welcome.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. IMG Developer's Kit</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="filesandinstallationnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="ReleaseNotes"
+>Release Notes</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Release Notes</B
+></SPAN
+></P
+><P
+>Please note some of the resources available here &#38; on-line:</P
+><P
+></P
+><UL
+><LI
+><P
+>The most frequently asked questions &#38; implementation of the frequent uses of the DevKit are on-line in our Developer's Corner at <A
+HREF="http://www.imgpresents.com/imgdev.htm"
+TARGET="_top"
+>IMG's Developer's Corner</A
+>.  This document is also used as the on-line information, and a more current version may be available on-line.  This is the link for the <A
+HREF="chap2cornerwebintro.html"
+>Developer's Corner within this document</A
+>.</P
+></LI
+><LI
+><P
+>For quick questions, feel free to e-mail us at devkit@imgpresents.com - We can quickly point you in the right direction, or give you a handful of options available.</P
+></LI
+><LI
+><P
+>If you run into something you can't do, also e-mail us at devkit@imgpresents.com, or call and ask for developer support - we may have some nugget of information that can save you a lot of time &#38; effort...</P
+></LI
+><LI
+><P
+>IDE Notes: In general, we tend to use older IDEs (e.g. Microsoft Visual Studio 6 is used more often then .NET 2003, or Visual Studio 2005/2008/2010).  This is done for the simple reason that you can move forward to newer IDEs without too much trouble, but trying to go backwards is difficult (if not impossible).</P
+></LI
+><LI
+><P
+>You can also refer to older and historical notes <A
+HREF="supportnotes.html"
+>here.</A
+></P
+></LI
+></UL
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit or Developer's Kit? A Brief History</B
+></SPAN
+></P
+><P
+>The original Developer's Kit is what is now found in the DEVKIT folder.  Certain comments, notes, and documentation refer to this as the "Developer's Kit." The current Developer's Kit includes the original Developer's Kit plus numerous add-ons, notes, utilities, modifications, and other tools.  Please be aware of this historical context when reading notes and documents that may reference the original.</P
+><P
+>What is now called the IMG Developer's Kit evolved from the My-T-Soft Developer's Kit. This Developer's Kit originally contained utilities &#38; folders focused on this family of products.  Now it is a collection of ALL developer utilities, for all IMG products that have developer information, source code, and utilities.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OnScreen and the Developer's Kit</B
+></SPAN
+></P
+><P
+>OnScreen (formerly My-T-Soft AT) has always been built on the same source as My-T-Soft.  Because OnScreen is focused on the individual user, and not truly meant as a tool for developers or integrators, IMG does not recommend nor support using OnScreen with these Developer's Kit tools &#38; utilities.  With that said, OnScreen has its own set of tools &#38; utils included with this Developer's Kit, and many of the DevKit utilities will operate with OnScreen. You can refer to the WCREMAP utility in the DEVKIT folder, and the OnScreen folder, that includes specially modified basic DevKit Utilities optimized for OnScreen. This is ONLY done as a courtesy to technical users of OnScreen or technicians / technically savvy specialists who are using OnScreen.  To re-iterate, there are many assumptions taken in OnScreen, and the primary assumption is that it is used by an individual user (i.e. imagine an individual and their computer - shouldn't they be in complete control of all software that is being used?).  So having external utilities that can manipulate this tool make no practical sense.  However, the capabilities of the Developer's Kit in conjunction with the commercial software, combined with the special capabilities of OnScreen has also created a desire to use OnScreen and the Developer's Kit tools.  The specific tools available provide a basic toolset that has satisfied various parties.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Build-A-Board and the Developer's Kit</B
+></SPAN
+></P
+><P
+>The My-T-Soft executable (MYTSOFT.EXE) included with Build-A-Board is the next generation of the software.  It is built from its own code base, and many of the Developer's Kit utilities, source code, and documentation may not be relevant (or operate correctly or at all) with the next generation of My-T-Soft (i.e. any version greater than 2.00).  As Build-A-Board evolves, the Developer's Kit will evolve with it.  If you have particular questions about a specific utility, or are having difficulties while working with Build-A-Board and the Developer's Kit, please feel free to contact IMG.</P
+><P
+>Because many users of Build-A-Board will eventually move the run-time files to a different system, the Developer's Kit is installed into its own SDK folder.  Reference \Program Files\Build-A-Board\[Project Name]\[Target System Folder] By including relevant Developer's Kit utilities into that Target System folder, the Make Run-Time Files or ActiveSync options will also include these utilities.</P
+><P
+>In the 1.77 release of My-T-Soft/My-T-Touch/My-T-Pen, a Build-A-Board run-time license is included with the run-time license for the 1.77 release.  By manipulating the KEYBOARD.KBF file, the desired layout can be brought up as required.  Note that many of the Developer's Kit utilities work with both run-time programs, but not all.  Refer to the support notes for Version 2 supported functions.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>The Magnifier Developer's Kit</B
+></SPAN
+></P
+><P
+>You will want to unzip the IMG Developer's Kit, and refer to the Magnifier folder, and the section covering The Magnifier Developer's Kit.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Joystick-To-Mouse Developer's Kit</B
+></SPAN
+></P
+><P
+>You will want to unzip the IMG Developer's Kit, and refer to the JTMUTIL folder, and the section covering the Joystick-To-Mouse Developer's Kit.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.79 Notes</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit 1.79 (DK179001.ZIP)</B
+></SPAN
+></P
+><P
+>This was released in September 2012 for the 1.79 Release.  Includes the Themes, MultiTouch DLL, Zip updates, and first public release of the HTML version of help.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.78 Notes</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit 1.78 Release 5 (DK178005.ZIP)</B
+></SPAN
+></P
+><P
+>This was configured in April 2011 for 1.78 Release 5, but the 1.78 R5 was never publicly released, and all changes roll into the 1.79 release. There was never a public Release 5 or 4.  The Developer's Kit documentation has been reworked to be available as HTML and PDF, and available on IMG's website in its entirety.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit 1.78 Release 3 (DK178003.ZIP)</B
+></SPAN
+></P
+><P
+>This was released in October 2007 in conjunction with the 1.78 Release 2, and adds 3 new options.   PAINTDLL allows external painting of keys, WORDSDLL to integrate with OnScreen and the Word lists/Word Complete candidates, and MTSAppBar which provides an AppBar (taskbar like app that attaches to top or bottom of screen and limits desktop/application area).  The DLL capabilities require the 1.78 Release 2 versions of My-T-Soft.</P
+><P
+>In a continuing effort to streamline things, this release also includes the Developer tools for The Magnifier 1.50 and Joystick-To-Mouse 2.60.  The intent is to bring all development tools &#38; documentation into one easy to update and maintain structure.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit 1.78 Release 2 (DK178002.ZIP)</B
+></SPAN
+></P
+><P
+>This was released in May 2007, and we have reworked all of the Developer's Kit examples, MTSDLL, Visual Basic, C#, J#, Java, and Internet Explorer examples to work with the new 1.78 location changes in a much better way.  This also includes source for KeyboardSync, WebSync, EditSync, OnScreen samples, and keyboard layout (KMF) sources.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kit 1.78 Release 1 (DK178001.ZIP)</B
+></SPAN
+></P
+><P
+>There are various updates, and the following new examples: C Sharp (C# / .NET integration example &#38; source);J Sharp (J#) example; Java integration example; AddOnDLL example; and a specific usage of  the Add-On DLL approach with LOGDLL (when used, logs usage details).  We have kept the samples in Visual Studio 6 (rather than Visual Studio 2005) for maximum compatibility - you should have no problem importing and updating these samples if you are using later MS tools.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IMPORTANT!!</B
+></SPAN
+>  The 1.78 version &#38; Vista versions moved configuration files such as the INI and KEYBOARD.KBF files out of the installation folder into personal / user locations.  Refer to the ConfigPath entry in the INI documentation for options &#38; details.  In general, this will cause problems with many assumptions in the Developer's Kit.  Use ConfigPath=0 for direct compatibility with the early 1.78 releases of the Developer's Kit.  See below for other Developer's Kits notes regarding this.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Developer's Kits Updates:</B
+></SPAN
+> With the 1.78 release, the Developer's Kit is no longer included by default with the release of the software - check your distribution media, or go on-line to download the latest version.  Because the on-line update is now a default option, there will be numerous updates to address Windows Vista and changes to the release that affect the Developer's Kit. There will be update releases to address &#38; update the Developer's Kit to work with the new configuration files locations and changes to the current &#38; future releases of the My-T-Soft software.  If the current available Developer's Kit approach does not work with the current My-T-Soft software, please check for more recent updates and let us know your situation.  Note that we provide source code, documentation, and assume we are dealing with capable developers.  While we attempt to make our software easy to use, and would like to make everyones life easier, being forced to change the location of our configuration files and dropping 14 years of consistency wasnt our first choice.  However, there are valid reasons and other benefits to providing flexibility in the location of the configuration files, so during the transition period, the developers kit and any developers running into these issues will need to be somewhat adaptable.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.77 Notes</B
+></SPAN
+></P
+><P
+>Updates to DEVKIT (CONFGMTS for Toolbar panel manipulation), CPYCNMTS, MOVEWMTS, KybdSync, MTSDLL, updated MS-Access example, updates to the Internet Explorer examples, a Visual C example added, sample logos with minimize button shown, and all relevant notes are now in this single Help file.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.75 Notes</B
+></SPAN
+></P
+><P
+>A DEVKIT2 Folder has been added to customize the Developer's Kit to work with Version 2.00+ versions of My-T-Soft.</P
+><P
+>CLOSEMTS, MOVEWMTS, MINMZMTS, FWCTLMTS, OPEN_MTS, REPOSMTS, and SVPOSMTS are included.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.74 Notes</B
+></SPAN
+></P
+><P
+>A DEVKITCE Folder has been added to bring basic DevKit executables &#38; source for the Windows CE platforms that Build-A-Board supports.  CLOSEMTS, MOVEWMTS, MINMZMTS, OPEN_MTS, REPOSMTS, and SVPOSMTS are included.</P
+><P
+>- KEYBOARD folder includes KEYENTER.EXE, KEYBACK.EXE, KEYTAB.EXE, KEYESC.EXE - simple executable that generate the virtual keystroke as indicated by the file name.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.73 Notes</B
+></SPAN
+></P
+><P
+>More of a minor update &#38; maintenance release than anything else.</P
+><P
+>These are the relevant additions that may be of interest:</P
+><P
+>- MTSISTRT has been added in the DEVKIT folder - allows for a clean implementation of opening My-T-Soft/My-T-Touch/My-T-Pen as an icon (or icon in the tray (Shell Icon)).  Note that if you tag the shortcut with the Run property as Minimized, the keyboard will open in the minimized state as a button.  There is no way to alter this, so this utility gives you all three choices of opening in a minimized state.</P
+><P
+>- STRESS.EXE (DEVUTIL folder) has been added to script various developer kit commands and verify the integrity of the commands and the keyboard software.  There was a minor memory leak when the 3D keys were in use and the CONFGMTS utility was used, and this little utility helped nail down that there was indeed a problem.</P
+><P
+>- EDITSYNC.EXE/ESLIB.DLL (UserUtil folder) has been added that allows 2 operation options - physical keyboard monitoring for OnScreen (to work in conjunction with WordComplete), and auto-positioning for text caret position (using Active Accessibility)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.72 Notes</B
+></SPAN
+></P
+><P
+>Some of the redundant documentation in each individual folder has been removed - this document is the current &#38; best source of info for the Developer's Kit.</P
+><P
+>The CPYCNMTS/FWCTLMTS have been redone to use only Microsoft Win32 APIs to allow proper operation in the NT/2000/XP platforms.</P
+><P
+>There have been some "Read-Only" file issues with Microsoft Source Safe within the Visual Basic examples, and a problem within the CPYCNMTS/FWCTLMTS utility on NT/2000/XP.</P
+><P
+>Files tagged as "Read-Only" will not be removed by the 1.70 Uninstall, and any files &#38; folders will have to be removed manually.</P
+><P
+>Finally a handful of new utilities have been added:</P
+><P
+>- TurnAway for Head/Eye "mouse" users (OnScreen)</P
+><P
+>- WCRemap (WordComplete remap - external utility to trigger completions) (OnScreen)</P
+><P
+>- ShowInfo - a nice utility to show Window Names &#38; Classes, Handles &#38; Parent</P
+><P
+>- WebSync - Internet Explorer utility for client control of My-T-Soft via VBScript / Client Scripting</P
+><P
+>- WaitRun - a utility to execute a command after a set period of time</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.71 Notes</B
+></SPAN
+></P
+><P
+>In Version 1.71, the Win32 compiler is Microsoft Visual C++ Version 6 - the DevKit, CtAltDel, and MTSDLL folders include project information for this compiler.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Version 1.50 Notes</B
+></SPAN
+></P
+><P
+>In Version 1.50, there is an icon in the Program Group created for My-T-Soft - Run Install Developer's Kit, and then select Extract to create the files &#38; folders on your system.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="welcome.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="filesandinstallationnotes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Welcome to the IMG Developer's Kit</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="imgdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Files And Installation Notes</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

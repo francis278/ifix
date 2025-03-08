@@ -1,0 +1,115 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Sd_TS.TEXT,Arial,9,1,Block Type:, 数据块类型:,,
+Caption,Sd_TS.DATALINK,Arial,9,1,,,,
+Caption,Sd_TS.TEXT1,Arial,9,0,Description:,描述:,,
+Caption,Sd_TS.DATALINK1,Arial,9,1,,,,
+Caption,Sd_TS.DATALINK2,Arial,9,0,,,,
+Caption,Sd_TS.DATALINK3,Arial,9,0,,,,
+Caption,Sd_TS.TEXT2,Arial,9,0,Prev Block:,前一块:,,
+Caption,Sd_TS.DATALINK5,Arial,9,0,,,,
+Caption,Sd_TS.DATALINK6,Arial,9,0,,,,
+Caption,Sd_TS.DATALINK7,Arial,9,0,,,,
+Caption,Sd_TS.TEXT4,Arial,9,0,Scan Qualifier:,扫描限定符:,,
+Caption,Sd_TS.DATALINK8,Arial,9,0,,,,
+Caption,Sd_TS.DATALINK9,Arial,9,0,,,,
+Caption,Sd_TS.DATALINK10,Arial,9,1,,,,
+Caption,Sd_TS.DATALINK11,Arial,9,1,,
+Caption,Sd_TS.DATALINK12,Arial,9,1,,
+Caption,Sd_TS.DATALINK13,Arial,9,1,,
+Caption,Sd_TS.DATALINK14,Arial,9,1,,
+Caption,Sd_TS.DATALINK15,Arial,9,1,,
+Caption,Sd_TS.DATALINK16,Arial,9,1,,
+Caption,Sd_TS.DATALINK17,Arial,9,1,,
+Caption,Sd_TS.TEXT7,Arial,9,1,XBAR Warning,XBAR 告警
+Caption,Sd_TS.TEXT8,Arial,9,1,Lower                    ,低                   
+Caption,Sd_TS.TEXT9,Arial,9,1,Upper                     ,高
+Caption,Sd_TS.TEXT10,Arial,9,1,# Groups Collected:,所选组数:
+Caption,Sd_TS.DATALINK18,Arial,9,1,,
+Caption,Sd_TS.DATALINK19,Arial,9,1,,
+Caption,Sd_TS.DATALINK20,Arial,9,1,,
+Caption,Sd_TS.DATALINK21,Arial,9,1,,
+Caption,Sd_TS.DATALINK22,Arial,9,1,,
+Caption,Sd_TS.TEXT12,Arial,9,0,Tagname:,标签名:
+Caption,Sd_TS.TEXT13,Arial,9,0,Next Block:,下一块:
+Caption,Sd_TS.DATALINK24,Arial,9,0,,
+Caption,Sd_TS.DATALINK25,Arial,9,0,,
+Caption,Sd_TS.DATALINK26,Arial,9,1,,
+Caption,Sd_TS.TEXT14,Arial,9,0,Enabled:,启用:
+Caption,Sd_TS.DATALINK27,Arial,9,0,,
+Caption,Sd_TS.DATALINK28,Arial,9,0,,
+Caption,Sd_TS.DATALINK29,Arial,9,1,,
+Caption,Sd_TS.DATALINK30,Arial,9,0,,
+Caption,Sd_TS.DATALINK31,Arial,9,0,,
+Caption,Sd_TS.DATALINK32,Arial,9,1,,
+Caption,Sd_TS.DATALINK33,Arial,9,0,,
+Caption,Sd_TS.DATALINK34,Arial,9,0,,
+Caption,Sd_TS.DATALINK35,Arial,9,1,,
+Caption,Sd_TS.DATALINK36,Arial,9,0,,
+Caption,Sd_TS.DATALINK37,Arial,9,0,,
+Caption,Sd_TS.DATALINK38,Arial,9,1,,
+Caption,Sd_TS.DATALINK39,Arial,9,0,,
+Caption,Sd_TS.DATALINK40,Arial,9,0,,
+Caption,Sd_TS.DATALINK41,Arial,9,1,,
+Caption,Sd_TS.DATALINK42,Arial,9,0,,
+Caption,Sd_TS.DATALINK43,Arial,9,0,,
+Caption,Sd_TS.DATALINK44,Arial,9,1,,
+Caption,Sd_TS.DATALINK45,Arial,9,0,,
+Caption,Sd_TS.DATALINK46,Arial,9,0,,
+Caption,Sd_TS.DATALINK47,Arial,9,1,,
+Caption,Sd_TS.DATALINK48,Arial,9,0,,
+Caption,Sd_TS.DATALINK49,Arial,9,0,,
+Caption,Sd_TS.DATALINK50,Arial,9,0,,
+Caption,Sd_TS.TEXT16,Arial,9,0,Low Limit:,低限:
+Caption,Sd_TS.TEXT17,Arial,9,0,1,1
+Caption,Sd_TS.DATALINK51,Arial,9,0,,
+Caption,Sd_TS.DATALINK52,Arial,9,0,,
+Caption,Sd_TS.DATALINK53,Arial,9,0,,
+Caption,Sd_TS.DATALINK54,Arial,9,0,,
+Caption,Sd_TS.DATALINK55,Arial,9,0,,
+Caption,Sd_TS.DATALINK56,Arial,9,0,,
+Caption,Sd_TS.TEXT19,Arial,9,0,Ena   Groups          Occ,Ena   Groups        Occ
+Caption,Sd_TS.DATALINK57,Arial,9,1,,
+Caption,Sd_TS.DATALINK58,Arial,9,1,,
+Caption,Sd_TS.DATALINK59,Arial,9,1,,
+Caption,Sd_TS.TEXT20,Arial,9,1,Block Scan Status:,数据块扫描状态:
+Caption,Sd_TS.DATALINK60,Arial,9,1,,
+Caption,Sd_TS.Text22,Arial,9,0,Statistical Data Specifics,统计数据特性
+Caption,Sd_TS.Text23,Arial,9,0,Security Areas,安全区域
+Caption,Sd_TS.Text24,Arial,9,0,Statistical Values,统计数值
+Caption,Sd_TS.Text25,Arial,9,0,Alarms,报警
+Caption,Sd_TS.Text26,Arial,9,0,Engineering Units,工程单位
+Caption,Sd_TS.Text27,Arial,9,0,Limits,限制
+Caption,Sd_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Sd_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Sd_TS.Text28,Arial,9,0,Scan Time:,扫描时间:
+Caption,Sd_TS.Text29,Arial,9,0,Input Tag:,输入标签:
+Caption,Sd_TS.Text30,Arial,9,0,Number of Groups:,组数:
+Caption,Sd_TS.Text31,Arial,9,0,Observations/Group:,观察/组:
+Caption,Sd_TS.Text32,Arial,9,0,Wait Time:,等待时间:
+Caption,Sd_TS.Text33,Arial,9,1,XBAR Control,XBAR 控制
+Caption,Sd_TS.Text34,Arial,9,1,Range Control,Range 控制
+Caption,Sd_TS.Text35,Arial,9,1,Standard Deviation Control,标准偏差控制
+Caption,Sd_TS.Text36,Arial,9,1,# Observations/Group:,# 观察/组:
+Caption,Sd_TS.Text37,Arial,9,1,XBAR:,XBAR:
+Caption,Sd_TS.Text38,Arial,9,1,XBARBAR:,XBARBAR:
+Caption,Sd_TS.Text39,Arial,9,1,RBAR:,RBAR:
+Caption,Sd_TS.Text40,Arial,9,1,Standard Deviation:,标准偏差:
+Caption,Sd_TS.Text41,Arial,9,1,Average Standard Deviation:,平均标准偏差:
+Caption,Sd_TS.Text42,Arial,9,1,Process Capability Index:,流程能力索引:
+Caption,Sd_TS.Text43,Arial,9,0,Priority:,优先级:
+Caption,Sd_TS.Text44,Arial,9,0,Areas:,区域:
+Caption,Sd_TS.Text45,Arial,9,0,N PNT X CTRL:,N PNT X CTRL:
+Caption,Sd_TS.Text46,Arial,9,0,N PNT X WARN:,N PNT X WARN:
+Caption,Sd_TS.Text47,Arial,9,0,N PNT X SPEC:,N PNT X SPEC:
+Caption,Sd_TS.Text48,Arial,9,0,N PNT RANGE:,N PNT RANGE:
+Caption,Sd_TS.Text49,Arial,9,0,N PNT STDDEV:,N PNT STDDEV:
+Caption,Sd_TS.Text50,Arial,9,0,TREND RUNS X:,TREND RUNS X:
+Caption,Sd_TS.Text51,Arial,9,0,LEN RUNS X:,LEN RUNS X:
+Caption,Sd_TS.Text52,Arial,9,0,CRIT RUNS X:,CRIT RUNS X:
+Caption,Sd_TS.Text53,Arial,9,0,High Limit:,高限:
+Caption,Sd_TS.Text54,Arial,9,0,Units:,单位:
+Caption,Sd_TS.Text55,Arial,9,0,2,2
+Caption,Sd_TS.Text56,Arial,9,0,3,3
+Caption,Sd_TS.DataLink62,Arial,9,0,,
+Caption,Sd_TS.Text57,Arial,9,0,Counter,计数:

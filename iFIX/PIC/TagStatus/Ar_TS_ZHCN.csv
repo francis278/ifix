@@ -1,0 +1,58 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Ar_TS.DATALINK13,Arial,9,0,,,,
+Caption,Ar_TS.TEXT8,Arial,9,0,Output Enable:,输出启用:,,
+Caption,Ar_TS.TEXT9,Arial,9,0,Address Type:,地址类型:,,
+Caption,Ar_TS.DATALINK14,Arial,9,0,,,,
+Caption,Ar_TS.TEXT10,Arial,9,0,Event Messages:,事件消息:,,
+Caption,Ar_TS.DATALINK15,Arial,9,0,,,,
+Caption,Ar_TS.DATALINK16,Arial,9,1,,,,
+Caption,Ar_TS.TEXT11,Arial,9,1,Offset 0:,Offset 0:,,
+Caption,Ar_TS.TEXT12,Arial,9,1,First 10 Current Values,头10个当前值,,
+Caption,Ar_TS.DATALINK17,Arial,9,1,,,,
+Caption,Ar_TS.DATALINK18,Arial,9,1,,,,
+Caption,Ar_TS.DATALINK19,Arial,9,1,,,,
+Caption,Ar_TS.DATALINK20,Arial,9,1,,,,
+Caption,Ar_TS.DATALINK21,Arial,9,1,,,,
+Caption,Ar_TS.DATALINK22,Arial,9,1,,
+Caption,Ar_TS.DATALINK23,Arial,9,1,,
+Caption,Ar_TS.DATALINK24,Arial,9,1,,
+Caption,Ar_TS.DATALINK25,Arial,9,1,,
+Caption,Ar_TS.Text15,Arial,9,1,Block Type:,数据块类型:
+Caption,Ar_TS.Text16,Arial,9,0,Description:,描述:
+Caption,Ar_TS.DataLink27,Arial,9,1,,
+Caption,Ar_TS.DataLink28,Arial,9,0,,
+Caption,Ar_TS.Text17,Arial,9,0,Tagname:,标签名:
+Caption,Ar_TS.DataLink29,Arial,9,1,,
+Caption,Ar_TS.Text21,Arial,9,1,Hardware Specifications,硬件特性
+Caption,Ar_TS.DataLink33,Arial,9,0,,
+Caption,Ar_TS.DataLink34,Arial,9,0,,
+Caption,Ar_TS.DataLink35,Arial,9,0,,
+Caption,Ar_TS.DataLink36,Arial,9,0,,
+Caption,Ar_TS.Text22,Arial,9,0,Signal Conditioning:,信号条件:
+Caption,Ar_TS.Text23,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Ar_TS.Text24,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Ar_TS.Text25,Arial,9,0,Device:,设备:
+Caption,Ar_TS.Text26,Arial,9,1,Security Areas,安全区域
+Caption,Ar_TS.DataLink37,Arial,9,0,,
+Caption,Ar_TS.DataLink38,Arial,9,0,,
+Caption,Ar_TS.DataLink39,Arial,9,0,,
+Caption,Ar_TS.Text27,Arial,9,0,1,1
+Caption,Ar_TS.Text28,Arial,9,0,2,2
+Caption,Ar_TS.Text29,Arial,9,0,3,3
+Caption,Ar_TS.DataLink40,Arial,9,0,,
+Caption,Ar_TS.DataLink41,Arial,9,0,,
+Caption,Ar_TS.DataLink42,Arial,9,0,,
+Caption,Ar_TS.Text30,Arial,9,1,Engineering Units,工程单位
+Caption,Ar_TS.Text31,Arial,9,0,Low Limit:,低限:
+Caption,Ar_TS.Text32,Arial,9,0,High Limit:,高限:
+Caption,Ar_TS.Text33,Arial,9,0,Units:,单位:
+Caption,Ar_TS.Text34,Arial,9,1,Offset 1:,Offset 1:
+Caption,Ar_TS.Text35,Arial,9,1,Offset 2:,Offset 2:
+Caption,Ar_TS.Text36,Arial,9,1,Offset 3:,Offset 3:
+Caption,Ar_TS.Text37,Arial,9,1,Offset 4:,Offset 4:
+Caption,Ar_TS.Text38,Arial,9,1,Offset 5:,Offset 5:
+Caption,Ar_TS.Text39,Arial,9,1,Offset 6:,Offset 6:
+Caption,Ar_TS.Text40,Arial,9,1,Offset 7:,Offset 7:
+Caption,Ar_TS.Text41,Arial,9,1,Offset 8:,Offset 8:
+Caption,Ar_TS.Text42,Arial,9,1,Offset 9:,Offset 9:

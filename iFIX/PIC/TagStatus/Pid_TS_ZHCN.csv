@@ -1,0 +1,76 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Pid_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Pid_TS.Group13.Text98,Arial,9,0,Reset (Min/Repeat):,复位 (Min/Repeat):,,
+Caption,Pid_TS.Group13.TEXT9,Arial,9,0,Tuning Parameters,调节参数,,
+Caption,Pid_TS.Group13.DATALINK12,Arial,9,0,,,,
+Caption,Pid_TS.Group13.DATALINK13,Arial,9,0,,,,
+Caption,Pid_TS.Group13.DATALINK14,Arial,9,0,,,,
+Caption,Pid_TS.Group13.TEXT10,Arial,9,0,Proportional Band:,比例:,,
+Caption,Pid_TS.Group13.Text97,Arial,9,0,Rate (Derivative):,速率:,,
+Caption,Pid_TS.Group18.TEXT20,Arial,9,0,Algorithm Tuning,算法调节,,
+Caption,Pid_TS.Group18.DATALINK27,Arial,9,0,,,,
+Caption,Pid_TS.Group18.DATALINK28,Arial,9,0,,,,
+Caption,Pid_TS.Group18.DATALINK29,Arial,9,0,,,,
+Caption,Pid_TS.Group18.TEXT21,Arial,9,0,Alpha:,Alpha:,,
+Caption,Pid_TS.Group18.Text99,Arial,9,0,Beta:,Beta:,,
+Caption,Pid_TS.Group18.Text100,Arial,9,0,Gamma:,Gamma:
+Caption,Pid_TS.Group15.TEXT7,Arial,9,0,PID Parameters,PID参数
+Caption,Pid_TS.Group15.DATALINK9,Arial,9,0,,
+Caption,Pid_TS.Group15.DATALINK10,Arial,9,0,,
+Caption,Pid_TS.Group15.DATALINK11,Arial,9,0,,
+Caption,Pid_TS.Group15.TEXT8,Arial,9,0,Gap Action:,间隔动作:
+Caption,Pid_TS.Group15.Text101,Arial,9,0,Deviation:,偏差:
+Caption,Pid_TS.Group15.Text102,Arial,9,0,Dead Band:,死区:
+Caption,Pid_TS.TEXT,Arial,9,0,Tagname:,标签名:
+Caption,Pid_TS.DATALINK,Arial,9,1,,
+Caption,Pid_TS.TEXT1,Arial,9,1,Block Type:,数据块类型:
+Caption,Pid_TS.DATALINK1,Arial,9,1,,
+Caption,Pid_TS.TEXT2,Arial,9,0,Set Point,设置点
+Caption,Pid_TS.DATALINK2,Arial,9,0,,
+Caption,Pid_TS.DATALINK3,Arial,9,0,,
+Caption,Pid_TS.DATALINK4,Arial,9,0,,
+Caption,Pid_TS.TEXT3,Arial,9,0,High Clamp:,高钳位:
+Caption,Pid_TS.TEXT4,Arial,9,0,Security Areas,安全区域
+Caption,Pid_TS.DATALINK5,Arial,9,0,,
+Caption,Pid_TS.DATALINK6,Arial,9,0,,
+Caption,Pid_TS.DATALINK7,Arial,9,0,,
+Caption,Pid_TS.TEXT5,Arial,9,0,1,1
+Caption,Pid_TS.TEXT11,Arial,9,0,Engineering Units,工程单位
+Caption,Pid_TS.DATALINK15,Arial,9,0,,
+Caption,Pid_TS.DATALINK16,Arial,9,0,,
+Caption,Pid_TS.DATALINK17,Arial,9,0,,
+Caption,Pid_TS.TEXT12,Arial,9,0,Low Limit:,低限:
+Caption,Pid_TS.DATALINK18,Arial,9,0,,
+Caption,Pid_TS.DATALINK19,Arial,9,0,,
+Caption,Pid_TS.DATALINK20,Arial,9,0,,
+Caption,Pid_TS.TEXT13,Arial,9,0,Engineering Units Output,工程单位输出
+Caption,Pid_TS.DATALINK22,Arial,9,0,,
+Caption,Pid_TS.DATALINK23,Arial,9,0,,
+Caption,Pid_TS.DATALINK24,Arial,9,0,,
+Caption,Pid_TS.TEXT16,Arial,9,0,Block Status:,数据块状态:
+Caption,Pid_TS.TEXT17,Arial,9,0,Current State,当前状态
+Caption,Pid_TS.TEXT18,Arial,9,0,Alarms,报警
+Caption,Pid_TS.DATALINK25,Arial,9,0,,
+Caption,Pid_TS.DATALINK26,Arial,9,0,,
+Caption,Pid_TS.TEXT19,Arial,9,0,Enabled:,启用:
+Caption,Pid_TS.Group19.TEXT6,Arial,9,0,Next Block:,下一块:
+Caption,Pid_TS.Group19.DATALINK_NEXT,Arial,9,1,,
+Caption,Pid_TS.Group19.TEXT15,Arial,9,0,Prev Block:,前一块:
+Caption,Pid_TS.Group19.DATALINK_PREV,Arial,9,1,,
+Caption,Pid_TS.Group20.Text95,Arial,9,0,Input,输入
+Caption,Pid_TS.Group21.Text96,Arial,9,0,CV,CV
+Caption,Pid_TS.Text103,Arial,9,0,Low Clamp:,低钳位:
+Caption,Pid_TS.Text104,Arial,9,0,Value:,数值:
+Caption,Pid_TS.Text105,Arial,9,0,2,2
+Caption,Pid_TS.Text106,Arial,9,0,3,3
+Caption,Pid_TS.Text107,Arial,9,0,High Limit:,高限:
+Caption,Pid_TS.Text108,Arial,9,0,Units:,单位:
+Caption,Pid_TS.Text109,Arial,9,0,Low Limit:,低限:
+Caption,Pid_TS.Text110,Arial,9,0,High Limit:,高限:
+Caption,Pid_TS.Text111,Arial,9,0,Units:,单位:
+Caption,Pid_TS.Text112,Arial,9,0,Alarm Status:,报警状态:
+Caption,Pid_TS.Text113,Arial,9,0,Value:,数值:
+Caption,Pid_TS.Text114,Arial,9,0,Areas:,区域:
+Caption,Pid_TS.DataLink32,Arial,9,0,,
+Caption,Pid_TS.Text115,Arial,9,0,Counter:,计数:

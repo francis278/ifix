@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Frequently Asked Questions</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="IMG Developer's Kit"
+HREF="imgdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="Files And Installation Notes"
+HREF="filesandinstallationnotes.html"><LINK
+REL="NEXT"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="filesandinstallationnotes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 1. IMG Developer's Kit</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="FAQ"
+>Frequently Asked Questions</A
+></H1
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Note: </B
+>This is a general FAQ section on the <SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+> - you may be also interested in the specific <A
+HREF="chap2cornerwebintro.html"
+>"How Do I..." section</A
+>.</P
+></BLOCKQUOTE
+></DIV
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Why do I need the <SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>?</B
+></SPAN
+></P
+><P
+>Implementing Touchscreen &#38; Pen based input driven applications often require limited keyboard input.  Even though the pointing device can operate a well written application, there are often times when quantities, names, files, passwords, or other character based input is required.  By NOT including a physical keyboard with these systems, the manufacturer / integrator often sees lower production costs, and allows a seamless operation from the more intuitive user interface.  By implementing the various keyboards &#38; panels in the My-T-Soft software and using this developer's kit, the application developer / systems integrator can provide all of the capabilities of a physical keyboard.  The ability to bring up a specific panel for the user, then sending it away when not needed (to restore valuable screen real-estate), allows the developer / integrator to implement a complete &#38; fully functional application on these types of systems.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>My time is limited - where should I start?</B
+></SPAN
+></P
+><P
+>Most people new to the Developer's Kit want to get going quickly, and dont want to review items that dont apply to them.  Because there is a wide spectrum of experience for people new to My-T-Soft, and a wide spectrum of requirements, it is difficult to generalize.  Here is an attempt (from our experiences) at addressing this question.</P
+><P
+>Most uses of the Developer's Kit revolve around moving and configuring My-T-Soft when appropriate for the user.  Key utilities are <A
+HREF="movewindow.html"
+>MOVEWMTS</A
+> (My-T-Soft MoveWindow), <A
+HREF="configuremtspanels.html"
+>CONFGMTS</A
+> (Configure My-T-Soft), and <A
+HREF="configuremtsonthefly.html"
+>CPYCNMTS</A
+> (Copy new Configuration to My-T-Soft).  Note that these utilities are available in both the DEVKIT folder, and as part of the MTSDLL DLL example.</P
+><P
+>These utilities accomplish the following:</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MOVEWMTS</B
+></SPAN
+> - by moving the My-T-Soft window (i.e. moving the keyboard panels around, or moving off-screen when not needed) a clean interface to the application from a touchscreen or pen interface can be accomplished quickly.  Usually the call to MOVEWMTS is triggered by an event, such as Field Enter (e.g. OnEnter), or Field Exit (e.g. OnExit).  It is recommended that My-T-Soft be moved off-screen when not needed, and on-screen when appropriate.  This utility easily handles the manipulation of where the keyboard is displayed.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CONFGMTS</B
+></SPAN
+> - this lets you change size and panels available.  Not as powerful as CPYCNMTS, but basic &#38; familiar to most developers.  Only real trade-off is display speed - on faster machines, this may not matter much.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CPYCNMTS</B
+></SPAN
+> - This utility requires pre-configured layouts, but once these are assembled, the seamless changeover from one configuration to another is a developers dream.</P
+><P
+>Programming language?  Whats that? (or they call me a Developer, so I better act like one)
+Review the Hints &#38; Comments below, and review the My-T-Soft Developer's Kit  - the pre-compiled executables can be run from most high-level environments, or from a windowed command prompt. </P
+><P
+> Start with MOVEWMTS and CONFGMTS to get a feel for what is possible.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>I use C and/or C++</B
+></SPAN
+></P
+><P
+>The source for the Developer's Kit and the <A
+HREF="mtsdll.html"
+>MTSDLL</A
+> is in C.  Picking up the relevant parts is easy for Windows developers.  If not familiar with the Windows API, start with MTSDLL.  Also refer to the <A
+HREF="visualc.html"
+>Visual C++ Examples (Microsoft Visual C Version 6 Project)</A
+> </P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>I'm using .NET and/or C#</B
+></SPAN
+></P
+><P
+>Refer to the <A
+HREF="csharp.html"
+>C# (.NET) examples &#38; source code</A
+>.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>I'm using JAVA or J#</B
+></SPAN
+></P
+><P
+>Refer to the <A
+HREF="java.html"
+>JAVA example</A
+>Java_Example and/or the <A
+HREF="jsharp.html"
+>J# examples</A
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>I'm using Visual Basic, Visual FoxPro, MS Access, or other high-level development environment</B
+></SPAN
+></P
+><P
+>Refer to the <A
+HREF="vbasic.html"
+>Visual Basic example</A
+> , or the <A
+HREF="msaccess.html"
+>MS Access example in MTSDLLMS</A
+>, or review the <A
+HREF="mtsdll.html"
+>MTSDLL functions</A
+>.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>I'm using Internet Explorer, or building a Web based kiosk</B
+></SPAN
+>
+Refer to the IEXPLORE.HTM (INSTALLFOLDER\IEXPLORE\IEXPLORE.HTM) file in the <A
+HREF="iexplorer.html"
+>IEXPLORE</A
+> folder</P
+><P
+>NOTE: The current directory depends on where you started this help file
+Run WebSync from INSTALLFOLDER (Run: \iexplore\websync.exe), then Open HTML file from INSTALLFOLDER (Open:.\iexplore\iexplore.htm)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Why isn't this an OCX (ActiveX/COM control)?</B
+></SPAN
+></P
+><P
+>These types of controls imply that there is a container to hold them, or some other software available to communicate to the control.  Since the keyboard software is used by all types of users in all types of situations, forcing this kind of constraint of the software is too limiting.  Allowing both direct user control (in cases where technicians or users are modifying the names of desktop icons, or changing file names, or logging on to a network, etc.), and allowing programmatic control (via events in edit controls, form activations, etc.) with the same exact piece of software is more powerful than limiting it only to development environments capable of working with COM controls.  Since the same results can be achieved with the current implementation, but not with an COM control, there is little reason to re-work the software as an COM Control.  See the MTSEDIT COM control included in the Developer's Kit as an example of a useful approach using COM controls.  Also note that the keyboard software is written at the same level as the Windows operating system, making it an important part of any system where there is only one interface (i.e. the pointing device).</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Hints and Comments for Developers (My-T-Touch / My-T-Pen / My-T-Soft Developer's Kit)</B
+></SPAN
+></P
+><P
+>This section is available at <A
+HREF="chap2hintsandcomments.html"
+>Hints and Comments</A
+>.</P
+><P
+>May 5, 2007</P
+><P
+>Copyright (C) 1997-2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="filesandinstallationnotes.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Files And Installation Notes</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="imgdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Developer's Corner</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

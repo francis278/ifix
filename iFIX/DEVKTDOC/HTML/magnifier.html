@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>The Magnifier</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="The Magnifier"
+HREF="themagnifier.html"><LINK
+REL="PREVIOUS"
+TITLE="The Magnifier"
+HREF="themagnifier.html"><LINK
+REL="NEXT"
+TITLE="Index"
+HREF="index.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="themagnifier.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 12. The Magnifier</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="index.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Magnifier"
+>The Magnifier</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: Magnifier</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: Utilities / Stand-alone Executables with Source</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API / Visual Basic / C#</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6 / Visual Basic / Visual Studio 2005</B
+></SPAN
+></P
+><P
+>We have been asked if the Magnifier can be controlled externally for integration with other applications, and with the release of The Magnifier 1.50, some tools and capabilities have been created for developers interested in controlling The Magnifier window / software.</P
+><P
+>These are the capabilities available:</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Open</B
+></SPAN
+> - Launches The Magnifier (up to 7 windowed magnifiers can be running at one time)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Close</B
+></SPAN
+> - Closes The Magnifier</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Close All</B
+></SPAN
+> - Closes all instances of The Magnifier</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Status</B
+></SPAN
+> - Obtains status from The Magnifier - is it running, is it a window or in full screen mode, are colors inverted or normal, is it visible or hidden.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Set Magnification factor</B
+></SPAN
+> - 1x-9x</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Set Magnification point</B
+></SPAN
+> - this can reposition the mouse cursor (normal magnification point), force the point so the mouse/text caret/keyboard focus are NOT referenced, and clear the forced point</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Move / Size</B
+></SPAN
+> - As a window, The Magnifier can be repositioned, resized as desired.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Get Position</B
+></SPAN
+> - obtain The Magnifiers current position (screen coordinates)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Get Size</B
+></SPAN
+> - obtain The Magnifiers windows width &#38; height</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Invert Colors</B
+></SPAN
+> - toggles inverted colors or normal colors</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Show / Hide</B
+></SPAN
+> - toggle The Magnifiers visibility - if visible, hides, if hidden, shows</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Full Screen</B
+></SPAN
+> - go to full screen mode</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Window</B
+></SPAN
+> - go to windowed mode</P
+><P
+>Note that most utilities assume only 1 magnifier is running, as they use the API FindWindow, and the first instance / topmost magnifier window will be used.</P
+><P
+>There 4 main areas of interest:</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Magnifier DLL (MAGDLL folder)</B
+></SPAN
+> - This is the core of these utilities.  This DLL communicates with The Magnifier window.  All other utilities interface with the DLL, which then interfaces with The Magnifier.  This is a DLL written in C, has a workspace for Microsoft Visual C++ 6. It is built with exported functions seen by other apps as __stdcall (which is PASCAL or WINAPI).</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl (root Magnifier folder)</B
+></SPAN
+> - this is a C based console utility (Command Prompt utility) that can be driven by commands typed at the prompt.  Integrating the C code with a C / C++ based utility from this example should be trivial.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Visual Basic</B
+></SPAN
+> - Built in VB 6, this has a single form with buttons that show off all the capabilities of the Magnifier DLL.  There is a Module that shows the DLL integration required by Visual Basic.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>C# / .NET</B
+></SPAN
+> - Built in Visual Studio 2005 from a sample C# application, a single form shows off all the capabilities of the Magnifier DLL (exactly the same as the Visual Basic example).  There is the MagDLL class that shows the Magnifier DLL integration required by the C#/.NET environment.</P
+><P
+>The following assumes you have The Magnifier installed.</P
+><P
+>The Visual Basic and C# examples just need you to open the project in the appropriate IDE, and run them - the operation is straightforward and should be obvious - Open The Magnifier (if not already running) and click on the buttons.  All the code is included and it should be easy to merge or integrate these capabilities with existing projects for any capable developer.</P
+><P
+>If you just want to explore these capabilities &#38; dont have an IDE, the MagControl command line utility can be used.  Also, this can be integrated within any high-level App (e.g. Microsoft Access, LabView, etc.) that can Shell or launch an external command.</P
+><P
+>For those that need or want some guidance, here is a quick step-by-step guide to see these capabilities in action.</P
+><P
+>Step 1 - Make sure The Magnifier is installed, download and unzip the Developers Kit (e.g. Check for Updates from the Magnifier Advanced Menu)</P
+><P
+>Step 2 - From the Start Menu, run CMD - e.g. in Vista, just type <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CMD</B
+></SPAN
+> and [Enter], or select Start Menu | Run, then type CMD and [Enter]</P
+><P
+>Step 3 - Change to the Magnifier developers kit folder, e.g. CD \Program Files\The Magnifier\Magnifier</P
+><P
+>Step 4 - Type these command (in bold) with descriptions as - description here</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl open[Enter]</B
+></SPAN
+> - opens the magnifier</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl fullscreen[Enter]</B
+></SPAN
+> - goes to full screen</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl setmag 4[Enter]</B
+></SPAN
+> - 4x Magnification</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl setmag 2[Enter]</B
+></SPAN
+> - 2x Magnification</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl window[Enter]</B
+></SPAN
+> - to window mode</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl movexywh 100 300 400 100[Enter]</B
+></SPAN
+> - moves window</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl showhide[Enter]</B
+></SPAN
+> - hide magnifier</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl showhide[Enter]</B
+></SPAN
+> - shows magnifier</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl invert[Enter]</B
+></SPAN
+> - inverts color</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl status[Enter]</B
+></SPAN
+> - shows magnifier status</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl currentxy[Enter]</B
+></SPAN
+> - shows current screen position</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl currentwh[Enter]</B
+></SPAN
+> - shows current window width/height </P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl invert[Enter]</B
+></SPAN
+> - inverts color</P
+><P
+>C:\Program...&#62; <SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MagControl close [Enter]</B
+></SPAN
+> - closes the magnifier</P
+><P
+>Developers Kit Version 1.78 Release 3 - 9/27/2007</P
+><P
+>Copyright  2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="themagnifier.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="index.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>The Magnifier</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="themagnifier.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Index</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

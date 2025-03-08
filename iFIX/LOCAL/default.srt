@@ -1,0 +1,7 @@
+! Sort items count
+2
+! Sort columns. One per line
+类型, 升序
+标签名, 升序
+!
+! ===== End of List ====

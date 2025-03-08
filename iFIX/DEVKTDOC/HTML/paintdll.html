@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Paint DLL and external painting interface</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="Log DLL (ADDONDLL Example)"
+HREF="logdll.html"><LINK
+REL="NEXT"
+TITLE="WordsDLL and external Word List interface"
+HREF="wordsdll.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="logdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="wordsdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="PaintDLL"
+>Paint DLL and external painting interface</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: PAINTDLL</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: External Capabilities for My-T-Soft via DLL</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6</B
+></SPAN
+></P
+><P
+>The PaintDLL.DLL with source code outlines what is necessary to integrate external painting to customize and control more of the visual display of My-T-Soft.</P
+><P
+>The ExternalPaint settings allow you to control the key painting in several ways:</P
+><P
+>Paint the key background (PaintKeyBackground)</P
+><P
+>Modify the default key background (PaintKeyModBackground)</P
+><P
+>Paint the key labels (PaintKeyLabel)</P
+><P
+>Paint the entire background of the panel (PaintFrame)</P
+><P
+>Completely Paint the key, bypassing internal painting (PaintKey)</P
+><P
+>By using internal key values &#38; keyboard info, you can also do small scale modifications, or large scale modifications to the visual display of My-T-Soft!</P
+><P
+>IMPORTANT NOTE: The ConfigPath determines the location of the INI where you need to modify and add the PaintDLL example below.  Refer to the My-T-Soft Setup | File | Show Config File Location for the location, or use My-T-Soft Setup | Configuration | Special Options | Edit My-T-Soft Initialization file.</P
+><P
+>Here are the relevant settings from the MYTSOFT.INI to achieve examples seen on website:</P
+><P
+>In [Configuration], the transparency is on, e.g.</P
+><P
+>Transparency=1</P
+><P
+>TransparencyLevel=161</P
+><P
+>The default PaintDLL.DLL is built from the Developer's Kit sample, and this is the MYTSOFT.INI settings:</P
+><P
+>[PaintDLL]</P
+><P
+>DLLName=%PRODDIR%\PaintDLL\Release\PaintDLL.DLL</P
+><P
+>PaintFrame=1</P
+><P
+>PaintFrameFunc=PaintDLLPaintFrame</P
+><P
+>PaintKey=0</P
+><P
+>PaintKeyFunc=PaintDLLPaintKey</P
+><P
+>PaintKeyBackground=1</P
+><P
+>PaintKeyBackgroundFunc=PaintDLLPaintKeyBackground</P
+><P
+>PaintKeyModBackground=0</P
+><P
+>PaintKeyModBackgroundFunc=PaintDLLPaintKeyModBackground</P
+><P
+>PaintKeyLabel=1</P
+><P
+>PaintKeyLabelFunc=PaintDLLPaintKeyLabel</P
+><P
+>The key down &#38; up bitmaps were modified to be gray-scale and copied into the Release folder for PaintDLL</P
+><P
+>If you refer to the Sounds / Advanced notes in the My-T-Soft Manual, you can find a key # reference that can be used within the PaintDLL code to handle specific keys.</P
+><P
+>This is the sequence the keyboard panels are painted.</P
+><P
+>The frame (entire panel) is painted (PaintFrame can be used to paint your own frame)
+Each key is painted in sequence based on its key number</P
+><P
+>For each key, this is the sequence:</P
+><P
+>The key background is painted (PaintKeyBackground can be used to paint your own background, or PaintKeyModBackground can be used to modify the default (internal) painted background)
+The key label (or image) is painted (PaintKeyLabel can be used to paint your own label).</P
+><P
+>Finally, PaintKey can be used to completely replace or modify a fully painted key</P
+><P
+>This documents the settings used with the external PaintDLL.DLL</P
+><P
+>[PaintDLL]</P
+><P
+>All settings must be in a section headed by [PaintDLL]</P
+><P
+>DLLName=%PRODDIR%\PaintDLL\Release\PaintDLL.DLL</P
+><P
+>The DLLName entry must contain the full path and name of the DLL to be used as the
+external interface.  %PRODDIR% expands to the current location of MYTSOFT.EXE, and</P
+><P
+>%WINDIR% uses GetWindowsDirectory</P
+><P
+>PaintFrame=1</P
+><P
+>PaintFrameFunc=PaintDLLPaintFrame</P
+><P
+>see below for general usage - PaintFrame paints the background of the entire panel - see</P
+><P
+>source for panel reference</P
+><P
+>PaintKey=0</P
+><P
+>PaintKeyFunc=PaintDLLPaintKey</P
+><P
+>see below for general usage - PaintKey can be used to modify the normal painted key (i.e. adding items or modifying the normal key as it is painted)  This is called after the entire key has been painted, e.g. the background and the lable has been painted.</P
+><P
+>PaintKeyBackground=1</P
+><P
+>PaintKeyBackgroundFunc=PaintDLLPaintKeyBackground</P
+><P
+>see below for general usage - PaintKeyBackground can be used to paint the background of the key, leaving the key label to be painted by My-T-Soft</P
+><P
+>PaintKeyModBackground=0</P
+><P
+>PaintKeyModBackgroundFunc=PaintDLLPaintKeyModBackground</P
+><P
+>see below for general usage - PaintKeyModBackground can be used to take the default key background painted by My-T-Soft and modify it prior to painting the label.</P
+><P
+>PaintKeyLabel=1</P
+><P
+>PaintKeyLabelFunc=PaintDLLPaintKeyLabel</P
+><P
+>see below for general usage - PaintKeyLabel can be used to paint the text in a different style, or use other labels</P
+><P
+>General Usage</P
+><P
+>The settings are listed as a pair - an entry that is used internally by My-T-Soft to determine if the function should be used - if 1, the named function is used, and if 0, the function is not used.  If the function is to be used, the Func label entry lists text that is used internally using the GetProcAddress to find the appropriate function in the PAINTDLL.DLL</P
+><P
+>Refer to the PAINTDLL.C for some examples that paint a custom look keyboard and further notes.</P
+><P
+>Developers Kit Version 1.78 Release 3 - 9/22/2007</P
+><P
+>Copyright © 2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="logdll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="wordsdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Log DLL (ADDONDLL Example)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>WordsDLL and external Word List interface</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

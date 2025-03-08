@@ -1,0 +1,481 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Build-A-Board KBF Dump (Extract)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="Developer utilities"
+HREF="devutil.html"><LINK
+REL="NEXT"
+TITLE="Themes with Key Images and PaintDLL Source"
+HREF="themes.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="devutil.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="themes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="KBFDump"
+>Build-A-Board KBF Dump (Extract)</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: KBFDUMP</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: Utility / Stand-alone executable</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: N/A</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: N/A</B
+></SPAN
+></P
+><P
+>KBFDUMP.EXE is a utility that can extract the data from the KBF file, and optionally, extract the data and re-create source files, usable by the Build-A-Board builder.  This is for the 2.10 KBF files created by Build-A-Board 2.10 only - it will not operate with KBF files prior to 2.00, or later than 2.10.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KBFDUMP.EXE Usage Notes</B
+></SPAN
+></P
+><P
+>Usage: KBFDUMP [KBFFileName]</P
+><P
+>(If no file name specified, KEYBOARD.KBF is used)</P
+><P
+>To extract SOURCE projects from KBF files, use "-extract"</P
+><P
+>Usage: KBFDUMP -extract [KBFFileName]</P
+><P
+>(If no file name specified, KEYBOARD.KBF is used)</P
+><P
+>Extracted project files will be saved to ExtractedKBFProject[#]</P
+><P
+>These source files will be located in Build-A-Board\Source folder</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Instructions</B
+></SPAN
+></P
+><P
+>Copy the KBFDUMP.EXE utility, and place in the \Program Files\Build-A-Board\Bin folder </P
+><P
+>From the command-line (CMD project), in \Program Files\Build-A-Board\Bin, run KBFDUMP on the existing KBF file you have, e.g. KBFDUMP -extract "\My Documents\KEYBOARD.KBF" </P
+><P
+>Now go into the Build-A-Board Builder </P
+><P
+>Use File | Open, and select and open ExtractedKBFProject </P
+><P
+>From the opened ExtractedKBFProject, use File | Save As and select a new name for the project (Example: MyLostProjectt) </P
+><P
+>Use File | Close to close (&#38; save) the project </P
+><P
+>Now copy the \Program Files\Build-A-Board\Source\MyLostProject\MyLostProject.zip to a safe place, and repeat "I will always backup my source files" as many times as necessary </P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Notes</B
+></SPAN
+></P
+><P
+>By default, the utility also dumps to the screen the data values of the KBF file. You can use output redirection to save to a file, e.g. KBFDUMP &#62; KBF.TXT</P
+><P
+>If an ExtractedKBFProject folder already exists, a new ExtractedKBFProject1 folder will be created, then ExtractedKBFProject2, ExtractedKBFProject3, etc.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Example</B
+></SPAN
+></P
+><P
+>The KBF structure is fairly well documented here - this is an example of a one-key, one panel, one window layout from Build-A-Board 2.10 - in general the actual dump text isn't that useful, where the -extract option which recreates the source files has been requested numerous times.</P
+><P
+>===========</P
+><P
+>KBF HEADER</P
+><P
+>===========</P
+><P
+>BYTE Sig[2] = M*</P
+><P
+>BYTE Ver[3] = 210</P
+><P
+>DWORD Startoffset = 94 | 0x005E</P
+><P
+>BYTE Level = 1 | 0x0001</P
+><P
+>======================</P
+><P
+>KBF Files/Offsets 0</P
+><P
+>======================</P
+><P
+>BYTE FileName[13] = MWF00001.MWF</P
+><P
+>DWORD Startoffset = 0 | 0x0000</P
+><P
+>DWORD Length = 109 | 0x006D</P
+><P
+>======================</P
+><P
+>KBF Files/Offsets 1</P
+><P
+>======================</P
+><P
+>BYTE FileName[13] = MPF00001.MPF</P
+><P
+>DWORD Startoffset = 109 | 0x006D</P
+><P
+>DWORD Length = 37 | 0x0025</P
+><P
+>======================</P
+><P
+>KBF Files/Offsets 2</P
+><P
+>======================</P
+><P
+>BYTE FileName[13] = MBF00001.MBF</P
+><P
+>DWORD Startoffset = 146 | 0x0092</P
+><P
+>DWORD Length = 25 | 0x0019</P
+><P
+>======================</P
+><P
+>KBF Files/Offsets 3</P
+><P
+>======================</P
+><P
+>BYTE FileName[13] = KEY00000.KEY</P
+><P
+>DWORD Startoffset = 171 | 0x00AB</P
+><P
+>DWORD Length = 71 | 0x0047</P
+><P
+>==================</P
+><P
+>MWF structure</P
+><P
+>==================</P
+><P
+>BYTE Sig[2] = MW</P
+><P
+>BYTE Version = 1 | 0x0001</P
+><P
+>BYTE Level = 1 | 0x0001</P
+><P
+>DWORD PanelStructure = 1 | 0x0001</P
+><P
+>BYTE Measure = 1 | 0x0001</P
+><P
+>WORD Width = 640 | 0x0280</P
+><P
+>WORD Height = 488 | 0x01E8</P
+><P
+>WORD PosX = 200 | 0x00C8</P
+><P
+>WORD PosY = 200 | 0x00C8</P
+><P
+>BYTE Position = 1 | 0x0001</P
+><P
+>BYTE Frame = 4 | 0x0004</P
+><P
+>BYTE Background = 7 | 0x0007</P
+><P
+>BYTE Highlight = 15 | 0x000F</P
+><P
+>BYTE Shadow = 8 | 0x0008</P
+><P
+>BYTE Border = 1 | 0x0001</P
+><P
+>BYTE BorderColor = 0 | 0x0000</P
+><P
+>BYTE FontFaceName = </P
+><P
+>BYTE FontHeight = 0 | 0x0000</P
+><P
+>BYTE FontWidth = 0 | 0x0000</P
+><P
+>WORD FontWeight = 0 | 0x0000</P
+><P
+>DWORD dwStyle = 3 | 0x0003</P
+><P
+>==================</P
+><P
+>Panels List</P
+><P
+>==================</P
+><P
+>MPF00001.MPF</P
+><P
+>==================</P
+><P
+>MPF structure</P
+><P
+>==================</P
+><P
+>BYTE Sig[2] = MP</P
+><P
+>BYTE Version = 1 | 0x0001</P
+><P
+>BYTE Level = 1 | 0x0001</P
+><P
+>BYTE cMBFFILE[13] = MBF00001.MBF</P
+><P
+>BYTE Measure = 1 | 0x0001</P
+><P
+>WORD Top = 0 | 0x0000</P
+><P
+>WORD Left = 0 | 0x0000</P
+><P
+>WORD Width = 640 | 0x0280</P
+><P
+>WORD Height = 488 | 0x01E8</P
+><P
+>BYTE Position = 1 | 0x0001</P
+><P
+>BYTE Frame = 3 | 0x0003</P
+><P
+>BYTE Background = 1 | 0x0001</P
+><P
+>BYTE Highlight = 15 | 0x000F</P
+><P
+>BYTE Shadow = 8 | 0x0008</P
+><P
+>BYTE Border = 1 | 0x0001</P
+><P
+>BYTE BorderColor = 0 | 0x0000</P
+><P
+>UINT Keys = 0 | 0x0000</P
+><P
+>==================</P
+><P
+>MBF structure</P
+><P
+>==================</P
+><P
+>BYTE Sig[2] = MB</P
+><P
+>BYTE Version = 1 | 0x0001</P
+><P
+>BYTE Level = 1 | 0x0001</P
+><P
+>DWORD KeyStructures = 1 | 0x0001</P
+><P
+>===========================</P
+><P
+>KEYS - KEY 0 (1 of 1)</P
+><P
+>===========================</P
+><P
+>KEY00000.KEY</P
+><P
+>WORD X = 118 | 0x0076</P
+><P
+>WORD Y = 100 | 0x0064</P
+><P
+>=========================</P
+><P
+>KEY Structure - KEY 0</P
+><P
+>=========================</P
+><P
+>BYTE Sig[2] = MK</P
+><P
+>BYTE Version = 1 | 0x0001</P
+><P
+>BYTE Level = 1 | 0x0001</P
+><P
+>BYTE bDown = 0 | 0x0000</P
+><P
+>BYTE Measure = 0 | 0x0000</P
+><P
+>BYTE Width = 410 | 0x019A</P
+><P
+>BYTE Height = 290 | 0x0122</P
+><P
+>BYTE BtnType = 2 | 0x0002</P
+><P
+>BYTE BtnLabel = KeySymbol</P
+><P
+>BYTE BtnShift = ShiftSymbol</P
+><P
+>BYTE BtnAction = keyaction</P
+><P
+>BYTE BtnFace = 7 | 0x0007</P
+><P
+>BYTE BtnText = 0 | 0x0000</P
+><P
+>BYTE BtnHigh = 15 | 0x000F</P
+><P
+>BYTE BtnShad = 8 | 0x0008</P
+><P
+>Version 1.78 Release 2 - 6/5/2007</P
+><P
+>Copyright © 1993-2007 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="devutil.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="themes.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Developer utilities</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Themes with Key Images and PaintDLL Source</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

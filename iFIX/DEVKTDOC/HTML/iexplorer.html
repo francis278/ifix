@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Internet Explorer utilities</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Language and Platform Examples"
+HREF="languageplatform.html"><LINK
+REL="PREVIOUS"
+TITLE="MS Access samples integrating the MTSDLL.DLL"
+HREF="msaccess.html"><LINK
+REL="NEXT"
+TITLE="MTS DLL with Source"
+HREF="mtsdll.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="msaccess.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 7. Language and Platform Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="mtsdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="IExplorer"
+>Internet Explorer utilities</A
+></H1
+><P
+>FOLDER: IEXPLORE / IEXPLORE/WebSync</P
+><P
+>TYPE: Web Pages, utility / stand-alone executable with source</P
+><P
+>SOURCE: INCLUDED</P
+><P
+>LANGUAGE: C</P
+><P
+>IDE: Microsoft Visual C++ 6</P
+><P
+>Note: Option 2 will work with My-T-Soft "Out of the box" and the Developer's Kit (DEVKIT)</P
+><P
+>Name: WebSync</P
+><P
+>Program name: WEBSYNC.EXE</P
+><P
+>Program Arguments: NONE</P
+><P
+>Requires: 1.70 version</P
+><P
+>Description: WebSync monitors for the MTSCMD.TXT file based on its delay - if it finds the file, it will process it and "execute" the command.  Review OVERVIEW.HTM in a browser for VBScript, and further details.</P
+><P
+>The IEXPLORE Folder contains:</P
+><P
+>WebSync - WEBSYNC.EXE</P
+><P
+>IEXPLORE.HTM</P
+><P
+>EXAMPLES.HTM</P
+><P
+>These HTML files are used as a starting point for the appropriate examples.  The 1.77 version updates these with folders for My-T-Pen/My-T-Soft/My-T-Touch so modifications are not required to show off the examples.</P
+><P
+>Integrating with Internet Explorer</P
+><P
+>My-T-Soft used as an example / Integrated with Internet Explorer</P
+><P
+>Option 1 </P
+><P
+>You can trigger events within My-T-Soft by using WebSync and VBScript (or other scripting method that can create a file on the client system). </P
+><P
+>( 1) IEXPLORE contains folders for each product with 2 sets of 2 HTM files for the appropriate version of windows (EDTPAGEW.HTM, OVRVIEWW.HTM for use with versions of Windows that use a WINDOWS folder, and EDTPAGEN.HTM, OVRVIEWN.HTM for use with versions of Windows that use a WINNT folder)</P
+><P
+>( 2) Run WEBSYNC.EXE to run WebSync</P
+><P
+>( 3) Make sure you have My-T-Soft running, it is not minimized, and you have a keyboard open at about size 8</P
+><P
+>( 4) Select the appropriate folder &#38; file for your version of Windows and installed product.  (EDTPAGE? will be referred to as EDITPAGE and OVRVIEW? Will be referred to as OVERVIEW) Double-click on EDITPAGE.HTM - this should open Internet Explorer - if you are on Windows 98, My-T-Soft, you should see the keyboard position itself on EDITPAGE, and hide on OVERVIEW - the 2 pages are linked to illustrate this approach of using the Devevloper's Kit &#38; VBScript with WebSync</P
+><P
+>( 5) All the details about the VBScript approach and WebSync are in the OVERVIEW.HTM - refer to this for notes &#38; implementation details</P
+><P
+>( 6) Review OVERVIEW.HTM and the Web page "source" to see details.</P
+><P
+>( 7) Quick Note: This example uses VBScript to communicate externally to WebSync, which uses the pre-compiled Developer's Kit executables to manipulate My-T-Soft.</P
+><P
+>Option 2 </P
+><P
+>You can trigger events within My-T-Soft by using the My-T-Soft Setup | Configuration | Special Options' Run command. This works best if you only have a small number of pages where you need a keyboard configuration, and/or you aren't using an advanced browser. The following example assumes you have 1 page with a form on it (where the keyboard is required), and a second page indicating proper submission. </P
+><P
+>( 1) You need the window names (the "TITLE" tag for the HTML page) - assuming you are in control of these, you should create a small, but unique title to each page you want to trigger on.</P
+><P
+>( 2) Run My-T-Soft Setup | Configuration | Special Options.</P
+><P
+>( 3) Enter the text for the "form" window in the drop-down combo edit box (Application Window Name), e.g. "Please fill out form"</P
+><P
+>( 4) Click on Run EXE radio button, Browse to select Developer's Kit EXE (e.g. C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE)</P
+><P
+>( 5) Add command line parameters (C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE x:20 y:344)</P
+><P
+>( 6) Click OK</P
+><P
+>( 7) Repeat for second window, click on Special Options</P
+><P
+>( 8) Enter the text for the "submitted" window in the drop-down combo edit box (Application Window Name), e.g. "Thank you!"</P
+><P
+>( 9) Click on Run EXE radio button, Browse to select Developer's Kit EXE (e.g. C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE)</P
+><P
+>(10) Add command line parameters (C:\WINDOWS\MYTSOFT\DEVKIT\MOVEWMTS.EXE x:2000 y:344)</P
+><P
+>(11) Click OK</P
+><P
+>(12) Test with web pages</P
+><P
+>(13) Notes: You need at least 2 windows to make operation work as you'd expect. To prevent an infinite loop, the Run EXE runs, and then is locked out until a different Run EXE event is triggered.</P
+><P
+>(14) The "React to Dialogs..." in My-T-Soft Setup | Configuration | Operation Options must be checked on to allow monitoring active windows.</P
+><P
+>(15) Only 64 characters from the Window Text (Window Name) are checked, and there is a max of 32 characters allowed in Special Options</P
+><P
+>(16) The name entered is matched against the whole name, so "Word" will match WordPad, Microsoft Word, WordPerfect, etc.</P
+><P
+>(17) This will drag on system resources, and may cause problems if you get a large number of entries in Special Options - this will depend on the speed of the system, memory, other applications running, etc., etc. so the exact number your particular system can handle before you notice speed issues will vary. This is really meant for just a handful of specific windows, not a 100 different configurations.</P
+><P
+>Version 1.77  July 7, 2003</P
+><P
+>Copyright  2001-2003 by Innovation Management Group, Inc.</P
+><P
+>All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="msaccess.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="mtsdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>MS Access samples integrating the MTSDLL.DLL</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="languageplatform.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>MTS DLL with Source</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Hints &#38; Comments</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="General Information on IMG's Software"
+HREF="chap2generalinformationonsoftware.html"><LINK
+REL="NEXT"
+TITLE="Overview of Developer's Kit"
+HREF="chap2overviewdevkit.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2generalinformationonsoftware.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2overviewdevkit.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HintsAndComments"
+>Hints &#38; Comments</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Hints and Comments for Developers (My-T-Touch / My-T-Pen / My-T-Soft Developer's Kit</B
+></SPAN
+>)</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Note: </B
+>The Developer's Kit started with the set of utilities now found in the DEVKIT folder.  It has grown to include numerous executables, source code, and helpful information - some older notes may refer to the Developer's Kit and only mean the utilities in the DEVKIT folder - newer notes refer to the whole set of utilities, source, documents, notes, etc.</P
+></BLOCKQUOTE
+></DIV
+><P
+>( 1) Instead of an open (launch) &#38; close approach OR an Open &#38; Minimize, IMG recommends to move the My-T-Soft window off-screen (i.e. at an X position of 1281 for a 1280 x 1024 layout) and use the Copy &#38; Configure utility to "restore" the appropriate layout when required (or just MoveMTS back on-screen at the desired location if the layout does not need to change).  This seamless changeover reduces repaint time, and is virtually instantaneous.  In multiple monitor configurations, you must be aware of entire virtual space.</P
+><P
+>( 2) Using a windowed Command Prompt allows you to use / test the utilities on demand, allowing you to learn them, save configurations, etc.  Configure My-T-Soft, then use SVSETMTS.EXE to save configuration; Move window off screen with MOVEWMTS x:2000, then SVPOSMTS to save position off-screen.  Use CLOSEMTS to shut down My-T-Soft.  Add shortcut to StartUp group (with NoSplash option), and your users will not know it is running until your application moves My-T-Soft window (MOVEWMTS) back on-screen!</P
+><P
+>( 3) The -NoSplash command line can be used, or the NoSplash option is available via the INI file.  Set NoSplash=1 (within the [Configuration] section of the MYTSOFT.INI in the installation directory) to disable the opening introduction (splash) screen. Note: First time painting delays may be noticeable depending on system speed, video memory, and system configuration.</P
+><P
+>( 4) Sometimes the default reaction of the software to move off of dialog boxes (and other predefined windows) is not desired.  Under Operation Options, the "Move off Dialogs..." setting sets Contention=0 (within [Configuration] section) to disable the default monitoring of other windows in the system.  Note that this global setting can affect other advanced options.  Be sure to test implementation if this change is made.</P
+><P
+>( 5) Note the 2 save options (Settings &#38; Position). Both must be done to "save" the current configuration. Settings refers to the displayed panels, and position refers to the screen position (upper left of window). The distinction is a legacy holdover from original design in 1993, and has specialized uses. Use utilities/batch to automate the two steps, or rework source of SVSETMTS and SVPOSMTS.</P
+><P
+>( 6) When integrating with a high-level program, refer to the code examples for <A
+HREF="msaccess.html"
+>MS-Access</A
+>, <A
+HREF="vbasic.html"
+>Visual Basic</A
+>, or play around at a windowed command prompt (Item 2 above).</P
+><P
+>( 7) Developer's Kit Source notes - Structure: The "action" code is contained in the WM_TIMER case (message) of the switch construct.  In general, this source code is NOT meant to be dropped into your application code. Because some high-level environments DO NOT support the Windows API, they are forced to use the compiled executables (and, in fact, it was assumed that a C developer would not need source for these simple calls). Windows C and C++ developers should have no problem sifting through the code for the relevant sections. The reason the WM_TIMER message is used (rather than simply using WinMain or WM_CREATE) is to allow an easy addition of a delay by increasing the SetTimer milliseconds. The extra structure and variables were left in place for flexibility in case there is the need for debugging, displaying a window, or some structure or variable is required. If you do not have familiarity with legacy Windows code and C only based Windows 3.1 structures, refer only to the code in WM_TIMER.</P
+><P
+>( 8) The most useful utilities are the MOVEWMTS and CPYCNMTS (with SVSETMTS and SVPOSMTS to "lock" down a configuration) - an incredible amount of flexibility can be obtained easily be saving configurations, and using the MOVEWMTS to move My-T-Soft off-screen, and then revert to an already saved configuration based on your application's/user's needs.</P
+><P
+>( 9) The SDSTRMTS allows for complete remapping of existing keyboard layouts within the Setup | Configuration | Key Options dialog.  Note that complete macro strings can be embedded, so F1 could be your name, F2 could be your Address, etc.  Only 1 executable with command line is available per key.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2generalinformationonsoftware.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2overviewdevkit.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>General Information on IMG's Software</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Overview of Developer's Kit</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

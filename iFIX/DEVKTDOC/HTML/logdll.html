@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Log DLL (ADDONDLL Example)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Add-On DLL Template"
+HREF="addondll.html"><LINK
+REL="PREVIOUS"
+TITLE="Add-On DLL Template"
+HREF="addondll.html"><LINK
+REL="NEXT"
+TITLE="Paint DLL and external painting interface"
+HREF="paintdll.html"></HEAD
+><BODY
+CLASS="sect2"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="addondll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="paintdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="LogDLL"
+>Log DLL (ADDONDLL Example)</A
+></H2
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: LOGDLL</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: External Capabilities for My-T-Soft</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: INCLUDED</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: Microsoft Visual C++ 6</B
+></SPAN
+></P
+><P
+>Located in the LOGDLL folder, this pre-built DLL (source code &#38; Microsoft Visual C++ Version 6 project &#38; workspace included- available with the Developers Kit extracted) will log start &#38; end times during runs of My-T-Soft.  The INI entry must be:</P
+><P
+>[AddOnDLL1]</P
+><P
+>DLLName=%PRODDIR%LOGDLL\LOGDLL.DLL</P
+><P
+>InitializeFunctionName=StartLog</P
+><P
+>InitializeFunctionType=2</P
+><P
+>TimerFunctionName=TimerLog</P
+><P
+>TimerFunctionType=2</P
+><P
+>TimerDelay=1000</P
+><P
+>CleanupFunctionName=EndLog</P
+><P
+>CleanupFunctionType=2</P
+><P
+>Value1=0</P
+><P
+>Value2=0</P
+><P
+>Value3=0</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Example of Log (My-T-Touch) (C:\WINDOWS \MYTTOUCH\MYTTOUCH.LOG):</B
+></SPAN
+></P
+><P
+>*** START RUN OF C:\WINDOWS\MYTTOUCH\MYTTOUCH.EXE</P
+><P
+>*** User: Username</P
+><P
+>*** Timestamp: 12:14:44 on 9 Aug 2005.</P
+><P
+>END RUN (4 seconds), Timestamp: 12:14:49 on 9 Aug 2005.</P
+><P
+>***</P
+><P
+>*** START RUN OF C:\WINDOWS\MYTTOUCH\MYTTOUCH.EXE</P
+><P
+>*** User: Username</P
+><P
+>*** Timestamp: 12:14:50 on 9 Aug 2005.</P
+><P
+>END RUN (1 seconds), Timestamp: 12:14:52 on 9 Aug 2005.</P
+><P
+>***</P
+><P
+>*** START RUN OF C:\WINDOWS\MYTTOUCH\MYTTOUCH.EXE</P
+><P
+>*** User: Username</P
+><P
+>*** Timestamp: 12:14:54 on 9 Aug 2005.</P
+><P
+>END RUN (7 seconds), Timestamp: 12:15:01 on 9 Aug 2005.</P
+><P
+>***</P
+><P
+>*** START RUN OF C:\WINDOWS\MYTTOUCH\MYTTOUCH.EXE</P
+><P
+>*** User: Username</P
+><P
+>*** Timestamp: 15:16:46 on 9 Aug 2005.</P
+><P
+>END RUN (10 seconds), Timestamp: 15:17:05 on 9 Aug 2005.</P
+><P
+>***</P
+><P
+>Version 1.78 - August 9, 2005</P
+><P
+>Copyright © 2004-2005 by Innovation Management Group, Inc.  All Rights Reserved.</P
+><P
+>My-T-Mouse, My-T-Pen, My-T-Touch, and My-T-Soft are registered trademarks of Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="addondll.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="paintdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Add-On DLL Template</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="addondll.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Paint DLL and external painting interface</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

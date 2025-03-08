@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Wait and then Close Program/Utility</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="My-T-Soft Developer's Kit for Windows"
+HREF="mytsoftdevkit.html"><LINK
+REL="PREVIOUS"
+TITLE="Wait and then Run Program/Utility"
+HREF="waitthenrun.html"><LINK
+REL="NEXT"
+TITLE="Trigger - Wait While Window, then Run - Also Launch / Activate App"
+HREF="trigger.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="waitthenrun.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 3. My-T-Soft Developer's Kit for Windows</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="trigger.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="WaitThenClose"
+>Wait and then Close Program/Utility</A
+></H1
+><P
+>Name: Wait &#38; then Close Utility</P
+><P
+>Executable name: WAITCLOSE.EXE</P
+><P
+>Command Line Arguments: [Wait time]</P
+><P
+>Requires: WAITCLOSE.INI</P
+><P
+>Description: Wait optional specified Wait time, then Close other windows based on entries in WAITCLOSE.INI</P
+><P
+>Notes:  The below is a copy of the WAITCLOSE.INI file that has comments embedded in it.  The INI must be in the same folder as the EXE file, and there must be at least some text for the title match or class match.  CloseAll is default off, so only 1 window will be closed.  Note that a simple match for PartofWindowsTitle with CloseAll=1 may match a lot of windows and cause other problems</P
+><P
+>The utility uses the Windows API GetWindowText and GetClassName to obtain the class names while enumerating all normal (application type) windows.</P
+><P
+>WAITCLOSE.INI</P
+><P
+>This WAITCLOSE.INI is used by the My-T-Soft Developer's Kit WAITCLOSE to identify
+a caption and/or class of a window to close</P
+><P
+>If the entry is empty (e.g. PartofWindowTitle=  ), then it will not be used</P
+><P
+>If both entries are empty, then WaitClose will issue a warning!</P
+><P
+>The window title is a substring search, while the class must match exactly!</P
+><P
+>For help finding out further info about actual values in running window, 
+refer to the ShowInfo.exe in DevUtil folder (or Windows Spy utilities)</P
+><P
+>[Settings]</P
+><P
+>PartOfWindowTitle=</P
+><P
+>PartOfWindowTitle if it contains some text will be used in a case insensitive
+match based on the Window title (caption bar text) from GetWindowText</P
+><P
+>Word would match "WordPad","Microsoft Word","WordPeferect","E-mail to WordSmith", etc.</P
+><P
+>Examples:</P
+><P
+>PartOfWindowTitle=Document</P
+><P
+>PartOfWindowTitle=Microsoft Word</P
+><P
+>WindowClass=</P
+><P
+>The WindowClass must be a complete (case insensitive) match to a window class</P
+><P
+>This can be used to ensure that only the window(s) you are interested in will be matched</P
+><P
+>Examples:</P
+><P
+>WindowClass=IEFrame</P
+><P
+>WindowClass=Notepad</P
+><P
+>CloseAll=0</P
+><P
+>If CloseAll=1, then all windows will be enumerated and any matches will be send a WM_CLOSE
+message.  If CloseAll=0 then the first match will stop the enumeration of top level windows.</P
+><P
+>Support: My-T-Soft 1.x (Note: not tied to version)</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="waitthenrun.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="trigger.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Wait and then Run Program/Utility</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="mytsoftdevkit.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Trigger - Wait While Window, then Run - Also Launch / Activate App</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

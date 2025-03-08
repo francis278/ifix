@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>How do I implement "on-demand" use with Visual Basic/MS Access?</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer's Corner"
+HREF="websitedevcorner.html"><LINK
+REL="PREVIOUS"
+TITLE="How do I toggle between keyboard layouts"
+HREF="chap2howdoitogglelayouts.html"><LINK
+REL="NEXT"
+TITLE="How Do I register / move DLL"
+HREF="chap2howdoiregisterdll.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap2howdoitogglelayouts.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 2. Developer's Corner</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap2howdoiregisterdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="Chap2HowDoIOnDemand"
+>How do I implement "on-demand" use with Visual Basic/MS Access?</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Steps for using the Copy &#38; Configure utility / Integrating with Visual Basic / MS-Access</B
+></SPAN
+></P
+><P
+>Developer's Kit 1.71 includes the MTS DLL (MTSDLL folder from extracted Developer's Kit) with an sample MDB database for MS-Access 97 showing how to tie the DLL into Access, and the event settings on a sample form - the steps &#38; examples included in the MTSDLL folder may be what you are looking for.  The same concepts apply, but the implementation is more integrated than the steps listed below. Note: The steps to create preset configuration still apply.</P
+><P
+>My-T-Soft used as an example / Integrated with MS-Access</P
+><P
+>&#13;( 1) Configure My-T-Soft with the proper Panels open &#38; set the appropriate size.  The necessary utilities are expected to be in current directory for MS-Access.
+</P
+><P
+>&#13;( 2) Use the Menu to select Save Current Settings, Save Current position (or use utilities).
+</P
+><P
+>&#13;( 3) The KEYBOARD.KBF in the installation directory contains the current saved configuration.  Copy this file to a DIFFERENT file name, e.g. KEYPAD.CFG, NUM.CFG, etc. (For this example, this is assumed to be the installation directory) Note: Do not use .KBF extension for these extra files.
+</P
+><P
+>&#13;( 4) Repeat Steps 1 - 3 as necessary to build up a set of configuration files.
+</P
+><P
+>&#13;( 5) The Copy &#38; Configure utility takes the file name as a single parameter.
+</P
+><P
+>&#13;( 6) Example: In Microsoft Access - Field (Text Box) Property Enter (OnEnter).  x = Shell("CPYCNMTS C:\WINNT\MYTSOFT\KEYPAD.CFG",1)
+</P
+><P
+>&#13;( 7) Description:  The example in Step 6 would restore My-T-Soft from an off screen position and reconfigure to match the KEYPAD (previously saved) configuration.
+</P
+><P
+>&#13;( 8) Example: In Microsoft Access - Field (Text Box) Property Exit (OnExit).  x = Shell("MOVEWMTS X:641 Y:320",1)
+</P
+><P
+>&#13;( 9) Description: The example in Step 8 moves My-T-Soft off screen when the field is exited (Keyboard Enter, Tab, etc.)
+</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap2howdoitogglelayouts.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap2howdoiregisterdll.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>How do I toggle between keyboard layouts</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="websitedevcorner.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>How Do I register / move DLL</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

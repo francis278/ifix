@@ -1,0 +1,61 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Bl_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Bl_TS.DATALINK,Arial,9,1,,,,
+Caption,Bl_TS.DATALINK1,Arial,9,1,,,,
+Caption,Bl_TS.DATALINK2,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK3,Arial,9,0,,,,
+Caption,Bl_TS.TEXT1,Arial,9,0,Prev Block:,前一块:,,
+Caption,Bl_TS.TEXT2,Arial,9,0,Description:,描述:,,
+Caption,Bl_TS.DATALINK5,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK6,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK7,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK8,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK9,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK10,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK11,Arial,9,0,,,,
+Caption,Bl_TS.DATALINK12,Arial,9,0,,
+Caption,Bl_TS.DATALINK13,Arial,9,0,,
+Caption,Bl_TS.DATALINK14,Arial,9,0,,
+Caption,Bl_TS.DATALINK15,Arial,9,0,,
+Caption,Bl_TS.DATALINK16,Arial,9,0,,
+Caption,Bl_TS.DATALINK17,Arial,9,0,,
+Caption,Bl_TS.DATALINK18,Arial,9,0,,
+Caption,Bl_TS.DATALINK19,Arial,9,0,,
+Caption,Bl_TS.DATALINK20,Arial,9,0,,
+Caption,Bl_TS.TEXT4,Arial,9,1,Output Calculation:,输出计算:
+Caption,Bl_TS.DATALINK23,Arial,9,1,,
+Caption,Bl_TS.TEXT5,Arial,9,1,Security Areas,安全区域
+Caption,Bl_TS.DATALINK24,Arial,9,0,,
+Caption,Bl_TS.DATALINK25,Arial,9,0,,
+Caption,Bl_TS.DATALINK26,Arial,9,0,,
+Caption,Bl_TS.TEXT7,Arial,9,0,Alarm Areas:,报警区域:
+Caption,Bl_TS.TEXT8,Arial,9,1,Alarms,报警
+Caption,Bl_TS.TEXT9,Arial,9,1, Inputs                                                                                     , 输入                                                                                     
+Caption,Bl_TS.TEXT10,Arial,9,1, Values                , 数值                
+Caption,Bl_TS.TEXT11,Arial,9,0,Tagname:,标签名:
+Caption,Bl_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Bl_TS.TEXT12,Arial,9,0,Next Block:,下一块:
+Caption,Bl_TS.DATALINK28,Arial,9,1,,
+Caption,Bl_TS.DATALINK29,Arial,9,1,,
+Caption,Bl_TS.TEXT13,Arial,9,1,Value:,数值:
+Caption,Bl_TS.TEXT14,Arial,9,1,Current State,当前状态
+Caption,Bl_TS.DataLink31,Arial,9,0,,
+Caption,Bl_TS.DataLink32,Arial,9,0,,
+Caption,Bl_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Bl_TS.Text16,Arial,9,0,A:,A:
+Caption,Bl_TS.Text17,Arial,9,0,B:,B:
+Caption,Bl_TS.Text18,Arial,9,0,C:,C:
+Caption,Bl_TS.Text19,Arial,9,0,D:,D:
+Caption,Bl_TS.Text20,Arial,9,0,E:,E:
+Caption,Bl_TS.Text21,Arial,9,0,F:,F:
+Caption,Bl_TS.Text22,Arial,9,0,G:,G:
+Caption,Bl_TS.Text23,Arial,9,0,H:,H:
+Caption,Bl_TS.Text24,Arial,9,0,1,1
+Caption,Bl_TS.Text25,Arial,9,0,2,2
+Caption,Bl_TS.Text26,Arial,9,0,3,3
+Caption,Bl_TS.Text27,Arial,9,0,Alarms Enabled:,报警启用:
+Caption,Bl_TS.Text28,Arial,9,1,Block Status:,数据块状态:
+Caption,Bl_TS.Text29,Arial,9,0,Scan Time:,扫描时间:
+Caption,Bl_TS.DataLink34,Arial,9,0,,
+Caption,Bl_TS.Text30,Arial,9,0,Counter:,计数:

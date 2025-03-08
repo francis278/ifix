@@ -1,0 +1,19 @@
+! List of available columns for display.
+! If you add column names, be sure to increase the number of columns.
+! Data items must be enclosed in quotes
+!
+! Number of columns is:
+7
+!
+! column name		field name	column width
+! ====================================================
+!
+"标签名"		"A_TAG"	8
+"类型"		"A_NAME"	2
+"描述"		"A_DESC"	20
+"扫描时间"		"A_SCANT"	5
+"I/O设备"		"A_IODV"	3
+"I/O地址"		"A_IOAD"	7
+"当前值"		"A_CV"	8
+!
+! ===== End of List ====

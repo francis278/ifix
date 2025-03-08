@@ -1,0 +1,321 @@
+[Version]
+Signature="$Windows NT$"
+Provider=%Provider%
+
+;
+;
+;  Install sections
+;
+;
+
+[DefaultInstall]
+
+[ProductInstall]
+CopyFiles=ViewNode, ScadaNode, NtSystem32
+AddReg=Product.Add.Reg
+
+[ViewNode]
+CopyFiles=Product.Copy.View
+AddReg=View.Add.Reg
+
+[ScadaNode]
+CopyFiles=Product.Copy.Scada
+AddReg=Scada.Add.Reg
+
+[NtSystem32]
+CopyFiles=Product.Copy.NtSystem32
+
+
+;
+;
+; Uninstall
+;
+;
+
+[DefaultUninstall]
+DelFiles=Product.Delete.Scada,Product.Delete.View,Product.Delete.NtSystem32
+DelReg=Product.Delete.Reg
+
+
+[RemoveFiles]
+DelFiles=Product.Delete.Scada,Product.Delete.View,Product.Delete.NtSystem32
+
+[RemoveKeys]
+DelReg=Product.Delete.Reg,Scada.Delete.Reg,View.Delete.Reg
+
+
+;
+;
+;  Registry sections, used by different install
+;  sections above
+;
+;
+
+[Product.Add.Reg]
+;
+; Product Registry entries here
+; For compatibility you must specify 0,1,2,3 for the fourth
+; parameter if you want to specify a value
+;
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"BasePath",FLG_ADDREG_TYPE_SZ,"%65701%"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"PdbPath", FLG_ADDRESS_TYPE_SZ,"%65701%\pdb"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"ErrorDll",FLG_ADDREG_TYPE_SZ, "%65701%\OPCErr.dll"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"SignalDll",FLG_ADDREG_TYPE_SZ, "%65701%\OPCSig.dll"
+; Keep the "Version" Registry entry as - empty string - will be filled in during setup program
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"Version",FLG_ADDREG_TYPE_SZ, ""
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"ChannelMaxMessages",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DriverAutoCreate",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"GrowIncrement",0x10001, 0xfff
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"MaxSize",0x10001, 0x989680
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"OverrunBuffer",0x10001, 0xfff
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DriverAutoCreate",0x10001,0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"SimulationMode",0x10001, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFilePath",FLG_ADDREG_TYPE_SZ,"%65701%"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileName",FLG_ADDREG_TYPE_SZ,"OPCDataLog"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileSize",0x10001, 0x40000000
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileCount",0x10001, 0x9
+
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogErrors",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogWarnings",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogInfo",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug1",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug2",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug3",0x10001, 0x1
+;dwp20110929 - add debug output flag
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebugOutput",0x10001, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogOPCTrace",0x10001, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRate",FLG_ADDREG_TYPE_SZ, "1000"
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRateServer",FLG_ADDREG_TYPE_SZ, "1000"
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRateSecondary",FLG_ADDREG_TYPE_SZ, "60000"
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"FileSaveOnFIXExit",0x10001, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverDefaultConfigFilePath",FLG_ADDREG_TYPE_SZ, "%65701%"
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverDefaultConfigFileName",FLG_ADDREG_TYPE_SZ, ""
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverStopSacOnFileOpen",0x10001, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"FixConnection",0x10001, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverTagAutocreationLogFile",FLG_ADDREG_TYPE_SZ, "OPCTagTrace.txt"
+
+;
+; for add/remove programs applet
+;
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"DisplayName",0,"iFIX OPC Client"
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"UninstallString",0,"%65701%\OPCUninstall.exe"
+;dwp20130828 - Added Publisher
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"Publisher",0,"GE Intelligent Platforms, Inc."
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"DisplayVersion",0,"7.46"
+
+;
+; add registry entry for event logging
+;
+HKLM,SYSTEM\CurrentControlSet\Services\EventLog\Application\OPC,"EventMessageFile", FLG_ADDREG_TYPE_SZ, "%65701%\OPCErr.dll"
+HKLM,SYSTEM\CurrentControlSet\Services\EventLog\Application\OPC,"TypesSupported",0x10001, 0x7
+
+
+
+;
+;
+; registry delete works by pruning the tree,
+; so if you have interdependent values, put thems in subkeys and
+; not in values of the main key since when you prune all the values are lost
+;
+
+[Product.Delete.Reg]
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"BasePath",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DriverAutoCreate",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"ErrorDll",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"SignalDll",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"Version",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"ChannelMaxMessages",FLG_ADDREG_TYPE_DWORD, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DriverAutoCreate",FLG_ADDREG_TYPE_DWORD, 0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"GrowIncrement",FLG_ADDREG_TYPE_DWORD, 0xfff
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"MaxSize",FLG_ADDREG_TYPE_DWORD, 0x989680
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"OverrunBuffer",FLG_ADDREG_TYPE_DWORD, 0xfff
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DriverAutoCreate",1,0x1
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"SimulationMode",FLG_ADDREG_TYPE_DWORD, 0x0
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFilePath",FLG_ADDREG_TYPE_SZ,"%65701%"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileName",FLG_ADDREG_TYPE_SZ,"OPCDataLog"
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileSize",0x10001, 0x40000000
+HKLM,SOFTWARE\Intellution\Drivers\OPC,"DataLogFileCount",0x10001, 0x9
+
+
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogErrors",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogWarnings",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogInfo",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug1",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug2",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebug3",,
+;dwp20110929 - add debug output flag
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogDebugOutput",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"LogOPCTrace",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRate",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRateServer",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"StatisticsRefreshRateSecondary",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"FileSaveOnFIXExit",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverDefaultConfigFilePath",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverDefaultConfigFileName",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverStopSacOnFileOpen",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"FixConnection",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults,"DriverTagAutocreationLogFile",,
+HKLM,SOFTWARE\Intellution\Drivers\OPC\DriverDefaults
+HKLM,SOFTWARE\Intellution\Drivers\OPC
+
+
+;
+; for add/remove programs applet
+;
+
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"DisplayName",,
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"UninstallString",,
+;dwp20130828 - Added Publisher
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"Publisher",,
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv,"DisplayVersion",,
+HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\OPCDrv
+
+
+;
+;
+; Disk lay out information, used by the CopyFiles lists
+;
+;;;
+;
+; This is the source disk identifiers the number at the
+; beginning maps to the SourceDisksFiles first parameter
+;
+; diskid = description,tagfile,unused,subdir
+;
+[SourceDisksNames]
+1="Intellution iFIX OPC Client Diskette",Server.cab,,
+
+;
+;
+; SourceDisksFiles -
+; This must have ALL file names in any copyfiles section
+; so that the default copyfile error callback dialog (browse,skip)
+; can use the SourceDisksNames strings above to help find the file
+;
+; filename_on_source = diskid,subdir,size,checksum,spare,spare
+; 
+
+[SourceDisksFiles]
+OPCspoll.exe=1
+OPCDrv.exe=1
+OPCDrv.tlb=1
+OPCstsr.dll=1
+OPCver.drv=1
+OPCstext.drv=1
+default.OPC=1
+Typelib.chm=1
+DrvSrv.chm=1
+OPC.chm=1
+OPCDidw.exe=1
+OPCPS.dll=1
+OPCErr.dll=1
+MemDev.dll=1
+OPCSig.dll=1
+OPC.inf=1
+OPCUninstall.exe=1
+OPCProxy.dll=1
+OPCcomn_ps.dll=1
+iFIXOPCClient.dll=1
+OSDKPS.dll=1
+OPCrel.txt=1
+drveda.dll=1
+OpcFixConnector.dll=1
+OpcSvrLocator.dll=1
+hhupd.exe=1
+DSMT.exe=1
+
+;
+;
+; Targetdirectories predefined for [DestinationDirs] section
+;   parameter number one  
+;     00 = null, use only the second parameter for a path
+;     11 = windows system directory
+;     ...
+;
+
+[DestinationDirs]
+;
+; a default if a particular copyfiles section
+;
+; DefaultDestDir=LDID[,subdir]  ; not used in this sample
+
+Product.Delete.View=01 
+Product.Delete.Scada=01 
+
+;
+; Run time defined strings, these are set with 
+; SetupSetDirectoryId once this inf is opened
+;
+
+Product.Copy.View=65701
+Product.Copy.Scada=65701
+Product.Copy.NtSystem32=11
+
+
+
+[Product.Copy.Scada]
+OPCspoll.exe
+OPCDrv.exe
+OPCDrv.tlb
+OPCstsr.dll
+OPCver.drv
+OPCstext.drv
+default.OPC
+Typelib.chm
+DrvSrv.chm
+OPCErr.dll
+MemDev.dll
+OPCSig.dll
+;OPC.inf
+;OPCUninstall.exe
+iFIXOPCClient.dll
+drveda.dll
+OpcFixConnector.dll
+
+
+
+[Product.Delete.Scada]
+OPCspoll.exe
+OPCDrv.exe
+OPCDrv.tlb
+OPCstsr.dll
+OPCver.drv
+OPCstext.drv
+default.OPC
+Typelib.chm
+DrvSrv.chm
+OPCErr.dll
+OPCSig.dll
+;OPC.inf
+iFIXOPCClient.dll
+OpcFixConnector.dll
+
+[Product.Copy.View]
+OPC.chm
+OPCDidw.exe
+OPC.inf
+OPCUninstall.exe
+OPCrel.txt
+OpcSvrLocator.dll
+hhupd.exe
+DSMT.exe
+
+[Product.Delete.View]
+OPC.chm
+OPCDidw.exe
+OPC.inf
+OPCUninstall.exe
+OPCrel.txt
+OpcPrn.pdf
+OpcSvrLocator.dll
+hhupd.exe
+;DSMT.exe	; Don't delete DSMT.exe because it is a shared tool
+
+[Product.Copy.NtSystem32]
+OPCPS.dll
+OPCProxy.dll
+OPCcomn_ps.dll
+OSDKPS.dll
+
+[Product.Delete.NtSystem32]
+;Nothing here. We want to leave the proxies for other OPC clients/servers

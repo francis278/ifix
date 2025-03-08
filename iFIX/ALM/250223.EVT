@@ -1,0 +1,20 @@
+
+
+--------------------------------------------------------
+PROFICY iFIX, EVENT LOG  2025/2/23 20:16:27
+--------------------------------------------------------
+
+2025/2/23 20:16:32 [fix.exe] iFIX 演示系统正在运行!
+
+2025/2/23 20:16:33 [WORKSPACE.EXE] 成功复制 Historian 信息。
+
+2025/2/23 21:37:08 [fix.exe] enviro.c: Set_ExplorerShell(): Cannot find window class SecShellHelperWnd. Make sure SecShellHelper.exe is started with normal user privileges.
+
+2025/2/23 21:37:13 [fix.exe] enviro.c: Set_ExplorerShell(): Cannot find window class SecShellHelperWnd. Make sure SecShellHelper.exe is started with normal user privileges.
+
+2025/2/23 22:17:08 [WORKSPACE.EXE] enviro.c: Set_ExplorerShell(): Cannot find window class SecShellHelperWnd. Make sure SecShellHelper.exe is started with normal user privileges.
+
+2025/2/23 22:17:10 [fix.exe] iFIX 软件关闭
+
+2025/2/23 22:17:10 [fix.exe] enviro.c: Set_ExplorerShell(): Cannot find window class SecShellHelperWnd. Make sure SecShellHelper.exe is started with normal user privileges.
+

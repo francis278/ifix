@@ -1,0 +1,68 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,AI_TS.Chart3,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,AI_TS.TEXT5,Arial,9,1,Hardware Specifications,硬件特性,,
+Caption,AI_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,AI_TS.TEXT1,Arial,9,1,Alarms,报警,,
+Caption,AI_TS.TEXT2,Arial,9,0,Dead Band:,死区:,,
+Caption,AI_TS.TEXT3,Arial,9,0,Description:,描述:,,
+Caption,AI_TS.DATALINK1,Arial,9,1,,,,
+Caption,AI_TS.DATALINK2,Arial,9,0,,,,
+Caption,AI_TS.DATALINK3,Arial,9,0,,,,
+Caption,AI_TS.DATALINK4,Arial,9,0,,,,
+Caption,AI_TS.DATALINK5,Arial,9,0,,,,
+Caption,AI_TS.DATALINK6,Arial,9,0,,,,
+Caption,AI_TS.DATALINK7,Arial,9,0,,,,
+Caption,AI_TS.DATALINK8,Arial,9,0,,,,
+Caption,AI_TS.DATALINK9,Arial,9,0,,
+Caption,AI_TS.DATALINK10,Arial,9,0,,
+Caption,AI_TS.TEXT8,Arial,9,1,Security Areas,安全区域
+Caption,AI_TS.DATALINK11,Arial,9,0,,
+Caption,AI_TS.DATALINK12,Arial,9,0,,
+Caption,AI_TS.DATALINK13,Arial,9,0,,
+Caption,AI_TS.DATALINK_PREV,Arial,9,1,,
+Caption,AI_TS.TEXT10,Arial,9,0,Prev Block:,前一块:
+Caption,AI_TS.DATALINK15,Arial,9,0,,
+Caption,AI_TS.DATALINK16,Arial,9,0,,
+Caption,AI_TS.DATALINK17,Arial,9,0,,
+Caption,AI_TS.DATALINK18,Arial,9,0,,
+Caption,AI_TS.DATALINK19,Arial,9,0,,
+Caption,AI_TS.DATALINK20,Arial,9,0,,
+Caption,AI_TS.DATALINK21,Arial,9,0,,
+Caption,AI_TS.DATALINK22,Arial,9,0,,
+Caption,AI_TS.DATALINK23,Arial,9,0,,
+Caption,AI_TS.TEXT11,Arial,9,0,Tagname:,标签名:
+Caption,AI_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,AI_TS.TEXT12,Arial,9,0,Next Block:,下一块:
+Caption,AI_TS.DATALINK27,Arial,9,1,,
+Caption,AI_TS.TEXT13,Arial,9,1,Scan Status:,扫描状态:
+Caption,AI_TS.TEXT6,Arial,9,1,Engineering Units,工程单位
+Caption,AI_TS.Text58,Arial,9,0,Signal Conditioning:,信号条件:
+Caption,AI_TS.Text59,Arial,9,0,I/O Address:,I/O 地址:
+Caption,AI_TS.Text60,Arial,9,0,H/W Options:,H/W 选项:
+Caption,AI_TS.Text61,Arial,9,0,Device:,设备:
+Caption,AI_TS.Text62,Arial,9,0,Low Limit:,低限:
+Caption,AI_TS.Text63,Arial,9,0,High Limit:,高限:
+Caption,AI_TS.Text64,Arial,9,0,Units:,单位:
+Caption,AI_TS.Text65,Arial,9,0,1,1
+Caption,AI_TS.Text66,Arial,9,0,2,2
+Caption,AI_TS.Text67,Arial,9,0,3,3
+Caption,AI_TS.Text68,Arial,9,1,Alarm Status:,报警状态:
+Caption,AI_TS.Text69,Arial,9,1,Block Status:,数据块状态:
+Caption,AI_TS.Text70,Arial,9,1,Value:,数值:
+Caption,AI_TS.Text71,Arial,9,0,ROC:,ROC:
+Caption,AI_TS.Text72,Arial,9,0,High High:,高高:
+Caption,AI_TS.Text73,Arial,9,0,High:,高:
+Caption,AI_TS.Text74,Arial,9,0,Low:,低:
+Caption,AI_TS.Text75,Arial,9,0,Low Low:,低低:
+Caption,AI_TS.Text76,Arial,9,0,Areas:,区域:
+Caption,AI_TS.Text77,Arial,9,0,Priority:,优先级:
+Caption,AI_TS.Text78,Arial,9,0,Enabled:,启用:
+Caption,AI_TS.Text79,Arial,9,0,Scan Time:,扫描时间:
+Caption,AI_TS.DataLink30,Arial,9,1,,
+Caption,AI_TS.TEXT14,Arial,9,1,Current State,当前状态
+Caption,AI_TS.DataLink31,Arial,9,1,,
+Caption,AI_TS.DataLink32,Arial,9,1,,
+Caption,AI_TS.DataLink33,Arial,9,1,,
+Caption,AI_TS.DataLink35,Arial,9,0,,
+Caption,AI_TS.Text85,Arial,9,0,Counter:,计数:

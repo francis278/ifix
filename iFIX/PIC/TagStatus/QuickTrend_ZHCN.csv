@@ -1,0 +1,43 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,QuickTrend.TagName,Arial,13,0,Tag Name,标签名,,
+Caption,QuickTrend.Desc,Arial,13,0,Description,描述,,
+Caption,QuickTrend.Value,Arial,13,0,Value,数值,,
+Caption,QuickTrend.Units,Arial,13,0,Units,单位,,
+Caption,QuickTrend.ROW1_GROUP.ROW1_TN,Arial,13,0,TagName 1,TagName 1,,
+Caption,QuickTrend.ROW1_GROUP.ROW1_DESC,Arial,13,0,Description 1,Description 1,,
+Caption,QuickTrend.ROW1_GROUP.ROW1_VAL,Arial,13,0,Value 1,Value 1,,
+Caption,QuickTrend.ROW1_GROUP.ROW1_UNITS,Arial,13,0,Units 1,Units 1,,
+Caption,QuickTrend.ROW2_GROUP.ROW2_TN,Arial,13,0,TagName 2,TagName 2,,
+Caption,QuickTrend.ROW2_GROUP.ROW2_DESC,Arial,13,0,Description 2,Description 2,,
+Caption,QuickTrend.ROW2_GROUP.ROW2_VAL,Arial,13,0,Value 2,Value 2,,
+Caption,QuickTrend.ROW2_GROUP.ROW2_UNITS,Arial,13,0,Units 2,Units 2,,
+Caption,QuickTrend.ROW3_GROUP.ROW3_TN,Arial,13,0,TagName 3,TagName 3,,
+Caption,QuickTrend.ROW3_GROUP.ROW3_DESC,Arial,13,0,Description 3,Description 3,,
+Caption,QuickTrend.ROW3_GROUP.ROW3_VAL,Arial,13,0,Value 3,Value 3
+Caption,QuickTrend.ROW3_GROUP.ROW3_UNITS,Arial,13,0,Units 3,Units 3
+Caption,QuickTrend.ROW4_GROUP.ROW4_TN,Arial,13,0,TagName 4,TagName 4
+Caption,QuickTrend.ROW4_GROUP.ROW4_DESC,Arial,13,0,Description 4,Description 4
+Caption,QuickTrend.ROW4_GROUP.ROW4_VAL,Arial,13,0,Value 4,Value 4
+Caption,QuickTrend.ROW4_GROUP.ROW4_UNITS,Arial,13,0,Units 4,Units 4
+Caption,QuickTrend.ROW5_GROUP.ROW5_TN,Arial,13,0,TagName 5,TagName 5
+Caption,QuickTrend.ROW5_GROUP.ROW5_DESC,Arial,13,0,Description 5,Description 5
+Caption,QuickTrend.ROW5_GROUP.ROW5_VAL,Arial,13,0,Value 5,Value 5
+Caption,QuickTrend.ROW5_GROUP.ROW5_UNITS,Arial,13,0,Units 5,Units 5
+Caption,QuickTrend.ROW6_GROUP.ROW6_TN,Arial,13,0,TagName 6,TagName 6
+Caption,QuickTrend.ROW6_GROUP.ROW6_DESC,Arial,13,0,Description 6,Description 6
+Caption,QuickTrend.ROW6_GROUP.ROW6_VAL,Arial,13,0,Value 6,Value 6
+Caption,QuickTrend.ROW6_GROUP.ROW6_UNITS,Arial,13,0,Units 6,Units 6
+Caption,QuickTrend.ROW7_GROUP.ROW7_TN,Arial,13,0,TagName 7,TagName 7
+Caption,QuickTrend.ROW7_GROUP.ROW7_DESC,Arial,13,0,Description 7,Description 7
+Caption,QuickTrend.ROW7_GROUP.ROW7_VAL,Arial,13,0,Value 7,Value 7,,
+Caption,QuickTrend.ROW7_GROUP.ROW7_UNITS,Arial,13,0,Units 7,Units 7,,
+Caption,QuickTrend.ROW8_GROUP.ROW8_TN,Arial,13,0,TagName 8,TagName 8,,
+Caption,QuickTrend.ROW8_GROUP.ROW8_DESC,Arial,13,0,Description 8,Description 8,,
+Caption,QuickTrend.ROW8_GROUP.ROW8_VAL,Arial,13,0,Value 8,Value 8,,
+Caption,QuickTrend.ROW8_GROUP.ROW8_UNITS,Arial,13,0,Units 8,Units 8,,
+Chart,QuickTrend.Chart5,Arial,9,0,Axis Title,Axis Title,Axis Title,Axis Title
+OleCaption,QuickTrend.ADD_ROW_BTN,Arial,9,0,Add Row,添加行,,
+OleCaption,QuickTrend.DEL_ROW_BTN,Arial,9,0,Delete Selected Row(s),删除所选行,,
+OleCaption,QuickTrend.SaveTagListCommandButton,Arial,9,0,Save Tag List,保存标签表,,
+OleCaption,QuickTrend.LoadTagListCommandButton,Arial,9,0,Load Tag List,装载标签表,,

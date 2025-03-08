@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Control My-T-Soft Button Utility</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="IMG Developer's Kit"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Developer Tools and Examples"
+HREF="devtools.html"><LINK
+REL="PREVIOUS"
+TITLE="MTSDock (MTSAppBar)"
+HREF="mtsdock.html"><LINK
+REL="NEXT"
+TITLE="Logos for Custom Logo Option"
+HREF="customlogosoption.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>IMG Developer's Kit</SPAN
+>: Developer's Kit Guide and Technical Documentation; Version 1.79; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="mtsdock.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 8. Developer Tools and Examples</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="customlogosoption.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="CntrlsMts"
+>Control My-T-Soft Button Utility</A
+></H1
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FOLDER: CNTRLMTS</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TYPE: Utility / Stand-alone Executable</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SOURCE: NONE</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LANGUAGE: C / Windows API</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IDE: N/A</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OVERVIEW</B
+></SPAN
+></P
+><P
+>The CNTRLMTS (Control &#38; Select My-T-Soft) utility allows a selection of 1-4 buttons that float in the caption bar, and allow a selection of different configurations of My-T-Soft / My-T-Pen / My-T-Touch.</P
+><P
+>The default settings in CNTRLMTS.INI assume that there are saved configurations in the installation directory.</P
+><P
+>This little utility is meant primarily as a front-end for the other developer kit utilities, and a method for the user/operator of selecting other previously saved configurations.</P
+><P
+>Review Developer's Kit Section for operation of specific DevKit utilities...</P
+><P
+>Note that by default ([Options], Operator=0) a right-click will open a menu that allows modification of the utility.  Use Operator=1 to disable this default action.</P
+><P
+>If you try and turn off the last button, all buttons will be made visible.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CNTRLMTS.INI</B
+></SPAN
+></P
+><P
+>[Buttons]</P
+><P
+>Keyboard=1</P
+><P
+>Edit=1</P
+><P
+>Numeric=1</P
+><P
+>Macro=1</P
+><P
+>The [Buttons] section defines which "buttons" are displayed</P
+><P
+>Use 1 to have the button displayed, 0 to hide</P
+><P
+>[Options]</P
+><P
+>Operator=0</P
+><P
+>Operator=0 enables right-click menu</P
+><P
+>Operator=1 disables right-click menu, and essentially locks out
+any configuration via the operator - direct editing of this INI
+is then required.</P
+><P
+>Editor=NOTEPAD.EXE</P
+><P
+>This allows a different selection for utility to edit the INI
+file when selected via the right-click menu</P
+><P
+>[Keyboard]</P
+><P
+>Program=C:\WINDOWS\MYTTOUCH\FWCTLMTS C:\WINDOWS\MYTTOUCH\DEV1.CFG</P
+><P
+>[Edit]</P
+><P
+>Program=C:\WINDOWS\MYTTOUCH\FWCTLMTS C:\WINDOWS\MYTTOUCH\DEV5.CFG</P
+><P
+>[Numeric]</P
+><P
+>Program=C:\WINDOWS\MYTTOUCH\FWCTLMTS C:\WINDOWS\MYTTOUCH\NUM.CFG</P
+><P
+>[Macro]</P
+><P
+>Program=C:\WINDOWS\MYTTOUCH\FWCTLMTS C:\WINDOWS\MYTTOUCH\MACRO2.CFG</P
+><P
+>Each particular button may have its own executable program / command
+line options.  Use CPYCNMTS for immediate change over, FWCTLMTS to
+toggle on-screen / off-screen display with different configuration.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LICENSE INFORMATION &#38; DISCLAIMER</B
+></SPAN
+></P
+><P
+>Innovation Management Group, Inc. (IMG) provides these utilities as aids to individuals and companies configuring systems for use with other licensed products of IMG.  For any other use, licensing fees must be arranged for directly with IMG.  The use of these utilities is solely the responsibility of the user.  IMG provides these utilities for the use of its customers, and ALL issues of system security must be managed by the end-user of these utilities.</P
+><P
+>Version 1.00</P
+><P
+>August 1, 1999</P
+><P
+>Copyright © 1997-1999 by Innovation Management Group, Inc.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="mtsdock.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="customlogosoption.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>MTSDock (MTSAppBar)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="devtools.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Logos for Custom Logo Option</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,107 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,Aa_TS.Text31,Arial,9,0,High:,高:,,
+Caption,Aa_TS.DATALINK24,Arial,9,0,,,,
+Caption,Aa_TS.DATALINK20,Arial,9,0,,,,
+Caption,Aa_TS.DATALINK46,Arial,9,0,,,,
+Caption,Aa_TS.DATALINK48,Arial,9,0,,,,
+Caption,Aa_TS.TEXT,Arial,9,0,Enabled:,启用:,,
+Caption,Aa_TS.TEXT1,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Aa_TS.DATALINK,Arial,9,1,,,,
+Caption,Aa_TS.TEXT4,Arial,9,0,Eng Units:,工程单位:,,
+Caption,Aa_TS.DATALINK1,Arial,9,1,,,,
+Caption,Aa_TS.DATALINK2,Arial,9,0,,,,
+Caption,Aa_TS.DATALINK3,Arial,9,0,,,,
+Caption,Aa_TS.TEXT7,Arial,9,1,Alarms,报警,,
+Caption,Aa_TS.DATALINK8,Arial,9,0,,,,
+Caption,Aa_TS.DATALINK9,Arial,9,0,,
+Caption,Aa_TS.DATALINK10,Arial,9,0,,
+Caption,Aa_TS.DATALINK11,Arial,9,0,,
+Caption,Aa_TS.TEXT9,Arial,9,0,Prev Block:,前一块:
+Caption,Aa_TS.DATALINK19,Arial,9,0,,
+Caption,Aa_TS.DATALINK21,Arial,9,0,,
+Caption,Aa_TS.DATALINK22,Arial,9,0,,
+Caption,Aa_TS.DATALINK23,Arial,9,0,,
+Caption,Aa_TS.DATALINK25,Arial,9,0,,
+Caption,Aa_TS.DATALINK26,Arial,9,0,,
+Caption,Aa_TS.DATALINK27,Arial,9,0,,
+Caption,Aa_TS.DATALINK28,Arial,9,0,,
+Caption,Aa_TS.DATALINK29,Arial,9,0,,
+Caption,Aa_TS.DATALINK30,Arial,9,0,,
+Caption,Aa_TS.DATALINK31,Arial,9,0,,
+Caption,Aa_TS.DATALINK32,Arial,9,0,,
+Caption,Aa_TS.DATALINK33,Arial,9,0
+Caption,Aa_TS.DATALINK34,Arial,9,0
+Caption,Aa_TS.DATALINK35,Arial,9,0
+Caption,Aa_TS.DATALINK36,Arial,9,0
+Caption,Aa_TS.DATALINK37,Arial,9,0
+Caption,Aa_TS.DATALINK38,Arial,9,0
+Caption,Aa_TS.DATALINK39,Arial,9,0
+Caption,Aa_TS.DATALINK40,Arial,9,0
+Caption,Aa_TS.DATALINK41,Arial,9,0
+Caption,Aa_TS.DATALINK42,Arial,9,0
+Caption,Aa_TS.DATALINK43,Arial,9,0
+Caption,Aa_TS.DATALINK44,Arial,9,0
+Caption,Aa_TS.DATALINK45,Arial,9,0
+Caption,Aa_TS.DATALINK47,Arial,9,0
+Caption,Aa_TS.DATALINK49,Arial,9,0
+Caption,Aa_TS.DATALINK50,Arial,9,0
+Caption,Aa_TS.DATALINK51,Arial,9,0,,
+Caption,Aa_TS.DATALINK52,Arial,9,0,,
+Caption,Aa_TS.DATALINK53,Arial,9,0,,
+Caption,Aa_TS.DATALINK54,Arial,9,0,,
+Caption,Aa_TS.DATALINK55,Arial,9,0,,
+Caption,Aa_TS.DATALINK56,Arial,9,0,,
+Caption,Aa_TS.TEXT15,Arial,9,0,Next Block:,下一块:
+Caption,Aa_TS.TEXT16,Arial,9,0,Tagname:,标签名:
+Caption,Aa_TS.Text19,Arial,9,1,Alarm,报警
+Caption,Aa_TS.Text20,Arial,9,1,Output Value,输出值
+Caption,Aa_TS.Text21,Arial,9,1,Pri,Pri
+Caption,Aa_TS.Text22,Arial,9,1,Contact Name,触点名
+Caption,Aa_TS.Text23,Arial,9,1,Re-Alarm,重报警
+Caption,Aa_TS.Text24,Arial,9,1,Time,时间
+Caption,Aa_TS.Text26,Arial,9,1,Mode,方式
+Caption,Aa_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Aa_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Aa_TS.Text27,Arial,9,1,Type,类型
+Caption,Aa_TS.Text28,Arial,9,0,Dev,Dev
+Caption,Aa_TS.Text29,Arial,9,0,ROC:,ROC:
+Caption,Aa_TS.Text30,Arial,9,0,Hi Hi:,高高:
+Caption,Aa_TS.Text32,Arial,9,0,Low:,低:
+Caption,Aa_TS.Text33,Arial,9,0,Low Low:,低低:
+Caption,Aa_TS.Text34,Arial,9,0,Signal Conditioning:,信号条件:
+Caption,Aa_TS.Text35,Arial,9,0,I/O Address:,I/O 地址:
+Caption,Aa_TS.Text36,Arial,9,0,H/W Options:,H/W 选项:
+Caption,Aa_TS.Text37,Arial,9,0,Device:,设备:
+Caption,Aa_TS.DataLink60,Arial,9,0,,
+Caption,Aa_TS.DataLink61,Arial,9,0,,
+Caption,Aa_TS.DataLink62,Arial,9,0,,
+Caption,Aa_TS.DataLink63,Arial,9,0,,
+Caption,Aa_TS.TEXT6,Arial,9,1,Hardware Specifications,硬件特性
+Caption,Aa_TS.DataLink64,Arial,9,1,,
+Caption,Aa_TS.DataLink65,Arial,9,1,,
+Caption,Aa_TS.DataLink66,Arial,9,1,,
+Caption,Aa_TS.Text38,Arial,9,1,Scan Status:,扫描状态:
+Caption,Aa_TS.DataLink67,Arial,9,1,,
+Caption,Aa_TS.Text39,Arial,9,1,Current State,当前状态
+Caption,Aa_TS.Text40,Arial,9,1,Alarm Status:,报警状态:
+Caption,Aa_TS.Text41,Arial,9,1,Block Status:,数据块状态:
+Caption,Aa_TS.Text42,Arial,9,1,Value:,数值:
+Caption,Aa_TS.Text43,Arial,9,1,Security Areas,安全区域
+Caption,Aa_TS.DataLink68,Arial,9,0,,
+Caption,Aa_TS.DataLink69,Arial,9,0,,
+Caption,Aa_TS.DataLink70,Arial,9,0,,
+Caption,Aa_TS.Text44,Arial,9,0,1,1
+Caption,Aa_TS.Text45,Arial,9,0,2,2
+Caption,Aa_TS.Text46,Arial,9,0,3,3
+Caption,Aa_TS.Text47,Arial,9,0,Areas:,区域:
+Caption,Aa_TS.Text48,Arial,9,0,Suspension:,暂停:
+Caption,Aa_TS.Text49,Arial,9,0,Remote ACK:,远程确认:
+Caption,Aa_TS.Text50,Arial,9,0,Dead Band:,死区:
+Caption,Aa_TS.Text51,Arial,9,0,Scan Time:,扫描时间:
+Caption,Aa_TS.Text52,Arial,9,0,Description:,描述:
+Caption,Aa_TS.Text53,Arial,9,1,Time,事件
+Caption,Aa_TS.Text54,Arial,9,1,Output,输出
+Caption,Aa_TS.Text55,Arial,9,1,Delay,延时
+Caption,Aa_TS.DataLink71,Arial,9,0,,
+Caption,Aa_TS.Text56,Arial,9,0,Counter:,计数:

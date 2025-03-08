@@ -1,0 +1,7283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>My-T-Soft Initialization File Documentation (MYTSOFT.INI)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Initialization File Documentation (MYTSOFT.INI)"
+HREF="initializationfile.html"><LINK
+REL="PREVIOUS"
+TITLE="Initialization File Documentation (MYTSOFT.INI)"
+HREF="initializationfile.html"><LINK
+REL="NEXT"
+TITLE="Error Messages and Numbers"
+HREF="errormessagesandnumbers.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="initializationfile.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 10. Initialization File Documentation (MYTSOFT.INI)</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="errormessagesandnumbers.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="MYTSOFTINI"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Initialization File Documentation (MYTSOFT.INI)</A
+></H1
+><P
+>Listed below are settings and information for specific
+applications that require special actions by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, along
+with the Configuration settings for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>. The Brackets [ ]
+denote the area in the MYTSOFT.INI file, or the application name
+where special consideration is required. Any lines starting with
+a semi-colon ( e.g. ; ) are comments and detailed information not found
+in the MYTSOFT.INI file.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>IMPORTANT NOTE: </B
+>This documentation stretches back over 20 years, covers 4 major releases of Windows families, and over a dozen specific Windows versions.  Due to changes in the operating environment, certain settings and configuration options have become obsolete.  In most cases, these remain documented and notated as obsolete.  For customer support (and the sometimes extremely specific customer needs), the multitude of options &#38; flexibility has become a crucial aspect of this software.  Because of this, every last capability needs to be documented somewhere, and this chapter is used for that purpose.</P
+></BLOCKQUOTE
+></DIV
+><P
+>All Settings are the default Settings of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><A
+NAME="Configuration"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Configuration]</B
+></SPAN
+></P
+><P
+>The following is the default configuration for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> at
+	Install.</P
+><A
+NAME="ConfigPath"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ConfigPath=1</B
+></SPAN
+></P
+><P
+>This setting determines where the configuration files will be located.
+	ConfigPath=0 means the configuration files will be in the installation
+	folder - there are no per user configuration files with this setting
+	and user permissions must allow read-write access to at least the
+	KEYBOARD.KBF and MYTSOFT.INI, or users must run with a fixed
+	(read-only) configuration.  When ConfigPath=1 or ConfigPath=2, each user will have
+	their own configuration files.  If ConfigPath=3, these are in shared among all 
+	users in a public location.</P
+><P
+>Note that the MYTSOFT.INI file in the installation folder
+	determines the location of new users' configuration files, and if an
+	administrator changes this after <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> has already been used by
+	other users, their existing individual configuration files will NOT be transferred
+	to the new location.  What will happen is the software will be unable
+	to find configuration files for the current user in the current specified
+	path, and a copy of the current configuration files will be used as
+	a starting point for this new location.</P
+><P
+>&#13;This is a breakdown by Operating System of the specific locations used - [User] indicates
+the actual user logged onto the system, and [ProductDir] indicates the Product's directory 
+name, e.g. the MYTSOFT folder.
+<P
+><B
+>ConfigPath Locations</B
+></P
+><P
+><B
+>ConfigPath: </B
+>0</P
+><P
+><B
+>Windows 2000/XP: </B
+>\Program Files\[ProductDir]</P
+><P
+><B
+>Windows Vista/7: </B
+>\Program Files\[ProductDir]</P
+><P
+><B
+>ConfigPath: </B
+>1</P
+><P
+><B
+>Windows 2000/XP: </B
+>C:\Documents and Settings\[User]\Application Data\Innovation Management Group\[ProductDir]</P
+><P
+><B
+>Windows Vista/7: </B
+>C:\Users\[User]\AppData\Roaming\Innovation Management Group\[ProductDir]</P
+><P
+><B
+>ConfigPath: </B
+>2</P
+><P
+><B
+>Windows 2000/XP: </B
+>C:\Documents and Settings\[User]\Local Settings\Application Data\Innovation Management Group\[ProductDir]</P
+><P
+><B
+>Windows Vista/7: </B
+>C:\Users\[User]\AppData\Local\Innovation Management Group\[ProductDir]</P
+><P
+><B
+>ConfigPath: </B
+>3</P
+><P
+><B
+>Windows 2000/XP: </B
+>C:\Documents and Settings\All Users\Application Data\Innovation Management Group\[ProductDir]</P
+><P
+><B
+>Windows Vista/7: </B
+>C:\ProgramData\Innovation Management Group\[ProductDir]</P
+>
+</P
+><A
+NAME="Contention"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Contention=1</B
+></SPAN
+></P
+><P
+>The Contention setting is the global or overriding setting - This
+	must be set to 1 for the individual application settings to be
+	recognized by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> - if you wish <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to remain over
+	all applications, set Contention=0 - you will need to be careful
+	in certain applications as noted in the individual application
+	settings below.  This is referred to "React to Dialogs..." in 
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup, additional details can be found in the Help
+	for the Operation Options dialog.</P
+><A
+NAME="InterfaceApproach"
+></A
+><P
+>(Obsolete since 1.70)</P
+><P
+>InterfaceApproach=1</P
+><P
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> has several internal strategies to interface with
+	other windows in the Windows environment. It is believed that the
+	strategy indicated by InterfaceApproach=1 is the best for all
+	windows applications. This is obsolete for all 32-bit versions.
+	This is left for reference purposes &#38; a reminder that the 
+	software still has internal options regarding the interface approach.</P
+><A
+NAME="OpenFirst"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OpenFirst=1</B
+></SPAN
+></P
+><A
+NAME="OpenAbout"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OpenAbout=0</B
+></SPAN
+></P
+><P
+>OpenFirst is set at installation to automatically open with the
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> splash screen and go directly into the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	Welcome. This is set to 0 once <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> runs the first time.
+	It is not used again. If OpenAbout=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will Open with
+	the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Splash Screen instead of the quick <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	logo. It primarily is a left over from the development stages of
+	the opening logo, but was left in for those user's who don't mind
+	or prefer the longer opening.</P
+><A
+NAME="OpenCentered"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OpenCentered=0</B
+></SPAN
+></P
+><P
+>If OpenCentered=1, then the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window will be centered and placed in the lower portion 
+	of the screen (based on the current resolution).  This overrides the position setting saved in the KBF file.
+	Also, this will set OpenCentered=0, making this a one-time use setting.  When set, the internal logic 
+	centers horizontally based on the System metrics (GetSystemMetrics API) for FullScreen X, and lower part of the 
+	screen based on FullScreen Y (single monitor).  This can be useful for externally controlling opening position 
+	by overriding the KBF positioning, for testing, or for first-open / display situations.
+</P
+><A
+NAME="NoSplash"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>NoSplash=0</B
+></SPAN
+></P
+><P
+>If NoSplash=0, then the splash (opening introduction) screens are
+	used at Startup of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  If NoSplash=1, then the intro
+	screens are not used, and <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> opens as previously configured.
+	This option can be initiated at run-time / via a shortcut by adding the
+	 -NoSplash option to the command line. 
+	(e.g. "C:\Program Files\MYTSOFT\MYTSOFT.EXE -NoSplash")</P
+><A
+NAME="TypeMatic"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TypeMatic=1</B
+></SPAN
+></P
+><A
+NAME="StartDelay"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>StartDelay=500</B
+></SPAN
+></P
+><A
+NAME="KeyDelay"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyDelay=20</B
+></SPAN
+></P
+><P
+>The TypeMatic settings are for automatic typing when you hold
+	down a key on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>. Set TypeMatic=1 if you wish this type
+	of action, or set TypeMatic=0 if you wish to disable automatic
+	typing. The StartDelay and KeyDelay are only meaningful if
+	TypeMatic=1. StartDelay is the delay in milliseconds a key must
+	be held down before the TypeMatic action begins. The default is
+	500 milliseconds or 1/2 a second. The KeyDelay is the delay
+	between successive keystrokes sent. The KeyDelay setting is also
+	in milliseconds.  Note that the enable/disable key options override
+	the typematic setting.  Note also that TypeMatic is available in
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup | Configuration | Operation Options.</P
+><A
+NAME="Cursor"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Cursor=2100</B
+></SPAN
+></P
+><P
+>This is the current cursor that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> uses while over the
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Keyboard display. Valid settings are as follows:</P
+><P
+>Small Right Hand is 2000</P
+><P
+>Small Left Hand is 2020</P
+><P
+>Small Right Hand with Int'l "Shift" symbol = 2040</P
+><P
+>Small Left Hand with Int'l "Shift" symbol = 2060</P
+><P
+>Large Right Hand is 2100</P
+><P
+>Large Left Hand is 2120</P
+><P
+>Large Right Hand with Int'l "Shift" symbol = 2140</P
+><P
+>Large Left Hand with Int'l "Shift" symbol = 2160</P
+><P
+>Standard Arrow = 2600</P
+><P
+>CrossHairs = 2620</P
+><P
+>Dot = 2640</P
+><P
+>Invisible / clear = 2660</P
+><A
+NAME="TrapDialAKeyCursor"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TrapDialAKeyCursor=1</B
+></SPAN
+></P
+><P
+>Note - the name is a hold-over from the Dial-A-Key option.
+	In <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, this is the setting that indicates whether the
+	cursor will be displayed over the Magnifier panel.
+	If TrapDialAKeyCursor=1, the cursor will be displayed over
+	the magnified image.  If TrapDialAKeyCursor=0, the cursor
+	will not be shown.</P
+><A
+NAME="Icon"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Icon=3100</B
+></SPAN
+></P
+><P
+>This is the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Icon to that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will use when
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> minimizes to an icon. Valid Settings are:
+	Fixed Icons, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> logos, Keyboard images, etc.
+	3000, 3001, 3002, 3003, 3004, 3005, 3006, 3007
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Text Icons (diff't colors)
+	3050, 3051, 3052, 3053, 3054, 3055, 3056
+	Animating icons
+	3100, 3104, 3108</P
+><A
+NAME="IconAnimate"
+></A
+><P
+>(Obsolete)</P
+><P
+>IconAnimate=0</P
+><P
+>NOTE: This is a holdover from the original Windows 3.0 release.
+	For all Windows versions beyond 1995, this should be 0.
+	The Icon settings are for which Icon <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> displays upon
+	minimizing to an icon, and if the icon should animate.
+	NOTE: Some icons are not meant to animate, so if IconAnimate=1
+	the only animation action will be to flash the border. The
+	IconAnimate setting is used to tell <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to animate the
+	icon if it is an animating icon and IconAnimate=1. Set
+	IconAnimate=0 to disable icon animation.</P
+><A
+NAME="IconOnTop"
+></A
+><P
+>(Obsolete)</P
+><P
+>IconOnTop=1</P
+><P
+>NOTE: This is a holdover from the original Windows 3.0 release.
+	For all Windows versions beyond 1995, this is not used.
+	If IconOnTop=1, the Icon will remain as a topmost window, so the
+	icon will always be visible. If IconOnTop=0, the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> icon
+	will be a normal window, and will fall behind other windows.</P
+><A
+NAME="MinimizeToButton"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MinimizeToButton=1</B
+></SPAN
+></P
+><P
+>If MinimizeToButton=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will minimize to a button (title bar button)
+	instead of an Icon, and ignore other Icon settings. If
+	MinimizeToButton=0, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will minimize to an Icon (Taskbar button).
+	If MinimizeToButton=2, then the Tray Icon will be used.  If MinimizeToButton=3, then <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> 
+	will minimize to a movable/sizable window.</P
+><A
+NAME="CaptionWatch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CaptionWatch=0</B
+></SPAN
+></P
+><A
+NAME="ButtonOffsetX"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOffsetX=0</B
+></SPAN
+></P
+><A
+NAME="ButtonOffsetY"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOffsetY=0</B
+></SPAN
+></P
+><P
+>These are special settings for the Minimize to Button option.
+	Since there may be other windows that use the top left portion
+	of the caption bar, the following settings may help alleviate
+	any conflicts:</P
+><P
+>In Windows 95 &#38; greater, the right side of the caption bar is used - 
+	negative values may be used to adjust towards the left.
+	If CaptionWatch=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will sense if there is a Window
+	other than the window that owns the caption bar in the area that
+	the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> button will be placed. <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will then move
+	to the right of the Window that is already in the caption bar.
+	If the above does not work for your application, you may add in
+	button offsets to move the top-left position of the button -
+	these will be added to the original position of the button and
+	the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> button will then be placed at the offset.</P
+><A
+NAME="ButtonOverrideW"
+></A
+><P
+>(Added in 1.76)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOverrideW=0</B
+></SPAN
+></P
+><A
+NAME="ButtonOverrideH"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOverrideH=0</B
+></SPAN
+></P
+><P
+>By default, the button sizes to the height of the caption bar
+	(title bar) using the GDI call StretchBlt.  A customer 
+	requested the ability to modify the width of the button for
+	touchscreen users, so these settings have been added to
+	allow full customization of the displayed button (when minimize to the
+	button state is selected).  For both ButtonOverrideW (width), and
+	ButtonOverrideH (height), if set to 0, then the default calculations occur
+	(e.g. fixed width, size height to caption bar).  If ButtonOverrideW is non-zero,
+	then the entered size (in pixels) is used for the width.  If ButtonOverrideH is
+	non-zero, then the entered size (in pixels) is used for the height.  DO NOT USE
+	negative values - your button will not appear!  (Select an alternative minimize
+	option to get at <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> if this occurs).  Because the Stretch Bitmap call is
+	used to fill out the display, the button display may be distorted, especially
+	as you get further from the default size.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Minimize to Window Options (Floating button in a Window): </B
+>
+	In 1.79, these settings take on a meaning when MinimizeToButton=3 (minimize to a floating button in a movable/sizable window).  A customer requested the ability to open in the minimized state, yet separate the default opening position of the floating window and the keyboard.  To accommodate this, these settings take on similar meanings for the Window minimize option.  If ButtonOverrideW is non-0, then the width for the floating window is specified in the INI setting.  Similarly, if ButtonOverrideH is non-0, then the height for the floating window is specified in the INI setting.
+	</P
+></BLOCKQUOTE
+></DIV
+><A
+NAME="ButtonOverrideX"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOverrideX=-20000</B
+></SPAN
+></P
+><A
+NAME="ButtonOverrideY"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonOverrideY=-20000</B
+></SPAN
+></P
+><P
+>By default, the button positions itself on the active window's caption bar
+	(title bar).  A customer requested the ability to force the minimized 
+	button to always position itself in one place on the screen.
+	When these values are present in the INI file (or any value greater
+	than -20000), then the entered ButtonOverrideX and / or ButtonOverrideY values
+	will be used when minimized to a button.  For example, if ButtonOverrideX=754 and
+	ButtonOverrideY=0, then the button will always position itself on the upper right
+	(800 x 600) of the screen, ignoring the active window.
+	These settings are independent internally, but in practical usage they need
+	to specificy a fixed screen position.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Minimize to Window Options (Floating button in a Window): </B
+>
+	In 1.79, these settings take on a meaning when MinimizeToButton=3 (minimize to a floating button in a movable/sizable window).  A customer requested the ability to open in the minimized state, yet separate the default opening position of the floating window and the keyboard.  To accommodate this, these settings take on similar meanings for the Window minimize option.  If ButtonOverrideX is something other than -20000, then the X screen position for the floating window is as set in this INI setting.  Similarly, if ButtonOverrideY is something other than -20000, then the Y screen position for the floating window is as set in this INI setting.  If command line overrides are used, they will be used (these settings will not override the command line override).
+	</P
+></BLOCKQUOTE
+></DIV
+><A
+NAME="ButtonIgnoreWindowXY"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonIgnoreWindowXY=0,0</B
+></SPAN
+></P
+><P
+>If this entry exists in the INI file, then this establishes a lower limit
+	(if both the x,y entries are non-0), then these values will be used as a check
+	against the active window, and if the window's size (X and Y) is less than
+	the entries specified here, then the button will NOT position on this window.
+	This was requested by a customer to prevent the button from moving to small display windows.
+	For example, if ButtonIgnoreWindowXY=100,100 than any window less than 100 x 100 will 
+	be ignored when determining the active window.  Note that BOTH entries are used, so
+	if a window is 200 x 50, then it would not be ignored, since the X value is not less
+	than 100.</P
+><A
+NAME="ButtonSingleMonitorLimit"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ButtonSingleMonitorLimit=0</B
+></SPAN
+></P
+><P
+>If ButtonSingleMonitorLimit=1, then a call to GetSystemMetrics(SM_CMONITORS) is called
+	and if the system has only 1 monitor, then the button will not be allowed to move off-screen
+	(for example, if the active window has a title bar off screen, or the window is wider than
+	the screen).  The ButtonOffsetX/ButtonOffsetY entries are used in the calculation, but the
+	screen will still limit the location of the minimized button.  If ButtonSingleMonitorLimit=2,
+	then the single screen limit will be used, regardless of how many monitors in the system.</P
+><A
+NAME="BackgroundColor"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>BackgroundColor=6201</B
+></SPAN
+></P
+><P
+>The BackgroundColor setting is the Keyboard Background color that
+	paints the background of the Keyboard &#38; Edit &#38; Magnifier panels.
+	Valid settings are as follows:</P
+><P
+>6200 - 6215 Solid Colors</P
+><P
+>6216 - 6230 Various Dithered Grays/White/Black</P
+><P
+>Note: The dithered colors may paint improperly on some <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	sizes.</P
+><A
+NAME="SlideOption"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SlideOption=1</B
+></SPAN
+></P
+><P
+>If SlideOption=1 <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> panels will slide out &#38; snap in.</P
+><P
+>If SlideOption=0 <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> panels will snap out &#38; snap in.</P
+><A
+NAME="Size"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Size=9</B
+></SPAN
+></P
+><P
+>This is the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> display size. Valid sizes are 1-12 if set manually.</P
+><P
+>Version 1.67 added infinite sizes - values greater than 12 should
+	not be handled here - use the SzUp &#38; SzDn in the software
+	to change sizes larger than 12.  The software handles the transition from 1 to 9, 
+	10 to 12, 12 to 13, and 13 and larger differently.  The sizing issues arise from 
+	maintaining the aspect ratio, visual aesthetics, and internal coding that should
+	be reworked.  At some point, it may be.  As it exists, arbitrarily changing the sizes
+	in increments greater than 1 can cause problems, especially if crossing the transition
+	from the original sizes (i.e. 1-12) and larger sizes.  It is recommended that
+	all sizing be handled within the normal operation of the software.  Refer to the 
+	Devevloper's Kit utilities, such as Copy and Configure MTS, that can arbitrarily change
+	the size configuration of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> on-the-fly for sizing flexibility.</P
+><A
+NAME="SizeMax"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SizeMax=12 (example)</B
+></SPAN
+></P
+><A
+NAME="SizeMin"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SizeMin=8 (example)</B
+></SPAN
+></P
+><P
+>When these values are present, they determine boundaries where the user cannot
+	change the size below SizeMin or above SizeMax.  When the size is at the SizeMin, the SzDn
+	key and menu options to size down are disabled, and when the size is at the SizeMax, the SzUp and menu
+	options to size up are disabled.  These can be used together, or independently.  These settings were
+	requested by a customer to keep a set range of sizes available to the user, but not let the user stray too far
+	from the preferred working sizes.</P
+><A
+NAME="Center"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Center=1</B
+></SPAN
+></P
+><A
+NAME="RestorePosition"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>RestorePosition=0</B
+></SPAN
+></P
+><P
+>The Center setting is used to automatically center <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> on
+	the screen if it is repositioned due to an window conflict. Set
+	Center=1 if you wish to center <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> when it is moved, or
+	Set Center=0 if you wish <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> stay in the same horizontal
+	position on the screen. If RestorePosition=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will
+	remember the screen position it was at when it was forced to move
+	due to a window conflict, and then restore that position when the
+	conflicting window is no longer the active window.
+	If RestorePosition=0, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will remain at its new position
+	when forced to move due to a window conflict.
+	Note: Window conlicts are set below in the Class Settings for
+	window Classes &#38; Actions.
+	Note:  Most users felt that it was less annoying for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	to remain at its new position, than to constantly jump back &#38; forth.</P
+><A
+NAME="TwoButtonMouse"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TwoButtonMouse=1</B
+></SPAN
+></P
+><P
+>If TwoButtonMouse=1, then <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will ignore the middle
+	button, regardless of the MouseButtons settings below, and
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup will not allow the user to change the middle
+	button setting. If TwoButtonMouse=0 <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> &#38; <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup
+	will assume there is a 3 button Mouse, and that the proper
+	drivers are installed for use within Windows.</P
+><P
+>IMPORTANT: <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will not work with the middle button if the
+	proper drivers are not installed. The default IBM PS/2, Microsoft
+	drivers do not support the middle button, and even some drivers
+	of 3 button mice do not support the middle button within Windows.
+	Check with your mouse manufacturer to obtain the proper drivers
+	if you have a 3 button mouse and Windows does not recognize the
+	middle button.</P
+><A
+NAME="Keyboard"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Keyboard=1</B
+></SPAN
+></P
+><P
+>This is the Keyboard description file <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> uses to define
+	the 101 Key panel layout.  The 104 layouts start in the 100+
+	range, so adding 100 to the 2-digit listing refers to the 104 key layouts, e.g. 101 is the US Standard 104 key layout.
+	Over the 20 years &#38; different Windows versions, our support team would be notified that a particular layout was not correct in a certain version of Windows.  Since with any particular release, multiple versions of Windows are supported, and it was thought that a keyboard layout would remain consistent, changes to the layouts were deemed problematic - for example, if it was changed for Windows version X, this change would cause problems in older versions of Windows.  So certain layouts are tagged "Old" to reflect that it might be required for an older version of Windows.
+	The values 1-96, and 101-196, and any 200+ entries listed are valid, and are 
+	related as follows:</P
+><P
+>01 = U.S. Standard, 02 = U.S. Dvorak Standard,
+	03 = U.S. Dvorak Left-Handed, 04 = U.S. Dvorak Right-Handed,
+	05 = U.S. My-T-Easy (ABC) Alphabetic Keyboard,
+	06 = Belgian (comma), 07 = British, 08 = Canadian Multi-lingual,
+	09 = Danish, 10 = Dutch, 11 = Finnish, 12 = French,
+	13 = French Canadian, 14 = German, 15 = Icelandic,
+	16 = Italian, 17 = Latin American, 18 = Norwegian,
+	19 = Portuguese, 20 = Spanish, 21 = Swedish,
+	22 = Swiss French, 23 = Swiss German, 24 = U.S. International,
+	25 = Hungarian (Old), 26 = Belgian (period), 27 = Arabic,
+	28 = Belarusian, 29 = Bulgarian, 30 = Bulgarian (Latin),
+	31 = Croatian, 32 = Czech (Old), 33 = Czech (Qwerty),
+	34 = Estonian, 35 = Greek, 36 = Hebrew,
+	37 = Hungarian, 38 = Irish, 39 = Latvian,
+	40 = Latvian (Latin), 41 = Polish (Old), 42 = Romanian,
+	43 = Russian (old), 44 = Slovak, 45 = Slovak (Qwerty),
+	46 = Turkish (F type), 47 = Turkish (Q type),
+	48 = Spanish (Mexico), 49 = U.S. Fazekas,
+	50 = U.S. Chubon, 51 = Slovenian, 52=Japanese,
+	53 = Chinese, 54 = Korean, 55 = French (Belgian),
+	56 = French (Luxembourg), 57 = German (Austrian),
+	58 = German (Leichtenstein),
+	59 = German (Luxembourg), 60 = Spanish (Argentina),
+	61 = Spanish (Bolivia), 62 = Spanish (Chile),
+	63 = Spanish (Columbia), 64 = Spanish (Costa Rica),
+	65 = Spanish (Dominican Republic),
+	66 = Spanish (Ecuador), 67 = Dutch (Belgian),
+	68 = Dutch (Netherlands), 69 = Italian (Switzerland),
+	70 = Norwegian (Bokmal), 71 = Portuguese (Brazilian),
+	72 = Spanish (Guatemala), 73 = Spanish (El Salvador),
+	74 = Spanish (Honduras), 75 = Spanish (Modern Sort),
+	76 = Spanish (Nicaragua), 77 = Spanish (Panama),
+	78 = Spanish (Paraguay), 79 = Spanish (Peru),
+	80 = Spanish (Puerto Rico), 81 = Spanish (Uruguay),
+	82 = Spanish (Venezuela), 83 = English (Australian),
+	84 = English (New Zealand), 85 = English (Jamaica),
+	86 = English (United Kingdom), 87 = Chinese (Cangjie),
+	88 = Canadian Multilingual, 89 = Polish,
+	90 = Polish Programmer, 91 = Thai,
+	92 = U.S. Plum, 93 = Russian (Cyrillic),
+	94 = Danish (ABC), 95 = U.S. (Numpad Enter),
+	96 = Czech, 97 = Belgian (period),
+	101-197 are the 104 key layouts matching the above,
+	200 = 104 British (1st alternate),
+	201 = 104 British (2nd alternate),
+	202 = 104 Hebrew (Alt.),
+	203 = 104 Chinese (Zhuyin) (Alt.),
+	204 = 104 Arabic (Alt.)</P
+><A
+NAME="DriveTypesToCheck"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DriveTypesToCheck=1</B
+></SPAN
+></P
+><A
+NAME="DefaultDrive"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DefaultDrive=C</B
+></SPAN
+></P
+><A
+NAME="CheckFloppies"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CheckFloppies=0</B
+></SPAN
+></P
+><P
+>These values are for the System Information display.</P
+><P
+>DriveTypesToCheck can take 4 values, which have the following
+	meanings:</P
+><P
+>0 = Do not check Removable Drive Types, or Network Drives</P
+><P
+>1 = Do not check Removable Drive Types, Check Network Drives</P
+><P
+>2 = Check Removable Drive Types, but Do Not Check Network Drives</P
+><P
+>3 = Check Both Removable &#38; Network Drives</P
+><P
+>DefaultDrive is the drive letter of the default drive that
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> displays in the System Information Panel.</P
+><P
+>Valid letters are A through Z.</P
+><P
+>CheckFloppies=0 means that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will not look at drive
+	letters A or B. If CheckFloppies=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will look at
+	Floppy Drives A and B.</P
+><A
+NAME="CheckMinMax"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CheckMinMax=1</B
+></SPAN
+></P
+><P
+>If CheckMinMax=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will check for the existence of
+	the Minimize Button &#38; Maximize Button on the Caption Bar of
+	the Window before Minimizing or Maximizing the window when
+	MIN or MAX is used on the Windows Controls Panels.
+	Set CheckMinMax=0 to bypass this check. This is important for
+	custom window displays that do not use the standard windows
+	controls for Minimize and Maximize.</P
+><A
+NAME="ClassWatch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ClassWatch=0</B
+></SPAN
+></P
+><A
+NAME="WindowWatch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WindowWatch=0</B
+></SPAN
+></P
+><A
+NAME="KeyWatch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyWatch=0</B
+></SPAN
+></P
+><A
+NAME="SetActiveWindowWatch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SetActiveWindowWatch=0</B
+></SPAN
+></P
+><A
+NAME="SkipTopMostAction"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SkipTopMostAction=0</B
+></SPAN
+></P
+><P
+>These settings can be used for debugging certain aspects of the operation within Windows, or which specific key numbers correspond to key operation on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+></P
+><P
+>These settings are for individuals experienced with Windows
+	Environment and window classes &#38; names, and Windows programming,
+	or at least its concepts.</P
+><P
+>The ClassWatch &#38; WindowWatch settings are for watching the Class
+	Name &#38; Window Name of the active Window. These primarily are for
+	finding this information so that the Special Settings &#38; Class
+	Settings can be modified for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to work with other
+	application Windows. If ClassWatch=1 <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will display on
+	the upper portion of the display the Class Name of the active
+	window. If WindowWatch=1 <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will display on the upper
+	portion of the display the Window Name of the active window.
+	Once this information has been determined, the ClassWatch &#38;
+	WindowWatch should be set back to 0.</P
+><P
+>KeyWatch=1 will display the keys affected by the enable/disable 
+	key option - this will display the number + 1000.  Only the alpha
+	and edit panel keys are displayed.  This is useful if building a different
+	keyboard mapping, and need to identify which key number is which.</P
+><P
+>SetActiveWindowWatch=1 will display which internal call is being used to call the SetForegroundWindow API
+	from <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  This can determine which area of code is responsible for this API call.  For more details on this, 
+	refer to Microsoft's documentation on the SetForegroundWindow API function, and the changes that occurred in Windows 2000
+	with regards to changing the keyboard focus and active (i.e. foreground) window programmatically.  This entry also serves
+	a double duty, and it displays a code identifying the internal call used to save data to the KEYBOARD.KBF file.</P
+><P
+>If SkipTopMostAction=1, this bypasses the internal code that tries to bring <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to the topmost position during normal operation.  In general, having an on-screen keyboard fall behind other windows is not productive.  However, there can be conflicts and issues if multiple windows are trying to maintain the topmost position in the Windows internal window manager list. Also, it has been the general consensus that menus in the system remain above the on-screen keyboard. During operation from a pen, touchscreen, or other pointing device, selecting menu selections is easier, more intuitive, and more effective directly from the pointing device, rather than indirectly from the on-screen keyboard.  You can refer to the MenuClasses entry below for Menu interface options.  For debugging purposes, or to see how <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will operate by bypassing this window interface code, you can set SkipTopMostAction=1.</P
+><A
+NAME="SetupSaveSettings"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SetupSaveSettings=0</B
+></SPAN
+></P
+><P
+>(The next 2 are obsolete)</P
+><A
+NAME="SetupAutoLoad"
+></A
+><P
+>SetupAutoLoad=0</P
+><A
+NAME="SetupAutoRun"
+></A
+><P
+>SetupAutoRun=0</P
+><P
+>These settings are for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup to track whether
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> has been configured for these special settings. They
+	are used as follows:</P
+><P
+>The SetupSaveSettings is used if <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is running. If
+	SetupSaveSettings=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will update its configuration 
+	file when <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup is closed. This will ensure that
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will open with the current configuration. This is
+	default set to 0 so the user can become familiar with all of the
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> configuration options before deciding which
+	configuration <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will open with. If the user is confused
+	as to why <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> does not open the way they left it, then
+	this setting should be set to 1. NOTE: This will only work for
+	configuration changes made in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup.
+	SetupAutoLoad &#38; SetupAutoRun are used internally to track
+	whether <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> has modified the WIN.INI file "load" and
+	"run" options.</P
+><P
+>The SetupAutoLoad and SetupAutoRun have been disabled since version 1.32 because of user
+	confusion.  Most users use the StartUp group, or understand
+	the Load and Run settings in the WIN.INI.  They remain because
+	they may be reworked and included in a future release.</P
+><A
+NAME="EnableOperator"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>EnableOperator=0</B
+></SPAN
+></P
+><A
+NAME="Password"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Password=5F626274</B
+></SPAN
+></P
+><P
+>(OnScreen Note - The EnableOperator setting is used for the 
+	Basic &#38; Advanced modes in OnScreen - the Password and
+	Supervisor/Operator mode are not available in OnScreen)</P
+><P
+>The Supervisor/Operator mode has been included, but it is default
+	off.  If EnableOperator=1, then <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> opens in the Operator
+	mode.  This disables the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Tool button, and the
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Menu button, and requires a password to be entered
+	before <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup is opened.  This effectively limits the
+	Operator to one (saved) configuration, but allows a supervisor to
+	modify or change the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> configuration if necessary.</P
+><P
+>Note:  The password is encrypted - the default entry above
+	corresponds to "PASS".  The <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Control Panel should
+	NOT be available for use by the Operator, as this would allow
+	the operator to modify the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> configuration.
+	Note that once the Setup password has been entered, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	operates in the supervisor mode.  Close both Setup &#38; <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>,
+	then restart <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to re-enable the operator mode.</P
+><A
+NAME="OperatorNoMin"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OperatorNoMin=0</B
+></SPAN
+></P
+><P
+>(OnScreen note - this requires the Supervisor/Operator mode
+	and therefore is not available in OnScreen)</P
+><P
+>The default Operator mode still allows the operator to minimize
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  To Disable this option, set OperatorNoMin=1, and
+	the minimize button will no longer function, disabling all of the
+	buttons on the Tool Bar.</P
+><A
+NAME="ControlLogo"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ControlLogo=0</B
+></SPAN
+></P
+><P
+>(OnScreen note: This is not supported)</P
+><P
+>When in operator mode, it is sometimes desirable to remove
+	the visual display of the buttons on the Tool Bar.  When
+	ControlLogo=1, an optional Bitmap file will be loaded and
+	displayed over the Tool Bar buttons.  This is a developer
+	enhancement, and the following details assume a general
+	understanding of Windows:</P
+><P
+>Requirements for ControlLogo=1</P
+><P
+>In the installation or user directory specified by ConfigPath, 12 bitmap files 
+	corresponding to the 12 sizes of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> need to be created:</P
+><P
+>NAME, WIDTH IN PIXELS, HEIGHT IN PIXELS</P
+><P
+>LOGO01.BMP, 12, 46</P
+><P
+>LOGO02.BMP, 15, 58</P
+><P
+>LOGO03.BMP, 18, 70</P
+><P
+>LOGO04.BMP, 21, 82</P
+><P
+>LOGO05.BMP, 24, 94</P
+><P
+>LOGO06.BMP, 27, 106</P
+><P
+>LOGO07.BMP, 30, 118</P
+><P
+>LOGO08.BMP, 33, 130</P
+><P
+>LOGO09.BMP, 36, 142</P
+><P
+>LOGO10.BMP, 47, 190</P
+><P
+>LOGO11.BMP, 62, 250</P
+><P
+>LOGO12.BMP, 83, 322</P
+><P
+>These files could be created via PaintBrush, or any other tool that 
+	creates bitmaps.  Only 16-color bitmaps are recommended because of
+	memory &#38; speed issues, but higher resolutions should operate
+	satisfactorily.  However, only 16-color bitmaps are guaranteed to work.
+	If no bitmap file is present for the current size, then no buttons are 
+	displayed, and a black background appears.
+	Sample/template bitmaps may be downloaded via IMG's Web site at
+	http://www.imgpresents.com/imgdev.htm</P
+><P
+>Prior to the 1.78 release, the installation path was the only
+	possible location.  In the original 1.78 release, this actually used the
+	location of the user's configuration, e.g. the path based on the ConfigPath
+	entry.  In 1.78 Release 2, the following logic is used:  The location specified
+	by the ConfigPath entry is used, and if the logo bitmap file does not exist, the
+	installation folder is tried.  This allows more flexibility, so that different users
+	can have different custom logos, or a machine level setting can be used by
+	placing the logo bitmaps in the installation folder.  This can also allow
+	a specific user to override the default logos.</P
+><A
+NAME="Editor"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Editor=NOTEPAD.EXE</B
+></SPAN
+></P
+><A
+NAME="ControlPanel"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ControlPanel=CONTROL.EXE</B
+></SPAN
+></P
+><A
+NAME="ControlPanelKeyboard"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ControlPanelKeyboard=rundll32.exe shell32.dll,Control_RunDLL main.cpl @1,1</B
+></SPAN
+></P
+><P
+>These are the default settings for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup.
+	Editor is the Executable used to modify the MYTSOFT.INI file
+	accessed from <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup, Configuration, Special.
+	ControlPanel is the Windows Control Panel accessed by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	Setup, Keyboards.
+	ControlPanelKeyboard is the Windows Keyboard Layout Applet for
+	selecting the current keyboard layout that is in use.
+	These may be changed if relevant for the Windows Configuration
+	in use.</P
+><A
+NAME="InstallPath"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>InstallPath=C:\%PROGRAMFILESDIR%\MYTSOFT</B
+></SPAN
+></P
+><P
+>This is created at Installation time to signify the chosen
+	InstallPath. If you need to move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, we suggest you
+	Un-Install, and then re-install <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to the new path.</P
+><A
+NAME="ShowKeys"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ShowKeys=111111111111111111111111111111...</B
+></SPAN
+></P
+><P
+>This setting indicates which keys are visible for the standard
+	keyboard (Alpha) panel.  The Esc key is key 0 and the count
+	increases from left to right, row by row.  A 1 indicates that
+	the key is visible, and a 0 indicates that the key will not
+	be painted, and not accessible.</P
+><A
+NAME="AllowFrameMove"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AllowFrameMove=1</B
+></SPAN
+></P
+><P
+>This is for controlled applications, or where there may be
+	extraneous movement caused by the touchscreen driver.  If
+	AllowFrameMove=1 then any non-key area will trigger the move
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> action via click &#38; drag.  If AllowFrameMove=0, then
+	it will not be possible to move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> via the selected
+	button click.  <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> must be moved via a secondary button
+	selection (<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup, Mouse Buttons) or by an external
+	application.</P
+><A
+NAME="VirtualPointer"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>VirtualPointer=1</B
+></SPAN
+></P
+><P
+>If VirtualPointer=0, then the default action of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> for button 
+	clicks and moves is in use.  This setting is best for standard system 
+	hardware such as the mouse, trackball, touchscreen, or pen.  Set 
+	VirtualPointer=1 if software control for the mouse cursor (pointer), or 
+	other devices are in use.  If there are any problems experienced while 
+	moving the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window using a click, drag, release, then 
+	VirtualPointer=1 may also be tried.</P
+><A
+NAME="SingleKeyPerClick"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SingleKeyPerClick=0</B
+></SPAN
+></P
+><P
+>This setting is used to distinguish the operation of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	for clicks.  The default action (SingleKeyPerClick=0) is to act
+	exactly like a physical mechanical spring key, where a down click;
+	drag off motion will generate a keystrokes (i.e. once the finger is
+	dragged off the key, it will bounce up and this will generate a
+	keystroke).  If SingleKeyPerClick=1, then only the
+	key that was pointed to during the down click will be generated,
+	even if the cursor is dragged onto adjacent keys or other parts
+	of the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window.  If the cursor is dragged off of the
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window while this setting is on, then the key-up
+	event will occur, and the keystroke will be generated.  It is
+	recommended that the Typematic setting be set off if 
+	SingleKeyPerClick is set on to disable multiple keystrokes
+	of the same "down" key.</P
+><A
+NAME="BorderNoHit"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>BorderNoHit=0</B
+></SPAN
+></P
+><P
+>This setting is used to identify pixels around the edge of the
+	keys (top, left, bottom, right) that will not be used to identify a key 
+	press.  Since the setting is in pixels, the actual values will differ 
+	between the 12 sizes available.  A setting of 6 for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> 
+	size 8 will create a noticeable border.  Valid values are from 0 to 100.
+	Note that a pixel value larger than the 1/2 the key size in pixels
+	will result in an unusable configuration, and values larger than the 
+	key may create software errors in internal calculations.</P
+><A
+NAME="ForceUnHook"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ForceUnHook=0</B
+></SPAN
+></P
+><P
+>The ForceUnHook option toggles an internal variable that is used
+	to track whether the system journal hooks should be set at all
+	times, or only when the cursor is over a typing panel.  The primary
+	reason for this is to test / resolve potential conflicts with other
+	software applications.</P
+><P
+>Note: Because of internal operation of the variable, it is opposite
+	to the displayed setting in Operation Options, e.g.
+	ForceUnHook=0 results from Track Pointing Device input at all
+	times being set On (checked), and
+	ForceUnHook=1 results from Track Pointing Device input at all
+	times being set Off (cleared)</P
+><P
+>1.70 notes:  This has taken on a stronger meaning with the 
+	1.70 release.  We have found that only a few non-mouse drivers
+	truly emulate the mouse driver functionality.  In order to support
+	touchscreen, pen, and non-mouse drivers that do not put sufficient
+	delays (and let other window processes run) between the move
+	and click events, the system hooks Always on (i..e. Track 
+	Pointining Device Input at all times) is required to 
+	handle focus issues in all pre-Win 2000 versions of Windows.
+	In general, a mouse cannot generate a click until it is moved into 
+	position (generating WM_MOUSEMOVE messages over the target
+	window) - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> uses these messages to set System hooks in
+	preparation for the possible WM_?BUTTONDOWN messages, to
+	prevent the focus switching events.  When a touchscreen, pen, or
+	other non-mouse driver moves &#38; sends click events without a delay
+	or release to other window processes running (part of the pseudo-
+	multitasking required by properly written windows programs), <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	cannot prepare for the focus shifting events.  "Click on release" settings
+	in the driver may alleviate the undesirable results, or leaving these hooks
+	Always on can also make for more desirable operation.
+	A great deal of effort was made to resolve the focus issues without
+	the use of these system hooks, but only through the use of these could
+	seamless operation occur throughout all windows applications &#38; input situations.
+	If problems arise where the system hooks settings causes <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to
+	become unresponsive, setting Track Pointing Device Input at all times
+	off may resolve this situation, and investigating options within the pointing
+	device driver (touchscreen, pen, etc.) may be helpful.</P
+><P
+>2 additional notes</P
+><P
+>1) Windows 2000 and above do not require the use of system hooks, so this setting
+	is not relevant (and the situations described above do not apply)</P
+><P
+>2) Try <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> on the system with an actual mouse device - if the 
+	problems do not occur, please contact the device driver manufacturer 
+	and inform them that their pointing device driver does not emulate a mouse
+	properly.</P
+><A
+NAME="NoHooksEver"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>NoHooksEver=0</B
+></SPAN
+></P
+><P
+>This is the setting called Alternate Virtual Interface in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup
+	In Windows 2000/XP, there is no need for the system hooks, and this setting
+	is automatically enabled when running in Windows 2000/XP.  In testing with
+	older and assistive technology devices &#38; software, it was found that some
+	of these require this setting (95/98/Me/NT).  If you experience any typing
+	difficulties &#38; a general non-responsiveness from <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, you may try
+	NoHooksEver=1 (Alternate Virtual Interface set On).</P
+><A
+NAME="RunAddFontResource"
+></A
+><P
+>(This is obsolete)</P
+><P
+>RunAddFontResource=0</P
+><P
+>This was added to remove the call to the AddFontResource Windows 
+	API for Windows 95 / 98.  On certain systems, the delay induced by 
+	Windows during this call caused problems in other programs / 
+	Windows during startup.</P
+><P
+>Since it is not required if the software was properly installed, it
+	was removed in version 1.61.  It still is called if run in Windows 3.1.
+	Set RunAddFontResource=1 to force this call during startup in
+	Windows 95 / 98.  This settings has no effect for Windows 3.1.</P
+><A
+NAME="KeyboardUpdate"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardUpdate=0</B
+></SPAN
+></P
+><P
+>This setting is used as a flag when a keyboard layout is modified
+	in Setup to indicate that the character set, AltGr status, and 
+	lowercase display setting should be read from the KMF file.
+	It is managed automatically through Setup, but if keyboard
+	layouts are modified manually, it may be wise to set this to 1
+	prior to running <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><A
+NAME="KeyboardFontBase"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardFontBase=MyTMouse</B
+></SPAN
+></P
+><A
+NAME="KeyboardFontMedium"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardFontMedium=MyTMouse</B
+></SPAN
+></P
+><A
+NAME="KeyboardFontLarge"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardFontLarge=Arial</B
+></SPAN
+></P
+><A
+NAME="KeyboardCharSetBase"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardCharSetBase=22</B
+></SPAN
+></P
+><A
+NAME="KeyboardCharSetMedium"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardCharSetMedium=22</B
+></SPAN
+></P
+><A
+NAME="KeyboardCharSetLarge"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardCharSetLarge=0</B
+></SPAN
+></P
+><A
+NAME="Keyboard1SizeAdjBase"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Keyboard1SizeAdjBase=0</B
+></SPAN
+></P
+><A
+NAME="Keyboard1SizeAdjMedium"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Keyboard1SizeAdjMedium=0</B
+></SPAN
+></P
+><A
+NAME="Keyboard1SizeAdjLarge"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Keyboard1SizeAdjLarge=1</B
+></SPAN
+></P
+><P
+>Sizes 1-6 are the Base sizes.  For almost all uses, the MyTMouse font 
+	is the best choice.</P
+><P
+>Medium Sizes are 7-9.</P
+><P
+>Large Sizes are 10-12 and sizes greater than 12.</P
+><P
+>The Character Set for Base / Medium / Large (KeyboardCharSet...) settings
+	allow changing the character set used to reference the keyboard characters.</P
+><P
+>The following lists documented sets</P
+><P
+>ANSI_CHARSET = 0</P
+><P
+>DEFAULT_CHARSET = 1</P
+><P
+>SYMBOL_CHARSET = 2</P
+><P
+>MyTMouse = 22</P
+><P
+>MAC_CHARSET = 77</P
+><P
+>SHIFTJIS_CHARSET = 128</P
+><P
+>HANGEUL_CHARSET = 129</P
+><P
+>HANGUL_CHARSET = 129</P
+><P
+>JOHAB_CHARSET = 130</P
+><P
+>GB2312_CHARSET = 134</P
+><P
+>CHINESEBIG5_CHARSET = 136</P
+><P
+>GREEK_CHARSET = 161</P
+><P
+>TURKISH_CHARSET = 162</P
+><P
+>VIETNAMESE_CHARSET      163</P
+><P
+>HEBREW_CHARSET = 177</P
+><P
+>ARABIC_CHARSET = 178</P
+><P
+>BALTIC_CHARSET = 186</P
+><P
+>RUSSIAN_CHARSET = 204</P
+><P
+>THAI_CHARSET = 222</P
+><P
+>EASTEUROPE_CHARSET = 238</P
+><P
+>OEM_CHARSET = 255</P
+><P
+>In general, use 22 for MyTMouse and 0 (ANSI) otherwise.</P
+><P
+>This affects the Windows GDI selection of fonts, and can be useful
+	if specific characters are not being selected as desired from the current 
+	KYBD????.KMF.</P
+><P
+>The Keyboard1SizeAdj... settings refers to the amount subtracted from 
+	the available area of the key (total pixels) used to display the font character.
+	Even though it strongly affects key displays of 1 character (i.e. alphanumeric 
+	keys on the Keyboard (Alpha) panel), it does have some effect on all buttons 
+	displayed. As the numbers increase the calculated area available for the
+	required display character(s) becomes smaller, forcing a smaller font to
+	display.</P
+><A
+NAME="LowerCaseDisplay"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LowerCaseDisplay=1</B
+></SPAN
+></P
+><P
+>If LowerCaseDisplay=1, then the default keyboard display will contain
+	lower case characters, only changing to upper case when the Shift or
+	Caps Lock is engaged.  If LowerCaseDisplay=0, then Upper Case 
+	characters will always be used on the keyboard display.</P
+><A
+NAME="IgnoreSystemCapsLock"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IgnoreSystemCapsLock=0</B
+></SPAN
+></P
+><P
+>This setting was asked for by a customer using the TS version
+	with Citrix.  Apparently there are some synchronization problems
+	within different client versions of Citrix, and the Caps lock operation
+	can be inconsistent.  By default, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> queries the system to
+	establish the Caps Lock state - on a normal PC, this operates
+	as one would expect - the Caps Lock state stays in sync between
+	the physical keyboard and <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  By setting
+	IgnoreSystemCapsLock=1, the portions of code that monitor
+	the system Caps lock state are bypassed.  Note that when the
+	Caps Lock key is used on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, the appropriate keystroke
+	is sent, but the state (key display / Caps lock ligh on Num panel)
+	within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will not reflect the change, because the system is 
+	not being queried, and these updates are bypassed.  In order to address
+	all possible system situations based on the Caps Lock state, additional
+	options have been added.  The following lists the 6 different settings
+	available for IgnoreSystemCapsLock:</P
+><P
+></P
+><UL
+><LI
+><P
+>IgnoreSystemCapsLock=0 (Default)</P
+></LI
+><LI
+><P
+>IgnoreSystemCapsLock=1 Does not repaint based on System Caps Lock</P
+></LI
+><LI
+><P
+>IgnoreSystemCapsLock=2 Paint Capped keys based on Internal Caps Lock state, 
+	but do not change key action</P
+></LI
+><LI
+><P
+>IgnoreSystemCapsLock=3 Paint Capped keys based on Internal Caps Lock state, 
+	change key action to shifted state if capped (This emulates Caps Lock action if Caps Lock is 
+	NEVER set on system)</P
+></LI
+><LI
+><P
+>IgnoreSystemCapsLock=4 Paint Capped keys based on Internal Caps Lock state, 
+	change key action to shifted state if NOT capped (This emulates Caps Lock action if Caps Lock is 
+	ALWAYS set on system)</P
+></LI
+><LI
+><P
+>IgnoreSystemCapsLock=5 Paint Capped keys based on Internal Caps Lock state, change key 
+	action to opposite of capped state (this would be used if the caps lock state is always opposite the 
+	Internal Caps lock state - however, this suggests the caps lock works on the system, so you really 
+	shouldn't be ignoring it)</P
+></LI
+></UL
+><A
+NAME="CapsLockMode"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CapsLockMode=0</B
+></SPAN
+></P
+><P
+>If CapsLockMode=0, then the key will visually latch based on the Caps Lock
+	mode, e.g. the Caps Lock will be shown as a key down for Caps Lock On, key up for Caps Lock Off.
+	If CapsLockMode=1, then the Caps Lock key will be treated as any other key, and not tied to Caps Lock State</P
+><A
+NAME="UseOrgCutCopyPasteUndo"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>UseOrgCutCopyPasteUndo=0</B
+></SPAN
+></P
+><P
+>This setting is to accommodate the change from Common User Interface
+	(Consistent User Interface) (Consistent??) options for Cut Copy Paste &#38; 
+	Undo.  Most applications support both versions, but for those that do not,
+	or require the original keystrokes, this setting has been provided.  
+	Note that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> uses the newer version by default.</P
+><P
+>UseOrgCutCopyPasteUndo=0 means:</P
+><P
+>Cut = Ctrl-X</P
+><P
+>Copy = Ctrl-C</P
+><P
+>Paste = Ctrl-V</P
+><P
+>Undo = Ctrl-Z</P
+><P
+>UseOrgCutCopyPasteUndo=1 means:</P
+><P
+>Cut = Shift-Del</P
+><P
+>Copy = Ctrl-Ins</P
+><P
+>Paste = Shift-Ins</P
+><P
+>Undo = Alt-Backspace</P
+><A
+NAME="DragMode"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DragMode=2</B
+></SPAN
+></P
+><P
+>The DragMode setting was added to be more consistent with the Windows
+	appearance settings.  The following are the settings &#38; what they mean:
+	DragMode=0, drag full window contents, ignore Windows settings;
+	DragMode=1, drag with focus rectangle, ignore Windows settings;
+	DragMode=2, use Windows settings to determine drag mode</P
+><A
+NAME="HoldShiftCtrl"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>HoldShiftCtrl=0</B
+></SPAN
+></P
+><P
+>This was added as a test for a customer, and has been left as an option.
+	By default, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> holds the shift &#38; control state until the key is actually
+	sent.  For example, with a Shift-T - this results in a Shift-Down at the shift
+	key press, then a T-down, T-up, Shift-up after a T key press. (Same for
+	the Ctrl key).  With HoldShiftCtrl=1, the Shift-down is held until the T key
+	press, resulting in a Shift-down, T-down, T-up, Shift-up when the T key
+	is released.  The Alt key is the System key in Windows, and it is not
+	included within this option.</P
+><A
+NAME="MenuOffset"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MenuOffset=200</B
+></SPAN
+></P
+><P
+>This setting was added in 1.70 to address Windows 98 &#38; its multiple
+	monitor support.  This is updated internally as the popup <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	menu is is used (offset is the width of menu).  Windows 98 incorrectly
+	displays the menu off screen (does not adjust to ensure that the menu is
+	visible on the screen).  Therefore, there are some adjustments made
+	prior to using the Windows API TrackPopupMenu when in Windows 98.
+	Issues: The LICENSE.EXE updates the registry at: HKLM\Software\
+	Innovation Management Group\Windows with a version # - this must
+	be "98" to invoke this action (only a problem in Windows 98).  The width
+	itself is adjusted when one of the secondary popup menus is used (Size, 
+	Settings, Position).</P
+><P
+>If the Windows Display Properties | Appearance modifies the displayed width
+	of the popup menu, one of these menus is required to be opened to force an
+	update of the offset value internally.</P
+><A
+NAME="Transparency"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Transparency=0</B
+></SPAN
+></P
+><P
+>This setting is for Windows 2000 and later.  When set to 1, various options are
+	enabled with <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to allow modifying the transparency for the displayed
+	window.  When enabled, the TransparencyLevel defines how "visible" the
+	window is - a lower-limit of 20 has been set in the SEETHRU.EXE (to
+	prevent the user from making the keyboard completely invisible), and the
+	level of 255 makes the window completely opaque (the disabled state).</P
+><A
+NAME="TransparencyLevel"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TransparencyLevel=75</B
+></SPAN
+></P
+><P
+>This is the current level of visibility, where 0 means invisible, and 255 means
+	the window is opaque (same as if the Transparency were 0 (disabled)).  The
+	little control program (SEETHRU.EXE) has a lower limit of 20, and these 
+	settings are saved to this INI file when <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> gets the message from
+	SEETHRU.  You can make the window invisible by setting Transparency=1
+	and TransparencyLevel=0, and then do not run SEETHRU.EXE.
+	See the Developer's Kit for external control info.</P
+><A
+NAME="WinLogon"
+></A
+><P
+>(This is obsolete)</P
+><P
+>Begin WinLogon settings</P
+><P
+>The WinLogon settings &#38; following support settings are for 95/98,
+	and handled by IMGLOGON.EXE - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Logon Utilities
+	The following section runs through AllowDomainEdit.</P
+><P
+>WinLogon=0</P
+><P
+>If WinLogon=1, then special code is used to properly type into the
+	windows logon screen (Network Client, Windows user logon, etc.).
+	This is a patch to work prior to release of fully 32-bit <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> should be run via RunServices option in registry:
+	HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunServices</P
+><A
+NAME="ForcePasswordLower"
+></A
+><A
+NAME="ForcePasswordUpper"
+></A
+><P
+>(These are obsolete)</P
+><P
+>1.70 Notes</P
+><P
+>The ForcePassword????? Options only affect operation
+	during the use of the Map Network Drive dialog</P
+><P
+>ForcePasswordLower=0</P
+><P
+>ForcePasswordUpper=0</P
+><P
+>These two settings change the way characters are sent to the
+	windows logon / password dialog.  Set ForcePasswordLower=1
+	to force lowercase characters to be sent, or set 
+	ForcePasswordUpper=1 to force uppercase characters.
+	ForcePasswordUpper will override the ForcePasswordLower
+	setting.</P
+><A
+NAME="ForcePasswordMixed"
+></A
+><P
+>ForcePasswordMixed=1</P
+><P
+>This setting overrides the upper &#38; lower case settings and
+	allows mixed case &#38; punctuation entry.  Most networks only
+	allow a limited set of password characters, but this setting
+	was added for additional flexibility, and set as the default.
+	The original specification from a customer for this option
+	was all Upper case, and other customers eventually required
+	these additional options.</P
+><P
+>Version 1.70 Notes: DisableEnter changes, and
+	UserNameNotPassword and AllowDomainEdit are not
+	used.</P
+><A
+NAME="DisableEnter"
+></A
+><P
+>DisableEnter=0</P
+><P
+>Version 1.70 modified this entry, managed by the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	Logon Utilities</P
+><P
+>This setting is used to resolve logon problems resulting in a
+	system hang.  Typically other software in the system is part
+	of the problem, and using the logon option in as clean a system
+	as possible is recommended.  If there are incomplete logons, or 
+	the system does not resume normal operation after logon, the
+	DisableEnter setting can be used.  In testing, it was found that
+	logon problems were related to the system hooks being set.
+	When DisableEnter=0, the Enter key operates normally.  If
+	DisableEnter=1, then the Enter key does not process 
+	any reaction, forcing the user to click OK on the logon
+	dialog.  The dialogs affected are Enter Windows Password
+	and Enter Network Password.  Note the ForceUnHook setting
+	should be set to 1.</P
+><P
+>(PRE 1.70 ONLY!)</P
+><P
+>DisableEnter=0</P
+><P
+>This setting is used to resolve logon problems resulting in a
+	system hang.  Typically other software in the system is part
+	of the problem, and using the logon option in as clean a system
+	as possible is recommended.  If there are incomplete logons, or 
+	the system does not resume normal operation after logon, the
+	DisableEnter setting can be used.  In testing, it was found that
+	logon problems were related to the system hooks being set.
+	When DisableEnter=0, the Enter key operates normally.  If
+	DisableEnter=1 or DisableEnter=2, the Enter key is disabled
+	on the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> keyboard, AND during the logon, system
+	hooks are in use only while the cursor is over <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> (see
+	VirtualPointer, ForceUnHook settings). This forces the user to
+	click on the OK button on the Password dialog, and forces 
+	the system hooks to be disabled during logon.  If 
+	DisableEnter=1, then normal operation resumes upon typing 
+	into any window after logon.  If DisableEnter=2, then this 
+	forces operation similar to ForceUnHook - even after logon.</P
+><A
+NAME="UserNameNotPassword"
+></A
+><P
+>(PRE 1.70 ONLY!)</P
+><P
+>UserNameNotPassword=0 </P
+><P
+>The default keyboard focus is on the password field.  To
+	override this (without requiring the user to use the Tab
+	key), set UserNameNotPassword=1.  This will force
+	the default keyboard focus to be on the User Name
+	at logon.  The default (if this entry is not present) is ;0.</P
+><A
+NAME="AllowDomainEdit"
+></A
+><P
+>(PRE 1.70 ONLY!)</P
+><P
+>AllowDomainEdit=0</P
+><P
+>By original design (at the request of a customer), the
+	domain was not editable (there was no way the user could
+	edit the domain field).  To allow this field to be edited by
+	the user, set AllowDomainEdit=1.</P
+><P
+>End WinLogon settings</P
+><A
+NAME="WantATVersion"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WantATVersion=1</B
+></SPAN
+></P
+><P
+>This setting should be 1 for OnScreen operation - it is not available
+	in non-AT versions (non Assistive Technology versions).
+	This may be a future option, but as of the 1.73 version, it should
+	be set to 1 for OnScreen, but it is not used otherwise.</P
+><A
+NAME="SetupMode"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SetupMode=0</B
+></SPAN
+></P
+><P
+>This indicates whether setup is in the Basic or Advanced mode.
+	If SetupMode=0 then the Basic mode is in use, and only the dialog
+	and options available in Basic mode are displayed.  If SetupMode=1
+	then Advanced mode is in use, and all options and advanced
+	dialogs are displayed.</P
+><A
+NAME="KeyboardFiles"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardFile=1</B
+></SPAN
+></P
+><P
+>This is used in conjunction with the WordComplete &#38; ActionPanel
+	settings.  This is an internal setting and should not be modified
+	here.  If KeyboardFile=1, then the WordComplete / Action panel
+	is in use. If KeyboardFile=0, then only the Action panel is in use.
+	This setting is used internally, and reflects the WordComplete
+	and ActionPanel settings.  This setting indicates which panel
+	will open when the Tool button (Icon /Top button on Tool bar) is
+	used.</P
+><A
+NAME="WordComplete"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WordComplete=1</B
+></SPAN
+></P
+><P
+>If WordComplete=1, then the WordComplete Panel is open.
+	If WordComplete=0, then the panel is closed.  This is used
+	by setup, and internally by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to indicate the state
+	of this panel.  If WordComplete=1, then ActionPanel=1.</P
+><A
+NAME="IntlWordComplete"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>IntlWordComplete=0</B
+></SPAN
+></P
+><P
+>This was added as an option, but the settings in the selected
+	KBF override this setting for International Keyboards that
+	have dead-keys, and Alt-Gr functionality.  In 1.70, it has
+	very little impact on operation, and should be left at 0 unless
+	instructed to change by IMG technical support.</P
+><A
+NAME="Suffixes"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Suffixes=1</B
+></SPAN
+></P
+><P
+>This indicates whether the Suffix mode is enabled.  If Suffixes=1, then
+	the Suffix button on the WordComplete panel is enabled, and suffixes
+	are automatically displayed after a word Completion.  If Suffixes=0
+	then Suffixes are disabled, and no automatic display occurs.</P
+><A
+NAME="ActionPanel"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ActionPanel=1</B
+></SPAN
+></P
+><P
+>This indicates whether the Action Panel is available.  By default,
+	the Action Panel is included with display of the WordComplete
+	Panel, and is automatically set to 1 if this is the case.  If 
+	WordComplete is not enabled, then the ActionPanel setting
+	indicates whether the ActionPanel is available.  In general,
+	the internal setting of KeyboardFile overrides this setting.
+	The ActionPanel and WordComplete settings are used by
+	Setup in User Options, and all configuration should be
+	managed through Setup, rather than directly manipulating
+	these settings.</P
+><A
+NAME="AutomaticU"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutomaticU=1</B
+></SPAN
+></P
+><P
+>If AutomaticU=1 then anytime a "Q" is used, a "U" is automatically
+	added to the text.  If AutomaticU=0, then this option is disabled.</P
+><A
+NAME="AutoSpace"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoSpace=1</B
+></SPAN
+></P
+><P
+>This indicates whether the Automatic spaces &#38; Capitals is on.
+	AutoSpace=1 indicates that spaces after word completions and
+	punctuation are automatically added.  This also enables the
+	Auto-Caps option that sets after a punctuation character, enabling
+	the first letter of a new sentence to be capitalized.  If Auto-Capitals
+	is engaged, any character will automatically turn off the Caps lock.
+	To disengage, use the Caps Lock key.</P
+><A
+NAME="AutoSpaceDisable"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoSpaceDisable=1</B
+></SPAN
+></P
+><P
+>This indicates whether the Automatic spaces &#38; Capitals sub-option 
+	of "Disable for single line input" is on.
+	AutoSpaceDisable=1 indicates that when <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> senses a single line input, the Automatic 
+	spaces &#38; Capitals feature will be disabled.  When AutoSpaceDisable=0, this special case for 
+	single-line input is not monitored.  When enabled, this features requires a Windows event 
+	hook that monitors the system text caret (text input cursor).  This only monitors for single line
+	system level "EDIT" class input windows.</P
+><A
+NAME="AutoCapI"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoCapI=1</B
+></SPAN
+></P
+><P
+>This is used to enable internal coding that forces a stand-alone character 
+	I to be capitalized automatically.  This is intended primarily for normal
+	lowercase typing as an aid to users.  This action can be disabled by
+	setting AutoCapI=0.</P
+><A
+NAME="SecondSpace"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SecondSpace=1</B
+></SPAN
+></P
+><P
+>This is used when Automatic spaces &#38; Capitals is on (AutoSpace=1)
+	If SecondSpace=1, then 2 spaces are added after a punctuation character
+	(period, question mark, exclamation point, etc.).  If SecondSpace=0, then
+	only a single space is used after a punctuation character.</P
+><A
+NAME="AutoArrange"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoArrange=1</B
+></SPAN
+></P
+><P
+>After different events, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will automatically arrange the open windows
+	for smoother operation.  For experienced or sophisticated users, this may be
+	annoying.  By setting AutoArrange=0, this default, automatic operation is
+	disabled.  The Arrange button on the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Action Panel will still arrange
+	the active window, by positioning the window above (or below) <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, and
+	filling the available space on the screen with the application window.</P
+><A
+NAME="AutoArrangeActive"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoArrangeActive=0</B
+></SPAN
+></P
+><P
+>This is only used if AutoArrange=1.  When AutoArrangeActive=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will
+        monitor the active window (only when the mouse cursor is over the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window)
+	and if a new window becomes active, it will automatically be arranged.  This also has
+	the effect of automatically arranging the active window when the mouse cursor is positioned
+	over <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> (which some users find helpful, and other users find annoying).  Because
+	of this, the setting is now separate and default off (AutoArrangeActive=0).</P
+><A
+NAME="AutoSaveMove"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AutoSaveMove=0</B
+></SPAN
+></P
+><P
+>In 1.78 Release 2, OnScreen Setup has been modified to change 
+	the Operation Options option to match the Save After Move entry in the Options menu,
+	and use the SaveAfterMove INI entry (see below).  The AutoSaveMove option still 
+	remains, and is implemented slightly differently than the SaveAfterMove option
+	within the actual run-time software.  For practical purposes, this setting is now
+	obsolete. If it is used, then SaveAfterMove=0 should be set in the INI.  Internally, 
+	the AutoSaveMove saves the configuration and position as separate steps, while the
+	SaveAfterMove saves the entire KEYBOARD.KBF in a single pass.</P
+><P
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will ALWAYS open at the last saved position.
+	Originally designed to ALWAYS save the current position after moving 
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, this has been added to address customers who dislike this 
+	default action or where confused by the fact that sometimes <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+	did not open in their "saved" position.  When On, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will execute
+	a Menu | Position | Save Position command when a move has been
+	completed.  Turn this option Off to prevent these saves after moving 
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><A
+NAME="ActionPanelEnabled"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ActionPanelEnabled=31</B
+></SPAN
+></P
+><P
+>Each button on the Action Panel may be Enabled or Disabled.
+	This setting uses a decimal value that is using a binary code
+	to indicate each key, where 1 is Enabled and 0 is Disabled.</P
+><P
+>These are the codes:</P
+><P
+>Back Key = 1, Size Key = 2, Select Key = 4, Move Key = 8
+	and Arrange Key = 16.  These codes are added together,
+	and then saved as the decimal value here.
+	A value of 31 indicates all buttons are Enabled.</P
+><P
+>For Example:</P
+><P
+>To Enable only the Back Key &#38; Move Key you would add 1
+	and 8 to result in ActionPanelEnabled=9
+	When disabled the key will be "grayed" and its action will
+	not be available to the user.</P
+><A
+NAME="KeyboardEnabled"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyboardEnabled=0</B
+></SPAN
+></P
+><P
+>If KeyboardEnabled=1 then the Physical Keyboard is enabled for 
+	WordComplete operation.  The WordComplete Panel MUST be
+	displayed for proper operation.  See Help, and User Options for
+	more details on using the Physical Keyboard.  If KeyboardEnabled=0
+	then the Physical Keyboard is not used.</P
+><A
+NAME="EnableDwell"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>EnableDwell=0</B
+></SPAN
+></P
+><P
+>If EnableDwell=1 then the Dwell Keypress Timer is enabled.  This
+	will engage the timer whenever the pointer (mouse cursor) remains
+	at one position (over OnScreen).  If the delay period expires, a click 
+	(Left or Right button down/up sequence based on the Mouse Button
+	setting) will be initiated.  The pointer must be moved again to 
+	reset/restart the timer.  To disable the dwell action, set EnableDwell=0.</P
+><A
+NAME="DwellTime"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DwellTime=10</B
+></SPAN
+></P
+><P
+>This is the length of the delay period used in EnableDwell=1.  Each
+	unit corresponds to a tick of 50 milliseconds.  The default is 10, or
+	0.5 seconds (500 milliseconds).  The valid range is from 1 to 100.</P
+><A
+NAME="Sound"
+></A
+><P
+>(OnScreen implementation only - see below for others)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Sound=0</B
+></SPAN
+></P
+><P
+>This can take on 3 settings.  If Sound=0 then no sound is generated
+	when buttons are used within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  If Sound=1, then the KeyClick
+	wave sound is played every time a button is clicked.   If Sound=2, then
+	voices are used to describe each key (for the standard 101 keyboard).
+	See <A
+HREF="soundsadvanced.html"
+>Sounds (Advanced Notes)</A
+> for a description of how to override
+	the default sounds.</P
+><A
+NAME="SoundMTS"
+></A
+><P
+>(Added in 1.76 for My-T-Pen, My-T-Soft, My-T-Soft TS, My-T-Touch)</P
+><P
+>(The implementation is different than in OnScreen (above) because 
+	default wave resources are NOT included within the executable - only
+	external wave files will be used)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Sound=0</B
+></SPAN
+></P
+><P
+>This can take on 3 settings.  If Sound=0 then no sound is generated
+	when buttons are used within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  If Sound=1, then the KeyClick
+	wave sound is played every time a button is clicked (similar to OnScreen).
+	However, the Keyclick wave is not included in the resources, so only
+	the override setting will work, using the "KEYCLICK.WAV" file in the
+	Sounds folder.  If you wish to use a different sound, copy the wave
+	file over the "KEYCLICK.WAV" file in the Sounds folder.
+	If Sound=2, then key numbered files are used to describe each key 
+	pressed, as long as there is a corresponding "numbered" entry in 
+	the sounds folder.
+	Refer to <A
+HREF="soundsadvanced.html"
+>Sounds (Advanced Notes)</A
+> for details on key numbers, and
+	other notes regarding this option.
+	Also note that there is no user interface for this, it must be modified
+	in the INI file.  See the NoAnnounce setting below if Text-To-Speech services 
+	are enabled on the platform and the announcement triggered when Sound=1.</P
+><A
+NAME="NoAnnounce"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>NoAnnounce=1</B
+></SPAN
+></P
+><P
+>When Sound=1, IMGSOUND.EXE is loaded, and if Text-To-Speech Services are 
+available, IMGSOUND will announce this fact by speaking "Text-To-Speech is available".
+In the commercial products, this can be annoying, since the sound is primarily only
+uesd for key-click audible feedback.  Set NoAnnounce=1 to skip this announcement.
+If NoAnnounce=0, then this "Text-To-Speech is available" announcement will be spoken.</P
+><A
+NAME="TopOffset"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TopOffset=2</B
+></SPAN
+></P
+><P
+>This is a setting used to help position OnScreen without
+	affecting the Taskbar.  This allows the Taskbar to be placed on 
+	top of the screen with the Auto-Hide option enabled, and let the user have
+	enough "space" to trigger the Taskbar display.</P
+><A
+NAME="TTSAvailable"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSAvailable=0</B
+></SPAN
+></P
+><P
+>This is the main option to enable the Text-To-Speech (TTS) functionality.
+	TTSAvailable=1 is required to enable TTS in OnScreen, but also requires
+	that the appropriate classes &#38; supporting TTS software is installed on
+	the system.  Forcing this setting on a system without the appropriate
+	TTS software installed &#38; configured properly will not accomplish
+	anything.  The supporting process IMGSOUND.EXE is required
+	to handle the TTS requests within OnScreen.  When TTSAvailable=1
+	is set in OnScreen, it enables the internal processing within OnScreen
+	to hand-off the speech request to the IMGSOUND process.  The
+	setting handles the Speak Key Text under pointer processing.
+	If IMGSOUND cannot find, establish the interface, and communicate
+	with the TTS speech components, the TTS option will not operate.
+	IMG has repackaged the required Microsoft Speech Components in
+	MSSPEECH.MSI (which requires the Windows Installer).  The
+	file &#38; the support Windows Installer for early versions of Windows 98
+	and NT 4 can be found in the Speech folder on the distribution media,
+	or on the IMG WebSite.
+	Note that IMGSOUND will play "Text to Speech is Available" when 
+	OnScreen starts to indicate this capability.  If the all OnScreen TTS
+	options are disabled, this will still occur at startup of OnScreen - to
+	disable this action, remove the Speech Components - Start Menu |
+	Settings | Control Panel | Add/Remove programs, Speech Components.
+	Note that for discrete pointing devices (touchscreens, etc.) that do not
+	hover well, this setting may not operate in a desirable fashion.</P
+><A
+NAME="TTSRepeat"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSRepeat=0</B
+></SPAN
+></P
+><P
+>This setting handles the option of repeating the same key text for
+	constantly when over a key.  The TTSRepeat=1 will cause a constant
+	stream of speech requests, based on the TTSDelay (see below).
+	To disable the repeat function, set TTSRepeat=0.</P
+><A
+NAME="TTSDelay"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSDelay=20</B
+></SPAN
+></P
+><P
+>This is the delay time (in 50 ms increments) - the default 20 corresponds
+	to about 2 seconds between speech requests.  Increase the setting to
+	stretch out the delay between speech requests, or decrease the number
+	to make the repeats quicker.  Note that not all speech events are of the
+	same length, so modifying this may cause incoherent speech events.
+	If you have repeating speech events overlapping, increase this setting - 
+	this may occur if you have a slow rate set for the voice.  This setting
+	is also affects how long you must be over a specific key before the
+	key will be spoken.</P
+><A
+NAME="TTSSpeakWord"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSSpeakWord=0</B
+></SPAN
+></P
+><P
+>This setting defines whether OnScreen will speak the word upon 
+	selection in the WordComplete panel (Speak Word on Click).
+	TTSSpeakWord=1 means the word will be spoken when clicked.
+	TTSSpeakWord=0 means no speech event will occur on selection
+	in the WordComplete panel.</P
+><A
+NAME="TTSSingleCharKey"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSSingleCharKey=0</B
+></SPAN
+></P
+><P
+>When TTSAvailable=1 is set, this setting will determine how 
+	Text-To-Speech reacts when the key to be spoken has just
+	a single character.  TTSSingleCharKey=1 will speak the
+	single character key, and 0 will disable single character key
+	speech.  For intermediate &#38; advanced user, there is no need
+	to hear the "normal" keys, and this can be used to disable
+	speech for the common keys.</P
+><A
+NAME="TTSWordsKey"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSWordsKey=0</B
+></SPAN
+></P
+><P
+>When TTSAvailable=1 is set, this setting will determine how 
+	Text-To-Speech reacts when the key to be spoken has a word.
+	TTSWordsKey=1 will speak the description (or the word) on the
+	key (any key with 2 or more characters).  TTSWordsKey=0 will
+	disable speech for keys with 2 or more characters.</P
+><A
+NAME="TTSWordComplete"
+></A
+><P
+>(OnScreen only - special meaning when CrossScanner in use)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSWordComplete=0</B
+></SPAN
+></P
+><P
+>When TTSAvailable=1 is set, this setting will determine how
+	Text-To-Speech reacts when over the WordComplete words.
+	Since these are dynamic, this third subset of keys may be
+	selected independently.  Set TTSWordComplete=1 to speak
+	the WordComplete words, set TTSWordComplete=0 to disable.
+	CrossScanner: When enabled, and CrossScanner is running,
+	CrossScanner will step through the available words and speak
+	them (delay handled in CrossScanner with Menu Speed setting)
+	The CrossScanner user may select the word when it is highlighted.
+	The sequence may be restarted by clicking on the buffer key in
+	the WordComplete panel.</P
+><A
+NAME="TTSScanWordComplete"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TTSScanWordComplete=0</B
+></SPAN
+></P
+><P
+>When TTSAvailable=1 is set, and TTSWordComplete=1, this optional setting
+	will perform what CrossScanner would do if CrossScanner was running - scan the 
+	the WordComplete panel, highlighting each word, speaking each word, and if there is a 
+	mouse click, type the highlighted word.  Use TTSScanWordComplete=1 to enable the 
+	automatic scan of WordComplete candidates each time the list is updated.
+	This feature is driven by the process IMGSOUND.exe and monitors mouse 
+	clicks via the WINEVENT.DLL.  Added for a user using a non-standard pointing
+	device, and the implementation expects the selection using the left-mouse
+	click, and cancel using the right-mouse click.  There are several instances
+	where the hardware events are coded for the device, and a non-standard 
+	configuration will not work with this option. This option should be set to 
+	TTSScanWordComplete=0 if CrossScanner is in use.</P
+><A
+NAME="ExpandAKey"
+></A
+><P
+>(Originally OnScreen only, supported in slightly different ways in all releases)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ExpandAKey=0</B
+></SPAN
+></P
+><P
+>This setting defines whether the "Zoom" window will appear
+	If ExpandAKey=1, then a separate window will appear to magnify
+	the key under the mouse pointer, if ExpandAKey=0, this option
+	is disabled.</P
+><P
+>The size of the Windows is defined by the factor (see ExpandAKeyFactor
+	below).  Internal logic is used to decide if the window is above or below
+	the pointer.  If part of the key is off-screen, the key will not be displayed.
+	Note that for discrete pointing devices (touchscreens, etc.) that do not
+	hover well, this setting may not operate in a desirable fashion. For Touchscreens, and 
+	other arbitraty point input devices, the HideZoomWindow option should be enabled.</P
+><A
+NAME="ExpandAKeyFactor"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ExpandAKeyFactor=3</B
+></SPAN
+></P
+><P
+>This setting is handled automatically within OnScreen Setup:
+	Large is 3, Larger is 5, and Largest is 7.  This setting can be
+	modified directly, but if you run setup, and select OK on the 
+	Enhance dialog, the setting will be overwritten.  Valid values are
+	2-20, but anything over 10 will probably be too large for actual use.
+	Larger windows (settings) will work better on faster systems, faster video
+	sub-systems.</P
+><A
+NAME="HideZoomWindow"
+></A
+><P
+>(Originally OnScreen only, supported in slightly different ways in all releases)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>HideZoomWindow=0</B
+></SPAN
+></P
+><P
+>Added for Touchscreen support for ExpandAKey (Key Zoom), HideZoomWindow=1 will hide the 
+	magnified key when a key click occurs.  HideZoomWindow=0 results in no reaction to any 
+	clicks - the mouse cursor will need to be off <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window to remove the Zoom window.  In Windows Vista / 7, when this setting is HideZoomWindow=1, the Zoom window will automatically fade away on its own.</P
+><A
+NAME="MouseOverHiLite"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MouseOverHiLite=0</B
+></SPAN
+></P
+><P
+>This setting indicates whether the key under the pointer will be 
+	highlighted or not.  MouseOverHiLite=1 will enable the highlight,
+	MouseOverHiLite=0 will disable any highlight action.  This setting
+	can be used separately or in conjunction with the ExpandAKey (Zoom).
+	The internal operation uses the invert option within the BitBlt API call,
+	so different color settings will cause different highlight views.
+	The WordComplete panel is handled separately (it was an add-on to the
+	original design, so there may be artifacts upon resize paints) - these will
+	resolve themselves in normal operation, or slide the pointer off the OnScreen
+	window.</P
+><P
+>Note that for discrete pointing devices (touchscreens, etc.) that do not
+	hover well, this setting may not operate in a desirable fashion.</P
+><A
+NAME="ControlPanelToggleButtons"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ControlPanelToggleButtons=1</B
+></SPAN
+></P
+><P
+>This setting indicates whether the control panel (Tool Button Opens &#38; Closes
+	Control panel) will display "latched" keys or not.  When ControlPanelToggleButtons=1
+	the buttons will display as "latched" - visually down.  The ToolTextIn and ToolTextOut
+	colors will still be used (see below, [Colors]).  For original operation, set
+	ControlPanelToggleButtons=0.</P
+><P
+>Note: This setting is not available in OnScreen Setup, it is only available here.</P
+><A
+NAME="EnableMouseScroll"
+></A
+><P
+>(Versions later than 1.75, OnScreen)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>EnableMouseScroll=1</B
+></SPAN
+></P
+><P
+>When EnableMouseScroll=1, and OnScreen is larger than the screen display,
+and a portion is not displayed, by holding the mouse pointer at the edge of the 
+screen where OnScreen scrolls off the display, the OnScreen window will 
+be moved back onto the display, in increments set by the ScrollMovePixels
+(see below).  In operation, it is more intuitive than the description - by moving
+the mouse toward the portion of OnScreen you wish to access &#38; holding at the
+display edge, OnScreen will scroll into view.  To disable this action, set
+EnableMouseScroll=0</P
+><A
+NAME="EnableScreenScroll"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>EnableScreenScroll=0</B
+></SPAN
+></P
+><P
+>This setting has been added for CrossScanner &#38; touchscreen users.  Since the
+ability to hold the mouse pointer at a particular location, e.g. the screen edge is
+difficult with various pointing devices (see EnableMouseScroll above), when 
+EnableScreenScroll=1 (Enable Scroll Window - OnScreen Setup | Appearance | Size)
+a scroll Window will appear with a slider, and buttons to move the OnScreen window.
+Because this takes screen real-estate, and OnScreen may be moved by dragging, and
+not all users operate OnScreen in a configuration that is larger than the 
+display size, it is default off (EnableScreenScroll=0).</P
+><A
+NAME="ScrollMovePixels"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScrollMovePixels=6</B
+></SPAN
+></P
+><P
+>This is the amount of move that will occur for EnableMouseScroll / EnableScreenScroll
+settings (see above).  For quicker movement, increase the number.  Because the
+purpose of this scroll is to access portions of OnScreen not visible, smooth
+scrolling may not be as high-priority as speed of operation.  Note that as the number
+of pixels get larger, the choppier the scroll onto the display will appear.  Note that
+speed of the system and video sub-system will affect the actual operation.</P
+><A
+NAME="CenterOversize"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CenterOversize=1</B
+></SPAN
+></P
+><P
+>This setting handles the position of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> when sized, and the resultant
+size is wider than the screen width.  If CenterOversize=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will be
+centered, leaving an equal portion off the left side of the screen &#38; off the 
+right side of the screen.  If CenterOversize=0, then the left side of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+will be aligned with the left side of the screen display, leaving the right-hand
+portion of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> off the screen.  CrossScanner users may prefer 
+setting CenterOversize=0.</P
+><A
+NAME="CrossScanner"
+></A
+><P
+>(OnScreen with CrossScanner only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CrossScanner=1</B
+></SPAN
+></P
+><P
+>This is an internal setting set by CrossScanner to handle different interface
+settings required by CrossScanner (different from the standard interface
+settings for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>).  The communication between OnScreen and 
+CrossScanner is handled automatically, and this setting should not
+be modified manually.  The following section will be created to handle
+the reset of OnScreen when CrossScanner is asleep or closed:</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[CrossScanner]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MinimizeToButton=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>NoHooksEver=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ForceUnHook=0</B
+></SPAN
+></P
+><P
+>These settings track the original settings of OnScreen and are
+handled dynamically by CrossScanner and OnScreen.  They should
+not be modified manually.  If there are any problems with interface 
+settings when OnScreen is run independent of CrossScanner, use
+OnScreen Setup to re-configure</P
+><A
+NAME="LetterAssist"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LetterAssist=1</B
+></SPAN
+></P
+><P
+>This setting controls the look-ahead and letter selection processing when using the WordComplete panel.  When LetterAssist=1, based on the currently typed letters and the lookup word list, only possible next letters will be available to the user.  When LetterAssist=0, no additional look-ahead processing will occur, and no modification to the keys available to the user will be done.</P
+><A
+NAME="ShowAsGrayed"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ShowAsGrayed=1</B
+></SPAN
+></P
+><P
+>This setting is only available when LetterAssist=1.  When ShowAsGrayed=1, letters not possible (based on the current letters typed and the current word list) will be shown as grayed out letters.  When ShowAsGrayed=0, for any letter that is not possible (based on the current letters typed and the current word list), the entire key will not be shown and will not be available to the user.</P
+><A
+NAME="AllowGrayedKey"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AllowGrayedKey=1</B
+></SPAN
+></P
+><P
+>This setting is only available when LetterAssist=1 and ShowAsGrayed=1. When AllowedGrayedKey=1, the user will still be able to select and type with grayed out keys (those that will not build words based on the current letters typed and the current word list).  When AllowedGrayedKey=0, the grayed keys will not be selectable.</P
+><A
+NAME="KeysOnlyAssist"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeysOnlyAssist=0</B
+></SPAN
+></P
+><P
+>The setting is referred to as WC-Assist, or WordComplete Assist.  When KeysOnlyAssist=1, the top row of number keys on the keyboard panel turns into 2 sets of 1-5 selection buttons when WordComplete candidates are available (colored the same as the WordCompletion candidate buttons).  When KeysOnlyAssist=0, no action occurs.</P
+><A
+NAME="KeysOnlyAssistNumbers"
+></A
+><P
+>(OnScreen only)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeysOnlyAssistNumbers=0</B
+></SPAN
+></P
+><P
+>This setting is only relevant when KeysOnlyAssist=1, and this is only available in the INI file.  When KeysOnly AssistNumbers=1, the function key row is replaced by number keys (to replace the number keys overtaken by the WordComplete candidate selection buttons) when WordComplete candidates are available.  In most typing situations, function keys are not used very often, and this provides number keys as an alternative to temporarily disabling the WC-Assist function to access the number keys.</P
+><A
+NAME="NumPadAlways"
+></A
+><P
+>(Added in 1.75a)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>NumPadAlways=0</B
+></SPAN
+></P
+><P
+>This is an option available only in the INI file, requested by a customer.
+By default, the Numeric keypad acts exactly like a physical keyboard, and
+responds to the state of the Num Lock setting.
+When NumPadAlways=1, the Numeric keypad (Num Panel), will always
+act as if the Num Lock is on &#38; type numbers, ignoring the actual state
+of the Num Lock toggle / light / keyboard state.
+This was requested to ensure proper operation if the user accidentally
+toggles the Num lock, or another application modified this keyboard state.</P
+><A
+NAME="Win2000ShutDown"
+></A
+><P
+>(Added in 1.75d)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Win2000ShutDown=1</B
+></SPAN
+></P
+><P
+>During the shut down sequence in Windows 2000, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is still enabled,
+and can cause painting problems if moved or configured.  Set Win2000ShutDown=1
+to disable <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> during this ShutDown dialog.  If you wish <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to operate
+during the Shut Down sequence (or any similar dialog in Windows), set
+Win2000ShutDown=0.  This problem is not seen in Windows XP.
+When Win2000ShutDown enabled, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> monitors for a Dialog as Topmost,
+with DS_FIXEDSYS, DS_CENTER styles.  If this type of dialog found, then special
+internal handling occurs - If opened or minimized to button, moving and the window
+is disabled, for other minimized options</P
+><A
+NAME="DisplayChangeEnabled"
+></A
+><P
+>(Added in 1.75F)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DisplayChangeEnabled=1</B
+></SPAN
+></P
+><P
+>This setting determines how <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> responds to the Display Change
+Window message when the resolution is changed (e.g. rotation, changing
+color depths, or screen appearance).  When DisplayChangeEnabled=1
+<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will reposition in an analogous position on the new display
+configuration.  <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will reposition itself on screen if any portion was
+positioned off screen.  If DisplayChangeEnabled=2, then the attempt to
+preserve an analogous position will be maintained - if using rotation software
+(portrait / landscape), then this setting is not recommended, as it could result
+in positioning <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> off screen after a rotation.</P
+><A
+NAME="SessionChangeEnabled"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SessionChangeEnabled=0</B
+></SPAN
+></P
+><P
+>This setting determines how <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> responds to the Session Change
+Window message when the session is changed (e.g. Fast User Switching).
+When SessionChangeEnabled=1, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will automatically open from a
+minimized state (if necessary) and restore settings.
+With the user specific settings (ConfigPath=1 or ConfigPath=2), this
+is not relevant, but if ConfigPath=0 or ConfigPath=3, then
+this option could still be required, especially in Windows XP.
+When there are shared settings, one user can modify settings, and then
+a session change event can occur.  To prevent synchronization issues
+between the saved settings and active configuration, when the session
+change event occurs (and the Session Change Message is sent), <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+will restore settings from the current saved settings.</P
+><A
+NAME="ReadOnlyOK"
+></A
+><P
+>(Added in 1.76)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ReadOnlyOK=0</B
+></SPAN
+></P
+><P
+>This setting was added for the Windows NT based platforms to address some
+security concerns.  If ReadOnlyOK=1, then files will be opened as Read Only,
+and Saving configurations / options, etc. from with <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will not occur.
+When ReadOnlyOK=0, the KEYBOARD.KBF file will be opened with Read/
+Write access, and Read/Write access will be expected for MYTSOFT.INI.
+In secure situations where users will be granted Read / Read &#38; Execute
+permissions, this setting allows operation of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> in a Read Only
+mode.  Note that reconfiguring is possible during operation (unless the 
+Operator Mode is enabled), but <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will always open with the 
+"original" settings from KEYBOARD.KBF &#38; MYTSOFT.INI.
+1.77 Note - to use this option, AllowReadOnlyOperation must be 0
+There is a slight distinction between the 2 settings.  If 
+AllowReadOnlyOperation=0 and ReadOnlyOK=1, then the
+configuration files will always be opened in a read-only mode,
+and the configuration cannot be updated.  If 
+AllowReadOnlyOperation=1 (ReadOnlyOK ignored), then files 
+will be opened as read/write UNLESS this fails
+because of user rights, then they will be opened as read-only.
+To prevent operation of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> if user has read-only rights,
+set both ReadOnlyOK=0, and AllowReadOnlyOperation=0</P
+><A
+NAME="AllowReadOnlyOperation"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AllowReadOnlyOperation=1</B
+></SPAN
+></P
+><P
+>This setting is an override for the ReadOnlyOK setting to address limited
+rights users in Windows NT based platforms.  In 1.77 it is default On, 
+bypassing the error message when the KEYBOARD.KBF &#38; MYTSOFT.INI
+files are Read Only, and running <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> as if ReadOnlyOK was set on</P
+><A
+NAME="ManualToolControl"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ManualToolControl=0</B
+></SPAN
+></P
+><P
+>The tool bar can be turned off in 1.77, and this setting determines if there
+is any manual interface available to toggle the tool bar.  The original design
+of the software used the tool bar as the anchor &#38; always visible element so
+the user would be able to manipulate the configuration as desired.  Developers
+requested that this panel be removed so the user has limited options with the
+software when it is tightly integrated into an application.  In earlier versions, the
+operator mode / custom logo options allowed some control over this panel.
+Refer to the Developer's Kit for tools to manipulate this panel programmatically.
+This setting allows manual control by the user when enabled.
+When ManualToolControl=1, a 3-click approach can be used to toggle the tool
+bar.  By clicking 3 times (1-2-3) in the same spot (border or non-key areas only),
+the tool bar panel will close if opened, or open if closed.
+When ManualToolControl=0, this action is ignored.  For touchscreens (&#38; other 
+less accurate pointing devices), you may set ManualToolControl to a larger value.
+If more than 1, then the number indicates the number pixels of "jitter" that will be 
+allowed to count the click as part of the 1-2-3 sequence.  For example,
+ManualToolControl=5 enables the 3-click tracking, and allows a +/- 5 pixel range
+from the 1st click to count as the second &#38; third clicks.</P
+><A
+NAME="WindowsKeysGraphics"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WindowsKeysGraphics=1</B
+></SPAN
+></P
+><P
+>This setting controls whether the graphics are displayed on the Windows Key and
+Applications key on the 104-key layouts.  When WindowsKeysGraphics=1, 
+bitmap images are overlaid onto the keys.  For smaller sizes, these may be unclear,
+since a StretchBlt operation is performed.  Set WindowsKeysGraphics=0 to disable
+this option - the text label for the Windows key is "Wnds", and the Application key 
+is "App"</P
+><A
+NAME="WindowsKeyWndsLatch"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WindowsKeyWndsLatch=1</B
+></SPAN
+></P
+><P
+>This setting affects the operation of the Windows key on the 104 key layouts.
+When WindowsKeyWndsLatch=1, the key will latch in a down position, allowing
+it to modify the next key typed.  This is for Windows functions such as Win-E or
+Win-F (Search for Files, etc.) - this is the default setting.
+If WindowsKeyWndsLatch=0, the key will not latch, and operate as a simple
+key, sending a down/up release on down/up press.  By default, this will open
+the start menu.  You will not be able to operate the Windows shortcut option
+with this setting, since the key will not latch down.  However, macros can still
+be used with this setting at 0.</P
+><A
+NAME="TabletPCEnabled"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TabletPCEnabled=1</B
+></SPAN
+></P
+><P
+>This setting affects operation within Windows XP, Tablet PC edition.
+When TabletPCEnabled=1, Pnlwatch.exe will be executed, which monitors
+if the Tablet PC Input Panel.  PanelWatch monitors the request for the 
+Tablet PC Input Panel, and coordinates display of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.
+When enabled, Pnlwatch.exe is placed in the All Users Startup 
+Group as <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Tablet PC Interface.
+PanelWatch can also be controlled manually.  When run normally
+PanelWatch does not show a window or create any display for the
+user.  When PNLWATCH.EXE is run directly (or the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+Tablet PC Interface is run from the StartUp Menu), PanelWatch
+will display an icon in the System Tray (notification area next to
+the clock).  So if PanelWatch is already running, running it again
+will toggle the display of a notification icon.
+When Enabled from the menu, the TabletPCEnabled=1 is set
+PanelWatch is run, and the StartUp icon is created in the 
+All Users group (as long as user has sufficient rights to create
+this shortcut file).  When disabled, TabletPCEnabled=0 is set,
+PanelWatch is closed, and the StartUp group icon is removed.</P
+><A
+NAME="MenuForceForeground"
+></A
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MenuForceForeground=0</B
+></SPAN
+></P
+><P
+>This is a setting that determines how the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> menu is handled
+in Windows 2000/XP.  In order to handle input focus issues, by default
+the opening the menu does not bring <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to the foreground as the
+input window - this causes some interface issues (menu falls behind
+other windows, does not clear if click on other windows, etc.).  These
+user interface issues may be undesirable to some users, and this
+option allows for user preferences
+If MenuForceForeground=0, menu issues may result, but window
+with current keyboard input focus will remain - typing on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+will type into current foreground window.
+If MenuForceForeground=1, menu issues will not occur, but <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+will become foreground window - user must reselect typing window
+before typing on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><A
+NAME="SaveAfterMove"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SaveAfterMove=0</B
+></SPAN
+></P
+><A
+NAME="SaveAfterChange"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SaveAfterChange=0</B
+></SPAN
+></P
+><A
+NAME="SaveAtClose"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SaveAtClose=0</B
+></SPAN
+></P
+><A
+NAME="SaveAtEndSession"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SaveAtEndSession=0</B
+></SPAN
+></P
+><P
+>These settings are used to trigger an automatic save of the current
+settings and position of the keyboard window, after the appropriate
+event.  SaveAfterMove=1, means that after any keyboard window move,
+the settings and position will be saved.  If SaveAfterChange=1,
+then the settings and position will be saved after any panel is
+opened or closed, or sized up or down.  If SaveAtClose=1,
+then the settings and position will be saved when the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is closed.
+If SaveAtEndSession=1, and if the user logs off or shuts down the system,
+then the settings and position will be saved.  Note that SaveAtClose and/or
+SaveAtEndSession effectively override SaveAfterMove and SaveAfterChange,
+since eventually <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will be closed, or the user will shut down / log off,
+and the current settings will be saved.  Also, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> can't be restarted (to
+use the current settings and position without being closed at some point.</P
+><A
+NAME="TerminalServerConsoleEnabled"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TerminalServerConsoleEnable=0</B
+></SPAN
+></P
+><P
+>This setting allows a non-server based product to run in the context of the server 
+console.  In general, only My-T-Soft TS should be used on a server where Terminal Services 
+are available.  However, there have been times when (for various reasons) customers run a 
+server based operating system as a stand-alone machine.  When TerminalServerConsoleEnable=1 
+for the non-server based products, the normal licensing will enable these products to run 
+on a server, in the context of the server console (i.e. at the display monitor for the 
+server, but NOT as a remote terminal).  By default, the non-server products sense this operation, 
+ask if this desired, and save TerminalServerConsoleEnable=1 automatically.</P
+><A
+NAME="EnableScan"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>EnableScan=0</B
+></SPAN
+></P
+><P
+>When EnableScan=1, keyboard scanning is enabled, and a transparent overlay is used to indicate
+the current scanning area within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  The following settings ONLY apply when EnableScan=1.  When
+EnableScan=0, keyboard scanning is disabled.  Only in OnScreen does the user have access to this setting 
+from OnScreen Setup, but keyboard scanning is available for all 1.78 versions.</P
+><A
+NAME="ScanSound"
+></A
+><P
+>(Added in 1.78 R2)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanSound=1</B
+></SPAN
+></P
+><P
+>This setting controls the sound for each discrete scanning step.  When ScanSound=0, there is no sound used.  When ScanSound=1, a "scan" sound is used.  When ScanSound=2, Text-To-Speech is used, announcing panels, rows/columns, and individual keys based on settings for Text-To-Speech announcements for the scan groupings (see below).  For ScanSound=1, the wave file is "scan-sound.wav" in the SOUNDS folder.</P
+><A
+NAME="ScanEnableDisableSound"
+></A
+><P
+>(Added in 1.78 R2)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanEnableDisableSound=1</B
+></SPAN
+></P
+><P
+>When ScanEnableDisableSound=1 is set, a special "Enabled" and "Disabled" sound (scan-enable.wav and scan-disable.wav in the SOUNDS folder) is played when scanning is enabled or disabled.  This is helpful if Alt-X is used to toggle scanning (e.g. a trainer working with a user).</P
+><A
+NAME="ScanColor"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanColor=0</B
+></SPAN
+></P
+><P
+>If ScanColor=0, an inverted color display of the current scan area is used within the scanning overlay  If ScanColor=1 a black overlay is used during scanning, and if ScanColor=2, then a white overlay is used.  Depending on the transparency setting, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> colors, the display itself, and the user, one color setting may be easier to distinguish over the other.</P
+><A
+NAME="ScanTransparencyLevel"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanTransparencyLevel=255</B
+></SPAN
+></P
+><P
+>This setting can take on values between 1 and 255.  In the Scanning Settings dialog, this is translated into  percentage, where 100% is 255.  Technically this is an "opaqueness" setting, as larger numbers make
+the transparent overlay more opaque.  Low values may make the actual overlay impossible to see, and high values will prevent seeing through the overlay, making it ineffective.  Suggested values range between 50 and 150, with the default at 70 for black and white, and invert is at the fully opaque 255.</P
+><A
+NAME="ScanTime"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanTime=1200</B
+></SPAN
+></P
+><P
+>This is a setting in milliseconds that defines the amount of time spent at each scan step.  The default of 1200 relates to a 1.2 second delay between each successive scan step.  From the Scanning Settings dialog, values can be set between 50 and 5000.  Values below 500 are not recommended.  This setting is also used as the Timeout After setting when Step Scan is selected as the right-click mode, but it is used at three times the current setting, so a 1200 setting results in a timeout waiting period of 3600 milliseconds, or 3.6 seconds.</P
+><A
+NAME="ScanRightClickMode"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanRightClickMode=2</B
+></SPAN
+></P
+><P
+>There are 8 different right-click settings:</P
+><P
+></P
+><UL
+><LI
+><P
+>ScanRightClickMode=0 means that the right-click is not used at all.  This should be set if the user cannot use, or does not have access to a right-click event (second button).  Note that even when set this way, a right-click can still result in a reset of the cursor clipping that is engaged during active scanning.  Also note that if this is set to 0, it is critical that the ScanReverseAfterNumScans be set to some value other than 0, otherwise the user will always be forced to fully complete a scan, or be forever stuck at a scan level with no way to revert up a scan level.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=1 corresponds to a full reset to the top level Panels scan, so a right-click during any scan level will reset and begin at a top level Panels scan.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=2 is the default, and acts as the reverse of the left-click, meaning the current scan level goes up to the previous level.  So a right-click during a Key scan will go to the Panel scan.  A right-click during a Panel scan goes to the Panels scan, and a right-click during a Panels scan will Stop scanning (while leaving the scanning overlay at the current panel).  At this stopped level, a left-click will re-engage scanning again.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=3 means that a right-click will stop scanning at the current scan level, leaving the scan overlay untouched.  A left-click will re-engage scanning at the same level.</P
+></LI
+><LI
+><P
+>For ScanRightClickMode=2 &#38; ScanRightClickMode=3, when stopped (paused), an additional right-click will move the scan overlay off of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> and display "Left Click Here to Start Scanning", which will engage the scanning process.  This allows a trainer or assistant to fully access <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> and still be able to quickly re-enable scanning.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=4 results in a right-click advancing the scan (rather than the timer advancing the scan).  This step scan allows the right-click to advanced &#38; move forward the scan at the user's speed, rather than a fixed timer rate.  This also enables several changes - instead of scan speed setting, this value is used as a timeout after rate (multiplied by 3), which will revert up one level if the timeout period expires.  Also, the physical keyboard is monitored, and when both the Control key and Alt keys are held down (e.g. [Ctrl]-[Alt]) on the physical keyboard, this scan mode will stop (right-click on <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to restart the scan process).</P
+></LI
+><LI
+><P
+>ScanRightClickMode=5 results in a right-click aborting the current scan, and acts as though the scan was fully completed (i.e. all the way to key selection), and then resets based on the Next scan setting.  This allows quick resets using the right button while scanning.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=6 results in a right-click cancelling scanning completely.  Only returning
+to <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup &#38; re-enabling scanning again will scanning be made available.</P
+></LI
+><LI
+><P
+>ScanRightClickMode=7 results in a right-click acting like a left-click.  This setting allows either click to trigger a scan step/selection.</P
+></LI
+></UL
+><A
+NAME="ScanLeftClickMode"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanLeftClickMode=0</B
+></SPAN
+></P
+><P
+>There are 4 different left-click settings (3 effective) that affect what happens after the left-click action occurs.  In general, the left-click steps down to the next scanning level.  If stopped, scanning begins at the Panels scan, scanning individual panels.  During the Panels scan, a panel is selected by the left-click, and the panel scan commences.  While scanning groups of keys (as defined for the panel), a left-click will begin an individual key scan.  Finally, during a key scan, a left-click will select the key, and act as a a "type" event for the key (e.g. selecting the key).  The ScanLeftClickMode affects what happens after this final key selection (i.e. Post Action)  These are the 4 possible settings:</P
+><P
+></P
+><UL
+><LI
+><P
+>ScanLeftClickMode=0 is the default setting, and means that the internal handling is not modified in any way, which is to revert up to the current panel scan (e.g. the middle level).  So during a keyboard scan, and a subsequent key selection, the keyboard panel will continue to be scanned.</P
+></LI
+><LI
+><P
+>ScanLeftClickMode=1 corresponds to the same group of keys being scanned, e.g. the scan remains at the key scan level.</P
+></LI
+><LI
+><P
+>ScanLeftClickMode=2 means that the current panel will be scanned at the panel scan.  Although this is handled slightly differently internally, the effective result is the same as ScanLeftClickMode=0 (or the default setting).  Because the internal coding is different, the setting is here to address this different implementation.</P
+></LI
+><LI
+><P
+>ScanLeftClickMode=3 results in a revert to the top level Panels scan after a key selection.</P
+></LI
+></UL
+><A
+NAME="ScanReverseAfterNumScans"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanReverseAfterNumScans=2</B
+></SPAN
+></P
+><P
+>This setting determines how many times a particular level will be scanned, before automatically returning to the next higher level.  At the Panels scan level, if the count is reached, the scanning will stop, leaving the current panel highlight by the scan overlay (a left-click will restart the scan).  If ScanReverseAfterNumScan=0, there is no maximum, and a scan will continue at the same level until a user selects a scan highlight with a left-click, or performs a right-click action.  Because this setting is potentially problematic if there is no right-click available, this setting cannot be set to No Maximum if the Right-Click mode is set as None (or not available).  In other words, never set ScanReverseAfterNumsScans=0 and ScanRightClickMode=0.  Any positive number for ScanReverseAfterNumScans results in an internal count, that will revert up one level after the count is passed.  In Scanning Settings, values of 1-6 are available, but this value can be any positive number (e.g. 1, 10, 20, etc.)</P
+><A
+NAME="ScanShowAllOptions"
+></A
+><P
+>(Added in 1.78 R2)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanShowAllOptions=0</B
+></SPAN
+></P
+><P
+>This setting indicates whether all options will be shown for the "Next Scan" and "Right-Click (2nd Button) Mode".  As the scanning options became more complex, it was suggested that we default to a limited number of options that address the majority of scanning usage.  When ScanShowAllOptions=1, then all possible options are listed and shown in the drop down lists for these 2 settings.  When ScanShowAllOption=0, a limited set of options are shown.  The order of some of the items will change based on this setting.</P
+><A
+NAME="ScanOpenPanels"
+></A
+><P
+>(Added in 1.78 R2)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanOpenPanels=1</B
+></SPAN
+></P
+><P
+>When ScanOpenPanels=1, the customized panel options are not available, and during scanning, all open panels will be scanned, left-to-right.  When ScanOpenPanels=0, then the ScanOrder setting determines the panels that are scanned and their order.</P
+><A
+NAME="ScanOrder"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanOrder=WordComplete,KeyboardAlpha</B
+></SPAN
+></P
+><P
+>The ScanOrder determines the order of the Panels scan level.  The order is left to right as listed.  Panels should not be duplicated.  This list can be easily manipulated and generated from the Scanning Settings.  The complete list of panels available (9 total) is: ScanOrder=WordComplete,KeyboardAlpha,KeyboardEdit,KeyboardNum,Toolbar,ControlPanel,WindowsControls,Macro,Calculator, and the naming should be self-describing of the actual panels in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>  Note that in the commercial versions, the WordComplete panel corresponds to the Magnifier panel.
+</P
+><P
+>Here are various examples &#38; scanning orders for the panels:</P
+><P
+>ScanOrder=WordComplete,KeyboardNum,Calculator</P
+><P
+>ScanOrder=Calculator,ControlPanel,Toolbar,Macro,WindowsControls,KeyboardNum,KeyboardEdit,KeyboardAlpha,WordComplete</P
+><P
+>ScanOrder=Calculator,KeyboardNum,KeyboardAlpha,KeyboardEdit,Toolbar,WordComplete,ControlPanel,Macro,WindowsControls</P
+><P
+>ScanOrder=WordComplete,KeyboardNum,Calculator</P
+><P
+>ScanOrder=Calculator,Controlpanel,Toolbar,KeyboardNum,WordComplete</P
+><P
+>ScanOrder=KeyboardAlpha,KeyboardEdit,KeyboardNum,Toolbar,ControlPanel</P
+><P
+>ScanOrder=ControlPanel,Toolbar,KeyboardNum,KeyboardEdit,KeyboardAlpha</P
+><P
+>For each panel in ScanOrder, there needs to be a corresponding Scan[Panel] entry below that lists key groupings for the corresponding panel.  In all cases, the keys are numbered from 1 to the maximum number of keys on the panel.  Groupings are separated by semi-colons (;), and individual keys are separated in the group with a comma (,).  It is important that only valid key numbers are used, otherwise the bounding scan overlay may be incorrect, and potentially cause other problems because of internal table lookups.  It is also important that no spaces be used, or any other characters or punctuation.  Also, there is an internal maximum of 25 groupings allowed - if this is exceeded, the additional groupings will not be used.  In order to provide additional examples (showing alternative groupings and row vs. column scans) and the correct entries, the following lists various examples for each panel, along with the default settings.
+</P
+><P
+>Text-To-Speech announcements can be embedded within these groupings, so each row or column can be named, and announced when Text-To-Speech is enabled within the Sounds section.  All that is required is that the word or phrase be included prior to the keys listing, enclosed in square brackets (examples below).  This is stripped out prior to processing the key sequence.  It is important that the square brackets be opened and closed correctly, and that there be no punctuation outside the square brackets (spaces, etc. are allowed within the square bracket set, but no other square brackets can be used).  The panel descriptions are currently fixed internally.
+</P
+><A
+NAME="ScanWordComplete"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanWordComplete=1,4,7,10,13;2,5,8,11,14;3,6,9,12,15;</B
+></SPAN
+></P
+><P
+>There are 15 keys on the WordComplete panel.  The default scan settings scans the WordComplete setting as columns, which is more effective for accessing the WordComplete candidate column.</P
+><P
+>;;This is a row scan of the WordComplete panel</P
+><P
+>ScanWordComplete=1,2,3;4,5,6;7,8,9;10,11,12;13,14,15;</P
+><P
+>;;This is the column scan of the WordComplete panel with Text-To-Speech announcements</P
+><P
+>ScanWordComplete=[Options]1,4,7,10,13;[Words]2,5,8,11,14;[Actions]3,6,9,12,15;</P
+><A
+NAME="ScanKeyboardAlpha"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>&#13;ScanKeyboardAlpha=1,2,3,4,5,6,7,8,9,10,11,12,13; 14,15,16,17,18,19,20,21,22,23,24,25,26,27; 28,29,30,31,32,33,34,35,36,37,38,39,40,53; 41,42,43,44,45,46,47,48,49,50,51,52,54; 55,56,57,58,59,60,61,62,63,64,65,66,67;68,69,70,71,72
+</B
+></SPAN
+></P
+><P
+>There are 72 keys on the Keyboard (Alpha) panel (101 layouts) and 75 keys for the 104 layouts.  The default scanning is in rows.</P
+><P
+>;;This is for row scan top to bottom with Text-To-Speech Announcements</P
+><P
+>ScanKeyboardAlpha=[Function Keys]1,2,3,4,5,6,7,8,9,10,11,12,13; [Numbers]14,15,16,17,18,19,20,21,22,23,24,25,26,27; [Q row]28,29,30,31,32,33,34,35,36,37,38,39,40,53; [Home row]41,42,43,44,45,46,47,48,49,50,51,52,54; [Shift row]55,56,57,58,59,60,61,62,63,64,65,66,67; [Final row]68,69,70,71,72</P
+><P
+>;;This for 101 layout</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanKeyboardAlpha=1,2,3,4,5,6,7,8,9,10,11,12,13; 14,15,16,17,18,19,20,21,22,23,24,25,26,27; 28,29,30,31,32,33,34,35,36,37,38,39,40,53; 41,42,43,44,45,46,47,48,49,50,51,52,54; 55,56,57,58,59,60,61,62,63,64,65,66,67; 68,69,70,71,72</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanKeyboardAlpha=68,69,70,71,72; 55,56,57,58,59,60,61,62,63,64,65,66,67; 41,42,43,44,45,46,47,48,49,50,51,52,54; 28,29,30,31,32,33,34,35,36,37,38,39,40,53; 14,15,16,17,18,19,20,21,22,23,24,25,26,27; 1,2,3,4,5,6,7,8,9,10,11,12,13</P
+><P
+>;;This for 104 layout</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanKeyboardAlpha=1,2,3,4,5,6,7,8,9,10,11,12,13; 14,15,16,17,18,19,20,21,22,23,24,25,26,27; 28,29,30,31,32,33,34,35,36,37,38,39,40,53; 41,42,43,44,45,46,47,48,49,50,51,52,54; 55,56,57,58,59,60,61,62,63,64,65,66,67; 68,73,69,70,71,74,72</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanKeyboardAlpha=68,73,69,70,71,74,72; 55,56,57,58,59,60,61,62,63,64,65,66,67; 41,42,43,44,45,46,47,48,49,50,51,52,54; 28,29,30,31,32,33,34,35,36,37,38,39,40,53; 14,15,16,17,18,19,20,21,22,23,24,25,26,27; 1,2,3,4,5,6,7,8,9,10,11,12,13;</P
+><A
+NAME="ScanKeyboardEdit"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanKeyboardEdit=1,2,3;4,5,6;7,8,9;10,11,12,13;</B
+></SPAN
+></P
+><P
+>There are 13 keys on the Keyboard (Edit) panel.  The default scan settings scans in rows, with the cursor arrow keys as one block.</P
+><P
+>;;This is row scan top to bottom</P
+><P
+>ScanKeyboardEdit=1,2,3;4,5,6;7,8,9;10,11,12,13;</P
+><P
+>;;This is row scan bottom to top</P
+><P
+>ScanKeyboardEdit=10,11,12,13;7,8,9;4,5,6;1,2,3;</P
+><P
+>;;This is column scan left</P
+><P
+>ScanKeyboardEdit=1,4,7,11;2,5,8,10,12;3,6,9,13;</P
+><P
+>;;This is column scan right</P
+><P
+>ScanKeyboardEdit=3,6,9,13;2,5,8,10,12;1,4,7,11;</P
+><A
+NAME="ScanKeyboardNum"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanKeyboardNum=1,2,3,4;5,6,7;9,10,11;12,13,14;16,17;8,15;</B
+></SPAN
+></P
+><P
+>There are 17 keys on the Keyboard (Numpad/numeric) panel.  The default scan settings scans in rows, with special handling for the elongated buttons on the right.</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanKeyboardNum=1,2,3,4;5,6,7;9,10,11;12,13,14;16,17;8,15;</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanKeyboardNum=8,15;16,17;12,13,14;9,10,11;5,6,7;1,2,3,4;</P
+><A
+NAME="ScanToolBar"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanToolBar=1;</B
+></SPAN
+></P
+><P
+>There are 3 keys on the Toolbar panel.  The default scan settings only highlights the top tool button.  Note that this means the panel scan and the key scan are the same, meaning 2 left-clicks are required to select the key.</P
+><P
+>;;This scans all three buttons (but not recommended for the scanning user)</P
+><P
+>ScanToolBar=1;2;3;</P
+><P
+>;;This scans all three buttons in an overlapping group </P
+><P
+>ScanToolBar=1,2;2,3;</P
+><A
+NAME="ScanControlPanel"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanControlPanel=1,2;3,4;5,6;7,8;9,10;11,12;</B
+></SPAN
+></P
+><P
+>There are 12 keys on the control panel.  The default scan settings highlights the 6 rows of 2 buttons.</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanControlPanel=1,2;3,4;5,6;7,8;9,10;11,12;</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanControlPanel=11,12;9,10;7,8;5,6;3,4;1,2;</P
+><P
+>;;This is for column scan left to right</P
+><P
+>ScanControlPanel=1,3,5,7,9,11;2,4,6,8,10,12;</P
+><P
+>;;This is for column scan right to left</P
+><P
+>ScanControlPanel=2,4,6,8,10,12;1,3,5,7,9,11;</P
+><A
+NAME="ScanMacro"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanMacro=1;2,3,4;5,6,7;8,9,10;11,12,13;14,15,16;</B
+></SPAN
+></P
+><P
+>There are 16 keys on the Macro panel.  The default scan settings highlights the top button and the 5 rows of 3 buttons.</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanMacro=1;2,3,4;5,6,7;8,9,10;11,12,13;14,15,16;</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanMacro=14,15,16;11,12,13;8,9,10;5,6,7;2,3,4;1;</P
+><P
+>;;This is for column scan left to right</P
+><P
+>ScanMacro=1;2,5,8,11,14;3,6,9,12,15;4,7,10,13,16;</P
+><P
+>;;This is for column scan right to left</P
+><P
+>ScanMacro=1;4,7,10,13,16;3,6,9,12,15;2,5,8,11,14;</P
+><A
+NAME="ScanWindowsControls"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ScanWindowsControls=1,2,3;4,5,6;7,8,9;10,11,12;13,14,15;16,17,18;</B
+></SPAN
+></P
+><P
+>There are 18 keys on the Windows Controls panel.  The default scan settings highlights the 6 rows of 3 buttons.</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanWindowsControls=1,2,3;4,5,6;7,8,9;10,11,12;13,14,15;16,17,18;</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanWindowsControls=16,17,18;13,14,15;10,11,12;7,8,9;4,5,6;1,2,3;</P
+><P
+>;;This is for column scan left to right</P
+><P
+>ScanWindowsControls=1,4,7,10,13,16;2,5,8,11,14,17;3,6,9,12,15,18;</P
+><P
+>;;This is for column scan right to left</P
+><P
+>ScanWindowsControls=3,6,9,12,15,18;2,5,8,11,14,17;1,4,7,10,13,16;</P
+><A
+NAME="ScanCalculator"
+></A
+><P
+>(Added in 1.78)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>&#13;ScanCalculator=1,2,3;4,5,6,7,8;10,11,12,13,14;15,16,17,18,19;21,22,23,24,25;9,20</B
+></SPAN
+></P
+><P
+>There are 25 keys on the Calculator panel.  The default scan settings highlights the rows, and handles the elongated buttons on the right separately.</P
+><P
+>;;This is for row scan top to bottom</P
+><P
+>ScanCalculator=1,2,3;4,5,6,7,8;10,11,12,13,14;15,16,17,18,19;21,22,23,24,25;9,20</P
+><P
+>;;This is for row scan bottom to top</P
+><P
+>ScanCalculator=9,20;21,22,23,24,25;15,16,17,18,19;10,11,12,13,14;4,5,6,7,8;1,2,3</P
+><P
+>;;This is for column scan left to right</P
+><P
+>ScanCalculator=1;2;3;4,10,15,21;5,11,16,22;6,12,17,23;7,13,24,18;8,14,19,25;9,20</P
+><P
+>;;This is for column scan right to left</P
+><P
+>ScanCalculator=3;2;1;9,20;8,14,19,25;7,13,24,18;6,12,17,23;5,11,16,22;4,10,15,21</P
+><A
+NAME="ShiftLock"
+></A
+><P
+>(Added in 1.79)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ShiftLock=0</B
+></SPAN
+></P
+><P
+>When ShiftLock=1, the role of the Shift key changes - when the Shift key is pressed, it will stay in the Shift state until the Shift key is pressed again.  ShiftLock=0 means the Shift state will clear when another key is pressed - this is the default operation.  Note when Multi-Touch is enabled, the Shift key can be held down by a constant pressed down input.</P
+><A
+NAME="ControlLock"
+></A
+><P
+>(Added in 1.79)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ControlLock=0</B
+></SPAN
+></P
+><P
+>When ControlLock=1, the role of the Control key changes - when the Control key is pressed, it will stay in the Control state until the Control key is pressed again.  ControlLock=0 means the Control state will clear when another key is pressed - this is the default operation.  Note when Multi-Touch is enabled, the Control key can be held down by a constant pressed down input.</P
+><A
+NAME="AltLock"
+></A
+><P
+>(Added in 1.79)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AltLock=0</B
+></SPAN
+></P
+><P
+>When AltLock=1, the role of the Alt key changes - when the Alt key is pressed, it will stay in the Alt state until the Alt key is pressed again.  AltLock=0 means the Alt state will clear when another key is pressed - this is the default operation.  Note when Multi-Touch is enabled, the Alt key can be held down by a constant pressed down input.</P
+><A
+NAME="AltGrLock"
+></A
+><P
+>(Added in 1.79)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AltGrLock=0</B
+></SPAN
+></P
+><P
+>When AltGrLock=1, the role of the AltGr key changes - when the AltGr key is pressed, it will stay in the AltGr state until the AltGr key is pressed again.  AltGrLock=0 means the AltGr state will clear when another key is pressed - this is the default operation.  Note when Multi-Touch is enabled, the AltGr key can be held down by a constant pressed down input.  The selected keyboard layout must present/support the AltGr key for this setting to have any affect.</P
+><A
+NAME="Settings"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Settings]</B
+></SPAN
+></P
+><P
+>(Added in 1.79)</P
+><P
+>The Settings section contains shared settings between the 1.x and 2.x software in preparation for a future comprehensive KBF (KeyBoard File) data structure that contains all settings associated with a specific user's configuration.</P
+><A
+NAME="XParallax"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>XParallax=0</B
+></SPAN
+></P
+><A
+NAME="YParallax"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>YParallax=0</B
+></SPAN
+></P
+><P
+>The XParallax and YParallax settings allow for situations and touchscreen hardware where the X/Y appearance is not in sync with system display - i.e. not a calibration issue, but a physical configuration or device setup situation where the perceived touch location is somewhat offset from the hardware/driver established touch location.  For example, when there is a noticeable physical separation between the display surface and the touch sensitive glass surface.  To accommodate these situations, X or Y (or both) parallax settings may be entered (positive or negative), and these values are used as an offset to calculate a modified location within the software to balance the difference between the user's viewpoint and its corresponding X/Y touch point.  Note these settings are used only for location values within the area of the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window.  These settings should only be used in situations where the user and device are consistently located, as these settings will make the software appear to operate incorrectly if the user's approach to the device is varied.  Use XParallax=0 and YParallax=0 to bypass these settings.</P
+><A
+NAME="KeyBlockTime"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>KeyBlockTime=0</B
+></SPAN
+></P
+><P
+>The KeyBlockTime is a per key blockout time in milliseconds where any additional key press via click event is ignored (blocked).  The setting is implemented per key, but is global in nature.  For each processed key, the particular key is is "blocked" during the blockout time specified.  However, another key press will clear the current blockout, and start a new blockout time for the new key.  Use KeyBlockTime=0 to bypass this setting.  KeyBlockTime=100 means 100 milliseconds key block time out.  KeyBlockTime=500 means 500 milliseconds (1/2 second) key block time out.</P
+><A
+NAME="AllowThemeChange"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AllowThemeChange=1</B
+></SPAN
+></P
+><P
+>The AllowThemeChange setting provides an enable/disable setting for theme changes either via the Touch Panel, the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> menu, or the 2-touch Rotate gesture.  If AllowThemeChange=1, then these Theme Change events are processed, otherwise if AllowThemeChange=0, then user triggered theme changes are not allowed.</P
+><A
+NAME="Theme"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Theme=ROUNDED_SLATE</B
+></SPAN
+></P
+><P
+>The Theme entry is the current theme in use.  This entry must correspond to a folder in the ThemesFolder specified folder, and the folder must have appropriate Theme settings and files.  The Change Theme event (AllowThemeChange) will rotate the theme based on the ThemeList, and update this entry, then reload the current theme.</P
+><A
+NAME="ThemeList"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ThemeList=ROUNDED_SLATE,ROUNDED_BLUE,CIRCLE_GRAY,ROUNDED_GREEN,RESET</B
+></SPAN
+></P
+><P
+>This must be a comma delimited list of folders that exist as sub-folders in the the specified ThemesFolder location.  When the Change Theme event occurs (AllowThemeChange), the next item in the list will be used as the new current theme, or the list will start over from the first entry.</P
+><A
+NAME="ThemesFolder"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ThemesFolder=%PRODDIR%\THEMES</B
+></SPAN
+></P
+><P
+>The ThemesFolder setting must correspond to a valid folder that has at least 1 theme sub-folder.  The default is %PRODDIR%\THEMES, which expands to the current installed folder, with a sub-folder of THEMES.  A valid Theme folder (in the THEMES folder) will have a THEME.INI, which contains replacement entries for specific items the current MYTSOFT.INI file.  When the Theme is applied (at <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> start or due to Change Theme event), the THEME.INI is read and applied to the current MYTSOFT.INI file.  For example themes, the PaintDLL overrides are used to change the painting of the keys, background, etc.  Refer to the Example Themes and the IMG Developer's Kit for more details.</P
+><A
+NAME="InitTouchPanel"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>InitTouchPanel=1</B
+></SPAN
+></P
+><P
+>This setting is used at the first run-time to determine if multi-touch hardware capabilities are present, and if they are, the WantTouchPanel setting will be set to 1 to show the Touch Panel.  The logic used requires that the RegisterTouchWindow API call is successful (Multi-touch capable hardware), and the WantMultiTouch or WantGestures is set to 1, and InitTouchPanel=1.  This allows the WantTouchPanel setting to sync up with available hardware and initial default settings, so the Touch Panel is shown if the system can support it, while preserving the meaning of WantTouchPanel based on user preferences.  The setting is always set to InitTouchPanel=0 after starting <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><A
+NAME="WantTouchPanel"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WantTouchPanel=0</B
+></SPAN
+></P
+><P
+>If WantTouchPanel=1, then the Touch Panel will be displayed (Windows Vista / 7).  The external MultiTouchDLL.DLL must be present for support (see IMG Developers' Kit), and either WantMultiTouch or WantGestures must be set to 1.  If WantTouchPanel=0, the Touch Panel will not be shown.  If the Touch Panel is shown on a system without Multi-Touch capabilities, the Theme &#38; Dismiss buttons will still operate, but gestures and multi-touch buttons will not be enabled.</P
+><A
+NAME="WantMultiTouch"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WantMultiTouch=0</B
+></SPAN
+></P
+><P
+>To select the multi-touch interface, use WantMultiTouch=1.  If this value is set, the WantGestures setting will not be used.</P
+><A
+NAME="WantGestures"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WantGestures=1</B
+></SPAN
+></P
+><P
+>To select the gesture interfaces, use WantGestures=1.  To use gestures, WantMultiTouch=0 must be used.</P
+><A
+NAME="FlicksMode"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FlicksMode=2</B
+></SPAN
+></P
+><P
+>During run-time, if both multi-touch and the gesture interface are off, then normal operation will occur, and flicks will be processed.  The MultiTouchDLL.DLL must be present, and the Touch Panel must be available.  FlicksMode=0 will disable flick processing.  FlicksMode=1 means the keyboard window will be sent to the screen location relative to the flick, i.e. up (north) means top center, down-left (south-east) means bottom left, etc.  FlicksMode=2 means the keyboard window will move in the horizontal/vertical directions, and minimize on a diagonal direction. </P
+><A
+NAME="ReturnOnScreen"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ReturnOnScreen=0</B
+></SPAN
+></P
+><P
+>The ReturnOnScreen setting controls how the keyboard window is positioned when recalled from its off-screen position (when dismissed by the Touch Panel's Clear/Dismiss/Recall button).  If ReturnOnScreen=0, then the left position of the keyboard window is recorded when dismissed, and returned to that original position when recalled.  (Note: If using gestures, and the keyboard window is panned off-screen to the left, then it will return at the left edge, and if panned off-screen to the right, then it will return at the right edge).  If ReturnOnScreen=1, then the keyboard window is returned to the center of the screen (or primary monitor in a multi-monitor system).  If ReturnOnScreen=2, then the keyboard window is returned to the center of the entire virtual space (in a multi-monitor system).  If there is only 1 monitor, then ReturnOnScreen=2 will operate the same as ReturnOnScreen=1.</P
+><A
+NAME="TouchFadeAway"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TouchFadeAway=1</B
+></SPAN
+></P
+><P
+>The TouchFadeAway setting indicates how the "on-screen" Touch Panel portion will react when the keyboard window if "off-screen".  If TouchFadeAway=1, then after a preset amount of time (a few seconds), the visible portion of the Touch Panel (green section when keyboard window off-screen) will fade away.  A click/touch/mouse event is required to reset and make the window visible.  If TouchFadeAway=0, then the fade away action is disabled, and the Touch Panel will always be visible.</P
+><A
+NAME="Region"
+></A
+><P
+>(Added in 1.79)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Region]</B
+></SPAN
+></P
+><P
+>The [Region] section is used to create a region mask that can change the shape of the visible window.  For some versions, this section replaces the external REGION.INI file.</P
+><A
+NAME="RoundedCorner"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>RoundedCorner=0</B
+></SPAN
+></P
+><P
+>When RoundedCorner=0, region masks are not applied to round the corners of the keyboard window.  When RoundedCorner=1, 4 ellipses (circles), and 2 rectangles are summed to create a rounded corner effect for the keyboard window.  The circle size (affecting the rounded corner) is calculated based on the current Size setting.  If the Region setting UseFixedArea is set, it will override the RoundedCorner setting.  Be sure to set UseFixedArea=0 when RoundedCorner=1.</P
+><A
+NAME="UseFixedArea"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>UseFixedArea=0</B
+></SPAN
+></P
+><P
+>Set UseFixedArea=1 to enable the use or specified areas to create a region mask that affects the visible portion of the keyboard window.  To disable these appearance options, set UseFixedArea=0.  Also reference RoundedCorner for a special case of these appearance settings.</P
+><A
+NAME="Area"
+></A
+><A
+NAME="Area1"
+></A
+><A
+NAME="Area2"
+></A
+><A
+NAME="Area3"
+></A
+><A
+NAME="Area4"
+></A
+><A
+NAME="Area5"
+></A
+><A
+NAME="Area6"
+></A
+><A
+NAME="Area7"
+></A
+><A
+NAME="Area8"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area1=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area2=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area3=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area4=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area5=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area6=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area7=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Area8=</B
+></SPAN
+></P
+><P
+>Up to 8 different Areas can be specified when UseFixedArea=1.  For validly specified areas, the different regions will be summed (logically OR'ed) to create more complex regions.  These regions must be set in sequential order, and each must be valid to properly create a complex region.  The Area entries must be of the form "[Type],left,top,right,bottom" where [Type] can be "Rect" or "Ellipse", and left, top, right, bottom are 0,0 based entries from the top/left of the keyboard window.  The Rect type region is defined by the rectangle area specified, where the Ellipse type results in the ellipse that will fit within the rectangle area specified.  (Example: Area1=Rect,3,5,271,109) The areas are not required to be contiguous.  The entries are coordinates using the top/left of the window as 0,0, and for practical use, the right value must be larger than the left value, and the bottom value must be larger than the top value.  Note these entries are not width/height, but absolute coordinates.</P
+><DIV
+CLASS="warning"
+><P
+></P
+><TABLE
+CLASS="warning"
+BORDER="1"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="CENTER"
+><B
+>Warning</B
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+><P
+>Be careful when using these settings, since the software can be made unusable or inaccessible if the region area specified does not map in a functional/usable way to the current keyboard window configuration.  Also, these are pixel settings based on a current size/configuration - changing the size and/or configuration of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> may result in an unacceptable display.</P
+></TD
+></TR
+></TABLE
+></DIV
+><A
+NAME="MouseButtons"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[MouseButtons]</B
+></SPAN
+></P
+><A
+NAME="LeftButton"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>LeftButton=0</B
+></SPAN
+></P
+><A
+NAME="RightButton"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>RightButton=2</B
+></SPAN
+></P
+><A
+NAME="MiddleButton"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MiddleButton=3</B
+></SPAN
+></P
+><A
+NAME="ShiftDisplay"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ShiftDisplay=1</B
+></SPAN
+></P
+><P
+>The MouseButtons settings are used to track which actions are
+triggered by the Mouse Button. LeftButton or RightButton must be
+set to 0 indicating the button that will press a <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+button. The valid settings are 1-63, referenced as follows:</P
+><P
+> 1=Ignore Button Press,       2=Move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+ 3=Look-Through <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>,   4=Open <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Menu,
+ 5=Minimize <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>,       6=Enter Key,
+ 7=Escape Key,                8=Tab Key,
+ 9=Space Bar,                10=BackSpace Key,
+11=Up-Arrow,                 12=Down-Arrow,
+13=Left-Arrow,               14=Right-Arrow,
+15=Insert,                   16=Delete,
+17=Home,                     18=End,
+19=Page Up,                  20=Page Down,
+21=F1 (Help),                22=F2,
+23=F3,                       24=F4,
+25=F5,                       26=F6,
+27=F7,                       28=F8,
+29=F9,                       30=F10 (Menu),
+31=F11,                      32=F12,
+33=Shift Key,                34=Ctrl Key,
+35=Alt Key,                  36=Ctrl-Ins (Copy),
+37=Shift-Ins (Paste),        38=Shift-Del (Cut),
+39=Ctrl-Del (Clear),         40=Alt-Backspace (Undo),
+41=Alt-F4 (Close Window),    42=Alt-Tab (Next App),
+43=Alt-Esc (Find App),       44=Alt-Space (System Menu),
+45=Alt-Y (Yes),              46=Alt-N (No),
+47=Shift-Tab,                48=Shift-F4 (Tile),
+49=Shift-F5 (Cascade),       50=Ctrl-F4 (Close Child),
+51=Ctrl-Tab (Select Child),  52=Ctrl-Esc (Task List),
+53=Ctrl-Space,               54=Ctrl-Backspace,
+55=Ctrl-Enter,               56=Ctrl-Home,
+57=Ctrl-End,                 58=Ctrl-Page Up,
+59=Ctrl-Page Down,           60=Ctrl-Up,
+61=Ctrl-Down,                62=Ctrl-Left,
+63=Ctrl-Right</P
+><P
+>The ShiftDisplay is included for those users who use the Shift
+key as one of their buttons - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> repaints the shifted
+keys when the Shift state is on (Shift-Key Down), and there is
+a slight delay on slower systems.
+To alleviate this delay, you may set ShiftDisplay=0.</P
+><A
+NAME="StartUp"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[StartUp]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>QuickHelp=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Magnifier=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Calc=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Alpha=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Edit=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Numeric=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Window=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Info=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MacroBrd=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MytCtl=1</B
+></SPAN
+></P
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTMPanel=1</B
+></SPAN
+></P
+><P
+>The StartUp settings are used to indicate which <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Panels
+will open at <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> startup. If these are changed, <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+configuration will change and then open in the new configuration
+from then on.</P
+><P
+>These settings can be manipulated thru the CONFGMTS utility
+(ConfigureMTS), the following indicates the relationship to the
+available panels in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>:</P
+><P
+>Alpha - Keyboard panel (letters, function keys)</P
+><P
+>Edit - Edit Panel (arrow keys, edit keys)</P
+><P
+>Numeric - Numeric Keypad panel</P
+><P
+>Window - Windows Controls panel</P
+><P
+>MacroBrd - Macro panel</P
+><P
+>Magnifier - Magnifier panel</P
+><P
+>Calc - Calculator panel</P
+><P
+>QuickHelp - QuickHelp panel</P
+><P
+>Info - System Information panel</P
+><P
+>MytCtl - Control panel</P
+><P
+>MyTMPanel - Tool bar panel</P
+><A
+NAME="SysInfo"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[SysInfo]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Time=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Date=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CurPos=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FreeDsk=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FreeMem=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>FreeRes=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Order=TDMSRC</B
+></SPAN
+></P
+><P
+>The settings Time, Date, CurPos, FreeDsk, FreeMem, FreeRes
+indicate if the display is shown.</P
+><P
+>The Order indicates which order the information is displayed.</P
+><P
+>The relationships are as follows:</P
+><P
+>Time,    Order T, Current System Time.</P
+><P
+>Date,    Order D, Current System Date.</P
+><P
+>CurPos,  Order C, Current Cursos Position.</P
+><P
+>FreeDsk, Order S, Free Disk Space.</P
+><P
+>FreeMem, Order M, Free System Memory.</P
+><P
+>FreeRes, Order R, Free System Resources.</P
+><P
+>(Added in 1.77)</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>TimeDisplayNoSeconds=0</B
+></SPAN
+></P
+><P
+>This setting was requested by a <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> TS user to reduce network
+traffic when using the time display on the System Information panel.
+When TimeDisplayNoSeconds=1, instead of hours, minutes &#38; seconds 
+(HH:MM:SS), the display is hours &#38; minutes (HH:MM), and the update 
+occurs only once 1 minute, instead of once a second.</P
+><A
+NAME="CalculatorTape"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[CalculatorTape]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CalcTapeActive=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>OpenTapeWithCalc=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CalcSendWithCR=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CalcSendWithEXE=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Program=</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>DecimalDigits=6</B
+></SPAN
+></P
+><P
+>CalcTapeActive=1 indicates that the Calculator Tape can be
+activated from the Calculator Panel. When the Calculator Panel
+opens, the Back Space is changed to indicate "Tape." If clicked,
+the Calculator Tape will open. At any time, by clicking on the
+Display, the Calculator Tape will open, or if already open, will
+close. When the Calculator Panel is closed, the Calculator Tape
+will automatically close.
+If CalcTapeActive=0, these features will not be available.
+As an alternative, if OpenTapeWithCalc=1, the Calculator Tape
+will open when the Calculator Panel is open.
+If CalcSendWithCR=1, the [Enter] Key will be appended to the
+keystrokes sent when the SD (Send) button is clicked on the
+Calculator Panel.
+If CalcSendWithEXE=1, the application specified with the 
+Program= setting will be launched when the SD (Send) button
+ is clicked on the Calculator Panel.
+Program= is used to specify the path &#38; file name of the executable
+program to launch when CalcSendWithEXE=1.  Only short file
+names is recommended for maximum compatibility.
+DecimalDigits sets the number of digits that the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+calculator will display to the right of the decimal place.
+Valid settings are 1 through 6.</P
+><A
+NAME="Colors"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Colors]</B
+></SPAN
+></P
+><A
+NAME="Display3DKeys"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Display3DKeys=1</B
+></SPAN
+></P
+><P
+>If Display3DKeys=1, then the shaded bitmap is used as a 
+background for the keys - this is recommended for 16-bit
+color or higher (256 colors is not sufficient)
+Set Display3DKeys=0 to disable the high-resolution
+display.</P
+><P
+>Note for sizes smaller than 8, the high-res is not supported
+because there are not enough pixels to create an 
+acceptable look.</P
+><A
+NAME="SystemColors"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SystemColors=0</B
+></SPAN
+></P
+><P
+>If SystemColors=0, then the following section defines the 
+colors available for the different panels.
+If SystemColors=1, then the colors are retreived from the
+Windows System, as setup in Display Properties, Appearance.</P
+><P
+>Colors are RGB values, listed RRR,GGG,BBB. If your monitor
+displays more than 16 colors, you may adjust these values here
+&#38; avoid the Colors Options in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup.</P
+><A
+NAME="ToolTextIn"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ToolTextIn=0,0,0</B
+></SPAN
+></P
+><P
+>Color of the Control Panel text if the Panel indicated is not
+displayed</P
+><A
+NAME="ToolTextOut"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>ToolTextOut=0,0,255</B
+></SPAN
+></P
+><P
+>Color of the Control Panel text if the Panel indicated is
+displayed</P
+><A
+NAME="TextFaceHighShadow"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text1=0,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face1=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High1=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow1=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Magnifier Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text2=0,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face2=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High2=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow2=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Keyboard Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text3=0,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face3=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High3=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow3=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Edit Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text4=0,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face4=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High4=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow4=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Numeric Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text5=0,0,128</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face5=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High5=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow5=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Windows Controls Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text6=128,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face6=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High6=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow6=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Macro Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Text7=0,0,0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Face7=192,192,192</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>High7=255,255,255</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Shadow7=128,128,128</B
+></SPAN
+></P
+><P
+>Button Text, Button Face, Button Highlight, Button Shadow of the
+Calculator Panel.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysT=255,255,255</B
+></SPAN
+></P
+><P
+>System Information: Time</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysD=0,255,255</B
+></SPAN
+></P
+><P
+>System Information: Date</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysC=255,255,0</B
+></SPAN
+></P
+><P
+>System Information: Cursor Position</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysS=255,0,0</B
+></SPAN
+></P
+><P
+>System Information: Disk Space</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysM=255,0,255</B
+></SPAN
+></P
+><P
+>System Information: System Memory Available</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysR=0,255,0</B
+></SPAN
+></P
+><P
+>System Information: System Resources</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>SysQ=0,255,0</B
+></SPAN
+></P
+><P
+>Quick Help Display</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Sys#=0,255,0</B
+></SPAN
+></P
+><P
+>Calculator Display</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>CalcMem=255,255,0</B
+></SPAN
+></P
+><P
+>Calculator Memory indicator</P
+><A
+NAME="INIHelp"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Help]</B
+></SPAN
+></P
+><P
+>This is a lookup section to map internal help topics to various external help manifestations.  During the 20 years of releases, various help formats have been introduced and then made obsolete.  Currently HTML and PDF are in use, as the most flexible and platform independent, in hopes that they might last a bit longer than Windows only help formats.  This is used by the HelpInterface function in IMGVERS.DLL, and should not be modified by the user.  Note that the INI file in the same folder as IMGVERS.DLL is used for this lookup.  If help reports a problem with the help file, verifying the INI in the installation folder and this section may be helpful.</P
+><P
+>THE FOLLOWING ARE SPECIFIC APPLICATIONS IN WHICH <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+REQUIRES SPECIAL SETTINGS</P
+><P
+>Certain Windows Applications may be affected by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+because of the way they were written. You may set <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+to act normally for any application by setting the Configuration
+in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup or editing the MYTSOFT.INI file.</P
+><A
+NAME="Special"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Special]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTSpcl0000=Command Prompt</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTSpcl0001=CMD.EXE</B
+></SPAN
+></P
+><P
+>IMPORTANT: Because of the revised interface approach, and
+the general improvement in quality of all windows software, many
+of these capabilities &#38; settings are no longer necessary.  In fact,
+the settings included are for example purposes only and they are
+not required for proper operation of the windowed command prompt.  Because these advanced special handling
+capabilities add a great deal of flexibility to the software, all documentation
+and notes remain.</P
+><P
+>The Special area designates which applications require special
+consideration by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>. These are used internally and
+should not be modified by the user here. Refer to <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+Setup to add, remove, or modify these settings.</P
+><P
+>The following MyTSpcl????= lists the application name that
+<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will check in the application section below for any
+special settings. This application name is the Window Text
+(Caption Heading) for the Window.  To add an application to this
+list, it must be assigned the next sequential number for
+MyTSpcl????.</P
+><P
+>ADVANCED NOTES:</P
+><P
+>The Special settings are used internally by <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to handle
+the vagaries of different Windows applications - they are
+documented here in case of similar problems with other
+Windows applications.</P
+><P
+>SPECIAL SETTINGS</P
+><P
+>Special=1 - is used to track internal window child controls
+for Edit, Buttons, List boxes, Scroll bars, etc. - No
+application should set Special=1.</P
+><P
+>Special=2 - this is for Paintbrush and the fact that it loses
+the input focus and DOES NOT regain it if another application is
+activated while text is being entered. This may not be useful in
+any other application because of the specific internal windows
+messages handled with this setting - if, however, an application
+is written in the same way, and <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> is unable to send
+keystrokes to that application, the user may wish to try this
+setting for that application. NOTE: This only applies if
+InterfaceApproach=0</P
+><P
+>Special=3 is used internally to handle the differences between
+Help in version 3.0 and 3.1.</P
+><P
+>Special=4 was used to handle the edit areas in the PIF editor
+for the main window. This setting is specific to the PIF editor,
+and will not work in any other cases. The InterfaceApproach=1
+setting has eliminated the need for this special action. PIF
+editor will not act properly if InterfaceApproach=0.</P
+><P
+>Special=5 is used to bring the Task Window over <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> in
+version 3.0 and handle special screen repaint issues - this is
+specific to the Task List.</P
+><P
+>Action Settings:</P
+><P
+>Action=0 - ignore</P
+><P
+>Action=1 - minimize to button</P
+><P
+>Action=2 - minimize to icon</P
+><P
+>Action=3 - hide <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> behind Window as an icon</P
+><P
+>Action=4 - move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> off of Window</P
+><P
+>Action=5 - resize Window, move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> off</P
+><P
+>Action=6 - Dialog Type Window - Move <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> to bottom</P
+><P
+>Action=7 - Popup Type Window (Help) - Move Window off of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+></P
+><P
+>Flags=1 - Window receives Focus</P
+><P
+>Flags=2 - Window does not get Input Focus</P
+><P
+>Action=8 - Screen Saver - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> floats</P
+><P
+>Action=9 - Screen Saver - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> bounces</P
+><P
+>Action=10 - <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> hides</P
+><P
+>Action=11 - 29 (RESERVED)</P
+><P
+>Action=30 - Use Secondary Strategy Win 3.0 Only</P
+><P
+>Action=31 - Use Secondary Strategy Win 3.1 Only</P
+><P
+>Action=32 - Use Secondary Strategy Always</P
+><P
+>The Flags entry is also checked for allowing a Button Move to a particular class of windows.  For example,
+if Action=0 and Flags=1 for a particular class, this class will be ignored, AND the button will not move
+to this class of window.  Essentially the Flags setting should only be used for Action=7 as outlined above,
+or set Flags=1 to prevent the button from moving to this class of window.</P
+><A
+NAME="CommandPrompt"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Command Prompt]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Contention=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=4</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[CMD.EXE]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Contention=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=4</B
+></SPAN
+></P
+><A
+NAME="Classes"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Classes]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0000=#32770</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0001=bordlg</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0002=Dialog</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0003=MS_WINNOTE</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0004=tutor</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0005=tutprogman</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0006=tutwrite</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0007=ListBox</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0008=ComboBox</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0009=ComboLBox</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0010=WFS_Drives</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0011=WFS_Drive</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0012=WindowsScreenSaverClass</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0013=Sleep</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0014=FXPopup</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0015=C_TurboType</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0016=bosa_sdm_Microsoft Word 6.0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0017=bosa_sdm_XL</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0018=LOGON</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0019=Blank Screen Saver</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0020=My-T-Soft Ctrl-Alt-Del</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0021=tooltips_class32</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0022=Button</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[#32770]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[bordlg]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Dialog]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[MS_WINNOTE]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=7</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Flags=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[tutor]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[tutprogman]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[tutwrite]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[ListBox]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=31</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[ComboBox]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=32</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[ComboLBox]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=31</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[WFS_Drives]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=30</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[WFS_Drive]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=30</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[WindowsScreenSaverClass]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Sleep]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[FXPopup]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[C_TurboType]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=7</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Flags=2</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[bosa_sdm_Microsoft Word 6.0]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[bosa_sdm_XL]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[LOGON]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Blank Screen Saver]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=10</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[My-T-Soft Ctrl-Alt-Del]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=6</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[tooltips_class32]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Flags=1</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Button]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Action=0</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Flags=1</B
+></SPAN
+></P
+><P
+>ADVANCED NOTES:</P
+><P
+>The Classes listed here are the classes that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> must act
+in special ways. Primarily this list is referenced internally
+during <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> operation against the active window. If a match
+is found, the action <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will take is given by the action.</P
+><P
+>IMPORTANT: Each Class on this list will affect the system memory
+that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> requires, and will affect the system operation
+speed within Windows since this list must be checked against the
+active window. There is no reason to remove any of the entries
+on this list, and if you do, proper operation of <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>
+cannot be ensured.</P
+><P
+>If <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> does not act the way you want it to act, cross
+check the <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> actions listed above, and if applicable, add
+the class and action to the list, as documented below in the
+example for screen savers.</P
+><P
+>NOTE: Screen Savers.</P
+><P
+>The main reason to add to this list would be to add a screen
+saver that you use which is not currently on the list.
+To add an entry: Add the Next sequential entry to the [Classes]
+section.</P
+><P
+>e.g.</P
+><P
+>MyTClass0028=MyScreenSaver</P
+><P
+>and then add an entry below it as:</P
+><P
+>[MyScreenSaver]</P
+><P
+>Action=10</P
+><P
+>This will result in <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> hiding behind the screen saver
+when the screen saver becomes active.</P
+><P
+>NOTE: Reference the actions above for alternate screen saver
+actions.</P
+><P
+>Reference the ClassWatch setting in the [Configuration]
+\section to find out the class of the active window.</P
+><A
+NAME="MenuClasses"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[MenuClasses]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0000=#32768</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0001=BaseBar</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0002=MsoCommandBarPopup</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0003=DV2ControlHost</B
+></SPAN
+></P
+><P
+>These settings have been added to allow additions of
+application defined menus.  Windows 98 added to the
+original Popupmenu class with the BaseBar, and Office 97
+added the MsoCommandBarPopup.  Since these menus
+work better when displayed above <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, internal
+settings &#38; action allow the classes of windows in this list
+to appear above <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.  There is a maximum of 
+10 classes that can be entered in this list.</P
+><A
+NAME="StayBehindClasses"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[StayBehindClasses]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0000=The Magnifier</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0001=CrossScanner FingerScan</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0002=CrossScanner Desktop</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0003=Defer:WordComplete</B
+></SPAN
+></P
+><P
+>These settings have been added to provide more flexibility for handling
+other windows in the system.  Because the MenuClasses setting are used for Menus and
+can affect focus issues, an additional setting for other interface windows that
+affect the windows display order has been added.  <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> will not position
+above (visibly on top) of these windows.  The "Defer:" prefix indicates a modified logic approach internally, so that when the mouse is positioned in the overlap between the keyboard window and the indicated deferred window, an override state occurs.  When the mouse slides onto the keyboard window in this state, the keyboard will then stay above the indicated window class.  This lasts until the mouse pointer goes off the keyboard window.  This allows a flexible approach, designed specifically for the WordComplete window, which stays topmost, unless the user wants to type a letter, which can be accomplished by sliding off the deferred window onto the keyboard, bringing the keyboard on top of the (otherwise) topmost window.  There can be only 1 Defer entry in this list.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Important Note: </B
+>
+The StayBehindClasses area ONLY refers to other windows that have the Topmost attribute in the system.  This cannot be used for normal type windows.  The Window manager sorts multiple Topmost windows, which in all cases will be above other non-topmost windows.  The StayBehindClasses is used to help sort these topmost windows.  In order to position the topmost <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> window below some application window, the application window must also have the Topmost attribute.  For application level control of the keyboard window, refer to IMG's Build-A-Board.
+</P
+></BLOCKQUOTE
+></DIV
+><P
+>(OnScreen only)</P
+><A
+NAME="DoNotArrangeClasses"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[DoNotArrangeClasses]</B
+></SPAN
+></P
+><P
+>maximum 32 characters</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0000=CrossScanner</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0001=MyTSetup</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0002=Shell_TrayWnd</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0003=Calculator Tape</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0004=The Magnifier</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0005=The Right Touch</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0006=TouchRight Utilities</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0007=ScrlCtrl</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0008=DV2ControlHost</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0009=SmartClick</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0010=WorkerW</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0011=SysListView32</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0012=ImlWinCls</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTClass0013=CrossScanner Cursor Park</B
+></SPAN
+></P
+><P
+>These settings have been added to allow additions of
+applications that the user does not want to be Auto-arranged
+when AutoArrange=1 - (see above for this setting).  Because
+certain OnScreen &#38; CrossScanner windows should not be
+affected by Auto-Arrange when enabled, this list provides the
+list of window classes that will not be arranged.</P
+><A
+NAME="MacroPanelsToOpen"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[MacroPanelsToOpen]</B
+></SPAN
+></P
+><P
+>The default setting is to have no panels automatically open.
+The list that would appear here is appended to the Window Names
+in the special MyTSpcl????= list above.</P
+><P
+>NOTE: If MacroPanelsToOpen includes one of the Special settings
+windows names, only the Special Settings will work &#38; the Macro
+Panel will not open.</P
+><P
+>IMPORTANT: Each Panel on this list will affect the system memory
+that <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> requires, and will affect the system operation
+speed within Windows since this list must be checked against the
+active window.</P
+><P
+>The list is built from OpenPanel????=MAC?????.KMF entries.</P
+><P
+>Example:</P
+><P
+>OpenPanel0000=MAC00032.KMF</P
+><P
+>OpenPanel0001=MAC00002.KMF</P
+><P
+>OpenPanel0002=MAC00008.KMF</P
+><P
+>where OpenPanel???? entries must be in sequential order starting
+at 0000. The numbers must be sequential. The Macro File name with ID embedded in the name must be the
+entry.</P
+><P
+>Since there is no easy way to view the Macro Panel at the file
+level, these settings should be handled within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Setup.</P
+><A
+NAME="Keys"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Keys]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>MyTKeys0000=78,16384</B
+></SPAN
+></P
+><P
+>The [Keys] section lists a sequential list of key IDs and enhanced
+settings code.  The first number in the list is the key ID for each 
+MyTKeys???? entry, and the second number (after the comma) 
+lists the enhanced settings ID.  See BUILD-A-MACRO notes above 
+for the Key IDs list.</P
+><P
+>The MyTKeys???? must be sequential starting at MyTKeys0000.
+e.g. Additional entries to the above would be</P
+><P
+>MyTKeys0001=1,1</P
+><P
+>MyTKeys0002=12,64</P
+><P
+>The Enhanced setting is a binary code (decimally displayed) that
+is set as follows:</P
+><P
+>Enable/Disable is 1-128</P
+><P
+>Launch is 256-32768</P
+><P
+>For any particular key, the bits are "or"-ed, or summed as follows</P
+><P
+>0 - Key enabled</P
+><P
+>+1 Disable Keystroke</P
+><P
+>+2 Disable Shift + Keystroke</P
+><P
+>+4 Disable Ctrl + Keystroke</P
+><P
+>+8 Disable Alt + Keystroke</P
+><P
+>+16 Disable Alt-Shift + Keystroke</P
+><P
+>+32 Disable Ctrl-Shift + Keystroke</P
+><P
+>+64 Disable Alt-Ctrl + Keystroke</P
+><P
+>+128 Disable Alt-Ctrl-Shift + Keystroke</P
+><P
+>+256 Launch with Keystroke</P
+><P
+>+512 Launch with Shift + Keystroke</P
+><P
+>+1024 Launch with Ctrl + Keystroke</P
+><P
+>+2048 Launch with Alt + Keystroke</P
+><P
+>+4096 Launch with Alt-Shift + Keystroke</P
+><P
+>+8192 Launch with Ctrl-Shift + Keystroke</P
+><P
+>+16384 Launch with Alt-Ctrl + Keystroke</P
+><P
+>+32768 Launch with Alt-Ctrl-Shift + Keystroke</P
+><P
+>The above setting for MyTKeys0000 is for the Delete Key
+(with Ctrl and the Alt key pressed) to launch the Key EXE
+below (for Key0078).  The utility will force Windows to 
+restart, so Ctrl-Alt-Delete on the keyboard will result in
+a warm reboot.  When the Logon Utilities are enabled in Windows 2000 / XP,
+a Ctrl-Alt-Del will perform the same result as if done on a physical
+keyboard, e.g. show a dialog in the secure WinLogon desktop.
+In Windows Vista/7, a separate set of buttons will be displayed on 
+the user desktop, allowing similar functionality to the WinLogon
+options shown if a Ctrl-Alt-Del is performed by a physical keyboard
+(the GINA interface has been dropped by Microsoft in Windows Vista/7, 
+so transferring to the secure WinLogon desktop does not occur). Options 
+include: Lock Workstation/Switch User, Log Off, Restart, Shutdown, and the
+Task Manager.</P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>[Key0078]</B
+></SPAN
+></P
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>Program=%PRODDIR%\CTALTDEL.EXE</B
+></SPAN
+></P
+><P
+>NOTE: This assumes the default install on a normal 
+windows setup - it is included primarily for example.
+Each Key ID can have 1 Key EXE associated with it, and 1 or more key
+combinations can launch this EXE based on the MyTKeys???? setting
+above in [Keys].</P
+><P
+>Note that the Enable/Disable portion of a keystroke is independent of
+its Launch setting.  The Keystroke should be initiated prior to the launch
+of the EXE, but system &#38; Windows issues may affect this timing.
+The path &#38; file name conform to "short" file names for 
+backwards compatibility.  Make sure you do not use Long file names
+in the path.</P
+><DIV
+CLASS="note"
+><BLOCKQUOTE
+CLASS="note"
+><P
+><B
+>Developer's Kit Notes: </B
+>The following sections are NOT in the default INI as shipped with the product, but since they are valid &#38; available entries, they are briefly listed here for reference.  For complete coverage, entry information, and further details on these sections, please refer to the Developer's Kit documentation.</P
+></BLOCKQUOTE
+></DIV
+><A
+NAME="AddOnDLL"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>AddOnDLL sections</B
+></SPAN
+></P
+><P
+>There are 3 possible sections available - [AddOnDLL1], [AddOnDLL2], [AddOnDLL3].  Only a single section is listed here.  The Developer's Kit covers a sample AddOnDLL, along with a Logging Log DLL using these capabilities.</P
+><P
+>[AddOnDLL1]</P
+><P
+>DLLName=%PRODDIR%ADDONDLL\ADDON.dll</P
+><P
+>InitializeFunctionName=InitFuncType7</P
+><P
+>InitializeFunctionType=7</P
+><P
+>TimerFunctionName=TimerFuncType9</P
+><P
+>TimerFunctionType=9</P
+><P
+>TimerDelay=1000</P
+><P
+>CleanupFunctionName=CleanupFuncType8</P
+><P
+>CleanupFunctionType=8</P
+><P
+>Value1=1</P
+><P
+>Value2=201</P
+><P
+>Value3=3302</P
+><A
+NAME="PaintDLL"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>PaintDLL section</B
+></SPAN
+></P
+><P
+>The Paint DLL allows an external DLL to handle certain painting tasks within <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>, allowing customization to the panel background, and the keys (both key background image and key label)  Refer to the Developer's Kit for details and a sample DLL that shows some custom painted images.</P
+><P
+>[PaintDLL]</P
+><P
+>DLLName=%PRODDIR%\PaintDLL\Release\PaintDLL.DLL</P
+><P
+>PaintFrame=1</P
+><P
+>PaintFrameFunc=PaintDLLPaintFrame</P
+><P
+>PaintKey=0</P
+><P
+>PaintKeyFunc=PaintDLLPaintKey</P
+><P
+>PaintKeyBackground=1</P
+><P
+>PaintKeyBackgroundFunc=PaintDLLPaintKeyBackground</P
+><P
+>PaintKeyModBackground=0</P
+><P
+>PaintKeyModBackgroundFunc=PaintDLLPaintKeyModBackground</P
+><P
+>PaintKeyLabel=1</P
+><P
+>PaintKeyLabelFunc=PaintDLLPaintKeyLabel</P
+><A
+NAME="WordsDLL"
+></A
+><P
+><SPAN
+CLASS="bold"
+><B
+CLASS="emphasis"
+>WordsDLL section</B
+></SPAN
+></P
+><P
+>The Words DLL allows an external DLL to handle Word List functionality when the WordComplete panel is available.  Refer to the Developer's Kit for details and a sample DLL that shows the integration.</P
+><P
+>[WordsDLL]</P
+><P
+>DLLName=%PRODDIR%\WordsDLL\Release\WordsDLL.DLL</P
+><P
+>WordsGetWordListFunc=GetWordList</P
+><P
+>WordsTypedWordFunc=TypedWord</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="initializationfile.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="errormessagesandnumbers.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Initialization File Documentation (MYTSOFT.INI)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="initializationfile.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Error Messages and Numbers</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

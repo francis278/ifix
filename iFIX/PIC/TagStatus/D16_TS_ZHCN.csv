@@ -1,0 +1,138 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,D16_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,D16_TS.DATALINK,Arial,9,1,,,,
+Caption,D16_TS.DATALINK1,Arial,9,1,,,,
+Caption,D16_TS.TEXT1,Arial,9,0,Prev Block:,前一块:,,
+Caption,D16_TS.DATALINK3,Arial,9,0,,,,
+Caption,D16_TS.DATALINK4,Arial,9,0,,,,
+Caption,D16_TS.TEXT2,Arial,9,0,Description:,描述:,,
+Caption,D16_TS.TEXT4,Arial,9,1,Hardware Specifications,硬件特性,,
+Caption,D16_TS.DATALINK5,Arial,9,0,,,,
+Caption,D16_TS.DATALINK6,Arial,9,0,,,,
+Caption,D16_TS.DATALINK7,Arial,9,0,,,,
+Caption,D16_TS.TEXT5,Arial,9,0,H/W Options:,硬件选项,,
+Caption,D16_TS.DATALINK12,Arial,9,0,,,,
+Caption,D16_TS.DATALINK13,Arial,9,0,,,,
+Caption,D16_TS.DATALINK14,Arial,9,0,,
+Caption,D16_TS.TEXT11,Arial,9,0,Tagname:,标签名:
+Caption,D16_TS.TEXT12,Arial,9,0,Next Block:,下一块:
+Caption,D16_TS.DataLink23,Arial,9,0,,
+Caption,D16_TS.DataLink24,Arial,9,0,,
+Caption,D16_TS.DataLink25,Arial,9,0,,
+Caption,D16_TS.Text48,Arial,9,0,1,1
+Caption,D16_TS.Text49,Arial,9,0,2,2
+Caption,D16_TS.Text50,Arial,9,0,3,3
+Caption,D16_TS.Text51,Arial,9,1,Security Areas,安全区域
+Caption,D16_TS.DataLink28,Arial,9,1,,
+Caption,D16_TS.Text52,Arial,9,1,Scan Status:,扫描状态:
+Caption,D16_TS.Text53,Arial,9,1,Current State,当前状态
+Caption,D16_TS.Text54,Arial,9,1,Alarm Status:,报警状态:
+Caption,D16_TS.Text55,Arial,9,1,Block Status:,数据块状态:
+Caption,D16_TS.Text56,Arial,9,1,Raw Value:,原值:
+Caption,D16_TS.Text57,Arial,9,0,Enabled:,启用:
+Caption,D16_TS.Text59,Arial,9,0,Priority:,优先级:
+Caption,D16_TS.Text60,Arial,9,0,Areas:,区域:
+Caption,D16_TS.Text61,Arial,9,1,Alarms,报警
+Caption,D16_TS.DATALINK_PREV,Arial,9,1,,
+Caption,D16_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,D16_TS.DataLink33,Arial,9,1,,
+Caption,D16_TS.DataLink34,Arial,9,1,,
+Caption,D16_TS.DataLink35,Arial,9,1,,
+Caption,D16_TS.Text62,Arial,9,0,Scan Time:,扫描时间:
+Caption,D16_TS.Text64,Arial,9,0,Device:,设备:
+Caption,D16_TS.Text65,Arial,9,0,I/O Address:,I/O地址:
+Caption,D16_TS.DATALINK11,Arial,9,0,,
+Caption,D16_TS.Text58,Arial,9,0,Initial Alarm:,初始报警:
+Caption,D16_TS.Text66,Arial,9,0,Mode:,方式:
+Caption,D16_TS.DataLink36,Arial,9,0,,
+Caption,D16_TS.Text67,Arial,9,0,BitCount:,位数:
+Caption,D16_TS.DataLink37,Arial,9,0,,
+Caption,D16_TS.Text68,Arial,9,0,Bit,位
+Caption,D16_TS.Text69,Arial,9,0,0,0
+Caption,D16_TS.Text70,Arial,9,0,1,1
+Caption,D16_TS.Text71,Arial,9,0,2,2
+Caption,D16_TS.Text72,Arial,9,0,3,3
+Caption,D16_TS.Text73,Arial,9,0,4,4
+Caption,D16_TS.Text74,Arial,9,0,5,5
+Caption,D16_TS.Text75,Arial,9,0,6,6
+Caption,D16_TS.Text76,Arial,9,0,7,7
+Caption,D16_TS.Text77,Arial,9,0,8,8
+Caption,D16_TS.Text78,Arial,9,0,9,9
+Caption,D16_TS.Text79,Arial,9,0,10,10
+Caption,D16_TS.Text80,Arial,9,0,11,11
+Caption,D16_TS.Text81,Arial,9,0,12,12
+Caption,D16_TS.Text82,Arial,9,0,13,13
+Caption,D16_TS.Text83,Arial,9,0,14,14
+Caption,D16_TS.Text84,Arial,9,0,15,15
+Caption,D16_TS.Text85,Arial,9,0,Invert,反向
+Caption,D16_TS.Text86,Arial,9,0,Alarm  Enabled,启用报警:
+Caption,D16_TS.Text87,Arial,9,0,Current Alarm,当前报警
+Caption,D16_TS.Text88,Arial,9,1,Current Value,当前值
+Caption,D16_TS.Text89,Arial,9,1,Device States,设备状态
+Caption,D16_TS.DataLink38,Arial,9,0,,
+Caption,D16_TS.DataLink39,Arial,9,0,,
+Caption,D16_TS.DataLink40,Arial,9,0,,
+Caption,D16_TS.DataLink41,Arial,9,0,,
+Caption,D16_TS.DataLink42,Arial,9,0,,
+Caption,D16_TS.DataLink43,Arial,9,0,,
+Caption,D16_TS.DataLink44,Arial,9,0,,
+Caption,D16_TS.DataLink45,Arial,9,0,,
+Caption,D16_TS.DataLink46,Arial,9,0
+Caption,D16_TS.DataLink47,Arial,9,0
+Caption,D16_TS.DataLink48,Arial,9,0
+Caption,D16_TS.DataLink49,Arial,9,0
+Caption,D16_TS.DataLink50,Arial,9,0
+Caption,D16_TS.DataLink51,Arial,9,0
+Caption,D16_TS.DataLink52,Arial,9,0
+Caption,D16_TS.DataLink53,Arial,9,0
+Caption,D16_TS.DataLink74,Arial,9,0
+Caption,D16_TS.DataLink75,Arial,9,0
+Caption,D16_TS.DataLink76,Arial,9,0
+Caption,D16_TS.DataLink77,Arial,9,0
+Caption,D16_TS.DataLink78,Arial,9,0
+Caption,D16_TS.DataLink79,Arial,9,0
+Caption,D16_TS.DataLink80,Arial,9,0
+Caption,D16_TS.DataLink81,Arial,9,0
+Caption,D16_TS.DataLink82,Arial,9,0
+Caption,D16_TS.DataLink83,Arial,9,0
+Caption,D16_TS.DataLink84,Arial,9,0
+Caption,D16_TS.DataLink85,Arial,9,0
+Caption,D16_TS.DataLink86,Arial,9,0
+Caption,D16_TS.DataLink87,Arial,9,0
+Caption,D16_TS.DataLink90,Arial,9,0
+Caption,D16_TS.DataLink91,Arial,9,0
+Caption,D16_TS.DataLink92,Arial,9,0
+Caption,D16_TS.DataLink93,Arial,9,0
+Caption,D16_TS.DataLink94,Arial,9,0
+Caption,D16_TS.DataLink95,Arial,9,0
+Caption,D16_TS.DataLink96,Arial,9,0
+Caption,D16_TS.DataLink97,Arial,9,0
+Caption,D16_TS.DataLink98,Arial,9,0
+Caption,D16_TS.DataLink99,Arial,9,0
+Caption,D16_TS.DataLink100,Arial,9,0
+Caption,D16_TS.DataLink101,Arial,9,0
+Caption,D16_TS.DataLink102,Arial,9,0
+Caption,D16_TS.DataLink103,Arial,9,0
+Caption,D16_TS.DataLink104,Arial,9,0
+Caption,D16_TS.DataLink105,Arial,9,0
+Caption,D16_TS.DataLink106,Arial,9,0
+Caption,D16_TS.DataLink107,Arial,9,0
+Caption,D16_TS.DataLink109,Arial,9,1
+Caption,D16_TS.DataLink110,Arial,9,1
+Caption,D16_TS.DataLink111,Arial,9,1
+Caption,D16_TS.DataLink112,Arial,9,1
+Caption,D16_TS.DataLink113,Arial,9,1
+Caption,D16_TS.DataLink114,Arial,9,1
+Caption,D16_TS.DataLink115,Arial,9,1
+Caption,D16_TS.DataLink116,Arial,9,1
+Caption,D16_TS.DataLink117,Arial,9,1,,
+Caption,D16_TS.DataLink118,Arial,9,1,,
+Caption,D16_TS.DataLink119,Arial,9,1,,
+Caption,D16_TS.DataLink120,Arial,9,1,,
+Caption,D16_TS.DataLink121,Arial,9,1,,
+Caption,D16_TS.DataLink122,Arial,9,1,,
+Caption,D16_TS.DataLink123,Arial,9,1,,
+Caption,D16_TS.DataLink124,Arial,9,1,,
+Caption,D16_TS.Text90,Arial,9,0,Re-Alarm:,重新报警:
+Caption,D16_TS.DataLink125,Arial,9,0,,

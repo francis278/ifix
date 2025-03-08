@@ -1,0 +1,34 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Chart,Hs_TS.Chart2,Arial,8,0,Axis Title,Axis Title,Axis Title,Axis Title
+Caption,Hs_TS.TEXT,Arial,9,1,Block Type:,数据块类型:,,
+Caption,Hs_TS.DATALINK,Arial,9,1,,,,
+Caption,Hs_TS.DATALINK1,Arial,9,1,,,,
+Caption,Hs_TS.TEXT1,Arial,9,0,Tagname:,标签名:,,
+Caption,Hs_TS.TEXT6,Arial,9,0,Next Block:,下一块:,,
+Caption,Hs_TS.DATALINK9,Arial,9,0,,,,
+Caption,Hs_TS.DATALINK10,Arial,9,0,,,,
+Caption,Hs_TS.DATALINK11,Arial,9,0,,,,
+Caption,Hs_TS.TEXT7,Arial,9,0,Autoclear:,自动清除:,,
+Caption,Hs_TS.TEXT8,Arial,9,0,Prev Block:,前一块:,,
+Caption,Hs_TS.TEXT9,Arial,9,0,Histogram Specifics,直方图特性,,
+Caption,Hs_TS.DATALINK13,Arial,9,1,,,,
+Caption,Hs_TS.TEXT10,Arial,9,1,Current Block Status:,当前块状态:,,
+Caption,Hs_TS.DATALINK_PREV,Arial,9,1,,
+Caption,Hs_TS.DATALINK_NEXT,Arial,9,1,,
+Caption,Hs_TS.DataLink15,Arial,9,0,,
+Caption,Hs_TS.DataLink16,Arial,9,0,,
+Caption,Hs_TS.DataLink17,Arial,9,0,,
+Caption,Hs_TS.Text30,Arial,9,1,Engineering Units,工程单位
+Caption,Hs_TS.Text31,Arial,9,0,Low Limit:,低限:
+Caption,Hs_TS.Text32,Arial,9,0,High Limit:,高限:
+Caption,Hs_TS.Text33,Arial,9,0,Units:,单位:
+Caption,Hs_TS.Text34,Arial,9,1,Security Areas,安全区域
+Caption,Hs_TS.DataLink18,Arial,9,0,,
+Caption,Hs_TS.DataLink19,Arial,9,0,,
+Caption,Hs_TS.DataLink20,Arial,9,0,,
+Caption,Hs_TS.Text35,Arial,9,0,1,1
+Caption,Hs_TS.Text36,Arial,9,0,2,2
+Caption,Hs_TS.Text37,Arial,9,0,3,3
+Caption,Hs_TS.Text38,Arial,9,0,Group Size:,组尺寸:
+Caption,Hs_TS.Text39,Arial,9,0,Interval:,间隔:

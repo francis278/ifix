@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Build-A-Board Support</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="My-T-Soft®"
+HREF="home.html"><LINK
+REL="UP"
+TITLE="Operation Notes"
+HREF="operationnotes.html"><LINK
+REL="PREVIOUS"
+TITLE="Command Line Options"
+HREF="commandlineoptions.html"><LINK
+REL="NEXT"
+TITLE="My-T-Soft Button Display"
+HREF="buttondisplay.html"></HEAD
+><BODY
+CLASS="sect1"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+><SUP
+>®</SUP
+>: for Windows; Indestructible Keyboards and Indispensable Utilities; Version 1.80; User's Guide</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="commandlineoptions.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+>Chapter 9. Operation Notes</TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="buttondisplay.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="BuildABoardSupport"
+>Build-A-Board Support</A
+></H1
+><P
+>The 1.76 and newer versions now support KBF files (KeyBoard Files) 
+	from IMG's Build-A-Board 2.10 or later.</P
+><P
+>The following notes some of the issues on how this is implemented.</P
+><P
+>The KEYBOARD.KBF file is the Keyboard Layout file, and it determines which 
+	program will be used to display &#38; operate the layout.  For KBF files built by 
+	Build-A-Board, MYTSOFT2.EXE will be used.  For the default KEYBOARD.KBF,
+	MYTSOFT.EXE will be used.  When MYTSOFT2.EXE is used, the MYTSOFT.INI
+	file is not referenced at all.  These are the key issues to be aware of when setting up 
+	which keyboard layout / program each user will be presented:</P
+><P
+>There is no specific way to retrieve the layouts built by Build-A-Board into the 
+	<SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> folder.  Build-A-Board should be installed on a development workstation
+	or stand-alone system.  Once the required layout(s) are built, these may be copied from 
+	the \Program Files\Build-A-Board\Target\[Project] folder, where [Project] is the name
+	of the Build-A-Board Project for the specific layout(s).</P
+><P
+>Note that the shortcut can be used to launch a specific layout specified via the 
+	command line, </P
+><P
+>e.g. C:\Program Files\MYTSOFT\MYTSOFT.EXE /k=NUMERIC.KBF, or</P
+><P
+>C:\Program Files\MYTSOFT\MYTSOFT.EXE /k=KEYBOARD.NUM.</P
+><P
+>The specified file MUST be in same folder as the EXE.</P
+><P
+>When MYTSOFT.EXE is run, if the KEYBOARD.KBF file (or specified file 
+	via the command line /k=[Keyboard Layout]) is for MYTSOFT2.EXE, 
+	MYTSOFT.EXE will terminate, and launch MYTSOFT2.EXE.</P
+><P
+>The license for MYTSOFT2.EXE is the same as for <SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+>.</P
+><P
+>Refer to the Administrator Notes in the IMG License Manager for differences in 
+	the Terminal Server version.</P
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="commandlineoptions.html"
+ACCESSKEY="P"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="home.html"
+ACCESSKEY="H"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="buttondisplay.html"
+ACCESSKEY="N"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Command Line Options</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="operationnotes.html"
+ACCESSKEY="U"
+>Up</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><SPAN
+CLASS="productname"
+>My-T-Soft</SPAN
+> Button Display</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

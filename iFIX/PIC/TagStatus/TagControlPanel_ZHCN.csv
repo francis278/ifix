@@ -1,0 +1,220 @@
+"[""请翻译字体名，字体尺寸，字体式样和翻译文字。如果这些域为空，他们将不能翻译。""]",,,,,,,,
+[分类,对象名,字体名,字体尺寸,字体式样,原文字,翻译文字,原文字,翻译文字]
+Caption,TagControlPanel.Text4,Arial,9,0,Tag,标签,,
+Caption,TagControlPanel.Text5,Arial,9,0,Status,状态,,
+Caption,TagControlPanel.Text6,Arial,9,0,Quick,快速,,
+Caption,TagControlPanel.Text7,Arial,9,0,Trend,趋势,,
+Caption,TagControlPanel.Text8,Arial,9,0,Tag Name,标签名,,
+Caption,TagControlPanel.Text9,Arial,9,0,Tag Type,标签类型,,
+Caption,TagControlPanel.Text11,Arial,9,0,Last Scan,最近扫描,,
+Caption,TagControlPanel.Text14,Arial,9,0,Units,单位,,
+Caption,TagControlPanel.Text15,Arial,9,0,Description,描述,,
+Caption,TagControlPanel.Text16,Arial,9,0,Current,当前,,
+Caption,TagControlPanel.Text17,Arial,9,0,Alarm,报警,,
+Caption,TagControlPanel.Text18,Arial,9,0,Last,最近,,
+Caption,TagControlPanel.Text19,Arial,9,0,Alarm Time,报警时间,,
+Caption,TagControlPanel.Text20,Arial,9,0,Value,值,,
+OleCaption,TagControlPanel.ROW1_GROUP.ROW1_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW1_GROUP.ROW1_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW1_GROUP.ROW1_TN,Arial,9,0,TAGNAME_tagname,TAGNAME_tagname
+Caption,TagControlPanel.ROW1_GROUP.ROW1_TTYPE,Arial,9,0,TAGTYPE,TAGTYPE
+Caption,TagControlPanel.ROW1_GROUP.ROW1_LS,Arial,9,0,,
+Caption,TagControlPanel.ROW1_GROUP.ROW1_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW1_GROUP.ROW1_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW1_GROUP.ROW1_CALM,Arial,9,0,CURRENT ALARM,CURRENT ALARM
+Caption,TagControlPanel.ROW1_GROUP.ROW1_LAST_ALM_TIME,Arial,9,0,LAST TIME,LAST TIME
+Caption,TagControlPanel.ROW1_GROUP.ROW1_VAL,Arial,9,0,,
+OleCaption,TagControlPanel.ADD_ROW_BTN,Arial,9,0,Add Row,添加行
+OleCaption,TagControlPanel.DEL_ROW_BTN,Arial,9,0,Delete Selected Row(s),删除所选行
+OleCaption,TagControlPanel.SaveTagListCommandButton,Arial,9,0,Save Tag List,保存标签表
+OleCaption,TagControlPanel.LoadTagListCommandButton,Arial,9,0,Load Tag List,装载标签表
+OleCaption,TagControlPanel.ROW3_GROUP.ROW3_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW3_GROUP.ROW3_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW3_GROUP.ROW3_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW3_GROUP.ROW3_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW3_GROUP.ROW3_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW3_GROUP.ROW3_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW3_GROUP.ROW3_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW3_GROUP.ROW3_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW3_GROUP.ROW3_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW3_GROUP.ROW3_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW4_GROUP.ROW4_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW4_GROUP.ROW4_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW4_GROUP.ROW4_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW4_GROUP.ROW4_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW4_GROUP.ROW4_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW4_GROUP.ROW4_Units4,Arial,9,0,,
+Caption,TagControlPanel.ROW4_GROUP.ROW4_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW4_GROUP.ROW4_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW4_GROUP.ROW4_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW4_GROUP.ROW4_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW5_GROUP.ROW5_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW5_GROUP.ROW5_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW5_GROUP.ROW5_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW5_GROUP.ROW5_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW5_GROUP.ROW5_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW5_GROUP.ROW5_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW5_GROUP.ROW5_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW5_GROUP.ROW5_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW5_GROUP.ROW5_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW5_GROUP.ROW5_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW6_GROUP.ROW6_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW6_GROUP.ROW6_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW6_GROUP.ROW6_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW6_GROUP.ROW6_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW6_GROUP.ROW6_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW6_GROUP.ROW6_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW6_GROUP.ROW6_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW6_GROUP.ROW6_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW6_GROUP.ROW6_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW6_GROUP.ROW6_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW7_GROUP.ROW7_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW7_GROUP.ROW7_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW7_GROUP.ROW7_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW7_GROUP.ROW7_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW7_GROUP.ROW7_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW7_GROUP.ROW7_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW7_GROUP.ROW7_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW7_GROUP.ROW7_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW7_GROUP.ROW7_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW7_GROUP.ROW7_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW8_GROUP.ROW8_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW8_GROUP.ROW8_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW8_GROUP.ROW8_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW8_GROUP.ROW8_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW8_GROUP.ROW8_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW8_GROUP.ROW8_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW8_GROUP.ROW8_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW8_GROUP.ROW8_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW8_GROUP.ROW8_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW8_GROUP.ROW8_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW9_GROUP.ROW9_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW9_GROUP.ROW9_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW9_GROUP.ROW9_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW9_GROUP.ROW9_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW9_GROUP.ROW9_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW9_GROUP.ROW9_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW9_GROUP.ROW9_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW9_GROUP.ROW9_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW9_GROUP.ROW9_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW9_GROUP.ROW9_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW10_GROUP.ROW10_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW10_GROUP.ROW10_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW10_GROUP.ROW10_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW10_GROUP.ROW10_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW10_GROUP.ROW10_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW10_GROUP.ROW10_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW10_GROUP.ROW10_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW10_GROUP.ROW10_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW10_GROUP.ROW10_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW10_GROUP.ROW10_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW11_GROUP.ROW11_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW11_GROUP.ROW11_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW11_GROUP.ROW11_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW11_GROUP.ROW11_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW11_GROUP.ROW11_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW11_GROUP.ROW11_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW11_GROUP.ROW11_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW11_GROUP.ROW11_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW11_GROUP.ROW11_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW11_GROUP.ROW11_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW12_GROUP.ROW12_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW12_GROUP.ROW12_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW12_GROUP.ROW12_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW12_GROUP.ROW12_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW12_GROUP.ROW12_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW12_GROUP.ROW12_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW12_GROUP.ROW12_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW12_GROUP.ROW12_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW12_GROUP.ROW12_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW12_GROUP.ROW12_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW13_GROUP.ROW13_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW13_GROUP.ROW13_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW13_GROUP.ROW13_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW13_GROUP.ROW13_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW13_GROUP.ROW13_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW13_GROUP.ROW13_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW13_GROUP.ROW13_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW13_GROUP.ROW13_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW13_GROUP.ROW13_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW13_GROUP.ROW13_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW14_GROUP.ROW14_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW14_GROUP.ROW14_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW14_GROUP.ROW14_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW14_GROUP.ROW14_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW14_GROUP.ROW14_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW14_GROUP.ROW14_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW14_GROUP.ROW14_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW14_GROUP.ROW14_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW14_GROUP.ROW14_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW14_GROUP.ROW14_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW15_GROUP.ROW15_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW15_GROUP.ROW15_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW15_GROUP.ROW15_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW15_GROUP.ROW15_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW15_GROUP.ROW15_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW15_GROUP.ROW15_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW15_GROUP.ROW15_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW15_GROUP.ROW15_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW15_GROUP.ROW15_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW15_GROUP.ROW15_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW16_GROUP.ROW16_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW16_GROUP.ROW16_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW16_GROUP.ROW16_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW16_GROUP.ROW16_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW16_GROUP.ROW16_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW16_GROUP.ROW16_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW16_GROUP.ROW16_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW16_GROUP.ROW16_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW16_GROUP.ROW16_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW16_GROUP.ROW16_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW17_GROUP.ROW17_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW17_GROUP.ROW17_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW17_GROUP.ROW17_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW17_GROUP.ROW17_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW17_GROUP.ROW17_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW17_GROUP.ROW17_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW17_GROUP.ROW17_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW17_GROUP.ROW17_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW17_GROUP.ROW17_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW17_GROUP.ROW17_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW18_GROUP.ROW18_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW18_GROUP.ROW18_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW18_GROUP.ROW18_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW18_GROUP.ROW18_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW18_GROUP.ROW18_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW18_GROUP.ROW18_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW18_GROUP.ROW18_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW18_GROUP.ROW18_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW18_GROUP.ROW18_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW18_GROUP.ROW18_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW19_GROUP.ROW19_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW19_GROUP.ROW19_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW19_GROUP.ROW19_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW19_GROUP.ROW19_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW19_GROUP.ROW19_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW19_GROUP.ROW19_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW19_GROUP.ROW19_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW19_GROUP.ROW19_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW19_GROUP.ROW19_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW19_GROUP.ROW19_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW20_GROUP.ROW20_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW20_GROUP.ROW20_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW20_GROUP.ROW20_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW20_GROUP.ROW20_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW20_GROUP.ROW20_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW20_GROUP.ROW20_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW20_GROUP.ROW20_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW20_GROUP.ROW20_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW20_GROUP.ROW20_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW20_GROUP.ROW20_VAL,Arial,9,0,,LAST TIME
+OleCaption,TagControlPanel.ROW2_GROUP.ROW2_TS,Arial,9,0,,
+OleCaption,TagControlPanel.ROW2_GROUP.ROW2_QT,Arial,9,0,,
+Caption,TagControlPanel.ROW2_GROUP.ROW2_TN,Arial,9,0,TAGNAME_tagname,
+Caption,TagControlPanel.ROW2_GROUP.ROW2_TTYPE,Arial,9,0,TAGTYPE,TAGNAME_tagname
+Caption,TagControlPanel.ROW2_GROUP.ROW2_LS,Arial,9,0,,TAGTYPE
+Caption,TagControlPanel.ROW2_GROUP.ROW2_Units,Arial,9,0,,
+Caption,TagControlPanel.ROW2_GROUP.ROW2_Desc,Arial,9,0,,
+Caption,TagControlPanel.ROW2_GROUP.ROW2_CALM,Arial,9,0,CURRENT ALARM,
+Caption,TagControlPanel.ROW2_GROUP.ROW2_LAST_ALM_TIME,Arial,9,0,LAST TIME,CURRENT ALARM
+Caption,TagControlPanel.ROW2_GROUP.ROW2_VAL,Arial,9,0,,LAST TIME
